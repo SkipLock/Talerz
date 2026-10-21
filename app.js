@@ -14,7 +14,7 @@ const WORKOUTS = {
 };
 const INTENS = ['Lekko', 'Umiarkowanie', 'Intensywnie'];
 const LS_KEY = 'talerz.v1';
-const APP_VERSION = '1.1.0';
+const APP_VERSION = '1.1.1';
 /* Starter products for a fresh install, per 100 g (average values from Polish food tables or package labels). */
 const STARTER = [
   ['s-kielbasa', 'Kiełbasa morlińska z piersią kurczaka (Morliny)', 187, 17, 13, 0.6, 126],
@@ -101,6 +101,7 @@ function hcApplyStatus(st) {
   S.hc.sdk = st.sdk || 'unavailable'; S.hc.all = !!st.all;
   S.hc.granted = Array.isArray(st.granted) ? st.granted : [];
   S.hc.samsungHealth = !!st.samsungHealth;
+  S.hc.appVersion = st.appVersion || '';
 }
 async function hcRefreshStatus() {
   try { hcApplyStatus(await nativeCall('status')); }
@@ -145,8 +146,9 @@ async function hcSync(dates, announce) {
   S.hc.busy = true; S.hc.error = ''; render();
   let changed = 0, failed = false;
   for (const date of dates) {
-    try { if (applyHealth(date, await nativeCall('readDay', { date }))) changed++; }
+    try { const res = await nativeCall('readDay', { date }); S.hc.diag = { at: Date.now(), date, res }; if (applyHealth(date, res)) changed++; }
     catch (e) {
+      S.hc.diag = { at: Date.now(), date, error: e };
       failed = true;
       if (e && e.code === 'not_granted') { S.hc.granted = []; S.hc.all = false; S.hc.error = 'Brak uprawnień do danych. Połącz ponownie.'; }
       else S.hc.error = 'Nie udało się pobrać danych z Health Connect.';
@@ -209,7 +211,9 @@ function hcProfileHtml() {
     <div class="btn-row">${actions}</div>
     <p class="small" style="margin-top:10px">Samsung Health musi udostępniać dane: w Samsung Health wejdź w <b>Ustawienia → Health Connect</b> i zezwól na kroki, ćwiczenia, kalorie i wagę. Nowe dane trafiają tam, gdy otworzysz Samsung Health albo gdy zegarek połączy się z telefonem.</p>
     ${h.samsungHealth ? '<button type="button" class="ghost wide" data-act="hc-open-sh">Otwórz Samsung Health</button>' : ''}
-    ${how}</section>`;
+    ${how}
+    ${h.diag ? `<details class="diag"><summary>Szczegóły ostatniego pobrania</summary><pre>${esc(JSON.stringify(h.diag, null, 1))}</pre></details>` : ''}
+    <p class="hint">Aplikacja ${esc(h.appVersion || '')}</p></section>`;
 }
 
 /* ---------- normalisers ---------- */

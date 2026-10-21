@@ -345,10 +345,40 @@ class MainActivity : ComponentActivity() {
         val range = TimeRangeFilter.between(start, end)
 
         if (PERM_STEPS in granted) {
-            val agg = client.aggregate(
-                AggregateRequest(metrics = setOf(StepsRecord.COUNT_TOTAL), timeRangeFilter = range)
-            )
-            out.put("steps", agg[StepsRecord.COUNT_TOTAL] ?: 0L)
+            val aggSteps = try {
+                client.aggregate(
+                    AggregateRequest(metrics = setOf(StepsRecord.COUNT_TOTAL), timeRangeFilter = range)
+                )[StepsRecord.COUNT_TOTAL] ?: 0L
+            } catch (e: Exception) {
+                out.put("stepsAggregateError", e.message ?: e.javaClass.simpleName)
+                0L
+            }
+            out.put("stepsAggregate", aggSteps)
+            // Raw records per source: on Android 14+ the aggregate skips apps missing from the
+            // Health Connect priority list, so fall back to the biggest single source.
+            val bySource = mutableMapOf<String, Long>()
+            var records = 0
+            var token: String? = null
+            var pages = 0
+            do {
+                val page = client.readRecords(
+                    ReadRecordsRequest(StepsRecord::class, timeRangeFilter = range, pageToken = token)
+                )
+                for (r in page.records) {
+                    val src = r.metadata.dataOrigin.packageName
+                    bySource[src] = (bySource[src] ?: 0L) + r.count
+                    records++
+                }
+                token = page.pageToken
+                pages++
+            } while (token != null && pages < 20)
+            val sources = JSONObject()
+            for ((k, v) in bySource) sources.put(k, v)
+            out.put("stepsBySource", sources)
+            out.put("stepRecords", records)
+            out.put("steps", if (aggSteps > 0) aggSteps else (bySource.values.maxOrNull() ?: 0L))
+        } else {
+            out.put("stepsPermission", false)
         }
 
         if (PERM_EXERCISE in granted) {
