@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Talerz</title>
+<meta name="description" content="Licznik kalorii: posiłki z makro, zestawy, kroki, treningi, waga i historia.">
+<meta name="theme-color" content="#F3F5F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1115" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand-row">
+      <span class="brand">Talerz</span>
+      <span id="sync" class="sync" data-state="loading" aria-live="polite">Wczytuję…</span>
+    </div>
+    <div id="datebar" class="datebar">
+      <button type="button" class="icon-btn" data-act="day-prev" aria-label="Poprzedni dzień">‹</button>
+      <div class="date-label"><span id="date-rel" class="date-rel"></span><span id="date-full" class="date-full"></span></div>
+      <button type="button" id="go-today" class="chip" data-act="day-today" hidden>Dziś</button>
+      <button type="button" class="icon-btn" data-act="day-next" aria-label="Następny dzień">›</button>
+    </div>
+  </header>
+  <main id="view-today" class="view"><div class="empty"><p>Wczytuję Twój dziennik…</p></div></main>
+  <main id="view-history" class="view" hidden></main>
+  <main id="view-library" class="view" hidden></main>
+  <main id="view-profile" class="view" hidden></main>
+</div>
+
+<nav class="tabs" aria-label="Sekcje">
+  <div class="tabs-in">
+    <button type="button" class="tab" data-act="tab" data-tab="today" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/></svg>Dziś</button>
+    <button type="button" class="tab" data-act="tab" data-tab="history"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12M12 20V5M19 20v-8M3 20h18"/></svg>Historia</button>
+    <button type="button" class="tab" data-act="tab" data-tab="library"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Produkty</button>
+    <button type="button" class="tab" data-act="tab" data-tab="profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Profil</button>
+  </div>
+</nav>
+
+<div id="sheet" class="sheet-wrap" hidden>
+  <div class="scrim" data-act="sheet-close"></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="sheet-head"><h2 id="sheet-title"></h2><button type="button" class="icon-btn" data-act="sheet-close" aria-label="Zamknij">×</button></div>
+    <div id="sheet-body"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" hidden><span id="toast-msg"></span><button type="button" id="toast-undo" class="toast-btn" hidden>Cofnij</button></div>
+
+<script src="app.js"></script>
+</body>
+</html>
