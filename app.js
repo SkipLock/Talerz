@@ -14,7 +14,7 @@ const WORKOUTS = {
 };
 const INTENS = ['Lekko', 'Umiarkowanie', 'Intensywnie'];
 const LS_KEY = 'talerz.v1';
-const APP_VERSION = '1.0.0';
+const APP_VERSION = '1.1.0';
 /* Starter products for a fresh install, per 100 g (average values from Polish food tables or package labels). */
 const STARTER = [
   ['s-kielbasa', 'Kiełbasa morlińska z piersią kurczaka (Morliny)', 187, 17, 13, 0.6, 126],
@@ -71,6 +71,146 @@ const S = {
 };
 const R = {};
 let SH = null;
+
+/* ---------- Android app bridge (Health Connect) ---------- */
+const NATIVE = (window.TalerzHealth && typeof window.TalerzHealth === 'object') ? window.TalerzHealth : null;
+const APK_URL = 'https://github.com/SkipLock/Talerz/releases/latest/download/talerz.apk';
+const HC_LS = 'talerz.hc';
+S.hc = { sdk: null, all: false, granted: [], busy: false, lastSync: 0, lastAuto: 0, error: '', samsungHealth: false };
+const nativeCalls = new Map();
+let nativeSeq = 0;
+window.__talerzNativeResolve = (id, ok, payload) => {
+  const p = nativeCalls.get(id); if (!p) return;
+  nativeCalls.delete(id);
+  let v = null;
+  try { v = payload ? JSON.parse(payload) : null; } catch (e) { v = null; }
+  if (ok) p.resolve(v || {}); else p.reject(v || { code: 'error', message: '' });
+};
+function nativeCall(method, args) {
+  return new Promise((resolve, reject) => {
+    if (!NATIVE) { reject({ code: 'no_native' }); return; }
+    const id = 'n' + (++nativeSeq);
+    nativeCalls.set(id, { resolve, reject });
+    try { NATIVE.call(id, method, JSON.stringify(args || {})); }
+    catch (e) { nativeCalls.delete(id); reject({ code: 'bridge', message: String(e) }); }
+  });
+}
+function hcLoadMeta() { try { const o = JSON.parse(localStorage.getItem(HC_LS) || '{}'); S.hc.lastSync = o.lastSync || 0; } catch (e) { /* ignore */ } }
+function hcSaveMeta() { try { localStorage.setItem(HC_LS, JSON.stringify({ lastSync: S.hc.lastSync })); } catch (e) { /* ignore */ } }
+function hcApplyStatus(st) {
+  S.hc.sdk = st.sdk || 'unavailable'; S.hc.all = !!st.all;
+  S.hc.granted = Array.isArray(st.granted) ? st.granted : [];
+  S.hc.samsungHealth = !!st.samsungHealth;
+}
+async function hcRefreshStatus() {
+  try { hcApplyStatus(await nativeCall('status')); }
+  catch (e) { S.hc.sdk = 'unavailable'; }
+  render();
+}
+async function hcConnect() {
+  try { hcApplyStatus(await nativeCall('requestPermissions')); }
+  catch (e) { toast(e && e.code === 'unavailable' ? 'Health Connect jest niedostępne na tym telefonie.' : 'Nie udało się otworzyć okna uprawnień.'); }
+  render();
+  if (S.hc.granted.length) hcSync([today(), addDays(today(), -1)], true);
+  else if (S.hc.sdk === 'available') toast('Bez uprawnień Talerz nie pobierze danych. Spróbuj jeszcze raz albo zajrzyj do Profilu.');
+}
+function applyHealth(date, res) {
+  if (!res || typeof res !== 'object') return false;
+  const before = getDay(date), beforeJson = JSON.stringify(before);
+  const d = clone(before);
+  const steps = Math.round(num(res.steps));
+  if (steps > 0 && !(d.stepsSource === 'manual' && (d.steps || 0) > steps)) { d.steps = steps; d.stepsSource = 'hc'; }
+  if (Array.isArray(res.sessions)) {
+    const ignored = new Set(d.hcIgnored || []);
+    const kept = d.workouts.filter(w => !w.hcId || w.locked);
+    const keptIds = new Set(kept.filter(w => w.hcId).map(w => w.hcId));
+    for (const s of res.sessions) {
+      const sid = String((s && s.id) || '');
+      if (!sid || ignored.has(sid) || keptIds.has(sid) || s.type === 'spacer') continue;
+      const minutes = Math.max(1, Math.round(num(s.minutes) || 0));
+      const kcal = num(s.totalKcal);
+      kept.push({ id: 'hc-' + sid, hcId: sid, type: WORKOUTS[s.type] ? s.type : 'inne', intensity: 1, minutes, source: kcal > 0 ? 'watch' : 'est', watchKcal: kcal > 0 ? Math.round(kcal) : null, title: String(s.title || '').slice(0, 60) });
+    }
+    d.workouts = kept;
+  }
+  const w = num(res.weight);
+  if (w >= 30 && w <= 300 && (!d.weight || d.weightSource === 'hc')) { d.weight = Math.round(w * 10) / 10; d.weightSource = 'hc'; }
+  if (JSON.stringify(d) === beforeJson) return false;
+  d.date = date; d.updatedAt = Date.now();
+  S.days[date] = d; persistDay(date);
+  return true;
+}
+async function hcSync(dates, announce) {
+  if (!NATIVE || S.hc.busy || !S.hc.granted.length) return;
+  S.hc.busy = true; S.hc.error = ''; render();
+  let changed = 0, failed = false;
+  for (const date of dates) {
+    try { if (applyHealth(date, await nativeCall('readDay', { date }))) changed++; }
+    catch (e) {
+      failed = true;
+      if (e && e.code === 'not_granted') { S.hc.granted = []; S.hc.all = false; S.hc.error = 'Brak uprawnień do danych. Połącz ponownie.'; }
+      else S.hc.error = 'Nie udało się pobrać danych z Health Connect.';
+      break;
+    }
+  }
+  S.hc.busy = false;
+  if (!failed) { S.hc.lastSync = Date.now(); hcSaveMeta(); }
+  render();
+  if (announce && !failed) toast(changed ? 'Pobrano dane z Samsung Health' : 'Bez zmian. Brakuje danych? Otwórz na chwilę Samsung Health.');
+}
+function hcAuto() {
+  if (!NATIVE || !S.hc.granted.length || S.hc.busy) return;
+  if (Date.now() - S.hc.lastAuto < 60000) return;
+  S.hc.lastAuto = Date.now();
+  hcSync([today(), addDays(today(), -1)], false);
+}
+window.__talerzResume = () => { if (NATIVE) hcRefreshStatus().then(hcAuto); };
+window.__talerzBack = () => {
+  if (SH) { closeSheet(); return true; }
+  if (S.tab !== 'today') { S.tab = 'today'; render(); window.scrollTo(0, 0); return true; }
+  if (S.date !== today()) { S.date = today(); render(); return true; }
+  return false;
+};
+const hcTime = ts => new Intl.DateTimeFormat('pl-PL', { hour: '2-digit', minute: '2-digit' }).format(new Date(ts));
+function hcBlockHtml() {
+  if (!NATIVE) return '';
+  const h = S.hc;
+  if (h.sdk === null) return '<div class="hc-row"><span>Sprawdzam połączenie z Health Connect…</span></div>';
+  if (h.sdk !== 'available') return `<div class="hc-row"><span>${h.sdk === 'update_required' ? 'Health Connect wymaga aktualizacji.' : 'Na tym telefonie brakuje Health Connect.'}</span><button type="button" class="ghost sm" data-act="hc-install">${h.sdk === 'update_required' ? 'Zaktualizuj' : 'Zainstaluj'}</button></div>`;
+  if (!h.granted.length) return '<div class="hc-row"><span>Pobieraj kroki i treningi z Samsung Health automatycznie.</span><button type="button" class="primary sm" data-act="hc-connect">Połącz</button></div>';
+  const msg = h.busy ? 'Pobieram dane z Samsung Health…' : h.error ? esc(h.error) : h.lastSync ? `Samsung Health · pobrano o ${hcTime(h.lastSync)}` : 'Samsung Health połączony';
+  return `<div class="hc-row"><span>${msg}</span><button type="button" class="ghost sm" data-act="hc-sync"${h.busy ? ' disabled' : ''}>Odśwież</button></div>`;
+}
+function hcProfileHtml() {
+  const how = '<p class="muted small">Kroki liczymy jako ok. 0,5 kcal na kg masy ciała na każdy przebyty kilometr, ponad podstawę dnia. Od kalorii z zegarka odejmujemy spoczynkowe, bo te są już w podstawie. Treningi bez kalorii szacujemy z tabel MET.</p>';
+  if (!NATIVE) {
+    return `<section class="card"><h3 class="card-t">Samsung Health i Galaxy Watch</h3>
+      <p>Strona w przeglądarce nie ma dostępu do danych z zegarka, więc tutaj kroki i treningi wpisujesz ręcznie.</p>
+      <p>Aplikacja Talerz na Androida pobiera je sama z Samsung Health przez Health Connect.</p>
+      <a class="primary wide btn-link" href="${APK_URL}">Pobierz aplikację na Androida</a>
+      <p class="hint">Po pobraniu otwórz plik talerz.apk i zezwól na instalację. Dane z tej strony przeniesiesz kopią zapasową.</p>
+      ${how}</section>`;
+  }
+  const h = S.hc;
+  let status, actions;
+  if (h.sdk !== 'available') {
+    status = h.sdk === 'update_required' ? 'Health Connect wymaga aktualizacji.' : 'Na tym telefonie brakuje Health Connect.';
+    actions = `<button type="button" class="primary" data-act="hc-install">${h.sdk === 'update_required' ? 'Zaktualizuj Health Connect' : 'Zainstaluj Health Connect'}</button>`;
+  } else if (!h.granted.length) {
+    status = 'Nie połączono.';
+    actions = '<button type="button" class="primary" data-act="hc-connect">Połącz z Samsung Health</button>';
+  } else {
+    const names = { READ_STEPS: 'kroki', READ_EXERCISE: 'treningi', READ_TOTAL_CALORIES_BURNED: 'kalorie z treningów', READ_WEIGHT: 'waga' };
+    status = `Połączono: ${h.granted.map(g => names[g] || g).join(', ')}.${h.all ? '' : ' Część danych jest wyłączona.'}`;
+    actions = `${h.all ? '' : '<button type="button" class="primary" data-act="hc-connect">Włącz resztę</button>'}<button type="button" class="ghost" data-act="hc-settings">Uprawnienia</button>`;
+  }
+  return `<section class="card"><h3 class="card-t">Samsung Health i Galaxy Watch</h3>
+    <p><b>${status}</b></p>
+    <div class="btn-row">${actions}</div>
+    <p class="small" style="margin-top:10px">Samsung Health musi udostępniać dane: w Samsung Health wejdź w <b>Ustawienia → Health Connect</b> i zezwól na kroki, ćwiczenia, kalorie i wagę. Nowe dane trafiają tam, gdy otworzysz Samsung Health albo gdy zegarek połączy się z telefonem.</p>
+    ${h.samsungHealth ? '<button type="button" class="ghost wide" data-act="hc-open-sh">Otwórz Samsung Health</button>' : ''}
+    ${how}</section>`;
+}
 
 /* ---------- normalisers ---------- */
 const PROFILE_DEFAULTS = { sex: 'm', age: 30, height: 175, weight: 80, goal: 75, mode: 'dynamic', deficit: 500, fixedKcal: 2200, proteinPerKg: 1.8, fatPct: 25 };
@@ -248,7 +388,9 @@ function renderToday() {
 
   const wos = day.workouts.map(wo => {
     const def = WORKOUTS[wo.type] || WORKOUTS.inne;
-    const sub = wo.source === 'watch' ? `z zegarka ${k0(wo.watchKcal)} kcal, bez spoczynkowych` : `${INTENS[wo.intensity ?? 1].toLowerCase()}, szacunek`;
+    const sub = wo.hcId
+      ? (wo.source === 'watch' ? `Samsung Health · ${k0(wo.watchKcal)} kcal, bez spoczynkowych` : 'Samsung Health · szacunek')
+      : wo.source === 'watch' ? `z zegarka ${k0(wo.watchKcal)} kcal, bez spoczynkowych` : `${INTENS[wo.intensity ?? 1].toLowerCase()}, szacunek`;
     return `<li><button type="button" class="entry" data-act="edit-wo" data-id="${esc(wo.id)}"><span class="e-name">${esc(def.label)} · ${k0(wo.minutes)} min</span><span class="e-sub">${sub}</span><span class="e-kcal plus">+${k0(woKcal(p, c.w, wo))}</span></button></li>`;
   }).join('');
 
@@ -274,11 +416,12 @@ function renderToday() {
   <section>${meals}</section>
   <h2 class="eyebrow">Ruch</h2>
   <section class="card">
+    ${hcBlockHtml()}
     <div class="move-total"><span class="muted small">${p.mode === 'fixed' ? 'Spalone ponad podstawę' : 'Dodane do limitu'}</span><b>+${k0(move)} kcal</b></div>
-    <div class="inline-row"><label for="steps-in">Kroki</label><input id="steps-in" type="text" inputmode="numeric" autocomplete="off" value="${day.steps ? day.steps : ''}" placeholder="0"><span class="kc">≈ ${k0(c.st)} kcal</span></div>
+    <div class="inline-row"><label for="steps-in">Kroki</label><input id="steps-in" type="text" inputmode="numeric" autocomplete="off" value="${day.steps ? day.steps : ''}" placeholder="0"><span class="kc">≈ ${k0(c.st)} kcal${day.stepsSource === 'hc' ? ' · z zegarka' : ''}</span></div>
     ${wos ? `<ul class="entries" style="margin-top:8px">${wos}</ul>` : ''}
     <button type="button" class="btn-line wide" data-act="add-wo">+ Trening</button>
-    <p class="hint">Kroki i kalorie z treningu przepisz z Samsung Health. Wyjaśnienie znajdziesz w zakładce Profil.</p>
+    <p class="hint">${NATIVE && S.hc.granted.length ? 'Brakuje danych z dziś? Otwórz na chwilę Samsung Health, a potem dotknij Odśwież.' : NATIVE ? 'Połącz Samsung Health, a kroki i treningi pobiorą się same.' : 'Kroki i kalorie z treningu przepisz z Samsung Health. Wyjaśnienie znajdziesz w zakładce Profil.'}</p>
   </section>
   <h2 class="eyebrow">Waga</h2>
   <section class="card">
@@ -447,11 +590,7 @@ function renderProfile() {
     <button type="submit" class="primary wide">Zapisz profil</button>
   </form>
   <div class="stack">
-    <section class="card"><h3 class="card-t">Samsung Health i Galaxy Watch</h3>
-      <p>Samsung Health i Health Connect trzymają dane w telefonie i nie udostępniają ich stronom internetowym, więc Talerz nie pobierze kroków ani treningów sam.</p>
-      <p>Wieczorem przepisz liczbę kroków z Samsung Health do zakładki Dziś. Po treningu dodaj go i zaznacz „Mam kalorie z zegarka”. Talerz odejmie od nich kalorie spoczynkowe, bo te są już w podstawie dnia.</p>
-      <p class="muted small">Kroki liczymy jako ok. 0,5 kcal na kg masy ciała na każdy przebyty kilometr, ponad podstawę dnia. Treningi bez zegarka szacujemy z tabel MET.</p>
-    </section>
+    ${hcProfileHtml()}
     <section class="card"><h3 class="card-t">Kopia zapasowa</h3>
       <p>Wszystkie wpisy są zapisane tylko w tym telefonie. Rób kopię co jakiś czas, a zawsze przed zmianą telefonu albo czyszczeniem danych przeglądarki.</p>
       <div class="btn-row"><button type="button" class="ghost" data-act="backup-save">Zapisz kopię</button><label class="ghost filelabel" for="backup-file">Wczytaj kopię</label></div>
@@ -875,15 +1014,24 @@ const ACT = {
     if (!(min > 0 && min <= 600)) { showErr('wo-err', 'Wpisz czas treningu w minutach.'); return; }
     let wk = null;
     if (SH.source === 'watch') { wk = num(SH.watchKcal); if (!(wk > 0 && wk <= 5000)) { showErr('wo-err', 'Wpisz kalorie z zegarka.'); return; } }
-    const wo = { id: SH.id || uid(), type: SH.type, intensity: SH.intensity, minutes: Math.round(min), source: SH.source, watchKcal: wk ? Math.round(wk) : null };
+    const prev = SH.id ? getDay(S.date).workouts.find(x => x.id === SH.id) : null;
+    const wo = { ...(prev || {}), id: SH.id || uid(), type: SH.type, intensity: SH.intensity, minutes: Math.round(min), source: SH.source, watchKcal: wk ? Math.round(wk) : null };
+    if (prev && prev.hcId) wo.locked = true;
     updateDay(S.date, d => { const i = d.workouts.findIndex(x => x.id === wo.id); if (i === -1) d.workouts.push(wo); else d.workouts[i] = wo; });
     closeSheet(); toast('Zapisano trening');
   },
   'wo-del'() {
     const id = SH.id, date = S.date; let removed = null, idx = -1;
-    updateDay(date, d => { idx = d.workouts.findIndex(x => x.id === id); if (idx !== -1) removed = d.workouts.splice(idx, 1)[0]; });
+    updateDay(date, d => {
+      idx = d.workouts.findIndex(x => x.id === id);
+      if (idx !== -1) removed = d.workouts.splice(idx, 1)[0];
+      if (removed && removed.hcId) d.hcIgnored = [...(d.hcIgnored || []), removed.hcId];
+    });
     closeSheet();
-    if (removed) toast('Usunięto trening', () => updateDay(date, d => { d.workouts.splice(Math.max(0, idx), 0, removed); }));
+    if (removed) toast('Usunięto trening', () => updateDay(date, d => {
+      d.workouts.splice(Math.max(0, idx), 0, removed);
+      if (removed.hcId) d.hcIgnored = (d.hcIgnored || []).filter(x => x !== removed.hcId);
+    }));
   },
 
   'lib-new'() { openSheet({ kind: 'prod', pid: null, draft: {}, confirmDel: false }); },
@@ -938,8 +1086,19 @@ const ACT = {
     Promise.resolve(ev.userChoice).then(r => { if (r && r.outcome === 'accepted') toast('Instaluję Talerz na telefonie'); render(); }).catch(() => render());
   },
   'install-dismiss'() { INSTALL.dismissed = true; render(); },
+  'hc-connect'() { hcConnect(); },
+  'hc-sync'() { const dates = S.date === today() ? [today(), addDays(today(), -1)] : [S.date]; hcSync(dates, true); },
+  'hc-install'() { nativeCall('installHealthConnect').catch(() => {}); },
+  'hc-settings'() { nativeCall('openHealthConnect').catch(() => {}); },
+  'hc-open-sh'() { nativeCall('openSamsungHealth').catch(() => toast('Nie znaleziono Samsung Health.')); },
   'backup-save'() {
     const data = { app: 'talerz', version: 1, exportedAt: new Date().toISOString(), profile: S.profile, library: S.library, days: S.days };
+    if (NATIVE) {
+      nativeCall('saveFile', { name: `talerz-kopia-${today()}.json`, text: JSON.stringify(data) })
+        .then(() => toast('Zapisano kopię'))
+        .catch(e => { if (!e || e.code !== 'cancelled') toast('Nie udało się zapisać kopii.'); });
+      return;
+    }
     const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
@@ -981,15 +1140,15 @@ document.addEventListener('change', e => {
     const v = Math.round(num(t.value));
     const steps = Number.isFinite(v) && v >= 0 ? Math.min(v, 150000) : 0;
     const date = S.date;
-    if (steps !== (getDay(date).steps || 0)) updateDay(date, d => { d.steps = steps; });
+    if (steps !== (getDay(date).steps || 0)) updateDay(date, d => { d.steps = steps; d.stepsSource = 'manual'; });
     return;
   }
   if (t.id === 'weight-in') {
     const raw = t.value.trim(), date = S.date;
-    if (!raw) { if (getDay(date).weight) updateDay(date, d => { d.weight = null; }); return; }
+    if (!raw) { if (getDay(date).weight) updateDay(date, d => { d.weight = null; delete d.weightSource; }); return; }
     const v = num(raw);
     if (!(v >= 30 && v <= 300)) { toast('Wpisz wagę w kg, np. 81,2.'); t.value = ''; return; }
-    updateDay(date, d => { d.weight = Math.round(v * 10) / 10; });
+    updateDay(date, d => { d.weight = Math.round(v * 10) / 10; d.weightSource = 'manual'; });
     return;
   }
   if (t.id === 'backup-file') { readBackup(t.files && t.files[0]); t.value = ''; return; }
@@ -1062,6 +1221,11 @@ function init() {
     });
   }
   window.addEventListener('storage', e => { if (e.key === LS_KEY) { loadLocal(); render(); } });
+  if (NATIVE) {
+    hcLoadMeta();
+    hcRefreshStatus().then(hcAuto);
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') hcRefreshStatus().then(hcAuto); });
+  }
 }
 init();
 })();

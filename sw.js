@@ -1,6 +1,6 @@
 /* Talerz service worker: app files load from the network when online (so updates arrive on the next launch)
    and from the cache when offline. Bump CACHE when the list of files changes. */
-const CACHE = 'talerz-1.0.0';
+const CACHE = 'talerz-1.1.0';
 const APP_FILES = [
   './',
   './index.html',
