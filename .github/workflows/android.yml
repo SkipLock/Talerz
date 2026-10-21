@@ -1,0 +1,83 @@
+name: Android APK
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'android/**'
+      - '.github/workflows/android.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android-apk
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+
+      - name: Klucz podpisu
+        shell: bash
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_PASSWORD" ]; then
+            openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 \
+              -in android/signing/talerz.keystore.enc \
+              -out "$RUNNER_TEMP/talerz.keystore" -pass env:KEYSTORE_PASSWORD
+            echo "TALERZ_KEYSTORE=$RUNNER_TEMP/talerz.keystore" >> "$GITHUB_ENV"
+            echo "TALERZ_KEYSTORE_PASSWORD=$KEYSTORE_PASSWORD" >> "$GITHUB_ENV"
+            echo "SIGNED=1" >> "$GITHUB_ENV"
+          else
+            echo "::warning::Brak sekretu KEYSTORE_PASSWORD. Buduję wersję testową bez publikacji."
+          fi
+
+      - name: Budowanie APK
+        shell: bash
+        working-directory: android
+        run: gradle assembleRelease --no-daemon --stacktrace --console=plain 2>&1 | tee "$RUNNER_TEMP/build.log"
+
+      - name: Publikacja APK
+        if: success() && env.SIGNED == '1'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp android/app/build/outputs/apk/release/app-release.apk talerz.apk
+          if ! gh release view apk >/dev/null 2>&1; then
+            gh release create apk --title "Talerz na Androida" --notes "Pobierz plik talerz.apk i otwórz go na telefonie." --latest
+          fi
+          gh release upload apk talerz.apk --clobber
+          gh release edit apk --notes "Wersja 1.0.${GITHUB_RUN_NUMBER}. Pobierz plik talerz.apk i otwórz go na telefonie z Androidem."
+
+      - name: Log budowy
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STATUS: ${{ job.status }}
+        run: |
+          set +e
+          dir="$RUNNER_TEMP/ci-logs"
+          mkdir -p "$dir" && cd "$dir"
+          git init -q -b ci-logs
+          if [ -f "$RUNNER_TEMP/build.log" ]; then tail -c 400000 "$RUNNER_TEMP/build.log" > build.log; else echo "brak logu" > build.log; fi
+          printf 'run=%s\nsha=%s\nstatus=%s\nsigned=%s\n' "$GITHUB_RUN_NUMBER" "$GITHUB_SHA" "$STATUS" "${SIGNED:-0}" > status.txt
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -qm "Build $GITHUB_RUN_NUMBER: $STATUS"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ci-logs
