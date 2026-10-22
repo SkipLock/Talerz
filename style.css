@@ -370,3 +370,7 @@ textarea{resize:vertical}
 .fav-btn:active .star{transform:scale(.88)}
 .add-groups .grp:first-child{margin-top:4px}
 @media (prefers-reduced-motion:reduce){.fav-btn .star{transition:none}}
+
+.sheet-head h2{flex:1}
+.sheet-extra{display:flex;align-items:center}
+.sheet-extra .fav-btn{margin:0}

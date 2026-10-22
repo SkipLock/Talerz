@@ -14,7 +14,7 @@ const WORKOUTS = {
 };
 const INTENS = ['Lekko', 'Umiarkowanie', 'Intensywnie'];
 const LS_KEY = 'talerz.v1';
-const APP_VERSION = '1.5.0';
+const APP_VERSION = '1.5.1';
 /* Product categories. A set ingredient can be swapped for any product from the same category. */
 const CATS = ['Pieczywo', 'Wędliny', 'Nabiał', 'Mięso i ryby', 'Warzywa', 'Owoce', 'Zboża i makarony', 'Tłuszcze i sosy', 'Gotowe dania', 'Słodycze i przekąski', 'Napoje', 'Inne'];
 /* Catalog of classic products, per 100 g (typical values from Polish food tables and labels; brands differ a little).
@@ -718,6 +718,7 @@ const OPEN_DEFAULT = { lib: [], add: ['__fav', '__recent'] };
 const loadOpen = k => { try { const v = localStorage.getItem(OPEN_KEYS[k]); return new Set(v ? JSON.parse(v) : OPEN_DEFAULT[k]); } catch (e) { return new Set(OPEN_DEFAULT[k]); } };
 S.open = { lib: loadOpen('lib'), add: loadOpen('add') };
 const STAR = '<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L12 16.5l-5.4 2.9 1.2-5.9-4.4-4.1 6-.7z"/></svg>';
+const favBtn = (kind, x) => `<button type="button" class="fav-btn" data-act="fav" data-kind="${kind}" data-id="${esc(x.id)}" aria-pressed="${!!x.fav}" aria-label="${x.fav ? 'Usuń z ulubionych' : 'Dodaj do ulubionych'}">${STAR}</button>`;
 const favMark = x => x.fav ? `<span class="fav-mark" title="Ulubione">${STAR}</span>` : '';
 function grpHtml(key, title, count, inner, searching, store = 'lib') {
   const open = searching || S.open[store].has(key);
@@ -869,6 +870,10 @@ function renderSheet() {
   else if (SH.kind === 'prod') { title = SH.pid ? 'Produkt' : 'Nowy produkt'; body = prodBody(); }
   else if (SH.kind === 'setedit') { title = SH.sid ? 'Danie' : 'Nowe danie'; body = setEditBody(); }
   $('#sheet-title').textContent = title;
+  let extra = '';
+  if (SH.kind === 'prod' && SH.pid) { const pr = prodById(SH.pid); if (pr) extra = favBtn('p', pr); }
+  else if (SH.kind === 'setedit' && SH.sid && SH.alt == null) { const st = S.library.sets.find(v => v.id === SH.sid); if (st) extra = favBtn('s', st); }
+  $('#sheet-extra').innerHTML = extra;
   $('#sheet-body').innerHTML = body;
 }
 
@@ -1254,6 +1259,7 @@ const ACT = {
     a.setAttribute('aria-pressed', String(!!x.fav));
     a.setAttribute('aria-label', x.fav ? 'Usuń z ulubionych' : 'Dodaj do ulubionych');
     toast(x.fav ? 'Dodano do ulubionych' : 'Usunięto z ulubionych');
+    if (S.tab === 'library') { const l = $('#lib-list'); if (l) l.innerHTML = libListHtml(); }
   },
   'pd-set'(a) {
     if (!S.pd) S.pd = draftFrom(S.profile);
@@ -1433,7 +1439,7 @@ const ACT = {
     const prod = { id: SH.pid || uid(), name, cat: d['pe-cat'] || guessCat(name), kcal100: kcal, p100: numOr(d['pe-p'], 0), f100: numOr(d['pe-f'], 0), c100: numOr(d['pe-c'], 0), portion: portion > 0 ? Math.round(portion) : null,
       unit: uName && uG > 0 ? { u: uName, g: Math.round(uG * 10) / 10, half: ['bułka', 'sztuka', 'kawałek', 'jajko'].includes(uName) } : false };
     const i = S.library.products.findIndex(x => x.id === prod.id);
-    if (i === -1) S.library.products.push(prod); else S.library.products[i] = prod;
+    if (i === -1) S.library.products.push(prod); else { if (S.library.products[i].fav) prod.fav = true; S.library.products[i] = prod; }
     persistLibrary(); closeSheet(); render(); toast(`Zapisano: ${name}`);
   },
   'prod-del'() {
