@@ -314,3 +314,19 @@ textarea{resize:vertical}
 .ing-pick{display:grid;gap:8px;border:1.5px solid var(--accent);border-radius:12px;padding:10px}
 .ing-pick-head{display:flex;justify-content:space-between;align-items:center}
 .ing-pick .rows{max-height:300px;overflow:auto}
+
+/* library: collapsible groups */
+.grp{border-bottom:1px solid var(--line)}
+.grp:first-child{border-top:1px solid var(--line);margin-top:12px}
+.grp-head{width:100%;display:flex;align-items:center;gap:10px;padding:13px 2px;background:none;border:0;text-align:left;min-height:52px}
+.grp-t{flex:1;font-family:var(--f-display);font-weight:800;font-stretch:85%;font-size:18px}
+.grp-n{font-size:13px;font-weight:700;color:var(--muted);background:var(--track);border-radius:999px;padding:2px 9px;font-variant-numeric:tabular-nums}
+.chev{width:20px;height:20px;fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .18s ease}
+.grp.open .chev{transform:rotate(180deg)}
+.grp-body{padding-bottom:8px}
+.grp-body .rows{border-top:0}
+.lib-sub{margin:18px 0 0;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.lib-sub + .grp{border-top:1px solid var(--line);margin-top:6px}
+.list-h{margin:14px 0 4px}
+.tag{display:inline-block;font-size:11px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:1px 6px;margin-right:4px;vertical-align:1px}
+@media (prefers-reduced-motion:reduce){.chev{transition:none}}

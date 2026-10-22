@@ -14,9 +14,9 @@ const WORKOUTS = {
 };
 const INTENS = ['Lekko', 'Umiarkowanie', 'Intensywnie'];
 const LS_KEY = 'talerz.v1';
-const APP_VERSION = '1.3.0';
+const APP_VERSION = '1.3.1';
 /* Product categories. A set ingredient can be swapped for any product from the same category. */
-const CATS = ['Pieczywo', 'Wędliny', 'Nabiał', 'Mięso i ryby', 'Warzywa', 'Owoce', 'Zboża i makarony', 'Tłuszcze i sosy', 'Dania', 'Słodycze i przekąski', 'Napoje', 'Inne'];
+const CATS = ['Pieczywo', 'Wędliny', 'Nabiał', 'Mięso i ryby', 'Warzywa', 'Owoce', 'Zboża i makarony', 'Tłuszcze i sosy', 'Gotowe dania', 'Słodycze i przekąski', 'Napoje', 'Inne'];
 /* Catalog of classic products, per 100 g (typical values from Polish food tables and labels; brands differ a little).
    [id, name, category, kcal, protein, fat, carbs, typical portion in g] */
 const STARTER = [
@@ -72,7 +72,7 @@ const STARTER = [
   ['s-majonez', 'Majonez', 'Tłuszcze i sosy', 680, 1.5, 75, 1, 10],
   ['s-ketchup', 'Ketchup', 'Tłuszcze i sosy', 100, 1.5, 0.2, 23, 15],
   ['s-musztarda', 'Musztarda', 'Tłuszcze i sosy', 110, 6, 6, 8, 10],
-  ['s-pierogi', 'Pierogi domowe z mięsem (Jawo)', 'Dania', 278, 11, 15, 24, 450]
+  ['s-pierogi', 'Pierogi domowe z mięsem (Jawo)', 'Gotowe dania', 278, 11, 15, 24, 450]
 ].map(([id, name, cat, kcal100, p100, f100, c100, portion]) => ({ id, name, cat, kcal100, p100, f100, c100, portion }));
 const CATALOG_VERSION = 2;
 /* Ready-made sets added once to every library: [name, [[product name, grams], ...]] */
@@ -109,7 +109,7 @@ const CAT_RULES = [
   ['Warzywa', /pomidor|ogor|salat|papryk|rzodkiew|kapust|marchew|cebul|brokul|warzyw|szczypior|ziemniak|kukurydz|fasol|groszek/],
   ['Owoce', /jablk|banan|gruszk|truskaw|pomarancz|winogr|owoc|borowk|malin|kiwi|mandaryn|sliwk/],
   ['Zboża i makarony', /ryz|makaron|kasz|platki|owsian|musli|granol|mak[ai]\b/],
-  ['Dania', /pierog|pizz|zupa|kotlet|nalesnik|lazani|burger|kebab|zapiekank|krokiet|gulasz|spaghetti/],
+  ['Gotowe dania', /pierog|pizz|zupa|kotlet|nalesnik|lazani|burger|kebab|zapiekank|krokiet|gulasz|spaghetti/],
   ['Słodycze i przekąski', /czekolad|baton|ciast|chips|lody|cukierk|wafel|zelk|paluszk|orzesz|orzech|drozdzowk|paczek/],
   ['Napoje', /sok|napoj|cola|piwo|kawa|herbat|woda|izoton|energety/]
 ];
@@ -331,7 +331,7 @@ const writer = {
       if (code === 'unavailable' && item.tries < 1) {
         item.tries++; await sleep(700 + Math.random() * 900);
         if (!this.pending.has(key)) this.pending.set(key, item);
-      } else if (code === 'quota_exceeded') toast('Brak miejsca na zapis. Usuń nieużywane produkty albo zestawy.');
+      } else if (code === 'quota_exceeded') toast('Brak miejsca na zapis. Usuń nieużywane produkty albo dania.');
       else toast('Nie udało się zapisać zmian. Sprawdź połączenie i spróbuj jeszcze raz.');
     } finally {
       this.busy.delete(key); renderSync();
@@ -509,7 +509,7 @@ function renderToday() {
   const meals = MEALS.map(([k, l]) => {
     const list = day.meals[k] || []; const mt = sumEntries(list);
     const rows = list.map(e => `<li><button type="button" class="entry" data-act="edit-entry" data-meal="${k}" data-id="${esc(e.id)}"><span class="e-name">${esc(e.name)}</span><span class="e-sub">${entrySub(e)}</span><span class="e-kcal">${k0(entryTotals(e).kcal)}</span></button></li>`).join('');
-    return `<div class="meal"><div class="meal-head"><h3>${l}</h3><span class="meal-kcal">${list.length ? k0(mt.kcal) + ' kcal' : ''}</span><button type="button" class="add" data-act="add-food" data-meal="${k}" aria-label="Dodaj do: ${l}">+</button></div>${list.length ? `<ul class="entries">${rows}</ul><button type="button" class="link" data-act="set-from-meal" data-meal="${k}">Zapisz jako zestaw</button>` : ''}</div>`;
+    return `<div class="meal"><div class="meal-head"><h3>${l}</h3><span class="meal-kcal">${list.length ? k0(mt.kcal) + ' kcal' : ''}</span><button type="button" class="add" data-act="add-food" data-meal="${k}" aria-label="Dodaj do: ${l}">+</button></div>${list.length ? `<ul class="entries">${rows}</ul><button type="button" class="link" data-act="set-from-meal" data-meal="${k}">Zapisz jako danie</button>` : ''}</div>`;
   }).join('');
 
   const wos = day.workouts.map(wo => {
@@ -653,6 +653,15 @@ function renderHistory() {
 }
 
 /* ---------- library ---------- */
+const LIB_OPEN_KEY = 'macroo.libOpen';
+S.libOpen = (() => { try { return new Set(JSON.parse(localStorage.getItem(LIB_OPEN_KEY) || '[]')); } catch (e) { return new Set(); } })();
+function grpHtml(key, title, count, inner, searching) {
+  const open = searching || S.libOpen.has(key);
+  const head = `<span class="grp-t">${title}</span><span class="grp-n">${count}</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>`;
+  return `<section class="grp${open ? ' open' : ''}">${searching
+    ? `<div class="grp-head">${head}</div>`
+    : `<button type="button" class="grp-head" data-act="lib-toggle" data-g="${esc(key)}" aria-expanded="${open}">${head}</button>`}${open ? `<div class="grp-body">${inner}</div>` : ''}</section>`;
+}
 function libListHtml() {
   const q = norm(S.libQuery);
   const sets = S.library.sets.filter(s => !q || norm(s.name).includes(q));
@@ -660,14 +669,17 @@ function libListHtml() {
   const groups = CATS.map(c => [c, prods.filter(p => catOf(p) === c)]).filter(([, l]) => l.length);
   const setRow = s => { const t = sumEntries(s.items); return `<li><button type="button" class="row" data-act="edit-set" data-sid="${esc(s.id)}"><span class="r-name">${esc(s.name)}</span><span class="r-sub">${s.items.map(i => esc(i.name)).join(', ')}</span><span class="r-k">${k0(t.kcal)} kcal</span></button></li>`; };
   const prodRow = p => `<li><button type="button" class="row" data-act="edit-prod" data-pid="${esc(p.id)}"><span class="r-name">${esc(p.name)}</span><span class="r-sub">B ${g1(p.p100)} · T ${g1(p.f100)} · W ${g1(p.c100)} na 100 g${p.portion ? ' · porcja ' + k0(p.portion) + ' g' : ''}</span><span class="r-k">${k0(p.kcal100)}</span></button></li>`;
-  return `<h3 class="eyebrow">Zestawy</h3>${sets.length ? `<ul class="rows">${sets.map(setRow).join('')}</ul>` : `<p class="muted small">${q ? 'Brak zestawów o tej nazwie.' : 'Nie masz jeszcze zestawów. Utwórz pierwszy przyciskiem „+ Zestaw”.'}</p>`}
-  <p class="muted small" style="margin:12px 0 0">Produkty · ${prods.length}, kcal na 100 g</p>
-  ${groups.length ? groups.map(([c, l]) => `<h3 class="eyebrow">${c} · ${l.length}</h3><ul class="rows">${l.map(prodRow).join('')}</ul>`).join('') : `<p class="muted small">${q ? 'Nic nie pasuje do wyszukiwania.' : 'Nie masz jeszcze produktów. Dodaj pierwszy przyciskiem „+ Produkt”.'}</p>`}`;
+  const searching = !!q;
+  const dishes = (!searching || sets.length) ? grpHtml('__dishes', 'Moje dania', sets.length,
+    sets.length ? `<ul class="rows">${sets.map(setRow).join('')}</ul>` : '<p class="muted small" style="margin:8px 0">Nie masz jeszcze dań. Utwórz pierwsze przyciskiem „+ Danie” albo z posiłku („Zapisz jako danie”).</p>', searching) : '';
+  return `${dishes}
+  <p class="lib-sub">Produkty · ${prods.length} · kcal na 100 g</p>
+  ${groups.length ? groups.map(([c, l]) => grpHtml(c, c, l.length, `<ul class="rows">${l.map(prodRow).join('')}</ul>`, searching)).join('') : `<p class="muted small">${q ? 'Nic nie pasuje do wyszukiwania.' : 'Nie masz jeszcze produktów. Dodaj pierwszy przyciskiem „+ Produkt”.'}</p>`}`;
 }
 function renderLibrary() {
   $('#view-library').innerHTML = `
-  <div class="h-head"><h2 class="h2">Produkty</h2><div class="btn-pair"><button type="button" class="ghost sm" data-act="set-new">+ Zestaw</button><button type="button" class="primary sm" data-act="lib-new">+ Produkt</button></div></div>
-  <div class="field"><label for="lib-q" class="sr">Szukaj</label><input id="lib-q" type="search" placeholder="Szukaj w produktach i zestawach" autocomplete="off" value="${esc(S.libQuery)}"></div>
+  <div class="h-head"><h2 class="h2">Produkty</h2><div class="btn-pair"><button type="button" class="ghost sm" data-act="set-new">+ Danie</button><button type="button" class="primary sm" data-act="lib-new">+ Produkt</button></div></div>
+  <div class="field"><label for="lib-q" class="sr">Szukaj</label><input id="lib-q" type="search" placeholder="Szukaj w produktach i daniach" autocomplete="off" value="${esc(S.libQuery)}"></div>
   <div id="lib-list">${libListHtml()}</div>`;
 }
 
@@ -791,7 +803,7 @@ function renderSheet() {
   else if (SH.kind === 'entry') { const r = entryBody(); if (r === null) { closeSheet(); return; } title = 'Wpis'; body = r; }
   else if (SH.kind === 'wo') { title = SH.id ? 'Trening' : 'Nowy trening'; body = woBody(); }
   else if (SH.kind === 'prod') { title = SH.pid ? 'Produkt' : 'Nowy produkt'; body = prodBody(); }
-  else if (SH.kind === 'setedit') { title = SH.sid ? 'Zestaw' : 'Nowy zestaw'; body = setEditBody(); }
+  else if (SH.kind === 'setedit') { title = SH.sid ? 'Danie' : 'Nowe danie'; body = setEditBody(); }
   $('#sheet-title').textContent = title;
   $('#sheet-body').innerHTML = body;
 }
@@ -800,27 +812,45 @@ function renderSheet() {
 function addBody() {
   if (SH.pick) return pickBody();
   if (SH.cfg) return cfgBody();
-  const tabs = [['prod', 'Produkty'], ['sets', 'Zestawy'], ['new', 'Nowy']];
+  const tabs = [['prod', 'Produkty i dania'], ['new', 'Nowy']];
   if (S.sample || SH.tab === 'ai') tabs.push(['ai', 'Asystent']);
   const head = `<div class="seg" role="tablist" aria-label="Sposób dodania">${tabs.map(([k, l]) => `<button type="button" role="tab" aria-selected="${SH.tab === k}" data-act="sh-tab" data-tab="${k}">${l}</button>`).join('')}</div>`;
   let pane;
-  if (SH.tab === 'prod') pane = `<div class="field"><label for="sh-q" class="sr">Szukaj</label><input id="sh-q" type="search" placeholder="Szukaj produktu" autocomplete="off" value="${esc(SH.q || '')}"></div><div id="sh-list">${pickListHtml()}</div>`;
-  else if (SH.tab === 'sets') pane = setsPaneHtml();
+  if (SH.tab === 'prod') pane = `<div class="field"><label for="sh-q" class="sr">Szukaj</label><input id="sh-q" type="search" placeholder="Szukaj produktu albo dania" autocomplete="off" value="${esc(SH.q || '')}"></div><div id="sh-list">${pickListHtml()}</div>`;
   else if (SH.tab === 'new') pane = newPaneHtml();
   else pane = aiPaneHtml();
   return head + `<div class="pane">${pane}</div>`;
 }
+function recentDishes() {
+  const out = [];
+  for (const d of Object.keys(S.days).sort().reverse().slice(0, 30)) {
+    const day = getDay(d);
+    for (const [k] of MEALS) for (const e of (day.meals[k] || [])) if (e.dish && !out.includes(e.dish)) out.push(e.dish);
+  }
+  return out;
+}
+function dishRowsHtml(q) {
+  const rd = recentDishes();
+  const list = S.library.sets.filter(x => !q || norm(x.name).includes(q)).sort((a, b) => {
+    const ia = rd.indexOf(a.id), ib = rd.indexOf(b.id);
+    if (ia !== -1 || ib !== -1) return (ia === -1 ? 1e9 : ia) - (ib === -1 ? 1e9 : ib);
+    return a.name.localeCompare(b.name, 'pl');
+  });
+  if (!list.length) return '';
+  return `<h3 class="eyebrow list-h">Moje dania</h3><ul class="rows">${list.map(x => `<li><button type="button" class="row" data-act="add-set" data-sid="${esc(x.id)}"><span class="r-name">${esc(x.name)}</span><span class="r-sub"><span class="tag">Dostosuj</span> ${x.items.map(i => esc(i.name)).join(', ')}</span><span class="r-k">${k0(sumEntries(x.items).kcal)}</span></button></li>`).join('')}</ul>`;
+}
 function pickListHtml() {
   const all = S.library.products;
-  if (!all.length) return '<p class="muted small">Nie masz jeszcze produktów. Dodaj pierwszy w zakładce „Nowy” albo zapytaj asystenta.</p>';
   const q = norm(SH.q || ''), rec = recentPids();
+  const dishes = dishRowsHtml(q);
+  if (!all.length && !dishes) return '<p class="muted small">Nie masz jeszcze produktów. Dodaj pierwszy w zakładce „Nowy” albo zapytaj asystenta.</p>';
   const list = all.filter(p => !q || norm(p.name).includes(q)).sort((a, b) => {
     const ia = rec.indexOf(a.id), ib = rec.indexOf(b.id);
     if (ia !== -1 || ib !== -1) return (ia === -1 ? 1e9 : ia) - (ib === -1 ? 1e9 : ib);
     return a.name.localeCompare(b.name, 'pl');
   });
-  if (!list.length) return `<p class="muted small">Nic nie pasuje do „${esc(SH.q)}”. <button type="button" class="link" data-act="sh-tab" data-tab="new">Dodaj nowy produkt</button></p>`;
-  return `<ul class="rows">${list.map(p => `<li><button type="button" class="row" data-act="pick" data-pid="${esc(p.id)}"><span class="r-name">${esc(p.name)}</span><span class="r-sub">${rec.includes(p.id) ? 'ostatnio · ' : ''}${k0(p.kcal100)} kcal na 100 g${p.portion ? ' · porcja ' + k0(p.portion) + ' g' : ''}</span><span class="r-k">${p.portion ? k0(p.kcal100 * p.portion / 100) : k0(p.kcal100)}</span></button></li>`).join('')}</ul>`;
+  if (!list.length && !dishes) return `<p class="muted small">Nic nie pasuje do „${esc(SH.q)}”. <button type="button" class="link" data-act="sh-tab" data-tab="new">Dodaj nowy produkt</button></p>`;
+  return `${dishes}${list.length ? `${dishes ? '<h3 class="eyebrow list-h">Produkty</h3>' : ''}<ul class="rows">${list.map(p => `<li><button type="button" class="row" data-act="pick" data-pid="${esc(p.id)}"><span class="r-name">${esc(p.name)}</span><span class="r-sub">${rec.includes(p.id) ? 'ostatnio · ' : ''}${k0(p.kcal100)} kcal na 100 g${p.portion ? ' · porcja ' + k0(p.portion) + ' g' : ''}</span><span class="r-k">${p.portion ? k0(p.kcal100 * p.portion / 100) : k0(p.kcal100)}</span></button></li>`).join('')}</ul>` : ''}`;
 }
 function pickBody() {
   const p = SH.pick, g = Number.isFinite(SH.pickG) ? SH.pickG : (p.portion || 100);
@@ -833,10 +863,6 @@ function pickBody() {
   <div id="pick-prev" class="preview">${previewHtml(per100(p, g))}</div>
   <p id="pick-err" class="err" hidden></p>
   <button type="button" class="primary wide" data-act="pick-add">Dodaj do: ${mealLabel(SH.meal)}</button>`;
-}
-function setsPaneHtml() {
-  if (!S.library.sets.length) return '<p class="muted small">Nie masz jeszcze zestawów. Utworzysz je w zakładce Produkty („+ Zestaw”) albo z posiłku („Zapisz jako zestaw”).</p>';
-  return `<p class="muted small" style="margin:0">Wybierz zestaw. Na następnym ekranie zmienisz rodzaj, gramaturę i dodasz dodatki.</p><ul class="rows">${S.library.sets.map(s => { const t = sumEntries(s.items); return `<li><button type="button" class="row" data-act="add-set" data-sid="${esc(s.id)}"><span class="r-name">${esc(s.name)}</span><span class="r-sub">${s.items.map(i => esc(i.name) + (i.portion ? '' : ' ' + k0(i.grams) + ' g')).join(', ')}</span><span class="r-k">${k0(t.kcal)} kcal</span></button></li>`; }).join('')}</ul>`;
 }
 function newPaneHtml() {
   const d = SH.draft, quick = SH.quick;
@@ -1033,23 +1059,24 @@ function ingPickerHtml(label) {
     <div id="ing-list">${ingPickListHtml(st.q)}</div></div>`;
 }
 function setEditBody() {
-  return `<div class="field"><label for="se-name">Nazwa zestawu</label><input id="se-name" type="text" autocomplete="off" value="${esc(SH.name)}" placeholder="np. Kromka z kiełbasą"></div>
-  <p class="muted small" style="margin:0">Przy każdym składniku wybierzesz rodzaj z tej samej kategorii, np. inny chleb albo inną wędlinę.</p>
+  return `<div class="field"><label for="se-name">Nazwa dania</label><input id="se-name" type="text" autocomplete="off" value="${esc(SH.name)}" placeholder="np. Kanapka z kiełbasą"></div>
+  <p class="muted small" style="margin:0">Ustaw domyślne składniki i wagę. Przy dodawaniu do posiłku w ekranie „Dostosuj” zmienisz rodzaj chleba czy wędliny, wagę i dodatki.</p>
   ${ingRowsHtml(SH.items)}
   ${ingPickerHtml('Składnik')}
   <div id="ing-prev" class="preview">${previewHtml(sumEntries(SH.items))}</div>
   <p id="se-err" class="err" hidden></p>
-  <div class="btn-row">${SH.sid ? `<button type="button" class="danger" data-act="set-del">${SH.confirmDel ? 'Na pewno usunąć?' : 'Usuń'}</button>` : ''}<button type="button" class="primary" data-act="set-save">${SH.sid ? 'Zapisz' : 'Zapisz zestaw'}</button></div>`;
+  <div class="btn-row">${SH.sid ? `<button type="button" class="danger" data-act="set-del">${SH.confirmDel ? 'Na pewno usunąć?' : 'Usuń'}</button>` : ''}<button type="button" class="primary" data-act="set-save">${SH.sid ? 'Zapisz' : 'Zapisz danie'}</button></div>`;
 }
 function cfgBody() {
   const c = SH.cfg;
-  return `<button type="button" class="back" data-act="cfg-back">‹ Wróć do zestawów</button>
-  <h3 class="pick-name">${esc(c.name)}</h3>
+  return `<button type="button" class="back" data-act="cfg-back">‹ Wróć do listy</button>
+  <p class="eyebrow" style="margin:0">Dostosuj</p>
+  <h3 class="pick-name" style="margin-top:-8px">${esc(c.name)}</h3>
   <p class="muted small" style="margin:-6px 0 0">Zmień rodzaj albo gramaturę i dołóż dodatki. To dotyczy tylko tego posiłku, chyba że zaznaczysz zapamiętanie.</p>
   ${ingRowsHtml(c.items)}
   ${ingPickerHtml('Dodatek')}
   <div id="ing-prev" class="preview">${previewHtml(sumEntries(c.items))}</div>
-  <label class="check"><input type="checkbox" id="cfg-remember"${c.remember ? ' checked' : ''}> Zapamiętaj te zmiany w zestawie</label>
+  <label class="check"><input type="checkbox" id="cfg-remember"${c.remember ? ' checked' : ''}> Zapamiętaj zmiany w tym daniu</label>
   <p id="cfg-err" class="err" hidden></p>
   <button type="button" class="primary wide" data-act="cfg-add">Dodaj do: ${mealLabel(SH.meal)}</button>`;
 }
@@ -1114,6 +1141,12 @@ const ACT = {
   'day-today'() { S.date = today(); render(); },
   'open-day'(a) { S.date = a.dataset.date; S.tab = 'today'; render(); window.scrollTo(0, 0); },
   'hist-range'(a) { S.histRange = +a.dataset.n; render(); },
+  'lib-toggle'(a) {
+    const g = a.dataset.g;
+    if (S.libOpen.has(g)) S.libOpen.delete(g); else S.libOpen.add(g);
+    try { localStorage.setItem(LIB_OPEN_KEY, JSON.stringify([...S.libOpen])); } catch (e) { /* per-device convenience only */ }
+    const l = $('#lib-list'); if (l) l.innerHTML = libListHtml();
+  },
   'pd-set'(a) {
     if (!S.pd) S.pd = draftFrom(S.profile);
     S.pd[a.dataset.k] = a.dataset.v;
@@ -1151,7 +1184,7 @@ const ACT = {
       const set = S.library.sets.find(x => x.id === c.sid);
       if (set) { set.items = chosen.map(it => ({ ...clone(it), id: uid() })); persistLibrary(); }
     }
-    const entries = chosen.map(it => newEntryFrom(it, it.grams)), ids = entries.map(e => e.id);
+    const entries = chosen.map(it => ({ ...newEntryFrom(it, it.grams), dish: c.sid })), ids = entries.map(e => e.id);
     updateDay(date, d => { d.meals[meal].push(...entries); });
     closeSheet();
     toast(`Dodano: ${c.name}${c.remember ? ' (zapamiętano zmiany)' : ''}`, () => updateDay(date, d => { d.meals[meal] = d.meals[meal].filter(e => !ids.includes(e.id)); }));
@@ -1300,11 +1333,11 @@ const ACT = {
   'set-save'() {
     const name = String(SH.name || '').trim();
     const items = SH.items.filter(it => it.portion || it.grams > 0);
-    if (!name) { showErr('se-err', 'Wpisz nazwę zestawu.'); return; }
+    if (!name) { showErr('se-err', 'Wpisz nazwę dania.'); return; }
     if (!items.length) { showErr('se-err', 'Dodaj co najmniej jeden składnik z gramaturą.'); return; }
     if (SH.sid) { const i = S.library.sets.findIndex(x => x.id === SH.sid); if (i !== -1) S.library.sets[i] = { ...S.library.sets[i], name, items }; }
     else S.library.sets.push({ id: uid(), name, items });
-    persistLibrary(); closeSheet(); render(); toast(`Zapisano zestaw: ${name}`);
+    persistLibrary(); closeSheet(); render(); toast(`Zapisano danie: ${name}`);
   },
   'install'() {
     const ev = INSTALL.prompt; if (!ev) return;
@@ -1347,7 +1380,7 @@ const ACT = {
   'set-del'() {
     if (!SH.confirmDel) { SH.confirmDel = true; renderSheet(); return; }
     const id = SH.sid; S.library.sets = S.library.sets.filter(x => x.id !== id);
-    persistLibrary(); closeSheet(); render(); toast('Usunięto zestaw');
+    persistLibrary(); closeSheet(); render(); toast('Usunięto danie');
   }
 };
 
@@ -1417,7 +1450,7 @@ function readBackup(file) {
     const days = data.days && typeof data.days === 'object' ? Object.keys(data.days).length : 0;
     const prods = Array.isArray(data.library && data.library.products) ? data.library.products.length : 0;
     const sets = Array.isArray(data.library && data.library.sets) ? data.library.sets.length : 0;
-    S.pendingImport = { data, fileName: file.name || 'kopia', summary: `Zawiera ${days} dni, ${prods} produktów i ${sets} zestawów.` };
+    S.pendingImport = { data, fileName: file.name || 'kopia', summary: `Zawiera ${days} dni, ${prods} produktów i ${sets} dań.` };
     renderProfile();
   };
   r.onerror = () => toast('Nie udało się odczytać pliku.');
