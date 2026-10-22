@@ -14,7 +14,7 @@ const WORKOUTS = {
 };
 const INTENS = ['Lekko', 'Umiarkowanie', 'Intensywnie'];
 const LS_KEY = 'talerz.v1';
-const APP_VERSION = '1.4.0';
+const APP_VERSION = '1.5.0';
 /* Product categories. A set ingredient can be swapped for any product from the same category. */
 const CATS = ['Pieczywo', 'Wędliny', 'Nabiał', 'Mięso i ryby', 'Warzywa', 'Owoce', 'Zboża i makarony', 'Tłuszcze i sosy', 'Gotowe dania', 'Słodycze i przekąski', 'Napoje', 'Inne'];
 /* Catalog of classic products, per 100 g (typical values from Polish food tables and labels; brands differ a little).
@@ -713,22 +713,26 @@ function renderHistory() {
 }
 
 /* ---------- library ---------- */
-const LIB_OPEN_KEY = 'macroo.libOpen';
-S.libOpen = (() => { try { return new Set(JSON.parse(localStorage.getItem(LIB_OPEN_KEY) || '[]')); } catch (e) { return new Set(); } })();
-function grpHtml(key, title, count, inner, searching) {
-  const open = searching || S.libOpen.has(key);
+const OPEN_KEYS = { lib: 'macroo.libOpen', add: 'macroo.addOpen' };
+const OPEN_DEFAULT = { lib: [], add: ['__fav', '__recent'] };
+const loadOpen = k => { try { const v = localStorage.getItem(OPEN_KEYS[k]); return new Set(v ? JSON.parse(v) : OPEN_DEFAULT[k]); } catch (e) { return new Set(OPEN_DEFAULT[k]); } };
+S.open = { lib: loadOpen('lib'), add: loadOpen('add') };
+const STAR = '<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L12 16.5l-5.4 2.9 1.2-5.9-4.4-4.1 6-.7z"/></svg>';
+const favMark = x => x.fav ? `<span class="fav-mark" title="Ulubione">${STAR}</span>` : '';
+function grpHtml(key, title, count, inner, searching, store = 'lib') {
+  const open = searching || S.open[store].has(key);
   const head = `<span class="grp-t">${title}</span><span class="grp-n">${count}</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>`;
   return `<section class="grp${open ? ' open' : ''}">${searching
     ? `<div class="grp-head">${head}</div>`
-    : `<button type="button" class="grp-head" data-act="lib-toggle" data-g="${esc(key)}" aria-expanded="${open}">${head}</button>`}${open ? `<div class="grp-body">${inner}</div>` : ''}</section>`;
+    : `<button type="button" class="grp-head" data-act="grp-toggle" data-store="${store}" data-g="${esc(key)}" aria-expanded="${open}">${head}</button>`}${open ? `<div class="grp-body">${inner}</div>` : ''}</section>`;
 }
 function libListHtml() {
   const q = norm(S.libQuery);
   const sets = S.library.sets.filter(s => !q || norm(s.name).includes(q));
   const prods = S.library.products.filter(p => !q || norm(p.name).includes(q)).sort((a, b) => a.name.localeCompare(b.name, 'pl'));
   const groups = CATS.map(c => [c, prods.filter(p => catOf(p) === c)]).filter(([, l]) => l.length);
-  const setRow = s => { const t = sumEntries(s.items); return `<li><button type="button" class="row" data-act="edit-set" data-sid="${esc(s.id)}"><span class="r-name">${esc(s.name)}</span><span class="r-sub">${s.items.map(i => esc(i.name)).join(', ')}</span><span class="r-k">${k0(t.kcal)} kcal</span></button></li>`; };
-  const prodRow = p => `<li><button type="button" class="row" data-act="edit-prod" data-pid="${esc(p.id)}"><span class="r-name">${esc(p.name)}</span><span class="r-sub">B ${g1(p.p100)} · T ${g1(p.f100)} · W ${g1(p.c100)} na 100 g${p.portion ? ' · porcja ' + k0(p.portion) + ' g' : ''}</span><span class="r-k">${k0(p.kcal100)}</span></button></li>`;
+  const setRow = s => { const t = sumEntries(s.items); return `<li><button type="button" class="row" data-act="edit-set" data-sid="${esc(s.id)}"><span class="r-name">${esc(s.name)}${favMark(s)}</span><span class="r-sub">${s.items.map(i => esc(i.name)).join(', ')}</span><span class="r-k">${k0(t.kcal)} kcal</span></button></li>`; };
+  const prodRow = p => `<li><button type="button" class="row" data-act="edit-prod" data-pid="${esc(p.id)}"><span class="r-name">${esc(p.name)}${favMark(p)}</span><span class="r-sub">B ${g1(p.p100)} · T ${g1(p.f100)} · W ${g1(p.c100)} na 100 g${p.portion ? ' · porcja ' + k0(p.portion) + ' g' : ''}</span><span class="r-k">${k0(p.kcal100)}</span></button></li>`;
   const searching = !!q;
   const dishes = (!searching || sets.length) ? grpHtml('__dishes', 'Moje dania', sets.length,
     sets.length ? `<ul class="rows">${sets.map(setRow).join('')}</ul>` : '<p class="muted small" style="margin:8px 0">Nie masz jeszcze dań. Utwórz pierwsze przyciskiem „+ Danie” albo z posiłku („Zapisz jako danie”).</p>', searching) : '';
@@ -889,35 +893,39 @@ function recentDishes() {
   }
   return out;
 }
-function dishRowsHtml(q) {
-  const rd = recentDishes();
-  const list = S.library.sets.filter(x => !q || norm(x.name).includes(q)).sort((a, b) => {
-    const ia = rd.indexOf(a.id), ib = rd.indexOf(b.id);
-    if (ia !== -1 || ib !== -1) return (ia === -1 ? 1e9 : ia) - (ib === -1 ? 1e9 : ib);
-    return a.name.localeCompare(b.name, 'pl');
-  });
-  if (!list.length) return '';
-  return `<h3 class="eyebrow list-h">Moje dania</h3><ul class="rows">${list.map(x => `<li><button type="button" class="row" data-act="add-set" data-sid="${esc(x.id)}"><span class="r-name">${esc(x.name)}</span><span class="r-sub"><span class="tag">Dostosuj</span> ${x.items.map(i => esc(i.name)).join(', ')}</span><span class="r-k">${k0(sumEntries(x.items).kcal)}</span></button></li>`).join('')}</ul>`;
-}
+const dishRow = x => `<li><button type="button" class="row" data-act="add-set" data-sid="${esc(x.id)}"><span class="r-name">${esc(x.name)}${favMark(x)}</span><span class="r-sub"><span class="tag">Dostosuj</span> ${x.items.map(i => esc(i.name)).join(', ')}</span><span class="r-k">${k0(sumEntries(x.items).kcal)}</span></button></li>`;
+const pickRow = p => `<li><button type="button" class="row" data-act="pick" data-pid="${esc(p.id)}"><span class="r-name">${esc(p.name)}${favMark(p)}</span><span class="r-sub">${k0(p.kcal100)} kcal na 100 g${unitOf(p) ? ` · ${unitLabel(1, unitOf(p).u)} ≈ ${g1(unitOf(p).g)} g` : ''}</span><span class="r-k">${p.portion ? k0(p.kcal100 * p.portion / 100) : k0(p.kcal100)}</span></button></li>`;
 function pickListHtml() {
-  const all = S.library.products;
-  const q = norm(SH.q || ''), rec = recentPids();
-  const dishes = dishRowsHtml(q);
-  if (!all.length && !dishes) return '<p class="muted small">Nie masz jeszcze produktów. Dodaj pierwszy w zakładce „Nowy” albo zapytaj asystenta.</p>';
-  const list = all.filter(p => !q || norm(p.name).includes(q)).sort((a, b) => {
-    const ia = rec.indexOf(a.id), ib = rec.indexOf(b.id);
-    if (ia !== -1 || ib !== -1) return (ia === -1 ? 1e9 : ia) - (ib === -1 ? 1e9 : ib);
-    return a.name.localeCompare(b.name, 'pl');
-  });
-  if (!list.length && !dishes) return `<p class="muted small">Nic nie pasuje do „${esc(SH.q)}”. <button type="button" class="link" data-act="sh-tab" data-tab="new">Dodaj nowy produkt</button></p>`;
-  return `${dishes}${list.length ? `${dishes ? '<h3 class="eyebrow list-h">Produkty</h3>' : ''}<ul class="rows">${list.map(p => `<li><button type="button" class="row" data-act="pick" data-pid="${esc(p.id)}"><span class="r-name">${esc(p.name)}</span><span class="r-sub">${rec.includes(p.id) ? 'ostatnio · ' : ''}${k0(p.kcal100)} kcal na 100 g${p.portion ? ' · porcja ' + k0(p.portion) + ' g' : ''}</span><span class="r-k">${p.portion ? k0(p.kcal100 * p.portion / 100) : k0(p.kcal100)}</span></button></li>`).join('')}</ul>` : ''}`;
+  const q = norm(SH.q || ''), searching = !!q;
+  const byName = (a, b) => a.name.localeCompare(b.name, 'pl');
+  const dishes = S.library.sets.filter(x => !q || norm(x.name).includes(q)).sort(byName);
+  const prods = S.library.products.filter(p => !q || norm(p.name).includes(q)).sort(byName);
+  if (!dishes.length && !prods.length) {
+    return q ? `<p class="muted small">Nic nie pasuje do „${esc(SH.q)}”. <button type="button" class="link" data-act="sh-tab" data-tab="new">Dodaj nowy produkt</button></p>`
+      : '<p class="muted small">Nie masz jeszcze produktów. Dodaj pierwszy w zakładce „Nowy” albo zapytaj asystenta.</p>';
+  }
+  const list = (ds, ps) => `<ul class="rows">${ds.map(dishRow).join('')}${ps.map(pickRow).join('')}</ul>`;
+  let html = '';
+  const favD = dishes.filter(x => x.fav), favP = prods.filter(p => p.fav);
+  if (favD.length || favP.length) html += grpHtml('__fav', `<span class="grp-star">${STAR}</span>Ulubione`, favD.length + favP.length, list(favD, favP), searching, 'add');
+  if (!searching) {
+    const rd = recentDishes().map(id => S.library.sets.find(x => x.id === id)).filter(Boolean).slice(0, 3);
+    const rp = recentPids().map(prodById).filter(Boolean).slice(0, 6);
+    if (rd.length || rp.length) html += grpHtml('__recent', 'Ostatnio', rd.length + rp.length, list(rd, rp), false, 'add');
+  }
+  if (dishes.length) html += grpHtml('__dishes', 'Moje dania', dishes.length, list(dishes, []), searching, 'add');
+  for (const c of CATS) {
+    const l = prods.filter(p => catOf(p) === c);
+    if (l.length) html += grpHtml(c, c, l.length, list([], l), searching, 'add');
+  }
+  return `<div class="add-groups">${html}</div>`;
 }
 function pickBody() {
   const p = SH.pick, g = Number.isFinite(SH.pickG) ? SH.pickG : (p.portion || 100);
   const chips = [...new Set([p.portion, 50, 100, 150, 200].filter(v => v > 0))];
   const un = unitOf(p);
   return `<button type="button" class="back" data-act="pick-back">‹ Wróć do listy</button>
-  <h3 class="pick-name">${esc(p.name)}</h3>
+  <div class="title-row"><h3 class="pick-name">${esc(p.name)}</h3><button type="button" class="fav-btn" data-act="fav" data-kind="p" data-id="${esc(p.id)}" aria-pressed="${!!p.fav}" aria-label="${p.fav ? 'Usuń z ulubionych' : 'Dodaj do ulubionych'}">${STAR}</button></div>
   <p class="muted small" style="margin:-6px 0 0">Na 100 g: ${k0(p.kcal100)} kcal · B ${g1(p.p100)} g · T ${g1(p.f100)} g · W ${g1(p.c100)} g</p>
   ${fld('pick-g', 'Ile zjadłeś (g)', g1(g))}
   ${un ? `<div class="chips">${unitChipsHtml(un, g, 'pick-g', '')}</div>` : ''}
@@ -1162,7 +1170,7 @@ function cfgBody() {
   if (c.alt != null) return altBody(c);
   return `<button type="button" class="back" data-act="cfg-back">‹ Wróć do listy</button>
   <p class="eyebrow" style="margin:0">Dostosuj</p>
-  <h3 class="pick-name" style="margin-top:-8px">${esc(c.name)}</h3>
+  <div class="title-row" style="margin-top:-8px"><h3 class="pick-name">${esc(c.name)}</h3>${S.library.sets.some(v => v.id === c.sid) ? `<button type="button" class="fav-btn" data-act="fav" data-kind="s" data-id="${esc(c.sid)}" aria-pressed="${!!(S.library.sets.find(v => v.id === c.sid) || {}).fav}" aria-label="Ulubione">${STAR}</button>` : ''}</div>
   <p class="muted small" style="margin:-6px 0 0">Zmień rodzaj albo gramaturę i dołóż dodatki. To dotyczy tylko tego posiłku, chyba że zaznaczysz zapamiętanie.</p>
   ${ingRowsHtml(c.items)}
   ${ingPickerHtml('Dodatek')}
@@ -1232,11 +1240,20 @@ const ACT = {
   'day-today'() { S.date = today(); render(); },
   'open-day'(a) { S.date = a.dataset.date; S.tab = 'today'; render(); window.scrollTo(0, 0); },
   'hist-range'(a) { S.histRange = +a.dataset.n; render(); },
-  'lib-toggle'(a) {
-    const g = a.dataset.g;
-    if (S.libOpen.has(g)) S.libOpen.delete(g); else S.libOpen.add(g);
-    try { localStorage.setItem(LIB_OPEN_KEY, JSON.stringify([...S.libOpen])); } catch (e) { /* per-device convenience only */ }
-    const l = $('#lib-list'); if (l) l.innerHTML = libListHtml();
+  'grp-toggle'(a) {
+    const g = a.dataset.g, store = a.dataset.store === 'add' ? 'add' : 'lib', set = S.open[store];
+    if (set.has(g)) set.delete(g); else set.add(g);
+    try { localStorage.setItem(OPEN_KEYS[store], JSON.stringify([...set])); } catch (e) { /* per-device convenience only */ }
+    if (store === 'lib') { const l = $('#lib-list'); if (l) l.innerHTML = libListHtml(); }
+    else { const l = $('#sh-list'); if (l) l.innerHTML = pickListHtml(); }
+  },
+  'fav'(a) {
+    const isSet = a.dataset.kind === 's';
+    const x = isSet ? S.library.sets.find(v => v.id === a.dataset.id) : prodById(a.dataset.id); if (!x) return;
+    x.fav = !x.fav; persistLibrary();
+    a.setAttribute('aria-pressed', String(!!x.fav));
+    a.setAttribute('aria-label', x.fav ? 'Usuń z ulubionych' : 'Dodaj do ulubionych');
+    toast(x.fav ? 'Dodano do ulubionych' : 'Usunięto z ulubionych');
   },
   'pd-set'(a) {
     if (!S.pd) S.pd = draftFrom(S.profile);

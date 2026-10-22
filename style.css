@@ -353,3 +353,20 @@ textarea{resize:vertical}
 .alt-k small{display:block;font-family:var(--f-body);font-size:11px;font-weight:500;color:var(--muted)}
 .ing-main{grid-template-columns:minmax(0,1fr)}
 .ing-pickbtn{min-width:0;overflow:hidden}
+
+/* favourites */
+:root{--star:#F5A524}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--star:#FFC247}}
+:root[data-theme="dark"]{--star:#FFC247}
+.star{width:100%;height:100%;display:block}
+.fav-mark{display:inline-block;width:13px;height:13px;margin-left:6px;vertical-align:-1px}
+.fav-mark .star,.grp-star .star{fill:var(--star);stroke:none}
+.grp-star{display:inline-block;width:16px;height:16px;margin-right:6px;vertical-align:-2px}
+.title-row{display:flex;align-items:flex-start;gap:10px}
+.title-row .pick-name{flex:1;min-width:0}
+.fav-btn{flex:none;width:38px;height:38px;border-radius:50%;border:0;background:transparent;padding:7px;margin:-4px -6px 0 0;color:var(--muted)}
+.fav-btn .star{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round;transition:transform .15s ease}
+.fav-btn[aria-pressed="true"] .star{fill:var(--star);stroke:var(--star)}
+.fav-btn:active .star{transform:scale(.88)}
+.add-groups .grp:first-child{margin-top:4px}
+@media (prefers-reduced-motion:reduce){.fav-btn .star{transition:none}}
