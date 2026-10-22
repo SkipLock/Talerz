@@ -14,7 +14,7 @@ const WORKOUTS = {
 };
 const INTENS = ['Lekko', 'Umiarkowanie', 'Intensywnie'];
 const LS_KEY = 'talerz.v1';
-const APP_VERSION = '1.3.1';
+const APP_VERSION = '1.4.0';
 /* Product categories. A set ingredient can be swapped for any product from the same category. */
 const CATS = ['Pieczywo', 'Wędliny', 'Nabiał', 'Mięso i ryby', 'Warzywa', 'Owoce', 'Zboża i makarony', 'Tłuszcze i sosy', 'Gotowe dania', 'Słodycze i przekąski', 'Napoje', 'Inne'];
 /* Catalog of classic products, per 100 g (typical values from Polish food tables and labels; brands differ a little).
@@ -74,7 +74,40 @@ const STARTER = [
   ['s-musztarda', 'Musztarda', 'Tłuszcze i sosy', 110, 6, 6, 8, 10],
   ['s-pierogi', 'Pierogi domowe z mięsem (Jawo)', 'Gotowe dania', 278, 11, 15, 24, 450]
 ].map(([id, name, cat, kcal100, p100, f100, c100, portion]) => ({ id, name, cat, kcal100, p100, f100, c100, portion }));
-const CATALOG_VERSION = 2;
+const CATALOG_VERSION = 3;
+/* Estimated weight of one piece for catalog products: id -> [unit, grams, allow half]. Typing the real weight is always preferred. */
+const UNITS_BY_ID = {
+  's-chleb-pz': ['kromka', 35], 's-chleb-pszenny': ['kromka', 35], 's-chleb-razowy': ['kromka', 35], 's-chleb-graham': ['kromka', 35],
+  's-chleb-slonecznik': ['kromka', 35], 's-chleb-wieloziarnisty': ['kromka', 35], 's-chleb-orkiszowy': ['kromka', 35], 's-chleb-tostowy': ['kromka', 25],
+  's-bulka-pszenna': ['bułka', 50, 1], 's-bulka-zytnia': ['bułka', 50, 1], 's-bulka-grahamka': ['bułka', 60, 1], 's-bagietka': ['kawałek', 60, 1], 's-wafle-ryzowe': ['wafel', 10],
+  's-kielbasa': ['plaster', 10], 's-krakowska-sucha': ['plaster', 8], 's-krakowska-parzona': ['plaster', 10], 's-slaska': ['plaster', 10], 's-zywiecka': ['plaster', 8],
+  's-szynkowa': ['plaster', 10], 's-szynka': ['plaster', 15], 's-poledwica': ['plaster', 15], 's-szynka-indyk': ['plaster', 15], 's-salami': ['plaster', 5],
+  's-parowki': ['parówka', 40], 's-kabanosy': ['kabanos', 25],
+  's-ser': ['plaster', 15], 's-serek-kanapkowy': ['łyżeczka', 8], 's-twarog': ['łyżka', 25], 's-jogurt': ['kubek', 150], 's-skyr': ['butelka', 360],
+  's-mleko': ['szklanka', 250], 's-jajko': ['jajko', 50, 1],
+  's-pomidor': ['plaster', 15], 's-ogorek': ['plaster', 5], 's-ogorek-kiszony': ['sztuka', 60, 1], 's-salata': ['liść', 10], 's-rzodkiewka': ['sztuka', 10], 's-papryka': ['plaster', 10],
+  's-ziemniaki': ['sztuka', 100, 1], 's-banan': ['sztuka', 120, 1], 's-jablko': ['sztuka', 180, 1],
+  's-owsiane': ['łyżka', 10], 's-maslo': ['łyżeczka', 5], 's-margaryna': ['łyżeczka', 5], 's-oliwa': ['łyżka', 10], 's-majonez': ['łyżka', 12],
+  's-ketchup': ['łyżka', 15], 's-musztarda': ['łyżeczka', 6], 's-pierogi': ['pieróg', 30]
+};
+for (const p of STARTER) { const u = UNITS_BY_ID[p.id]; if (u) p.unit = { u: u[0], g: u[1], half: !!u[2] }; }
+/* Polish forms: [1, 2–4, 5+, half ("pół ...")] */
+const UNIT_FORMS = {
+  'kromka': ['kromka', 'kromki', 'kromek', 'kromki'], 'bułka': ['bułka', 'bułki', 'bułek', 'bułki'], 'plaster': ['plaster', 'plastry', 'plastrów', 'plastra'],
+  'sztuka': ['sztuka', 'sztuki', 'sztuk', 'sztuki'], 'łyżka': ['łyżka', 'łyżki', 'łyżek', 'łyżki'], 'łyżeczka': ['łyżeczka', 'łyżeczki', 'łyżeczek', 'łyżeczki'],
+  'kawałek': ['kawałek', 'kawałki', 'kawałków', 'kawałka'], 'parówka': ['parówka', 'parówki', 'parówek', 'parówki'], 'kabanos': ['kabanos', 'kabanosy', 'kabanosów', 'kabanosa'],
+  'pieróg': ['pieróg', 'pierogi', 'pierogów', 'pieroga'], 'butelka': ['butelka', 'butelki', 'butelek', 'butelki'], 'szklanka': ['szklanka', 'szklanki', 'szklanek', 'szklanki'],
+  'kubek': ['kubek', 'kubki', 'kubków', 'kubka'], 'liść': ['liść', 'liście', 'liści', 'liścia'], 'jajko': ['jajko', 'jajka', 'jajek', 'jajka'], 'wafel': ['wafel', 'wafle', 'wafli', 'wafla']
+};
+/* Sections inside a category, used when choosing a type ("rodzaj"). */
+const SUB_RULES = {
+  'Pieczywo': [['Chleb', /chleb/], ['Bułki i bagietki', /bulk|kajzer|grahamk|bagiet|rogal/]],
+  'Wędliny': [['Kiełbasy', /kielbas/], ['Szynki i polędwice', /szynk|poledwic/], ['Parówki i kabanosy', /parow|kabanos|serdel|frankfurter|berlink/]],
+  'Nabiał': [['Sery', /\bser|twarog|twaroz|mozzarell|feta/], ['Jogurty i mleko', /jogurt|skyr|mleko|kefir|maslank/], ['Jajka', /jaj/]]
+};
+const SUB_OTHER = { 'Pieczywo': 'Inne pieczywo', 'Wędliny': 'Inne wędliny', 'Nabiał': 'Inny nabiał' };
+const subOf = (name, cat) => { const n = norm(name); for (const [sub, re] of (SUB_RULES[cat] || [])) if (re.test(n)) return sub; return SUB_OTHER[cat] || cat; };
+const SUB_UNITS = { 'Chleb': ['kromka', 35], 'Bułki i bagietki': ['bułka', 55, 1], 'Kiełbasy': ['plaster', 10], 'Szynki i polędwice': ['plaster', 15], 'Parówki i kabanosy': ['sztuka', 35, 1], 'Sery': ['plaster', 15], 'Jajka': ['jajko', 50, 1] };
 /* Ready-made sets added once to every library: [name, [[product name, grams], ...]] */
 const STARTER_SETS = [
   ['Kanapka z wędliną', [['Chleb pszenno-żytni', 50], ['Masło', 5], ['Kiełbasa krakowska parzona', 30]]],
@@ -117,6 +150,26 @@ const guessCat = name => { const n = norm(name); for (const [c, re] of CAT_RULES
 const catOf = p => (p && CATS.includes(p.cat)) ? p.cat : guessCat(p && p.name);
 const prodById = id => S.library.products.find(p => p.id === id);
 const catOfItem = it => { const p = it.pid ? prodById(it.pid) : null; return p ? catOf(p) : guessCat(it.name); };
+/* The estimated piece of a product: its own setting, else a default for its kind (bread -> slice). false = none. */
+function unitOf(p) {
+  if (!p) return null;
+  if (p.unit === false) return null;
+  if (p.unit && p.unit.u && p.unit.g > 0) return p.unit;
+  const d = SUB_UNITS[subOf(p.name, catOf(p))];
+  if (!d) return null;
+  const g = d[0] === 'bułka' && p.portion >= 30 && p.portion <= 150 ? p.portion : d[1];
+  return { u: d[0], g, half: !!d[2] };
+}
+const unitOfItem = it => it.portion ? null : unitOf((it.pid && prodById(it.pid)) || { name: it.name });
+function unitLabel(n, u) {
+  const f = UNIT_FORMS[u];
+  if (!f) return n === 0.5 ? `pół × ${u}` : `${n} × ${u}`;
+  if (n === 0.5) return `pół ${f[3]}`;
+  if (n === 1) return `1 ${f[0]}`;
+  const m10 = n % 10, m100 = n % 100;
+  return `${n} ${m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14) ? f[1] : f[2]}`;
+}
+const unitCounts = un => un.half ? [0.5, 1, 2] : [1, 2, 3];
 
 /* ---------- state ---------- */
 const S = {
@@ -293,11 +346,18 @@ function normLib(l) {
 }
 /* Adds catalog products and ready-made sets that the library does not have yet (once per catalog version). */
 function upgradeLibrary(lib) {
-  if ((lib.catalog || 0) >= CATALOG_VERSION) return false;
+  const from = lib.catalog || 0;
+  if (from >= CATALOG_VERSION) return false;
   const byName = () => new Map(lib.products.map(p => [norm(p.name), p]));
   let names = byName();
+  if (from >= 2) {
+    for (const p of STARTER) { const own = lib.products.find(x => x.id === p.id); if (own && own.unit === undefined && p.unit) own.unit = clone(p.unit); }
+    lib.catalog = CATALOG_VERSION;
+    return true;
+  }
   const ids = new Set(lib.products.map(p => p.id));
   for (const p of STARTER) if (!ids.has(p.id) && !names.has(norm(p.name))) lib.products.push(clone(p));
+  for (const p of STARTER) { const own = lib.products.find(x => x.id === p.id); if (own && own.unit === undefined && p.unit) own.unit = clone(p.unit); }
   names = byName();
   const setNames = new Set(lib.sets.map(x => norm(x.name)));
   for (const [name, parts] of STARTER_SETS) {
@@ -855,10 +915,12 @@ function pickListHtml() {
 function pickBody() {
   const p = SH.pick, g = Number.isFinite(SH.pickG) ? SH.pickG : (p.portion || 100);
   const chips = [...new Set([p.portion, 50, 100, 150, 200].filter(v => v > 0))];
+  const un = unitOf(p);
   return `<button type="button" class="back" data-act="pick-back">‹ Wróć do listy</button>
   <h3 class="pick-name">${esc(p.name)}</h3>
   <p class="muted small" style="margin:-6px 0 0">Na 100 g: ${k0(p.kcal100)} kcal · B ${g1(p.p100)} g · T ${g1(p.f100)} g · W ${g1(p.c100)} g</p>
   ${fld('pick-g', 'Ile zjadłeś (g)', g1(g))}
+  ${un ? `<div class="chips">${unitChipsHtml(un, g, 'pick-g', '')}</div>` : ''}
   <div class="chips">${chips.map(v => `<button type="button" class="chip" data-act="pick-g" data-g="${v}">${v === p.portion ? 'Porcja ' : ''}${k0(v)} g</button>`).join('')}</div>
   <div id="pick-prev" class="preview">${previewHtml(per100(p, g))}</div>
   <p id="pick-err" class="err" hidden></p>
@@ -1017,6 +1079,8 @@ function prodBody() {
   <p class="muted small" style="margin:0">Wartości na 100 g, z etykiety.</p>
   <div class="grid4">${fld('pe-kcal', 'kcal', d['pe-kcal'])}${fld('pe-p', 'Białko g', d['pe-p'])}${fld('pe-f', 'Tłuszcz g', d['pe-f'])}${fld('pe-c', 'Węgle g', d['pe-c'])}</div>
   ${fld('pe-portion', 'Typowa porcja (g, opcjonalnie)', d['pe-portion'])}
+  <div class="grid2"><div class="field"><label for="pe-unit">Szacunek: nazwa sztuki</label><input id="pe-unit" type="text" autocomplete="off" value="${esc(d['pe-unit'] ?? '')}" placeholder="np. kromka, plaster"></div>${fld('pe-unit-g', 'Waga sztuki (g)', d['pe-unit-g'])}</div>
+  <p class="hint" style="margin:-6px 0 0">Daje szybkie przyciski, np. „2 kromki”. Zostaw puste, jeśli niepotrzebne.</p>
   ${SH.pid ? '<p class="hint" style="margin:0">Zmiana nie wpływa na wcześniejsze wpisy w dzienniku.</p>' : ''}
   <p id="pe-err" class="err" hidden></p>
   <div class="btn-row">${SH.pid ? `<button type="button" class="danger" data-act="prod-del">${SH.confirmDel ? 'Na pewno usunąć?' : 'Usuń'}</button>` : ''}<button type="button" class="primary" data-act="prod-save">Zapisz</button></div>`;
@@ -1032,17 +1096,42 @@ function altsFor(it) {
   return S.library.products.filter(p => catOf(p) === cat).sort((a, b) => a.name.localeCompare(b.name, 'pl'));
 }
 const ingSub = it => { const t = entryTotals(it); return `${k0(t.kcal)} kcal · B ${g1(t.p)} · T ${g1(t.f)} · W ${g1(t.c)}`; };
+function unitChipsHtml(un, grams, act, extra) {
+  return unitCounts(un).map(n => {
+    const g = Math.round(n * un.g * 10) / 10, on = Math.abs((grams || 0) - g) < 0.05;
+    return `<button type="button" class="chip u-chip" aria-pressed="${on}" data-act="${act}" ${extra} data-n="${n}" data-g="${g}">${unitLabel(n, un.u)} <small>${g1(g)} g</small></button>`;
+  }).join('');
+}
 function ingRowsHtml(items) {
   if (!items.length) return '<p class="muted small" style="margin:0">Brak składników. Dodaj pierwszy przyciskiem poniżej.</p>';
-  return `<ul class="ing">${items.map((it, i) => {
-    const alts = altsFor(it), inLib = alts.some(p => p.id === it.pid);
-    const nameEl = alts.length > 1 || (alts.length && !inLib)
-      ? `<select class="ing-sel" data-ing-alt="${i}" aria-label="Rodzaj: ${esc(it.name)}">${inLib ? '' : `<option value="" selected>${esc(it.name)}</option>`}${alts.map(p => `<option value="${esc(p.id)}"${p.id === it.pid ? ' selected' : ''}>${esc(p.name)} · ${k0(p.kcal100)} kcal</option>`).join('')}</select>`
-      : `<span class="ing-name">${esc(it.name)}</span>`;
+  return `<p class="muted small" style="margin:0">Wpisz wagę albo dotknij szacunku, np. „1 kromka”. Nazwę dotknij, żeby zmienić rodzaj.</p><ul class="ing">${items.map((it, i) => {
+    const alts = altsFor(it), canSwap = alts.length > 1 || (alts.length && !alts.some(p => p.id === it.pid));
+    const nameEl = canSwap
+      ? `<button type="button" class="ing-pickbtn" data-act="ing-alt-open" data-i="${i}" aria-label="Zmień rodzaj: ${esc(it.name)}"><span class="ing-name">${esc(it.name)}</span><span class="ing-change">Zmień</span></button>`
+      : `<span class="ing-name ing-plain">${esc(it.name)}</span>`;
     const grams = it.portion ? '<span class="muted small">porcja</span>'
-      : `<div class="ing-g"><input type="text" inputmode="decimal" data-ing-g="${i}" value="${g1(it.grams)}" aria-label="Gramy: ${esc(it.name)}"><span>g</span></div>`;
-    return `<li><div class="ing-main">${nameEl}<span class="ing-sub" id="ing-k-${i}">${ingSub(it)}</span></div>${grams}<button type="button" class="x" data-act="ing-rm" data-i="${i}" aria-label="Usuń: ${esc(it.name)}">×</button></li>`;
+      : `<div class="ing-g"><input type="text" inputmode="decimal" data-ing-g="${i}" value="${g1(it.grams)}" aria-label="Waga w gramach: ${esc(it.name)}"><span>g</span></div>`;
+    const un = unitOfItem(it);
+    return `<li><div class="ing-main">${nameEl}<span class="ing-sub" id="ing-k-${i}">${ingSub(it)}</span></div>${grams}<button type="button" class="x" data-act="ing-rm" data-i="${i}" aria-label="Usuń: ${esc(it.name)}">×</button>${un ? `<div class="ing-units">${unitChipsHtml(un, it.grams, 'ing-unit', `data-i="${i}"`)}</div>` : ''}</li>`;
   }).join('')}</ul>`;
+}
+/* Type chooser: a screen of its own, split into sections (bread / rolls / other ...). */
+function altBody(st) {
+  const it = st.items[st.alt]; if (!it) { st.alt = null; return ''; }
+  const cat = catOfItem(it), alts = altsFor(it), grams = it.grams || 0;
+  const secs = new Map();
+  for (const sub of [...(SUB_RULES[cat] || []).map(r => r[0]), SUB_OTHER[cat] || cat]) secs.set(sub, []);
+  for (const p of alts) { const k = subOf(p.name, cat); if (!secs.has(k)) secs.set(k, []); secs.get(k).push(p); }
+  const opt = p => {
+    const un = unitOf(p), on = p.id === it.pid;
+    return `<li><button type="button" class="alt-opt" aria-pressed="${on}" data-act="ing-alt-set" data-pid="${esc(p.id)}"><span class="alt-n">${esc(p.name)}</span><span class="alt-s">${k0(p.kcal100)} kcal na 100 g${un ? ` · ${unitLabel(1, un.u)} ≈ ${g1(un.g)} g` : ''}</span><span class="alt-k">${k0(p.kcal100 * grams / 100)}<small>kcal przy ${g1(grams)} g</small></span></button></li>`;
+  };
+  const sections = [...secs].filter(([, l]) => l.length).map(([sub, l]) => `${secs.size > 1 ? `<h4 class="alt-h">${sub}</h4>` : ''}<ul class="alt-list">${l.map(opt).join('')}</ul>`).join('');
+  return `<button type="button" class="back" data-act="ing-alt-back">‹ Wróć</button>
+  <p class="eyebrow" style="margin:0">Wybierz rodzaj · ${cat}</p>
+  <h3 class="pick-name" style="margin-top:-8px">${esc(it.name)}</h3>
+  ${sections}
+  <p class="hint">Brakuje Twojego? Dodaj go w zakładce Produkty, a pojawi się tutaj.</p>`;
 }
 function ingPickListHtml(q) {
   const nq = norm(q || '');
@@ -1059,6 +1148,7 @@ function ingPickerHtml(label) {
     <div id="ing-list">${ingPickListHtml(st.q)}</div></div>`;
 }
 function setEditBody() {
+  if (SH.alt != null) return altBody(SH);
   return `<div class="field"><label for="se-name">Nazwa dania</label><input id="se-name" type="text" autocomplete="off" value="${esc(SH.name)}" placeholder="np. Kanapka z kiełbasą"></div>
   <p class="muted small" style="margin:0">Ustaw domyślne składniki i wagę. Przy dodawaniu do posiłku w ekranie „Dostosuj” zmienisz rodzaj chleba czy wędliny, wagę i dodatki.</p>
   ${ingRowsHtml(SH.items)}
@@ -1069,6 +1159,7 @@ function setEditBody() {
 }
 function cfgBody() {
   const c = SH.cfg;
+  if (c.alt != null) return altBody(c);
   return `<button type="button" class="back" data-act="cfg-back">‹ Wróć do listy</button>
   <p class="eyebrow" style="margin:0">Dostosuj</p>
   <h3 class="pick-name" style="margin-top:-8px">${esc(c.name)}</h3>
@@ -1162,7 +1253,10 @@ const ACT = {
   'sh-tab'(a) { SH.tab = a.dataset.tab; SH.pick = null; SH.cfg = null; renderSheet(); },
   'pick'(a) { const p = S.library.products.find(x => x.id === a.dataset.pid); if (!p) return; SH.pick = p; SH.pickG = NaN; renderSheet(); },
   'pick-back'() { SH.pick = null; renderSheet(); },
-  'pick-g'(a) { const g = +a.dataset.g; SH.pickG = g; const i = $('#pick-g'); if (i) i.value = g1(g); $('#pick-prev').innerHTML = previewHtml(per100(SH.pick, g)); },
+  'pick-g'(a) {
+    const g = +a.dataset.g; SH.pickG = g; const i = $('#pick-g'); if (i) i.value = g1(g); $('#pick-prev').innerHTML = previewHtml(per100(SH.pick, g));
+    document.querySelectorAll('.u-chip[data-act="pick-g"]').forEach(c => c.setAttribute('aria-pressed', String(Math.abs(+c.dataset.g - g) < 0.05)));
+  },
   'pick-add'() {
     const p = SH.pick, g = Number.isFinite(SH.pickG) ? SH.pickG : num($('#pick-g').value);
     if (!(g > 0 && g <= 5000)) { showErr('pick-err', 'Wpisz ilość w gramach, np. 150.'); return; }
@@ -1190,6 +1284,14 @@ const ACT = {
     toast(`Dodano: ${c.name}${c.remember ? ' (zapamiętano zmiany)' : ''}`, () => updateDay(date, d => { d.meals[meal] = d.meals[meal].filter(e => !ids.includes(e.id)); }));
   },
   'ing-rm'(a) { const items = ingItems(); if (items) { items.splice(+a.dataset.i, 1); renderSheet(); } },
+  'ing-alt-open'(a) { const st = ingState(); st.alt = +a.dataset.i; renderSheet(); const sh = $('.sheet'); if (sh) sh.scrollTop = 0; },
+  'ing-alt-back'() { const st = ingState(); st.alt = null; renderSheet(); },
+  'ing-alt-set'(a) {
+    const st = ingState(), it = st && st.items[st.alt], np = prodById(a.dataset.pid);
+    if (it && np) Object.assign(it, { pid: np.id, name: np.name, kcal100: np.kcal100, p100: np.p100, f100: np.f100, c100: np.c100 });
+    st.alt = null; renderSheet();
+  },
+  'ing-unit'(a) { const items = ingItems(), it = items && items[+a.dataset.i]; if (it) { it.grams = +a.dataset.g; renderSheet(); } },
   'ing-pick'() { const st = ingState(); st.picking = true; st.q = ''; renderSheet(); const q = $('#ing-q'); if (q) q.scrollIntoView({ block: 'nearest' }); },
   'ing-pick-close'() { ingState().picking = false; renderSheet(); },
   'ing-add'(a) {
@@ -1303,14 +1405,16 @@ const ACT = {
   'lib-new'() { openSheet({ kind: 'prod', pid: null, draft: {}, confirmDel: false }); },
   'edit-prod'(a) {
     const p = S.library.products.find(x => x.id === a.dataset.pid); if (!p) return;
-    openSheet({ kind: 'prod', pid: p.id, confirmDel: false, draft: { 'pe-name': p.name, 'pe-cat': CATS.includes(p.cat) ? p.cat : '', 'pe-kcal': g1(p.kcal100), 'pe-p': g1(p.p100), 'pe-f': g1(p.f100), 'pe-c': g1(p.c100), 'pe-portion': p.portion ? g1(p.portion) : '' } });
+    openSheet({ kind: 'prod', pid: p.id, confirmDel: false, draft: { 'pe-name': p.name, 'pe-cat': CATS.includes(p.cat) ? p.cat : '', 'pe-kcal': g1(p.kcal100), 'pe-p': g1(p.p100), 'pe-f': g1(p.f100), 'pe-c': g1(p.c100), 'pe-portion': p.portion ? g1(p.portion) : '', 'pe-unit': unitOf(p) ? unitOf(p).u : '', 'pe-unit-g': unitOf(p) ? g1(unitOf(p).g) : '' } });
   },
   'prod-save'() {
     const d = SH.draft, name = String(d['pe-name'] || '').trim(), kcal = num(d['pe-kcal']);
     if (!name) { showErr('pe-err', 'Wpisz nazwę.'); return; }
     if (!(kcal >= 0 && kcal <= 950)) { showErr('pe-err', 'Wpisz kalorie na 100 g (0–950).'); return; }
     const portion = num(d['pe-portion']);
-    const prod = { id: SH.pid || uid(), name, cat: d['pe-cat'] || guessCat(name), kcal100: kcal, p100: numOr(d['pe-p'], 0), f100: numOr(d['pe-f'], 0), c100: numOr(d['pe-c'], 0), portion: portion > 0 ? Math.round(portion) : null };
+    const uName = String(d['pe-unit'] ?? '').trim().toLowerCase().slice(0, 20), uG = num(d['pe-unit-g']);
+    const prod = { id: SH.pid || uid(), name, cat: d['pe-cat'] || guessCat(name), kcal100: kcal, p100: numOr(d['pe-p'], 0), f100: numOr(d['pe-f'], 0), c100: numOr(d['pe-c'], 0), portion: portion > 0 ? Math.round(portion) : null,
+      unit: uName && uG > 0 ? { u: uName, g: Math.round(uG * 10) / 10, half: ['bułka', 'sztuka', 'kawałek', 'jajko'].includes(uName) } : false };
     const i = S.library.products.findIndex(x => x.id === prod.id);
     if (i === -1) S.library.products.push(prod); else S.library.products[i] = prod;
     persistLibrary(); closeSheet(); render(); toast(`Zapisano: ${name}`);
