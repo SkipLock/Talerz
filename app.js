@@ -14,7 +14,7 @@ const WORKOUTS = {
 };
 const INTENS = ['Lekko', 'Umiarkowanie', 'Intensywnie'];
 const LS_KEY = 'talerz.v1';
-const APP_VERSION = '1.1.1';
+const APP_VERSION = '1.2.0';
 /* Starter products for a fresh install, per 100 g (average values from Polish food tables or package labels). */
 const STARTER = [
   ['s-kielbasa', 'Kiełbasa morlińska z piersią kurczaka (Morliny)', 187, 17, 13, 0.6, 126],
@@ -74,7 +74,7 @@ let SH = null;
 
 /* ---------- Android app bridge (Health Connect) ---------- */
 const NATIVE = (window.TalerzHealth && typeof window.TalerzHealth === 'object') ? window.TalerzHealth : null;
-const APK_URL = 'https://github.com/SkipLock/Talerz/releases/latest/download/talerz.apk';
+const APK_URL = 'https://github.com/SkipLock/Talerz/releases/latest/download/macroo.apk';
 const HC_LS = 'talerz.hc';
 S.hc = { sdk: null, all: false, granted: [], busy: false, lastSync: 0, lastAuto: 0, error: '', samsungHealth: false };
 const nativeCalls = new Map();
@@ -113,7 +113,7 @@ async function hcConnect() {
   catch (e) { toast(e && e.code === 'unavailable' ? 'Health Connect jest niedostępne na tym telefonie.' : 'Nie udało się otworzyć okna uprawnień.'); }
   render();
   if (S.hc.granted.length) hcSync([today(), addDays(today(), -1)], true);
-  else if (S.hc.sdk === 'available') toast('Bez uprawnień Talerz nie pobierze danych. Spróbuj jeszcze raz albo zajrzyj do Profilu.');
+  else if (S.hc.sdk === 'available') toast('Bez uprawnień Macroo nie pobierze danych. Spróbuj jeszcze raz albo zajrzyj do Profilu.');
 }
 function applyHealth(date, res) {
   if (!res || typeof res !== 'object') return false;
@@ -188,9 +188,9 @@ function hcProfileHtml() {
   if (!NATIVE) {
     return `<section class="card"><h3 class="card-t">Samsung Health i Galaxy Watch</h3>
       <p>Strona w przeglądarce nie ma dostępu do danych z zegarka, więc tutaj kroki i treningi wpisujesz ręcznie.</p>
-      <p>Aplikacja Talerz na Androida pobiera je sama z Samsung Health przez Health Connect.</p>
+      <p>Aplikacja Macroo na Androida pobiera je sama z Samsung Health przez Health Connect.</p>
       <a class="primary wide btn-link" href="${APK_URL}">Pobierz aplikację na Androida</a>
-      <p class="hint">Po pobraniu otwórz plik talerz.apk i zezwól na instalację. Dane z tej strony przeniesiesz kopią zapasową.</p>
+      <p class="hint">Po pobraniu otwórz plik macroo.apk i zezwól na instalację. Dane z tej strony przeniesiesz kopią zapasową.</p>
       ${how}</section>`;
   }
   const h = S.hc;
@@ -217,11 +217,17 @@ function hcProfileHtml() {
 }
 
 /* ---------- normalisers ---------- */
-const PROFILE_DEFAULTS = { sex: 'm', age: 30, height: 175, weight: 80, goal: 75, mode: 'dynamic', deficit: 500, fixedKcal: 2200, proteinPerKg: 1.8, fatPct: 25 };
+const PROFILE_DEFAULTS = { name: '', sex: 'm', age: 30, height: 175, weight: 80, goal: 75, goalType: 'lose', mode: 'dynamic', deficit: 400, surplus: 300, fixedKcal: 2200, proteinPerKg: 1.8, fatPct: 25 };
+const DEFICITS = [200, 300, 400, 500, 600, 750];
+const SURPLUSES = [150, 200, 300, 400, 500];
 function normProfile(p) {
   if (!p || typeof p !== 'object') return null;
   const o = { ...PROFILE_DEFAULTS, ...p };
-  for (const k of ['age', 'height', 'weight', 'goal', 'deficit', 'fixedKcal', 'proteinPerKg', 'fatPct']) o[k] = numOr(o[k], PROFILE_DEFAULTS[k]);
+  for (const k of ['age', 'height', 'weight', 'goal', 'deficit', 'surplus', 'fixedKcal', 'proteinPerKg', 'fatPct']) o[k] = numOr(o[k], PROFILE_DEFAULTS[k]);
+  if (!['lose', 'keep', 'gain'].includes(o.goalType)) o.goalType = o.deficit > 0 ? 'lose' : 'keep';
+  if (o.goalType === 'lose' && !(o.deficit > 0)) o.deficit = PROFILE_DEFAULTS.deficit;
+  if (!(o.surplus > 0)) o.surplus = PROFILE_DEFAULTS.surplus;
+  o.name = String(o.name || '').trim().slice(0, 30);
   if (o.sex !== 'k') o.sex = 'm';
   if (o.mode !== 'fixed') o.mode = 'dynamic';
   return o;
@@ -299,6 +305,8 @@ function calcFor(p, day, w) {
   const tdee = base + st + wk;
   let limit, floored = false;
   if (p.mode === 'fixed') limit = p.fixedKcal || 2000;
+  else if (p.goalType === 'gain') limit = tdee + (p.surplus || 0);
+  else if (p.goalType === 'keep') limit = tdee;
   else { limit = tdee - (p.deficit || 0); if (limit < bmr) { limit = bmr; floored = true; } }
   const prot = (p.proteinPerKg || 1.8) * (p.goal || w);
   const fat = limit * (p.fatPct || 25) / 100 / 9;
@@ -306,6 +314,45 @@ function calcFor(p, day, w) {
   return { w, bmr, base, st, wk, tdee, limit, floored, prot, fat, carb };
 }
 const calc = date => calcFor(S.profile, getDay(date), weightOn(date).w);
+/* Words that depend on the goal: a limit when losing, a target when keeping or gaining. */
+function goalWords(p) {
+  if (p.goalType === 'gain') return { lim: 'cel', Lim: 'Cel', limGen: 'celu', left: 'kcal do zjedzenia', over: 'kcal ponad cel', overBad: false };
+  if (p.goalType === 'keep') return { lim: 'cel', Lim: 'Cel', limGen: 'celu', left: 'kcal zostało', over: 'kcal ponad cel', overBad: true };
+  return { lim: 'limit', Lim: 'Limit', limGen: 'limitu', left: 'kcal zostało', over: 'kcal ponad limit', overBad: true };
+}
+/* How a logged day went against its target. */
+function dayStatus(p, eaten, limit) {
+  const diff = eaten - limit;
+  if (p.goalType === 'gain') {
+    if (diff >= -150) return diff > 400 ? ['warn', 'dużo ponad'] : ['ok', 'w celu'];
+    return diff >= -400 ? ['warn', 'trochę za mało'] : ['over', 'za mało'];
+  }
+  if (p.goalType === 'keep') {
+    if (Math.abs(diff) <= 150) return ['ok', 'w normie'];
+    if (Math.abs(diff) <= 350) return ['warn', diff > 0 ? 'lekko ponad' : 'trochę mniej'];
+    return ['over', diff > 0 ? 'ponad' : 'za mało'];
+  }
+  if (diff <= 0) return ['ok', 'w limicie'];
+  return diff <= 150 ? ['warn', 'lekko ponad'] : ['over', 'ponad'];
+}
+function greetingHtml(p, c, t, day) {
+  if (S.date !== today()) return '';
+  const h = new Date().getHours();
+  const hello = h >= 5 && h < 11 ? 'Dzień dobry' : h >= 11 && h < 18 ? 'Cześć' : h >= 18 && h < 23 ? 'Dobry wieczór' : 'Jeszcze nie śpisz?';
+  const W = goalWords(p), rem = c.limit - t.kcal, protLeft = c.prot - t.p;
+  let sub;
+  if (!countEntries(day)) {
+    sub = h < 12 ? `Na dziś masz ${k0(c.limit)} kcal. Zacznij od śniadania.` : `Nic jeszcze nie wpisane. Na dziś masz ${k0(c.limit)} kcal.`;
+  } else if (h >= 19) {
+    if (p.goalType === 'gain') sub = rem > 150 ? `Jak minął dzień? Do celu brakuje jeszcze ${k0(rem)} kcal.` : 'Jak minął dzień? Cel na dziś osiągnięty.';
+    else sub = rem >= 0 ? `Jak minął dzień? Jesteś w ${W.limGen}, zostało ${k0(rem)} kcal.` : `Jak minął dzień? Dziś ${k0(-rem)} kcal ponad ${W.lim}. Jutro nowy dzień.`;
+  } else if (rem > 0) {
+    sub = `${p.goalType === 'gain' ? 'Do zjedzenia jeszcze' : 'Zostało'} ${k0(rem)} kcal${protLeft > 5 ? ` i ${k0(protLeft)} g białka` : ''}.`;
+  } else {
+    sub = p.goalType === 'gain' ? 'Cel kalorii na dziś osiągnięty.' : `Na dziś ${W.lim} wykorzystany.`;
+  }
+  return `<div class="hello"><p class="hello-t">${hello}${p.name && h >= 5 && h < 23 ? ', ' + esc(p.name) : ''}</p><p class="hello-s">${sub}</p></div>`;
+}
 function entryTotals(e) {
   const f = e.portion ? 1 : (e.grams || 0) / 100;
   return { kcal: (e.kcal100 || 0) * f, p: (e.p100 || 0) * f, f: (e.f100 || 0) * f, c: (e.c100 || 0) * f };
@@ -363,7 +410,7 @@ function renderDatebar() {
   $('#date-full').textContent = rel ? fmtDate(d, { weekday: 'long', day: 'numeric', month: 'long' }) : fmtDate(d, { day: 'numeric', month: 'long', year: 'numeric' });
   $('#go-today').hidden = d === t;
 }
-const setupHtml = () => `<section class="label"><h2>Zacznij od profilu</h2><hr class="rule thick"><p>Talerz policzy dzienny limit kalorii i białka z Twojego wieku, wzrostu, wagi i celu.</p><button type="button" class="primary wide" data-act="tab" data-tab="profile">Uzupełnij profil</button></section>`;
+const setupHtml = () => `<section class="label"><h2>Zacznij od profilu</h2><hr class="rule thick"><p>Macroo policzy dzienne kalorie i białko z Twojego wieku, wzrostu, wagi i celu.</p><button type="button" class="primary wide" data-act="tab" data-tab="profile">Uzupełnij profil</button></section>`;
 
 function macroRow(name, cls, val, target) {
   const pc = target > 0 ? Math.min(100, val / target * 100) : 0;
@@ -377,12 +424,14 @@ function renderToday() {
   const el = $('#view-today');
   if (!S.profile) { el.innerHTML = setupHtml(); return; }
   const p = S.profile, date = S.date, day = getDay(date), c = calc(date), t = dayTotals(day);
-  const rem = c.limit - t.kcal, over = rem < 0;
+  const W = goalWords(p);
+  const rem = c.limit - t.kcal, over = rem < 0, overCls = over && W.overBad ? ' over' : '';
   const pct = c.limit > 0 ? Math.min(100, t.kcal / c.limit * 100) : 0;
   const move = c.st + c.wk;
+  const adj = p.goalType === 'gain' ? ` + nadwyżka ${k0(p.surplus)}` : p.goalType === 'keep' ? '' : ` − deficyt ${k0(p.deficit)}`;
   const foot = p.mode === 'fixed'
-    ? `Limit stały z profilu. Ruch dziś to ≈ ${k0(move)} kcal i nie zmienia limitu.`
-    : `Limit = podstawa ${k0(c.base)} + kroki ${k0(c.st)} + treningi ${k0(c.wk)} − deficyt ${k0(p.deficit)}${c.floored ? `. Nie schodzi poniżej przemiany spoczynkowej (${k0(c.bmr)})` : ''}.`;
+    ? `${W.Lim} stały z profilu. Ruch dziś to ≈ ${k0(move)} kcal i nie zmienia ${W.limGen}.`
+    : `${W.Lim} = podstawa ${k0(c.base)} + kroki ${k0(c.st)} + treningi ${k0(c.wk)}${adj}${c.floored ? `. Nie schodzi poniżej przemiany spoczynkowej (${k0(c.bmr)})` : ''}.`;
 
   const meals = MEALS.map(([k, l]) => {
     const list = day.meals[k] || []; const mt = sumEntries(list);
@@ -402,15 +451,15 @@ function renderToday() {
   const wHint = day.weight ? 'Zapisane. Limit liczy się z tej wagi.' : wi.date ? `Ostatni pomiar: ${g1(wi.w)} kg (${fmtDate(wi.date, { day: 'numeric', month: 'short' })}).` : `Na razie liczymy z wagi z profilu (${g1(p.weight)} kg).`;
 
   const banner = INSTALL.prompt && !isStandalone() && !INSTALL.dismissed
-    ? `<div class="install-banner"><span>Zainstaluj Talerz jako aplikację z ikoną.</span><button type="button" class="primary sm" data-act="install">Zainstaluj</button><button type="button" class="x" data-act="install-dismiss" aria-label="Nie teraz">×</button></div>`
+    ? `<div class="install-banner"><span>Zainstaluj Macroo jako aplikację z ikoną.</span><button type="button" class="primary sm" data-act="install">Zainstaluj</button><button type="button" class="x" data-act="install-dismiss" aria-label="Nie teraz">×</button></div>`
     : '';
-  el.innerHTML = `${banner}
+  el.innerHTML = `${banner}${greetingHtml(p, c, t, day)}
   <section class="label" aria-label="Bilans dnia">
-    <div class="label-head"><h2>Bilans dnia</h2><span class="label-tag">${p.mode === 'fixed' ? 'limit stały' : 'limit z ruchem'}</span></div>
+    <div class="label-head"><h2>Bilans dnia</h2><span class="label-tag">${p.mode === 'fixed' ? W.lim + ' stały' : W.lim + ' z ruchem'}</span></div>
     <hr class="rule thick">
-    <div class="big"><span class="big-num${over ? ' over' : ''}">${k0(Math.abs(rem))}</span><span class="big-cap">${over ? 'kcal ponad limit' : 'kcal zostało'}</span></div>
-    <div class="meter${over ? ' over' : ''}"><span style="width:${pct.toFixed(1)}%"></span></div>
-    <div class="stat3"><div><b>${k0(c.limit)}</b><span>limit</span></div><div><b>${k0(t.kcal)}</b><span>zjedzone</span></div><div><b>+${k0(move)}</b><span>ruch</span></div></div>
+    <div class="big"><span class="big-num${overCls}">${k0(Math.abs(rem))}</span><span class="big-cap">${over ? W.over : W.left}</span></div>
+    <div class="meter${overCls}"><span style="width:${pct.toFixed(1)}%"></span></div>
+    <div class="stat3"><div><b>${k0(c.limit)}</b><span>${W.lim}</span></div><div><b>${k0(t.kcal)}</b><span>zjedzone</span></div><div><b>+${k0(move)}</b><span>ruch</span></div></div>
     <hr class="rule mid">
     ${macroRow('Białko', 'prot', t.p, c.prot)}${macroRow('Tłuszcz', 'fat', t.f, c.fat)}${macroRow('Węglowodany', 'carb', t.c, c.carb)}
     <hr class="rule thick">
@@ -421,7 +470,7 @@ function renderToday() {
   <h2 class="eyebrow">Ruch</h2>
   <section class="card">
     ${hcBlockHtml()}
-    <div class="move-total"><span class="muted small">${p.mode === 'fixed' ? 'Spalone ponad podstawę' : 'Dodane do limitu'}</span><b>+${k0(move)} kcal</b></div>
+    <div class="move-total"><span class="muted small">${p.mode === 'fixed' ? 'Spalone ponad podstawę' : 'Dodane do ' + W.limGen}</span><b>+${k0(move)} kcal</b></div>
     <div class="inline-row"><label for="steps-in">Kroki</label><input id="steps-in" type="text" inputmode="numeric" autocomplete="off" value="${day.steps ? day.steps : ''}" placeholder="0"><span class="kc">≈ ${k0(c.st)} kcal${day.stepsSource === 'hc' ? ' · z zegarka' : ''}</span></div>
     ${wos ? `<ul class="entries" style="margin-top:8px">${wos}</ul>` : ''}
     <button type="button" class="btn-line wide" data-act="add-wo">+ Trening</button>
@@ -435,7 +484,7 @@ function renderToday() {
 }
 
 /* ---------- history ---------- */
-function barChart(rows) {
+function barChart(rows, p) {
   const W = 340, H = 170, pl = 32, pr = 6, pt = 10, pb = 20, iw = W - pl - pr, ih = H - pt - pb, n = rows.length;
   const maxV = Math.max(1500, ...rows.map(r => Math.max(r.eaten, r.limit))) * 1.06;
   const step = maxV > 3400 ? 1000 : 500;
@@ -446,7 +495,7 @@ function barChart(rows) {
   for (let v = 0; v <= top; v += step) s += `<line class="grid" x1="${pl}" x2="${W - pr}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}"/><text class="ax" x="${pl - 5}" y="${(y(v) + 3).toFixed(1)}" text-anchor="end">${v === 0 ? '0' : g1(v / 1000) + 'k'}</text>`;
   rows.forEach((r, i) => {
     const x = pl + i * bw + gap / 2, w = bw - gap;
-    if (r.logged) s += `<rect class="${r.eaten > r.limit ? 'b-over' : 'b-ok'}" x="${x.toFixed(1)}" y="${y(r.eaten).toFixed(1)}" width="${w.toFixed(1)}" height="${(y(0) - y(r.eaten)).toFixed(1)}" rx="1.5"/>`;
+    if (r.logged) s += `<rect class="${dayStatus(p, r.eaten, r.limit)[0] === 'ok' || (p.goalType === 'lose' && r.eaten <= r.limit) ? 'b-ok' : 'b-over'}" x="${x.toFixed(1)}" y="${y(r.eaten).toFixed(1)}" width="${w.toFixed(1)}" height="${(y(0) - y(r.eaten)).toFixed(1)}" rx="1.5"/>`;
     s += `<line class="tgt" x1="${(x - 1).toFixed(1)}" x2="${(x + w + 1).toFixed(1)}" y1="${y(r.limit).toFixed(1)}" y2="${y(r.limit).toFixed(1)}"/>`;
     const showLabel = n <= 7 || i % 5 === 0 || i === n - 1;
     if (showLabel) {
@@ -490,31 +539,41 @@ function renderHistory() {
   const logged = rows.filter(r => r.logged);
   const avg = f => logged.length ? logged.reduce((a, r) => a + f(r), 0) / logged.length : 0;
   const avgE = avg(r => r.eaten), avgL = avg(r => r.limit), avgB = avg(r => r.eaten - r.tdee), avgP = avg(r => r.prot);
-  const goal = S.profile.goal;
+  const P = S.profile, W = goalWords(P), goal = P.goal, wNow = weightOn(end).w;
+  const when = days => fmtDate(addDays(end, Math.round(days)), { day: 'numeric', month: 'long', year: 'numeric' });
   let fc;
   if (logged.length < 3) fc = `Prognoza pojawi się po 3 dniach z wpisami (masz ${logged.length}).`;
-  else if (avgB > -50) fc = 'Średnio jesz mniej więcej tyle, ile spalasz, albo więcej. Waga przy takim bilansie raczej stoi.';
+  else if (P.goalType === 'gain') {
+    const kgw = avgB * 7 / 7700, left = goal - wNow;
+    if (avgB < 50) fc = 'Średnio jesz mniej więcej tyle, ile spalasz, albo mniej. Przy takim bilansie waga nie wzrośnie.';
+    else if (left <= 0) fc = `Cel ${g1(goal)} kg osiągnięty. Obecne tempo to ok. ${g1(kgw)} kg w górę tygodniowo.`;
+    else fc = `Przy takim bilansie przybierasz ok. ${g1(kgw)} kg tygodniowo. ${g1(goal)} kg osiągniesz około ${when(left / (kgw / 7))}. Prognoza liczy tylko dni z wpisami.`;
+  } else if (P.goalType === 'keep') {
+    const kgw = avgB * 7 / 7700;
+    fc = Math.abs(avgB) <= 100 ? 'Jesz mniej więcej tyle, ile spalasz. Waga powinna stać w miejscu.' : `Średnio ${avgB > 0 ? 'nadwyżka' : 'deficyt'} ${k0(Math.abs(avgB))} kcal dziennie, czyli ok. ${g1(Math.abs(kgw))} kg ${avgB > 0 ? 'w górę' : 'w dół'} tygodniowo.`;
+  } else if (avgB > -50) fc = 'Średnio jesz mniej więcej tyle, ile spalasz, albo więcej. Waga przy takim bilansie raczej stoi.';
   else {
-    const kgw = -avgB * 7 / 7700, wNow = weightOn(end).w, left = wNow - goal;
+    const kgw = -avgB * 7 / 7700, left = wNow - goal;
     if (left <= 0) fc = `Cel ${g1(goal)} kg osiągnięty. Obecne tempo to ok. ${g1(kgw)} kg tygodniowo.`;
-    else fc = `Przy takim bilansie chudniesz ok. ${g1(kgw)} kg tygodniowo. ${g1(goal)} kg osiągniesz około ${fmtDate(addDays(end, Math.round(left / (kgw / 7))), { day: 'numeric', month: 'long', year: 'numeric' })}. Prognoza liczy tylko dni z wpisami.`;
+    else fc = `Przy takim bilansie chudniesz ok. ${g1(kgw)} kg tygodniowo. ${g1(goal)} kg osiągniesz około ${when(left / (kgw / 7))}. Prognoza liczy tylko dni z wpisami.`;
   }
+  const balGood = P.goalType === 'gain' ? avgB >= 0 : P.goalType === 'keep' ? Math.abs(avgB) <= 150 : avgB <= 0;
   const dash = '–';
   const dayRow = r => {
     let cls = 'none', lab = 'brak wpisów';
-    if (r.logged) { if (r.eaten <= r.limit) { cls = 'ok'; lab = 'w limicie'; } else if (r.eaten <= r.limit + 150) { cls = 'warn'; lab = 'lekko ponad'; } else { cls = 'over'; lab = 'ponad'; } }
+    if (r.logged) [cls, lab] = dayStatus(P, r.eaten, r.limit);
     return `<li><button type="button" class="day-row" data-act="open-day" data-date="${r.d}"><span class="dr-date">${esc(fmtDate(r.d, { weekday: 'short' }).replace('.', ''))} ${esc(fmtDate(r.d, { day: '2-digit', month: '2-digit' }))}</span><span class="dr-k">${r.logged ? `${k0(r.eaten)} / ${k0(r.limit)} kcal` : dash}</span><span class="pill ${cls}">${lab}</span></button></li>`;
   };
   el.innerHTML = `
   <div class="h-head"><h2 class="h2">Historia</h2><div class="seg sm" role="group" aria-label="Zakres"><button type="button" aria-pressed="${n === 7}" data-act="hist-range" data-n="7">7 dni</button><button type="button" aria-pressed="${n === 30}" data-act="hist-range" data-n="30">30 dni</button></div></div>
   <section class="stats">
     <div class="stat"><span class="stat-l">Zjedzone</span><b>${logged.length ? k0(avgE) : dash}</b><span class="stat-u">kcal dziennie, średnio</span></div>
-    <div class="stat"><span class="stat-l">Limit</span><b>${logged.length ? k0(avgL) : dash}</b><span class="stat-u">kcal dziennie, średnio</span></div>
-    <div class="stat"><span class="stat-l">Bilans</span><b class="${logged.length ? (avgB <= 0 ? 'good' : 'over') : ''}">${logged.length ? (avgB > 0 ? '+' : '−') + k0(Math.abs(avgB)) : dash}</b><span class="stat-u">kcal vs. spalone, dziennie</span></div>
+    <div class="stat"><span class="stat-l">${W.Lim}</span><b>${logged.length ? k0(avgL) : dash}</b><span class="stat-u">kcal dziennie, średnio</span></div>
+    <div class="stat"><span class="stat-l">Bilans</span><b class="${logged.length ? (balGood ? 'good' : 'over') : ''}">${logged.length ? (avgB > 0 ? '+' : '−') + k0(Math.abs(avgB)) : dash}</b><span class="stat-u">kcal vs. spalone, dziennie</span></div>
     <div class="stat"><span class="stat-l">Białko</span><b>${logged.length ? k0(avgP) : dash}</b><span class="stat-u">g dziennie, cel ${k0(calc(end).prot)} g</span></div>
   </section>
   <p class="forecast">${fc}</p>
-  <section class="card chart-card"><h3 class="card-t">Kalorie dzień po dniu</h3>${barChart(rows)}<div class="legend"><span><i class="lg-bar"></i>zjedzone</span><span><i class="lg-over"></i>ponad limit</span><span><i class="lg-tgt"></i>limit dnia</span></div></section>
+  <section class="card chart-card"><h3 class="card-t">Kalorie dzień po dniu</h3>${barChart(rows, P)}<div class="legend"><span><i class="lg-bar"></i>zjedzone</span><span><i class="lg-over"></i>${P.goalType === 'gain' ? 'poniżej celu' : P.goalType === 'keep' ? 'poza normą' : 'ponad limit'}</span><span><i class="lg-tgt"></i>${W.lim} dnia</span></div></section>
   <section class="card chart-card"><h3 class="card-t">Waga</h3>${weightChart()}</section>
   <h2 class="eyebrow">Dni</h2>
   <ul class="days">${rows.slice().reverse().map(dayRow).join('')}</ul>`;
@@ -539,17 +598,18 @@ function renderLibrary() {
 
 /* ---------- profile ---------- */
 function draftFrom(p) {
-  if (!p) return { sex: 'm', age: '', height: '', weight: '', goal: '', mode: 'dynamic', deficit: '500', fixedKcal: '2200', proteinPerKg: '1.8', fatPct: '25' };
-  return { sex: p.sex, age: String(p.age), height: String(p.height), weight: g1(p.weight), goal: g1(p.goal), mode: p.mode, deficit: String(p.deficit), fixedKcal: String(p.fixedKcal), proteinPerKg: String(p.proteinPerKg), fatPct: String(p.fatPct) };
+  if (!p) return { name: '', sex: 'm', age: '', height: '', weight: '', goal: '', goalType: 'lose', mode: 'dynamic', deficit: '400', surplus: '300', fixedKcal: '2200', proteinPerKg: '1.8', fatPct: '25' };
+  return { name: p.name || '', sex: p.sex, age: String(p.age), height: String(p.height), weight: g1(p.weight), goal: g1(p.goal), goalType: p.goalType, mode: p.mode, deficit: String(p.deficit), surplus: String(p.surplus), fixedKcal: String(p.fixedKcal), proteinPerKg: String(p.proteinPerKg), fatPct: String(p.fatPct) };
 }
 function parsePd(d) {
-  const p = { sex: d.sex === 'k' ? 'k' : 'm', age: num(d.age), height: num(d.height), weight: num(d.weight), goal: num(d.goal), mode: d.mode === 'fixed' ? 'fixed' : 'dynamic', deficit: numOr(d.deficit, 500), fixedKcal: num(d.fixedKcal), proteinPerKg: numOr(d.proteinPerKg, 1.8), fatPct: numOr(d.fatPct, 25) };
+  const goalType = ['lose', 'keep', 'gain'].includes(d.goalType) ? d.goalType : 'lose';
+  const p = { name: String(d.name || '').trim().slice(0, 30), sex: d.sex === 'k' ? 'k' : 'm', age: num(d.age), height: num(d.height), weight: num(d.weight), goal: num(d.goal), goalType, mode: d.mode === 'fixed' ? 'fixed' : 'dynamic', deficit: numOr(d.deficit, 400), surplus: numOr(d.surplus, 300), fixedKcal: num(d.fixedKcal), proteinPerKg: numOr(d.proteinPerKg, 1.8), fatPct: numOr(d.fatPct, 25) };
   let err = '';
   if (!(p.age >= 14 && p.age <= 100)) err = 'Wpisz wiek (14–100 lat).';
   else if (!(p.height >= 120 && p.height <= 230)) err = 'Wpisz wzrost w cm (120–230).';
   else if (!(p.weight >= 35 && p.weight <= 250)) err = 'Wpisz wagę w kg (35–250).';
   else if (!(p.goal >= 35 && p.goal <= 250)) err = 'Wpisz wagę docelową w kg (35–250).';
-  else if (p.mode === 'fixed' && !(p.fixedKcal >= 1000 && p.fixedKcal <= 6000)) err = 'Wpisz stały limit kalorii (1000–6000).';
+  else if (p.mode === 'fixed' && !(p.fixedKcal >= 1000 && p.fixedKcal <= 6000)) err = `Wpisz ${goalType === 'lose' ? 'stały limit' : 'stały cel'} kalorii (1000–6000).`;
   if (!(p.fixedKcal >= 1000)) p.fixedKcal = 2200;
   return { p, err };
 }
@@ -558,33 +618,45 @@ function profileSummary(d) {
   if (err) return `<p class="muted small" style="margin:4px 0">Uzupełnij dane, a tu pojawią się wyliczenia.</p>`;
   const w = S.profile ? weightOn(today()).w : p.weight;
   const c0 = calcFor(p, emptyDay(today()), w), c10 = calcFor(p, { ...emptyDay(today()), steps: 10000 }, w);
-  const pace = p.mode === 'dynamic' ? p.deficit * 7 / 7700 : null;
-  return `<dl>
+  const W = goalWords(p);
+  const pace = p.mode !== 'dynamic' || p.goalType === 'keep' ? null : (p.goalType === 'gain' ? p.surplus : p.deficit) * 7 / 7700;
+  let note = '';
+  if (p.goalType === 'lose' && p.goal > p.weight + 0.4) note = 'Waga docelowa jest wyższa niż obecna. Jeśli chcesz przytyć, wybierz cel „Przytyć”.';
+  else if (p.goalType === 'gain' && p.goal < p.weight - 0.4) note = 'Waga docelowa jest niższa niż obecna. Jeśli chcesz schudnąć, wybierz cel „Schudnąć”.';
+  return `${note ? `<p class="goal-note">${note}</p>` : ''}<dl>
     <dt>Przemiana spoczynkowa</dt><dd>${k0(c0.bmr)} kcal</dd>
     <dt>Podstawa dnia (× 1,2)</dt><dd>${k0(c0.base)} kcal</dd>
     <dt>10 000 kroków</dt><dd>+${k0(c10.st)} kcal</dd>
-    <dt class="key">${p.mode === 'fixed' ? 'Limit (stały)' : 'Limit przy 10 000 kroków'}</dt><dd class="key">${k0(c10.limit)} kcal</dd>
+    <dt class="key">${p.mode === 'fixed' ? W.Lim + ' (stały)' : W.Lim + ' przy 10 000 kroków'}</dt><dd class="key">${k0(c10.limit)} kcal</dd>
     <dt>Białko (${g1(p.proteinPerKg)} g × ${g1(p.goal)} kg)</dt><dd>${k0(c10.prot)} g</dd>
-    ${pace !== null ? `<dt>Tempo przy tym deficycie</dt><dd>≈ ${g1(pace)} kg/tydz.</dd>` : ''}
+    ${pace !== null ? `<dt>Tempo przy ${p.goalType === 'gain' ? 'tej nadwyżce' : 'tym deficycie'}</dt><dd>≈ ${g1(pace)} kg/tydz. ${p.goalType === 'gain' ? 'w górę' : 'w dół'}</dd>` : ''}
   </dl>`;
 }
 function renderProfile() {
   const d = S.pd || (S.pd = draftFrom(S.profile));
   const f = (id, key, label, mode = 'decimal') => `<div class="field"><label for="${id}">${label}</label><input id="${id}" data-k="${key}" type="text" inputmode="${mode}" autocomplete="off" value="${esc(d[key])}"></div>`;
   const opt = (key, vals) => vals.map(([v, l]) => `<option value="${v}"${String(d[key]) === String(v) ? ' selected' : ''}>${l}</option>`).join('');
+  const pace = v => g1(v * 7 / 7700).replace(/^0$/, '0,1');
+  const goalLim = d.goalType === 'lose' ? 'Limit' : 'Cel';
   const installCard = INSTALL.prompt && !isStandalone()
-    ? `<section class="card"><h3 class="card-t">Zainstaluj Talerz</h3><p>Dodaj Talerz do telefonu jako aplikację z własną ikoną. Będzie działać na pełnym ekranie i bez internetu.</p><button type="button" class="primary wide" data-act="install">Zainstaluj aplikację</button></section>`
+    ? `<section class="card"><h3 class="card-t">Zainstaluj Macroo</h3><p>Dodaj Macroo do telefonu jako aplikację z własną ikoną. Będzie działać na pełnym ekranie i bez internetu.</p><button type="button" class="primary wide" data-act="install">Zainstaluj aplikację</button></section>`
     : '';
   $('#view-profile').innerHTML = `
   <h2 class="h2" style="margin-bottom:12px">Profil</h2>
   <form id="pf" class="form" novalidate>
+    <div class="field"><label for="p-name">Imię (opcjonalnie, do powitania)</label><input id="p-name" data-k="name" type="text" autocomplete="given-name" maxlength="30" value="${esc(d.name)}"></div>
     <div class="field"><span class="flabel">Płeć</span><div class="seg" role="group" aria-label="Płeć"><button type="button" aria-pressed="${d.sex === 'm'}" data-act="pd-set" data-k="sex" data-v="m">Mężczyzna</button><button type="button" aria-pressed="${d.sex === 'k'}" data-act="pd-set" data-k="sex" data-v="k">Kobieta</button></div></div>
-    <div class="grid2">${f('p-age', 'age', 'Wiek (lata)', 'numeric')}${f('p-height', 'height', 'Wzrost (cm)', 'numeric')}${f('p-weight', 'weight', 'Waga (kg)')}${f('p-goal', 'goal', 'Cel (kg)')}</div>
+    <div class="grid2">${f('p-age', 'age', 'Wiek (lata)', 'numeric')}${f('p-height', 'height', 'Wzrost (cm)', 'numeric')}${f('p-weight', 'weight', 'Waga (kg)')}${f('p-goal', 'goal', 'Waga docelowa (kg)')}</div>
     <p class="hint" style="margin-top:-6px">Gdy wpisujesz wagę w zakładce Dziś, limit liczy się z ostatniego pomiaru.</p>
-    <div class="field"><span class="flabel">Limit kalorii</span><div class="seg" role="group" aria-label="Rodzaj limitu"><button type="button" aria-pressed="${d.mode !== 'fixed'}" data-act="pd-set" data-k="mode" data-v="dynamic">Rośnie z ruchem</button><button type="button" aria-pressed="${d.mode === 'fixed'}" data-act="pd-set" data-k="mode" data-v="fixed">Stały</button></div></div>
+    <div class="field"><span class="flabel">Cel</span><div class="seg" role="group" aria-label="Cel"><button type="button" aria-pressed="${d.goalType === 'lose'}" data-act="pd-set" data-k="goalType" data-v="lose">Schudnąć</button><button type="button" aria-pressed="${d.goalType === 'keep'}" data-act="pd-set" data-k="goalType" data-v="keep">Utrzymać</button><button type="button" aria-pressed="${d.goalType === 'gain'}" data-act="pd-set" data-k="goalType" data-v="gain">Przytyć</button></div></div>
+    <div class="field"><span class="flabel">${goalLim} kalorii</span><div class="seg" role="group" aria-label="Rodzaj ${goalLim === 'Limit' ? 'limitu' : 'celu'}"><button type="button" aria-pressed="${d.mode !== 'fixed'}" data-act="pd-set" data-k="mode" data-v="dynamic">Rośnie z ruchem</button><button type="button" aria-pressed="${d.mode === 'fixed'}" data-act="pd-set" data-k="mode" data-v="fixed">Stały</button></div></div>
     ${d.mode === 'fixed'
-      ? f('p-fixed', 'fixedKcal', 'Stały limit (kcal)', 'numeric')
-      : `<div class="field"><label for="p-deficit">Deficyt</label><select id="p-deficit" data-k="deficit">${opt('deficit', [[0, 'Bez deficytu (utrzymanie)'], [300, '300 kcal (ok. 0,3 kg/tydz.)'], [400, '400 kcal'], [500, '500 kcal (ok. 0,45 kg/tydz.)'], [600, '600 kcal'], [750, '750 kcal (ok. 0,7 kg/tydz.)']])}</select></div>`}
+      ? f('p-fixed', 'fixedKcal', `${goalLim === 'Limit' ? 'Stały limit' : 'Stały cel'} (kcal)`, 'numeric')
+      : d.goalType === 'lose'
+        ? `<div class="field"><label for="p-deficit">Deficyt</label><select id="p-deficit" data-k="deficit">${opt('deficit', DEFICITS.map(v => [v, `${v} kcal · ${pace(v)} kg/tydz.${v === 300 || v === 400 ? ' · polecane' : ''}`]))}</select></div>`
+        : d.goalType === 'gain'
+          ? `<div class="field"><label for="p-surplus">Nadwyżka</label><select id="p-surplus" data-k="surplus">${opt('surplus', SURPLUSES.map(v => [v, `+${v} kcal · ${pace(v)} kg/tydz.${v === 300 ? ' · polecane' : ''}`]))}</select></div><p class="hint" style="margin-top:-6px">Najlepiej przybierać powoli i trenować siłowo. Wtedy rosną głównie mięśnie, a nie tłuszcz.</p>`
+          : '<p class="hint" style="margin-top:-6px">Cel to tyle, ile spalasz w danym dniu, razem z krokami i treningami.</p>'}
     <div class="grid2">
       <div class="field"><label for="p-prot">Białko na kg celu</label><select id="p-prot" data-k="proteinPerKg">${opt('proteinPerKg', [[1.4, '1,4 g'], [1.6, '1,6 g'], [1.8, '1,8 g'], [2, '2,0 g'], [2.2, '2,2 g']])}</select></div>
       <div class="field"><label for="p-fat">Tłuszcz</label><select id="p-fat" data-k="fatPct">${opt('fatPct', [[20, '20% kalorii'], [25, '25% kalorii'], [30, '30% kalorii'], [35, '35% kalorii']])}</select></div>
@@ -602,7 +674,7 @@ function renderProfile() {
       ${S.pendingImport ? `<div class="confirm"><p><b>Wczytać kopię z pliku ${esc(S.pendingImport.fileName)}?</b> ${S.pendingImport.summary} Obecne dane w tym telefonie zostaną zastąpione.</p><div class="btn-row"><button type="button" class="ghost" data-act="backup-cancel">Anuluj</button><button type="button" class="primary" data-act="backup-apply">Wczytaj</button></div></div>` : ''}
     </section>
     ${installCard}
-    <p class="hint" style="text-align:center">Talerz ${APP_VERSION}</p>
+    <p class="hint" style="text-align:center">Macroo ${APP_VERSION}</p>
   </div>`;
 }
 function syncPd(t) {
@@ -912,7 +984,15 @@ const ACT = {
   'day-today'() { S.date = today(); render(); },
   'open-day'(a) { S.date = a.dataset.date; S.tab = 'today'; render(); window.scrollTo(0, 0); },
   'hist-range'(a) { S.histRange = +a.dataset.n; render(); },
-  'pd-set'(a) { if (!S.pd) S.pd = draftFrom(S.profile); S.pd[a.dataset.k] = a.dataset.v; renderProfile(); },
+  'pd-set'(a) {
+    if (!S.pd) S.pd = draftFrom(S.profile);
+    S.pd[a.dataset.k] = a.dataset.v;
+    if (a.dataset.k === 'goalType') {
+      if (a.dataset.v === 'lose' && !DEFICITS.includes(+S.pd.deficit)) S.pd.deficit = '400';
+      if (a.dataset.v === 'gain' && !SURPLUSES.includes(+S.pd.surplus)) S.pd.surplus = '300';
+    }
+    renderProfile();
+  },
   'sheet-close'() { closeSheet(); },
 
   'add-food'(a) { openSheet({ kind: 'add', meal: a.dataset.meal, tab: 'prod', q: '', pick: null, pickG: NaN, draft: {}, quick: false, ai: { text: '', file: null, items: null, note: '', status: '', busy: false, ctl: null } }); },
@@ -1087,7 +1167,7 @@ const ACT = {
     const ev = INSTALL.prompt; if (!ev) return;
     INSTALL.prompt = null;
     ev.prompt();
-    Promise.resolve(ev.userChoice).then(r => { if (r && r.outcome === 'accepted') toast('Instaluję Talerz na telefonie'); render(); }).catch(() => render());
+    Promise.resolve(ev.userChoice).then(r => { if (r && r.outcome === 'accepted') toast('Instaluję Macroo na telefonie'); render(); }).catch(() => render());
   },
   'install-dismiss'() { INSTALL.dismissed = true; render(); },
   'hc-connect'() { hcConnect(); },
@@ -1096,9 +1176,9 @@ const ACT = {
   'hc-settings'() { nativeCall('openHealthConnect').catch(() => {}); },
   'hc-open-sh'() { nativeCall('openSamsungHealth').catch(() => toast('Nie znaleziono Samsung Health.')); },
   'backup-save'() {
-    const data = { app: 'talerz', version: 1, exportedAt: new Date().toISOString(), profile: S.profile, library: S.library, days: S.days };
+    const data = { app: 'macroo', version: 1, exportedAt: new Date().toISOString(), profile: S.profile, library: S.library, days: S.days };
     if (NATIVE) {
-      nativeCall('saveFile', { name: `talerz-kopia-${today()}.json`, text: JSON.stringify(data) })
+      nativeCall('saveFile', { name: `macroo-kopia-${today()}.json`, text: JSON.stringify(data) })
         .then(() => toast('Zapisano kopię'))
         .catch(e => { if (!e || e.code !== 'cancelled') toast('Nie udało się zapisać kopii.'); });
       return;
@@ -1106,7 +1186,7 @@ const ACT = {
     const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = `talerz-kopia-${today()}.json`;
+    a.download = `macroo-kopia-${today()}.json`;
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 4000);
     toast('Kopia zapisana w Pobranych');
@@ -1189,7 +1269,7 @@ function readBackup(file) {
   r.onload = () => {
     let data = null;
     try { data = JSON.parse(String(r.result)); } catch (e) { data = null; }
-    if (!data || data.app !== 'talerz' || typeof data.library !== 'object') { toast('To nie jest plik kopii Talerza.'); return; }
+    if (!data || !['talerz', 'macroo'].includes(data.app) || typeof data.library !== 'object') { toast('To nie jest plik kopii Macroo.'); return; }
     const days = data.days && typeof data.days === 'object' ? Object.keys(data.days).length : 0;
     const prods = Array.isArray(data.library && data.library.products) ? data.library.products.length : 0;
     const sets = Array.isArray(data.library && data.library.sets) ? data.library.sets.length : 0;
@@ -1209,8 +1289,15 @@ function startLocal() {
   if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
   render();
 }
+function hideSplash() {
+  const sp = document.getElementById('splash'); if (!sp) return;
+  let reduce = false;
+  try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { reduce = false; }
+  setTimeout(() => { sp.classList.add('out'); setTimeout(() => sp.remove(), 400); }, reduce ? 250 : 950);
+}
 function init() {
   startLocal();
+  hideSplash();
   if ('serviceWorker' in navigator) {
     const hadController = !!navigator.serviceWorker.controller;
     navigator.serviceWorker.register('./sw.js').then(reg => {
@@ -1220,7 +1307,7 @@ function init() {
     let reloaded = false;
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       if (!hadController || reloaded) return;
-      if (SH || isTyping()) { toast('Jest nowa wersja Talerza. Uruchom aplikację ponownie, żeby ją wczytać.'); return; }
+      if (SH || isTyping()) { toast('Jest nowa wersja Macroo. Uruchom aplikację ponownie, żeby ją wczytać.'); return; }
       reloaded = true; location.reload();
     });
   }

@@ -1,7 +1,7 @@
 {
-  "name": "Talerz",
-  "short_name": "Talerz",
-  "description": "Licznik kalorii: posiłki z makro, zestawy, kroki, treningi, waga i historia.",
+  "name": "Macroo",
+  "short_name": "Macroo",
+  "description": "Licznik kalorii i makro: posiłki, zestawy, kroki, treningi, waga i historia.",
   "lang": "pl",
   "id": "./",
   "start_url": "./",
@@ -9,7 +9,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#F3F5F8",
-  "theme_color": "#1D4ED8",
+  "theme_color": "#12151D",
   "categories": ["health", "food", "fitness"],
   "icons": [
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },

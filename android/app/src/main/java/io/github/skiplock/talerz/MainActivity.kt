@@ -39,7 +39,7 @@ import java.time.LocalDate
 import java.time.ZoneId
 
 /**
- * Talerz for Android: the Talerz web app in a WebView, plus a small bridge
+ * Macroo for Android: the Macroo web app (formerly Talerz) in a WebView, plus a small bridge
  * (window.TalerzHealth) that reads steps, workouts, workout calories and weight
  * from Health Connect, where Samsung Health shares the Galaxy Watch data.
  */
@@ -505,7 +505,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun showOffline() {
-        val html = """<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-family:sans-serif;margin:0;padding:56px 24px;background:#F3F5F8;color:#121820}@media (prefers-color-scheme:dark){body{background:#0E1115;color:#E8ECF1}}h1{font-size:28px;margin:0 0 12px}p{font-size:16px;line-height:1.5}a{display:inline-block;margin-top:16px;background:#1D4ED8;color:#fff;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700}</style></head><body><h1>Brak internetu</h1><p>Talerz potrzebuje internetu przy pierwszym uruchomieniu. Potem działa także bez sieci.</p><a href="$START_URL">Spróbuj ponownie</a></body></html>"""
+        val html = """<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-family:sans-serif;margin:0;padding:56px 24px;background:#F3F5F8;color:#121820}@media (prefers-color-scheme:dark){body{background:#0E1115;color:#E8ECF1}}h1{font-size:28px;margin:0 0 12px}p{font-size:16px;line-height:1.5}a{display:inline-block;margin-top:16px;background:#1D4ED8;color:#fff;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700}</style></head><body><h1>Brak internetu</h1><p>Macroo potrzebuje internetu przy pierwszym uruchomieniu. Potem działa także bez sieci.</p><a href="$START_URL">Spróbuj ponownie</a></body></html>"""
         webView.loadDataWithBaseURL(null, html, "text/html", "utf-8", null)
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Talerz</string>
-    <string name="privacy_title">Talerz i Twoje dane</string>
-    <string name="privacy_text">Talerz i Health Connect\n\nTalerz odczytuje z Health Connect liczbę kroków, treningi, kalorie spalone na treningach i wagę. Tych danych używa wyłącznie do policzenia Twojego dziennego bilansu kalorii.\n\nDane zostają w Twoim telefonie. Talerz nigdzie ich nie wysyła i niczego nie zapisuje w Health Connect.\n\nUprawnienia możesz w każdej chwili cofnąć w ustawieniach Health Connect.</string>
+    <string name="app_name">Macroo</string>
+    <string name="privacy_title">Macroo i Twoje dane</string>
+    <string name="privacy_text">Macroo i Health Connect\n\nMacroo odczytuje z Health Connect liczbę kroków, treningi, kalorie spalone na treningach i wagę. Tych danych używa wyłącznie do policzenia Twojego dziennego bilansu kalorii.\n\nDane zostają w Twoim telefonie. Macroo nigdzie ich nie wysyła i niczego nie zapisuje w Health Connect.\n\nUprawnienia możesz w każdej chwili cofnąć w ustawieniach Health Connect.</string>
 </resources>

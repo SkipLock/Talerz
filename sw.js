@@ -1,6 +1,6 @@
-/* Talerz service worker: app files load from the network when online (so updates arrive on the next launch)
+/* Macroo service worker: app files load from the network when online (so updates arrive on the next launch)
    and from the cache when offline. Bump CACHE when the list of files changes. */
-const CACHE = 'talerz-1.1.1';
+const CACHE = 'talerz-1.2.0';
 const APP_FILES = [
   './',
   './index.html',

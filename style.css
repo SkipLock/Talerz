@@ -276,3 +276,27 @@ textarea{resize:vertical}
 .diag{margin-top:10px;font-size:12.5px}
 .diag summary{cursor:pointer;color:var(--accent);font-weight:600}
 .diag pre{white-space:pre-wrap;word-break:break-all;background:var(--track);padding:8px;border-radius:8px;max-height:280px;overflow:auto;font-size:11px}
+
+/* brand + splash (Macroo) */
+.brand{display:inline-flex;align-items:center;gap:8px}
+.brand-mark{width:24px;height:24px;flex:none}
+#splash{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:var(--bg);transition:opacity .3s ease,visibility .3s ease}
+#splash.out{opacity:0;visibility:hidden;pointer-events:none}
+.splash-logo{width:112px;height:112px;animation:sp-spin .8s cubic-bezier(.2,.8,.2,1) both}
+.splash-word{font-family:var(--f-display);font-weight:900;font-stretch:72%;font-size:30px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);animation:sp-word .45s ease-out .38s both}
+.sg{animation:.36s cubic-bezier(.3,.7,.3,1) both}
+.sg1{animation-name:sg1;animation-delay:.04s}
+.sg2{animation-name:sg2;animation-delay:.18s}
+.sg3{animation-name:sg3;animation-delay:.3s;animation-duration:.42s}
+@keyframes sg1{from{stroke-dashoffset:27.22}to{stroke-dashoffset:0}}
+@keyframes sg2{from{stroke-dashoffset:22.22}to{stroke-dashoffset:0}}
+@keyframes sg3{from{stroke-dashoffset:42.22}to{stroke-dashoffset:0}}
+@keyframes sp-spin{from{transform:rotate(-40deg) scale(.86)}to{transform:none}}
+@keyframes sp-word{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.splash-logo,.splash-word,.sg{animation:none}.sg{stroke-dashoffset:0!important}}
+
+/* greeting */
+.hello{margin:2px 0 12px}
+.hello-t{font-family:var(--f-display);font-weight:800;font-stretch:85%;font-size:24px;line-height:1.1;margin:0}
+.hello-s{margin:3px 0 0;color:var(--muted);font-size:14.5px}
+.goal-note{margin:2px 0 8px;padding:8px 10px;border-radius:8px;background:var(--accent-soft);font-size:13.5px}

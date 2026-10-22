@@ -58,12 +58,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          cp android/app/build/outputs/apk/release/app-release.apk talerz.apk
+          cp android/app/build/outputs/apk/release/app-release.apk macroo.apk
+          cp macroo.apk talerz.apk   # old download links keep working
           if ! gh release view apk >/dev/null 2>&1; then
-            gh release create apk --title "Talerz na Androida" --notes "Pobierz plik talerz.apk i otwórz go na telefonie." --latest
+            gh release create apk --title "Macroo na Androida" --notes "Pobierz plik macroo.apk i otwórz go na telefonie." --latest
           fi
-          gh release upload apk talerz.apk --clobber
-          gh release edit apk --notes "Wersja 1.0.${GITHUB_RUN_NUMBER}. Pobierz plik talerz.apk i otwórz go na telefonie z Androidem."
+          gh release upload apk macroo.apk talerz.apk --clobber
+          gh release edit apk --title "Macroo na Androida" --notes "Wersja 1.0.${GITHUB_RUN_NUMBER}. Pobierz plik macroo.apk i otwórz go na telefonie z Androidem."
 
       - name: Log budowy
         if: always()
