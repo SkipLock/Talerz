@@ -4,8 +4,8 @@
 + 15 kV i 20 kV
 - 230 V i 400 V
 - 110 kV i 220 kV
-- 400 kV i 750 kV
-! Sieci SN pracują najczęściej na napięciu 15 kV lub 20 kV. 110 kV to sieć wysokiego napięcia, a 220 i 400 kV najwyższego.
+- 6 kV i 10 kV
+! Sieci SN pracują najczęściej na napięciu 15 kV lub 20 kV. Napięcia 6 kV i 10 kV spotyka się rzadziej, głównie w sieciach zakładów przemysłowych. 110 kV to sieć wysokiego napięcia, a 220 i 400 kV najwyższego.
 
 ? W jakich granicach powinna się mieścić wartość skuteczna napięcia w sieci niskiego napięcia według PN-EN 50160?
 + ±10% napięcia znamionowego
@@ -37,7 +37,7 @@
 
 ? Powyżej jakiej wartości tg φ odbiorca zwykle płaci za ponadumowny pobór energii biernej?
 + 0,4
-- 0,1
+- 0,6
 - 0,8
 - 1,0
 ! Typowo przyjmuje się tg φ₀ = 0,4, co odpowiada cos φ ≈ 0,93. Pobór energii biernej powyżej tej wartości jest dodatkowo płatny.
@@ -160,3 +160,290 @@
 - Do pomiaru energii biernej
 - Do ochrony przed porażeniem
 ! Kondensatory razem z indukcyjnością sieci mogą wejść w rezonans z którąś harmoniczną. Dławik szeregowy przesuwa częstotliwość rezonansową poniżej 5. harmonicznej.
+
+? Jakie napięcie znamionowe ma sieć wysokiego napięcia zasilająca stacje GPZ?
++ 110 kV
+- 400 V
+- 15 kV
+- 30 kV
+! W stacjach GPZ transformatory obniżają napięcie 110 kV do 15 kV lub 20 kV.
+
+? Co oznacza skrót GPZ?
++ Główny punkt zasilający, czyli stację 110 kV/SN
+- Gniazdo przemysłowe zasilające
+- Główny przewód zerowy
+- Generator prądu zmiennego
+! Z GPZ wychodzą linie średniego napięcia do stacji SN/nN.
+
+? Jakie napięcie ma sieć niskiego napięcia zasilająca odbiorców w Polsce?
++ 230/400 V
+- 110/190 V
+- 15/20 kV
+- Wyłącznie 690 V
+! Napięcie fazowe wynosi 230 V, a międzyprzewodowe 400 V, przy częstotliwości 50 Hz.
+
+? Jaka jest częstotliwość znamionowa w polskim systemie elektroenergetycznym?
++ 50 Hz
+- 16,7 Hz
+- 60 Hz
+- 25 Hz
+! W Europie stosuje się 50 Hz, a w Ameryce Północnej 60 Hz.
+
+? Jakie rodzaje stacji transformatorowych SN/nN się stosuje?
++ Słupowe, wnętrzowe i kontenerowe
+- Wyłącznie podziemne
+- Wyłącznie dachowe
+- Wyłącznie przewoźne
+! Stacje słupowe są typowe dla terenów wiejskich, a wnętrzowe i kontenerowe dla miast i zakładów.
+
+? Jaki układ sieci nN najczęściej występuje w polskich sieciach dystrybucyjnych?
++ TN-C w sieci, przechodzący w budynku w TN-C-S
+- IT
+- Wyłącznie TT
+- TN-S od samego transformatora
+! Sieć prowadzi przewód PEN, który w złączu lub rozdzielnicy budynku rozdziela się na N i PE.
+
+? Do czego służy uziemienie robocze w stacji transformatorowej?
++ Do uziemienia punktu neutralnego transformatora po stronie nN
+- Wyłącznie do ochrony odgromowej obudowy
+- Do zasilania odbiorców
+- Do pomiaru energii
+! Uziemienie robocze ustala potencjał przewodu neutralnego względem ziemi.
+
+? Dlaczego przewód PEN w sieci napowietrznej uziemia się w wielu miejscach?
++ Aby ograniczyć napięcie przewodu PEN względem ziemi przy jego przerwie lub doziemieniu fazy
+- Aby zwiększyć prąd obciążenia
+- Aby obniżyć częstotliwość
+- Nie uziemia się go
+! Wielokrotne uziemienie przewodu ochronno-neutralnego zwiększa bezpieczeństwo odbiorców.
+
+? Co dzieje się w linii napowietrznej przy wyładowaniu atmosferycznym?
++ Powstaje fala przepięciowa o bardzo dużej wartości i krótkim czasie trwania
+- Napięcie zanika na kilka godzin
+- Częstotliwość rośnie do 100 Hz
+- Prąd przemienny zmienia się w stały
+! Przed skutkami przepięć chronią ograniczniki przepięć w sieci i w instalacjach.
+
+? Czym jest strefa ochrony odgromowej LPZ?
++ Obszarem, dla którego określono poziom zagrożenia elektromagnetycznego wywołanego piorunem
+- Strefą instalacyjną w ścianie
+- Strefą łazienki
+- Strefą zagrożoną wybuchem
+! Na granicach stref LPZ montuje się ograniczniki przepięć odpowiednich typów.
+
+? Jakie klasy urządzenia piorunochronnego (LPS) przewiduje PN-EN 62305?
++ I, II, III i IV, gdzie klasa I jest najskuteczniejsza
+- A, B, C i D
+- Tylko 1, 2 i 3
+- Norma nie przewiduje klas
+! Klasę dobiera się na podstawie analizy ryzyka. Wpływa ona m.in. na rozstaw przewodów odprowadzających i wielkość oczek zwodów.
+
+? Jaką rezystancję uziemienia zaleca się dla instalacji piorunochronnej budynku?
++ Nie większą niż 10 Ω
+- Nie większą niż 1000 Ω
+- Dokładnie 0 Ω
+- Nie mniejszą niż 100 Ω
+! Niska rezystancja uziemienia ułatwia odprowadzenie prądu pioruna do ziemi.
+
+? Z czego wykonuje się zwody i przewody odprowadzające instalacji piorunochronnej?
++ Ze stali ocynkowanej, miedzi lub aluminium o odpowiednim przekroju, np. z drutu stalowego ocynkowanego Ø8 mm
+- Z przewodu YDYp 1,5 mm²
+- Z przewodu telefonicznego
+- Z rurki PVC
+! Przewody muszą wytrzymać prąd pioruna i być odporne na korozję.
+
+? Co oznacza odstęp izolacyjny w ochronie odgromowej?
++ Najmniejszą odległość między instalacją piorunochronną a instalacjami wewnętrznymi, przy której nie dojdzie do przeskoku iskry
+- Odstęp między przewodem fazowym a neutralnym
+- Szerokość strefy instalacyjnej
+- Odległość między słupami linii
+! Gdy odstępu nie da się zachować, wykonuje się połączenia wyrównawcze.
+
+? Jak często bada się instalację piorunochronną budynku?
++ Co najmniej raz na 5 lat
+- Raz na 20 lat
+- Tylko po uderzeniu pioruna
+- Nigdy
+! Prawo budowlane wymaga badania instalacji elektrycznej i piorunochronnej co najmniej raz na 5 lat. Po wyładowaniu wskazana jest dodatkowa kontrola.
+
+? Jaki jest cel kompensacji indywidualnej, czyli kondensatora przy silniku?
++ Zmniejszenie prądu w zasilaniu silnika i odciążenie sieci od jego mocy biernej
+- Zwiększenie mocy silnika
+- Zmiana kierunku obrotów
+- Ochrona przed przepięciami
+! Kompensacja indywidualna działa tylko wtedy, gdy pracuje dany silnik.
+
+? Jaka jest zaleta kompensacji centralnej, czyli baterii w rozdzielnicy głównej?
++ Jedna regulowana bateria dopasowuje moc kompensacyjną do zmieniającego się obciążenia całego zakładu
+- Odciąża od prądu biernego wszystkie przewody wewnątrz zakładu
+- Nie wymaga żadnej regulacji
+- Zwiększa moc czynną
+! Kompensacja centralna nie zmniejsza jednak prądu biernego w przewodach wewnątrz zakładu.
+
+? Czym grozi przekompensowanie, czyli zbyt duża moc baterii kondensatorów?
++ Poborem mocy biernej pojemnościowej, wzrostem napięcia i opłatami za energię bierną pojemnościową
+- Spadkiem częstotliwości
+- Zwiększeniem mocy czynnej silników
+- Nie ma żadnych skutków
+! Regulator załącza tylko tyle stopni baterii, ile potrzeba w danej chwili.
+
+? Jakiej mocy baterię kondensatorów trzeba zastosować, aby zmniejszyć pobór mocy biernej z 60 kvar do 20 kvar?
++ 40 kvar
+- 20 kvar
+- 60 kvar
+- 80 kvar
+! Bateria musi dostarczyć różnicę: 60 − 20 = 40 kvar.
+
+? Zakład pobiera 100 kW przy tg φ = 0,75. Jaką moc bierną pobiera?
++ 75 kvar
+- 125 kvar
+- 100 kvar
+- 133 kvar
+! Q = P · tg φ = 100 kW · 0,75 = 75 kvar.
+
+? Ile mocy biernej trzeba skompensować w zakładzie o mocy 100 kW, aby zmniejszyć tg φ z 0,75 do 0,4?
++ 35 kvar
+- 115 kvar
+- 40 kvar
+- 75 kvar
+! Qk = P · (tg φ₁ − tg φ₂) = 100 · (0,75 − 0,4) = 35 kvar.
+
+? Co nazywamy migotaniem światła (flickerem)?
++ Odczuwalne wahania strumienia świetlnego wywołane szybkimi wahaniami napięcia
+- Efekt stroboskopowy wirujących części
+- Całkowity zanik napięcia
+- Zmianę barwy światła
+! Migotanie wywołują np. piece łukowe, spawarki i duże silniki o zmiennym obciążeniu.
+
+? Jak PN-EN 50160 dzieli przerwy w zasilaniu?
++ Na krótkie (do 3 minut) i długie (powyżej 3 minut), przy napięciu poniżej 5% deklarowanego
+- Na przerwy dzienne i nocne
+- Na przerwy jednofazowe i trójfazowe
+- Norma nie opisuje przerw
+! Krótkie przerwy powodują m.in. automatyki SPZ i SZR, a długie wynikają zwykle z awarii.
+
+? Co oznacza skrót SPZ w sieciach elektroenergetycznych?
++ Samoczynne ponowne załączanie linii po krótkotrwałym zakłóceniu
+- Stały pomiar zużycia
+- System przeciwpożarowy
+- Sieć przemysłową zakładową
+! Wiele zwarć w liniach napowietrznych jest przemijających, np. gałąź dotknie przewodu. SPZ przywraca zasilanie po krótkiej przerwie.
+
+? Co oznacza skrót SZR?
++ Samoczynne załączanie rezerwy
+- System zasilania regulowanego
+- Stację zasilania rozdzielczego
+- Sygnalizację zwarcia ręcznego
+! Automatyka SZR przełącza odbiorniki na zasilanie rezerwowe, np. drugą linię lub agregat, po zaniku zasilania podstawowego.
+
+? Do czego służy agregat prądotwórczy w szpitalach i zakładach przemysłowych?
++ Do rezerwowego zasilania ważnych odbiorów podczas zaniku napięcia sieci
+- Do kompensacji mocy biernej
+- Do pomiaru jakości energii
+- Do zasilania sieci SN
+! Agregat uruchamia się automatycznie, a do czasu jego rozruchu zasilanie podtrzymują zasilacze UPS.
+
+? Co musi mieć instalacja budynku, do której można przyłączyć agregat prądotwórczy?
++ Przełącznik z blokadą, który uniemożliwia jednoczesne połączenie agregatu z siecią
+- Wystarczy zwykłe gniazdo
+- Nie potrzeba żadnych zabezpieczeń
+- Wyłącznie wyłącznik zmierzchowy
+! Bez takiego przełącznika agregat mógłby podać napięcie do sieci i zagrozić pracownikom energetyki.
+
+? Czym jest mikroinstalacja według ustawy o odnawialnych źródłach energii?
++ Instalacją OZE o łącznej mocy elektrycznej nie większej niż 50 kW, przyłączoną do sieci o napięciu niższym niż 110 kV
+- Instalacją OZE o mocy większej niż 50 kW i nie większej niż 1 MW
+- Każdym źródłem energii o mocy do 50 kW, także agregatem spalinowym
+- Instalacją OZE o mocy do 10 kW, która nie może być przyłączona do sieci
+! Typowa mikroinstalacja to przydomowa elektrownia fotowoltaiczna. Ustawa o OZE wymaga mocy elektrycznej do 50 kW i przyłączenia do sieci o napięciu niższym niż 110 kV.
+
+? Które urządzenie zamienia prąd stały z paneli fotowoltaicznych na przemienny, zsynchronizowany z siecią?
++ Falownik (inwerter) sieciowy
+- Prostownik
+- Transformator separacyjny
+- Ogranicznik przepięć
+! Falownik dopasowuje napięcie i częstotliwość do sieci oraz wyłącza się po jej zaniku.
+
+? Jakie zabezpieczenia stosuje się po stronie DC instalacji fotowoltaicznej?
++ Rozłącznik DC, bezpieczniki gPV przy wielu łańcuchach i ograniczniki przepięć DC
+- Wyłącznie wyłączniki 230 V AC
+- Nie stosuje się zabezpieczeń
+- Wyłącznie licznik energii
+! Łuk przy prądzie stałym trudno zgasić, dlatego aparaty po stronie DC muszą być do tego przeznaczone.
+
+? Dlaczego łączniki do prądu stałego w instalacjach PV muszą mieć specjalną konstrukcję?
++ Bo przy prądzie stałym łuk nie gaśnie samoczynnie przy przejściu prądu przez zero
+- Bo prąd stały ma wyższą częstotliwość
+- Bo prąd stały nie nagrzewa styków
+- Nie muszą
+! Prąd przemienny 100 razy na sekundę przechodzi przez zero, co ułatwia gaszenie łuku. Przy prądzie stałym tak się nie dzieje.
+
+? Jak zmienia się napięcie paneli fotowoltaicznych w niskiej temperaturze?
++ Rośnie, dlatego falownik dobiera się z uwzględnieniem napięcia przy najniższej temperaturze
+- Spada do zera
+- Nie zmienia się
+- Zmienia się tylko prąd
+! Przekroczenie dopuszczalnego napięcia wejściowego falownika w mroźny, słoneczny dzień może go uszkodzić.
+
+? Co mierzy licznik dwukierunkowy w instalacji prosumenta?
++ Energię pobraną z sieci i energię oddaną do sieci
+- Wyłącznie moc bierną
+- Zużycie dwóch mieszkań
+- Napięcie w dwóch fazach
+! Prosument oddaje nadwyżki energii do sieci, więc do rozliczeń potrzebny jest pomiar w obu kierunkach.
+
+? Jakie zadanie ma rozdzielnica SN w stacji transformatorowej?
++ Rozdziela energię na poziomie średniego napięcia i pozwala łączyć oraz zabezpieczać linie i transformatory
+- Rozdziela energię 230 V do mieszkań
+- Mierzy zużycie gazu
+- Kompensuje harmoniczne
+! W rozdzielnicach SN stosuje się rozłączniki, wyłączniki i zabezpieczenia linii oraz transformatorów.
+
+? Co oznacza skrót ZK w sieci niskiego napięcia?
++ Złącze kablowe
+- Zabezpieczenie kontrolne
+- Zasilanie kondensatorowe
+- Zespół kompensacyjny
+! Złącze kablowe to szafka z zabezpieczeniami, z której wychodzi zasilanie budynku.
+
+? Jak nazywa się odcinek sieci łączący sieć dystrybucyjną ze złączem budynku?
++ Przyłącze
+- WLZ
+- Obwód odbiorczy
+- Przewód wyrównawczy
+! Za złączem zaczyna się instalacja odbiorcy, a przyłącze należy zwykle do operatora sieci.
+
+? Jakie przewody stosuje się w izolowanych liniach napowietrznych niskiego napięcia?
++ Przewody samonośne izolowane, np. AsXSn
+- Przewody YDYp
+- Przewody H03VV-F
+- Gołe szyny miedziane
+! Przewody izolowane zmniejszają ryzyko zwarć, np. przez gałęzie, i porażeń.
+
+? Dlaczego w liniach napowietrznych stosuje się przewody aluminiowe lub stalowo-aluminiowe, a nie miedziane?
++ Bo są lżejsze i tańsze, a stalowy rdzeń zwiększa wytrzymałość mechaniczną
+- Bo przewodzą lepiej niż miedź
+- Bo nie mają rezystancji
+- Bo są wymagane tylko w nocy
+! Lżejsze przewody pozwalają stosować lżejsze słupy i dłuższe przęsła.
+
+? Co to jest zwarcie doziemne?
++ Połączenie przewodu fazowego z ziemią lub z uziemionymi częściami
+- Połączenie dwóch faz
+- Przerwa w przewodzie
+- Przeciążenie przewodu
+! W sieciach z uziemionym punktem neutralnym zwarcie doziemne powoduje duży prąd, który wyłącza zabezpieczenia.
+
+? Które zwarcie w sieci trójfazowej daje zwykle największy prąd i służy do doboru zdolności łączeniowej aparatów?
++ Trójfazowe symetryczne
+- Jednofazowe daleko od transformatora
+- Przerwa w przewodzie
+- Przeciążenie o 10%
+! Prąd zwarcia trójfazowego decyduje o doborze aparatów, a prąd zwarcia jednofazowego o skuteczności samoczynnego wyłączenia zasilania.
+
+? Jakim wskaźnikiem opisuje się przeciętny czas przerw w zasilaniu przypadający na odbiorcę w ciągu roku?
++ SAIDI
+- THD
+- cos φ
+- uₖ
+! Operatorzy raportują wskaźniki SAIDI (czas przerw) i SAIFI (liczba przerw).

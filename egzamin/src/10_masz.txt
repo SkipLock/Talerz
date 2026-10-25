@@ -16,7 +16,7 @@
 
 ? Ile wynosi poślizg silnika o prędkości synchronicznej 1500 obr/min, który obraca się z prędkością 1440 obr/min?
 + 4%
-- 2%
+- 60%
 - 6%
 - 96%
 ! s = (n₁ − n) / n₁ = (1500 − 1440) / 1500 = 0,04 = 4%.
@@ -195,7 +195,7 @@
 + 155 °C
 - 105 °C
 - 130 °C
-- 180 °C
+- 120 °C
 ! Klasy izolacji: A – 105 °C, E – 120 °C, B – 130 °C, F – 155 °C, H – 180 °C.
 
 ? Ile wynosi poślizg znamionowy silnika, którego tabliczkę przedstawiono na rysunku?
@@ -253,7 +253,7 @@
 + 3000 obr/min
 - 1500 obr/min
 - 1000 obr/min
-- 6000 obr/min
+- 750 obr/min
 ! Silnik dwubiegunowy ma jedną parę biegunów: n₁ = 60 · 50 / 1 = 3000 obr/min.
 
 ? Jakie straty występują w transformatorze?
@@ -267,7 +267,7 @@
 + 1000 obr/min
 - 750 obr/min
 - 1500 obr/min
-- 3000 obr/min
+- 500 obr/min
 ! Silnik sześciobiegunowy ma 3 pary biegunów: n₁ = 60 · 50 / 3 = 1000 obr/min.
 
 ? Ile wynosi prędkość synchroniczna silnika ośmiobiegunowego zasilanego napięciem 50 Hz?
@@ -279,7 +279,7 @@
 
 ? Silnik o prędkości synchronicznej 1000 obr/min pracuje z poślizgiem 5%. Z jaką prędkością się obraca?
 + 950 obr/min
-- 50 obr/min
+- 1000 obr/min
 - 995 obr/min
 - 1050 obr/min
 ! n = n₁ · (1 − s) = 1000 · 0,95 = 950 obr/min.
@@ -351,7 +351,7 @@
 + 230 V
 - 133 V
 - 400 V
-- 690 V
+- 200 V
 ! W gwieździe uzwojenie jest pod napięciem fazowym: 400 V / √3 ≈ 230 V.
 
 ? Co się stanie, gdy silnik z tabliczką 230/400 V Δ/Y omyłkowo połączymy w trójkąt i zasilimy z sieci 3×400 V?
@@ -481,7 +481,7 @@
 + 120 A
 - 15 A
 - 66,7 A
-- 600 A
+- 40 A
 ! Przekładnia wynosi 200 / 5 = 40, więc I₁ = 40 · 3 A = 120 A.
 
 ? Jakie zadanie ma uzwojenie wzbudzenia w maszynie prądu stałego?
@@ -551,7 +551,7 @@
 + 85%
 - 15%
 - 80%
-- 117%
+- 0,85%
 ! η = P₂ / P₁ = 4,25 / 5 = 0,85 = 85%.
 
 ? Jakie straty występują w silniku indukcyjnym?
@@ -573,7 +573,7 @@
 + 10,6 A
 - 9,3 A
 - 13,8 A
-- 18,4 A
+- 8,2 A
 ! P₁ = P₂ / η = 6,25 kW, a I = P₁ / (√3 · U · cos φ) = 6250 / (1,73 · 400 · 0,85) ≈ 10,6 A.
 
 ? Dlaczego hamulec elektromagnetyczny silnika trzyma wał, gdy silnik jest wyłączony?

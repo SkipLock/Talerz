@@ -10,7 +10,7 @@
 ? Jakim napięciem probierczym mierzy się rezystancję izolacji obwodu 230/400 V?
 + 500 V prądu stałego
 - 250 V prądu przemiennego
-- 1000 V prądu przemiennego
+- 400 V prądu przemiennego
 - 50 V prądu stałego
 ! Według PN-HD 60364-6 obwody o napięciu znamionowym do 500 V (poza SELV i PELV) bada się napięciem 500 V DC.
 
@@ -118,7 +118,7 @@
 
 ? Pomiar impedancji pętli zwarcia w obwodzie 230 V dał wynik Zs = 1,15 Ω. Ile wynosi spodziewany prąd zwarcia?
 + 200 A
-- 115 A
+- 348 A
 - 265 A
 - 2000 A
 ! Ik = U₀ / Zs = 230 V / 1,15 Ω = 200 A.
@@ -474,7 +474,7 @@
 + 0,8
 - 0,5
 - 0,6
-- 1,25
+- 0,64
 ! S = 230 · 6,25 = 1437,5 VA, więc cos φ = 1150 / 1437,5 = 0,8.
 
 ? Którym przyrządem mierzy się prędkość obrotową wału silnika?

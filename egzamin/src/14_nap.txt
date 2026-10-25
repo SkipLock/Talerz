@@ -144,7 +144,7 @@
 + 1152 obr/min
 - 1200 obr/min
 - 1440 obr/min
-- 960 obr/min
+- 1248 obr/min
 ! n₁ = 60 · 40 / 2 = 1200 obr/min, a n = n₁ · (1 − s) = 1200 · 0,96 = 1152 obr/min.
 
 ? Który element przekształtnika gromadzi energię w obwodzie pośredniczącym napięcia stałego?
@@ -160,3 +160,290 @@
 - Bo wyświetlacz musi się wyłączyć
 - Bo zmienia się kierunek prądu w sieci
 ! Kondensatory w obwodzie DC są naładowane do napięcia ponad 500 V przy zasilaniu 400 V. Czas rozładowania podaje producent na obudowie.
+
+? Ile wynosi prędkość synchroniczna silnika dwubiegunowego zasilanego z falownika napięciem 60 Hz?
++ 3600 obr/min
+- 1800 obr/min
+- 3000 obr/min
+- 3500 obr/min
+! n₁ = 60 · f / p = 60 · 60 / 1 = 3600 obr/min.
+
+? Jaką częstotliwość trzeba ustawić w falowniku, aby silnik czterobiegunowy miał prędkość synchroniczną 900 obr/min?
++ 30 Hz
+- 15 Hz
+- 45 Hz
+- 60 Hz
+! f = n₁ · p / 60 = 900 · 2 / 60 = 30 Hz.
+
+? Co dzieje się z momentem silnika zasilanego z falownika powyżej częstotliwości znamionowej, gdy napięcie nie może już rosnąć?
++ Pole słabnie, więc dostępny moment maleje
+- Moment rośnie
+- Moment pozostaje stały w całym zakresie
+- Silnik się zatrzymuje
+! Powyżej punktu znamionowego stosunek U/f maleje i strumień słabnie. To zakres w przybliżeniu stałej mocy.
+
+? Do czego służy podbicie napięcia (boost) w falowniku przy małych częstotliwościach?
++ Kompensuje spadek napięcia na rezystancji uzwojeń, dzięki czemu silnik ma większy moment przy rozruchu
+- Wyłącza napięcie podczas rozruchu
+- Zwiększa częstotliwość powyżej 50 Hz
+- Hamuje silnik prądem stałym
+! Przy małej częstotliwości spadek na rezystancji stojana jest znaczący i bez podbicia silnik miałby za mały moment.
+
+? Na czym polega sterowanie wektorowe w przemienniku częstotliwości?
++ Na oddzielnej regulacji strumienia i momentu silnika, co daje dobry moment także przy małych prędkościach
+- Na sterowaniu samą częstotliwością bez zmiany napięcia
+- Na przełączaniu gwiazda-trójkąt
+- Na zmianie liczby biegunów
+! Sterowanie wektorowe korzysta z modelu silnika i pomiaru prądów. Daje lepszą dynamikę niż sterowanie skalarne U/f.
+
+? Co określa parametr „czas rozpędzania” w falowniku?
++ Czas narastania częstotliwości od zera do wartości zadanej
+- Czas pracy silnika
+- Czas, po którym falownik się wyłącza
+- Temperaturę silnika
+! Zbyt krótki czas rozpędzania może przeciążyć napęd i spowodować wyłączenie falownika przez nadmierny prąd.
+
+? Falownik zgłasza podczas hamowania przekroczenie napięcia w obwodzie DC. Co to oznacza i jak temu zaradzić?
++ Energia oddawana przez silnik podnosi napięcie kondensatorów; trzeba wydłużyć czas hamowania albo zastosować rezystor hamujący
+- Napięcie sieci spadło
+- Silnik jest odłączony
+- Przewód ochronny jest przerwany
+! Przy szybkim zatrzymywaniu dużych mas silnik pracuje jak prądnica i ładuje obwód DC.
+
+? Jak odzyskać energię hamowania napędu z falownikiem, zamiast zamieniać ją w ciepło?
++ Zastosować przekształtnik oddający energię do sieci albo wspólną szynę DC kilku napędów
+- Zwiększyć rezystor hamujący
+- Odłączyć silnik od falownika
+- Zmienić kolejność faz
+! W windach, dźwigach i wirówkach odzysk energii daje duże oszczędności.
+
+? Jaki wpływ na sieć zasilającą ma przemiennik częstotliwości?
++ Pobiera prąd odkształcony z wyższymi harmonicznymi, dlatego stosuje się dławiki sieciowe i filtry
+- Nie ma żadnego wpływu
+- Poprawia kształt napięcia sieci
+- Zawsze zwiększa częstotliwość sieci
+! Prostownik wejściowy z kondensatorami pobiera prąd impulsowo, co odkształca prąd w sieci.
+
+? Do czego służy dławik silnikowy (wyjściowy) przy falowniku zasilającym silnik długim kablem?
++ Ogranicza stromość napięcia i przepięcia na zaciskach silnika oraz prądy pojemnościowe kabla
+- Zwiększa prędkość silnika
+- Kompensuje moc bierną sieci
+- Zastępuje przekaźnik termiczny
+! Przy długich kablach na zaciskach silnika powstają przepięcia, które mogą uszkodzić izolację uzwojeń.
+
+? Na czym polega modulacja PWM w falowniku napięcia?
++ Napięcie wyjściowe tworzą szybko przełączane impulsy o zmiennej szerokości
+- Na prostowaniu napięcia diodami
+- Na zmianie odczepów transformatora
+- Na zmianie liczby biegunów silnika
+! Odpowiednie zmiany szerokości impulsów sprawiają, że prąd silnika ma kształt zbliżony do sinusoidy.
+
+? Jakie są zalety napędu pompy z falownikiem w porównaniu z pracą ze stałą prędkością i dławieniem zaworem?
++ Duże oszczędności energii, łagodny rozruch i dokładna regulacja wydajności
+- Brak jakichkolwiek zalet
+- Większe zużycie energii
+- Konieczność użycia silnika prądu stałego
+! Moc pomp i wentylatorów maleje z sześcianem prędkości, więc niewielkie zmniejszenie prędkości daje duże oszczędności.
+
+? Jak zmieni się moc pobierana przez wentylator, gdy jego prędkość zmniejszymy o połowę?
++ Zmaleje około 8 razy
+- Zmaleje 2 razy
+- Zmaleje 4 razy
+- Nie zmieni się
+! Moc wentylatora jest w przybliżeniu proporcjonalna do sześcianu prędkości: (1/2)³ = 1/8.
+
+? Jak tyrystor reguluje napięcie w prostowniku sterowanym?
++ Przewodzi od chwili podania impulsu na bramkę do końca połówki okresu, więc opóźnienie impulsów zmniejsza napięcie średnie
+- Zawsze przewodzi jak zwykła dioda
+- Magazynuje energię
+- Mierzy prąd
+! Im później w połówce okresu tyrystor zostanie załączony, tym mniejsze średnie napięcie na wyjściu.
+
+? Ile diod ma trójfazowy prostownik mostkowy niesterowany?
++ Sześć
+- Dwie
+- Cztery
+- Dwanaście
+! Mostek trójfazowy ma po dwie diody na każdą fazę.
+
+? Jaka jest częstotliwość tętnień napięcia na wyjściu trójfazowego prostownika mostkowego zasilanego z sieci 50 Hz?
++ 300 Hz
+- 50 Hz
+- 100 Hz
+- 150 Hz
+! Prostownik sześciopulsowy daje sześć impulsów na okres sieci: 6 · 50 Hz = 300 Hz.
+
+? Ile wynosi napięcie średnie na wyjściu niesterowanego mostka trójfazowego zasilanego z sieci 400 V?
++ Około 540 V
+- Około 230 V
+- Około 400 V
+- Około 800 V
+! Dla mostka trójfazowego Ud ≈ 1,35 · U = 1,35 · 400 V ≈ 540 V. To typowe napięcie obwodu DC falownika.
+
+? Jak nazywa się przekształtnik DC/DC obniżający napięcie?
++ Przetwornica obniżająca (buck)
+- Przetwornica podwyższająca (boost)
+- Falownik
+- Prostownik
+! Przetwornica buck zamienia wyższe napięcie stałe na niższe z dużą sprawnością, przełączając tranzystor z dużą częstotliwością.
+
+? Gdzie stosuje się przetwornice podwyższające napięcie stałe (boost)?
++ Np. w falownikach fotowoltaicznych i w zasilaczach z korekcją współczynnika mocy
+- Wyłącznie w żarówkach
+- W bezpiecznikach
+- W transformatorach olejowych
+! Przetwornica boost podnosi napięcie stałe do poziomu potrzebnego np. w obwodzie DC falownika.
+
+? Do czego służy radiator w urządzeniach energoelektronicznych?
++ Do odprowadzania ciepła z półprzewodników mocy
+- Do pomiaru prądu
+- Do filtrowania zakłóceń
+- Do magazynowania energii
+! Tranzystory i tyrystory mocy nagrzewają się wskutek strat przewodzenia i przełączania.
+
+? Co może powodować częste wyłączanie się falownika z powodu przekroczenia prądu podczas rozruchu?
++ Za krótki czas rozpędzania, za duże obciążenie albo błędnie wprowadzone dane silnika
+- Za długi czas rozpędzania
+- Za niska temperatura otoczenia
+- Zbyt dobra izolacja kabla
+! Falownik ogranicza prąd, aby chronić tranzystory. Trzeba wydłużyć rampę albo sprawdzić napęd.
+
+? Jak zmienić kierunek obrotów silnika zasilanego z falownika?
++ Zmienić kierunek w falowniku, parametrem albo sygnałem sterującym
+- Zamienić przewody L i N zasilające falownik
+- Zamienić przewód ochronny z neutralnym
+- Nie da się
+! Falownik sam ustala kolejność faz na wyjściu, więc kierunek zmienia się elektronicznie.
+
+? Dlaczego nie powinno się przełączać stycznika między falownikiem a silnikiem podczas pracy?
++ Bo przełączanie pod obciążeniem grozi uszkodzeniem stopnia wyjściowego falownika
+- Bo stycznik nie przewodzi prądu przemiennego
+- Bo silnik nie ruszy
+- Można to robić dowolnie
+! Jeśli stycznik jest potrzebny, np. ze względów bezpieczeństwa, przełącza się go przy zatrzymanym falowniku.
+
+? Czym jest silnik bezszczotkowy prądu stałego (BLDC)?
++ Silnikiem z magnesami trwałymi na wirniku, w którym komutację wykonuje układ elektroniczny
+- Silnikiem indukcyjnym pierścieniowym
+- Silnikiem szeregowym ze szczotkami grafitowymi
+- Transformatorem obrotowym
+! Silniki BLDC są ciche, sprawne i trwałe; stosuje się je m.in. w wentylatorach, pompach i pojazdach elektrycznych.
+
+? Jaka jest główna zaleta serwonapędu?
++ Dokładne sterowanie położeniem, prędkością i momentem dzięki sprzężeniu zwrotnemu z enkodera
+- Brak potrzeby zasilania
+- Praca z jedną prędkością
+- Brak możliwości sterowania
+! Serwonapędy stosuje się w robotach przemysłowych i obrabiarkach CNC.
+
+? Jakie zabezpieczenia silnika realizuje zwykle przemiennik częstotliwości?
++ Przeciążeniowe (model cieplny), zwarciowe na wyjściu, nadnapięciowe i podnapięciowe oraz od zaniku fazy
+- Wyłącznie przepięciowe od piorunów
+- Żadnych
+- Wyłącznie różnicowoprądowe 30 mA
+! Dlatego silnik zasilany z falownika często nie wymaga osobnego przekaźnika termicznego.
+
+? Do czego służy termistor PTC wbudowany w uzwojenie silnika?
++ Do bezpośredniego zabezpieczenia silnika przed przegrzaniem, przez przekaźnik termistorowy albo wejście falownika
+- Do pomiaru prędkości
+- Do pomiaru prądu
+- Do rozruchu silnika
+! Rezystancja termistora PTC gwałtownie rośnie po przekroczeniu temperatury zadziałania.
+
+? Na czym polega rozruch silnika pierścieniowego?
++ Na dołączeniu rezystorów do obwodu wirnika i stopniowym ich zwieraniu
+- Na przełączeniu gwiazda-trójkąt
+- Na użyciu kondensatora rozruchowego
+- Na zamianie faz
+! Rezystory zmniejszają prąd rozruchowy i zwiększają moment. Po rozruchu pierścienie się zwiera.
+
+? Co to jest moment krytyczny silnika indukcyjnego?
++ Największy moment, jaki silnik może rozwinąć; przy większym obciążeniu silnik się zatrzymuje
+- Moment przy biegu jałowym
+- Moment rozruchowy zawsze równy zeru
+- Moment przy prędkości synchronicznej
+! Moment krytyczny wynosi zwykle 2–3 razy więcej niż znamionowy.
+
+? Jak zmienia się moment krytyczny silnika indukcyjnego przy obniżeniu napięcia zasilania?
++ Maleje z kwadratem napięcia
+- Rośnie
+- Nie zmienia się
+- Maleje liniowo z częstotliwością
+! Spadek napięcia o 10% obniża moment krytyczny do około 81%, co przy dużym obciążeniu grozi zatrzymaniem silnika.
+
+? Na czym polega hamowanie odzyskowe silnika indukcyjnego?
++ Maszyna obraca się szybciej niż pole i oddaje energię do sieci
+- Na zasileniu uzwojeń prądem stałym
+- Na zamianie dwóch faz
+- Na zwarciu uzwojeń
+! Występuje np. przy opuszczaniu ciężaru dźwigiem albo przy zmniejszaniu częstotliwości w falowniku.
+
+? Jakie zadanie ma przekładnia w układzie napędowym?
++ Dopasowuje prędkość i moment silnika do wymagań maszyny roboczej
+- Podwyższa napięcie silnika
+- Chroni przed porażeniem
+- Mierzy energię
+! Przekładnia zmniejszająca prędkość zwiększa moment w tym samym stosunku, pomijając straty.
+
+? Silnik o prędkości 1450 obr/min napędza maszynę przez przekładnię o przełożeniu i = 5. Z jaką prędkością obraca się wał maszyny?
++ 290 obr/min
+- 145 obr/min
+- 1450 obr/min
+- 7250 obr/min
+! n₂ = n₁ / i = 1450 / 5 = 290 obr/min.
+
+? Jak zmieni się moment na wale wyjściowym przekładni zmniejszającej prędkość pięciokrotnie (bez strat)?
++ Wzrośnie 5 razy
+- Zmaleje 5 razy
+- Nie zmieni się
+- Wzrośnie 25 razy
+! Moc jest stała (M · n = const), więc pięć razy mniejsza prędkość to pięć razy większy moment.
+
+? Do czego służy sprzęgło w układzie napędowym?
++ Do połączenia wału silnika z wałem maszyny i przenoszenia momentu, często z wyrównaniem niewielkiej niewspółosiowości
+- Do pomiaru prędkości
+- Do zmiany napięcia
+- Do chłodzenia silnika
+! Sprzęgła elastyczne tłumią też drgania i udary przy rozruchu.
+
+? Dlaczego silniki dźwigów mają hamulce?
++ Aby utrzymać ładunek po zatrzymaniu i przy zaniku zasilania
+- Aby zwiększyć prędkość podnoszenia
+- Aby zmniejszyć pobór mocy biernej
+- Hamulce nie są potrzebne
+! Hamulce sprężynowe zaciskają się samoczynnie, gdy zanika zasilanie.
+
+? Co oznacza softstart z bypassem?
++ Softstart, w którym po rozruchu tyrystory zwiera stycznik, więc nie nagrzewają się podczas pracy
+- Falownik z rezystorem hamującym
+- Rozrusznik gwiazda-trójkąt
+- Przekaźnik czasowy
+! Stycznik bypassu przejmuje prąd po rozruchu, co zmniejsza straty i potrzebę chłodzenia.
+
+? Jaki silnik stosuje się najczęściej w hulajnogach i rowerach elektrycznych?
++ Silnik bezszczotkowy z magnesami trwałymi, często umieszczony w piaście koła
+- Silnik pierścieniowy
+- Silnik szeregowy prądu przemiennego
+- Silnik synchroniczny ze wzbudzeniem elektromagnetycznym
+! Silniki BLDC mają dużą sprawność i moment przy małych wymiarach; zasila je sterownik elektroniczny z akumulatora.
+
+? Co oznacza stopień ochrony IP20 przemiennika częstotliwości i gdzie wolno go instalować?
++ Ochronę przed dotknięciem palcem, bez ochrony przed wodą; montuje się go w szafach sterowniczych
+- Pełną wodoszczelność; można go montować na zewnątrz
+- Odporność na wybuchy
+- Brak ochrony przed dotykiem
+! Do montażu przy maszynie stosuje się wersje IP55 lub IP66.
+
+? Jak wykonuje się połączenia ochronne przemiennika częstotliwości i silnika?
++ Zaciski PE falownika i silnika łączy się żyłą ochronną kabla silnikowego oraz z szyną PE szafy
+- Nie łączy się ich z PE, żeby nie było zakłóceń
+- Łączy się je tylko przewodem neutralnym
+- Uziemia się wyłącznie ekran
+! Połączenia ochronne i ekran kabla zapewniają bezpieczeństwo i ograniczają zakłócenia.
+
+? Czym jest prąd upływu przemiennika częstotliwości i jak wpływa na dobór wyłącznika RCD?
++ To prąd płynący do ziemi przez kondensatory filtrów i pojemność kabla; może powodować zbędne zadziałania RCD 30 mA
+- To prąd obciążenia silnika
+- To prąd zwarciowy sieci
+- W falownikach nie występuje
+! Dla falowników stosuje się zwykle wyłączniki typu B, często o większym prądzie IΔn, np. 300 mA, lub wersje odporne na prądy wysokiej częstotliwości.

@@ -174,3 +174,122 @@
 - Wyśmiać go przy innych
 - Samemu zdjąć rękawice, żeby było sprawiedliwie
 ! Każdy pracownik powinien reagować na zagrożenia. Zwrócenie uwagi może zapobiec wypadkowi.
+
+? Co oznacza termin „line conductor” (L)?
++ Przewód fazowy
+- Przewód neutralny
+- Przewód ochronny
+- Przewód wyrównawczy
+! Neutral conductor to przewód neutralny (N), a protective conductor przewód ochronny (PE).
+
+? Jak przetłumaczyć „short circuit”?
++ Zwarcie
+- Przerwa w obwodzie
+- Przeciążenie
+- Upływ prądu
+! Open circuit to przerwa w obwodzie, overload – przeciążenie, leakage current – prąd upływu.
+
+? Co oznacza słowo „overload”?
++ Przeciążenie
+- Zwarcie
+- Przepięcie
+- Spadek napięcia
+! Short circuit to zwarcie, surge (overvoltage) – przepięcie, voltage drop – spadek napięcia.
+
+? Co oznacza termin „leakage current”?
++ Prąd upływu
+- Prąd zwarciowy
+- Prąd rozruchowy
+- Prąd znamionowy
+! Short-circuit current to prąd zwarciowy, starting current – prąd rozruchowy, rated current – prąd znamionowy.
+
+? Jak przetłumaczyć „screwdriver”?
++ Wkrętak (śrubokręt)
+- Szczypce
+- Młotek
+- Klucz płaski
+! Pliers to szczypce, hammer – młotek, spanner (wrench) – klucz.
+
+? Co oznacza słowo „pliers”?
++ Szczypce, kombinerki
+- Wkrętak
+- Nóż
+- Lutownica
+! Side cutters to szczypce boczne, a soldering iron – lutownica.
+
+? Jak przetłumaczyć „bearing”?
++ Łożysko
+- Wał
+- Uzwojenie
+- Obudowa
+! Shaft to wał, winding – uzwojenie, housing (frame) – obudowa.
+
+? Co oznacza termin „power factor”?
++ Współczynnik mocy
+- Moc czynną
+- Moc znamionową
+- Częstotliwość
+! Active power to moc czynna, reactive power – bierna, apparent power – pozorna.
+
+? Co oznacza w napędach określenie „frequency converter” lub „inverter”?
++ Przemiennik częstotliwości (falownik)
+- Transformator
+- Prostownik
+- Stycznik
+! Rectifier to prostownik, transformer – transformator, contactor – stycznik.
+
+? Jak przetłumaczyć „cable tray”?
++ Korytko kablowe
+- Bęben kablowy
+- Dławnica
+- Końcówka kablowa
+! Cable drum to bęben kablowy, cable gland – dławnica, cable lug – końcówka kablowa.
+
+? Co oznacza napis „Do not switch on! Work in progress”?
++ Nie załączać! Pracują ludzie
+- Uwaga! Wysokie napięcie
+- Wyjście ewakuacyjne
+- Zakaz palenia
+! Takie tablice wiesza się na napędach łączników, którymi wyłączono napięcie na czas pracy.
+
+? Co oznacza „safety helmet”?
++ Kask ochronny
+- Okulary ochronne
+- Rękawice ochronne
+- Obuwie ochronne
+! Safety glasses to okulary ochronne, gloves – rękawice, safety shoes – obuwie ochronne.
+
+? Jak przetłumaczyć „luminaire” (light fitting)?
++ Oprawa oświetleniowa
+- Łącznik oświetlenia
+- Źródło światła
+- Ściemniacz
+! Light source to źródło światła, light switch – łącznik, dimmer – ściemniacz.
+
+? Co oznacza słowo „maintenance”?
++ Konserwację, utrzymanie w sprawności
+- Montaż
+- Projektowanie
+- Sprzedaż
+! Maintenance obejmuje przeglądy, konserwację i naprawy, a installation to montaż.
+
+? Na czym polega delegowanie zadań w zespole?
++ Na przekazaniu wykonania zadania innej osobie wraz z potrzebnymi uprawnieniami
+- Na wyjeździe służbowym
+- Na zwolnieniu pracownika
+- Na odmowie wykonania pracy
+! Kierujący deleguje zadania zgodnie z kwalifikacjami pracowników, ale nadal odpowiada za wynik.
+
+? Jak dobrze zaplanować pracę zespołu monterów?
++ Ustalić kolejność zadań, potrzebne materiały i narzędzia oraz przydzielić zadania według kwalifikacji
+- Zacząć pracę bez planu
+- Zamawiać materiały dopiero po rozpoczęciu każdej czynności
+- Przydzielić wszystkie zadania jednej osobie
+! Dobre przygotowanie skraca przestoje i ogranicza błędy.
+
+? Jak przetłumaczyć „wire”?
++ Przewód, drut
+- Wyłącznik
+- Gniazdo
+- Bezpiecznik
+! Cable to kabel, a conductor żyła lub przewodnik.

@@ -204,7 +204,7 @@
 + 500 Ω
 - 100 Ω
 - 600 Ω
-- 5 kΩ
+- 50 Ω
 ! R = (U − U_LED) / I = (12 − 2) V / 0,02 A = 500 Ω. W praktyce wybiera się najbliższą wartość z szeregu, np. 510 Ω.
 
 ? Jaki element wykrywa położenie krańcowe ruchomej części maszyny przez mechaniczny kontakt?
@@ -228,3 +228,282 @@
 - Dzielnik napięcia z rezystorów
 - Bateria kondensatorów
 ! Zasilacz impulsowy daje stabilizowane napięcie stałe 24 V i oddziela obwody sterowania od sieci.
+
+? Jaką funkcję realizuje szczebel przedstawiony na rysunku?
+@ lad:I1 I2 (Q1)
++ Q1 = I1 AND I2
+- Q1 = I1 OR I2
+- Q1 = NOT I1
+- Q1 = I1 XOR I2
+! Styki połączone szeregowo realizują iloczyn: Q1 jest załączone, gdy oba wejścia mają stan 1.
+
+? Co realizuje szczebel przedstawiony na rysunku?
+@ lad:/I1 (Q1)
++ Negację: Q1 jest załączone, gdy I1 ma stan 0
+- Podtrzymanie wyjścia Q1
+- Iloczyn I1 i Q1
+- Opóźnienie załączenia Q1
+! Styk rozwierny przewodzi, gdy zmienna ma stan 0, więc Q1 = NOT I1.
+
+? Co oznacza cewka oznaczona literą S w schemacie drabinkowym z rysunku?
+@ lad:I1 (S Q1);I2 (R Q1)
++ Ustawienie wyjścia Q1 w stanie 1, które pozostaje po zaniku warunku
+- Zwykłe wyjście, aktywne tylko wtedy, gdy warunek jest spełniony
+- Wyłączenie wyjścia
+- Licznik impulsów
+! Cewka S (set) ustawia wyjście, a cewka R (reset) je kasuje. Razem działają jak przerzutnik RS.
+
+? W jakim stanie będzie wyjście Q1 po krótkim naciśnięciu i zwolnieniu przycisku podłączonego do I1 (rysunek)?
+@ lad:I1 (S Q1);I2 (R Q1)
++ Załączone, dopóki nie pojawi się sygnał na I2
+- Wyłączone zaraz po zwolnieniu przycisku
+- Będzie migać
+- Wyłączone, bo I2 ma stan 0
+! Cewka S zapamiętuje stan 1. Dopiero sygnał na I2 kasuje wyjście cewką R.
+
+? Kiedy wyjście bramki XOR ma stan 1?
++ Gdy wejścia mają różne stany
+- Gdy oba wejścia mają stan 1
+- Gdy oba wejścia mają stan 0
+- Zawsze
+! XOR daje 1 tylko wtedy, gdy jedno wejście ma stan 0, a drugie 1.
+
+? Kiedy wyjście bramki NAND ma stan 0?
++ Tylko gdy wszystkie wejścia mają stan 1
+- Gdy co najmniej jedno wejście ma stan 0
+- Gdy wszystkie wejścia mają stan 0
+- Nigdy
+! NAND to negacja iloczynu: tylko dla samych jedynek iloczyn wynosi 1, a po negacji 0.
+
+? Jaką funkcję logiczną realizują dwa łączniki zwierne połączone równolegle w obwodzie lampy?
++ Sumę logiczną (OR)
+- Iloczyn logiczny (AND)
+- Negację (NOT)
+- Różnicę symetryczną (XOR)
+! Lampa świeci, gdy zamknięty jest jeden lub drugi łącznik albo oba.
+
+? Jaką funkcję logiczną realizuje układ schodowy z dwoma łącznikami schodowymi?
++ XOR albo jej negację, zależnie od przyjętego stanu początkowego
+- AND
+- OR
+- NOT
+! Zmiana stanu dowolnego łącznika zmienia stan lampy, tak jak zmiana dowolnego wejścia zmienia wyjście bramki XOR.
+
+? Do czego służy licznik CTU w sterowniku PLC?
++ Do zliczania impulsów w górę i zmiany stanu wyjścia po osiągnięciu zadanej wartości
+- Do opóźnienia wyłączenia
+- Do porównywania temperatur
+- Do zmiany kierunku obrotów
+! CTU (count up) zwiększa stan przy każdym zboczu sygnału wejściowego, a CTD liczy w dół.
+
+? Jak działa timer TOF?
++ Wyjście załącza się razem z wejściem i wyłącza dopiero po nastawionym czasie od zaniku sygnału wejściowego
+- Opóźnia załączenie wyjścia
+- Wytwarza impuls o stałej długości przy każdym zboczu
+- Zlicza impulsy
+! TOF (off-delay) przedłuża działanie wyjścia, np. wentylatora w łazience po wyłączeniu światła.
+
+? Czym różni się wyjście przekaźnikowe sterownika PLC od tranzystorowego?
++ Przekaźnikowe łączy obwody AC i DC, ale wolniej i z ograniczoną trwałością styków; tranzystorowe łączy tylko DC, szybko i bez zużycia
+- Wyjście tranzystorowe łączy 230 V AC, a przekaźnikowe nie
+- Nie ma różnicy
+- Wyjście przekaźnikowe działa tylko przy 5 V
+! Do szybkich sygnałów wybiera się wyjścia tranzystorowe, a do łączenia różnych napięć przekaźnikowe.
+
+? Co oznacza określenie „czujnik PNP”?
++ W stanie aktywnym wyjście czujnika podaje plus zasilania na obciążenie, np. wejście PLC
+- W stanie aktywnym wyjście zwiera obciążenie do minusa
+- Czujnik nie wymaga zasilania
+- Czujnik działa tylko przy prądzie przemiennym
+! Czujnik NPN w stanie aktywnym łączy obciążenie z minusem zasilania.
+
+? Do czego służy czujnik pojemnościowy?
++ Do bezdotykowego wykrywania przedmiotów metalowych i niemetalowych, np. poziomu cieczy lub granulatu
+- Wyłącznie do pomiaru temperatury
+- Wyłącznie do wykrywania metali
+- Do pomiaru prądu
+! Czujnik reaguje na zmianę pojemności, gdy zbliża się materiał o innej przenikalności elektrycznej niż powietrze.
+
+? Na jakiej zasadzie działa kontaktron?
++ Styki zamknięte w szklanej rurce zamykają się pod wpływem pola magnetycznego, np. magnesu
+- Reaguje na zmianę temperatury
+- Reaguje na światło
+- Mierzy ciśnienie
+! Kontaktrony stosuje się np. w czujnikach otwarcia okien i drzwi w systemach alarmowych.
+
+? Który czujnik temperatury ma rezystancję 100 Ω w temperaturze 0 °C?
++ Pt100
+- Termopara typu K
+- Czujnik indukcyjny
+- Kontaktron
+! Pt100 to platynowy czujnik rezystancyjny. Jego rezystancja rośnie wraz z temperaturą.
+
+? Na czym polega działanie termopary?
++ Wytwarza niewielkie napięcie zależne od różnicy temperatur między złączem pomiarowym a złączem odniesienia
+- Zmienia rezystancję pod wpływem światła
+- Zamyka styki przy określonej temperaturze
+- Wytwarza pole magnetyczne
+! Termopary, np. typu K, mierzą wysokie temperatury, m.in. w piecach.
+
+? Do czego służy bimetal w termostacie?
++ Wygina się przy zmianie temperatury i otwiera lub zamyka styki
+- Mierzy prąd
+- Wytwarza światło
+- Magazynuje energię
+! Bimetal to dwa metale o różnej rozszerzalności cieplnej, połączone ze sobą. Stosuje się go w termostatach i przekaźnikach termicznych.
+
+? Jakie zadanie ma przekaźnik w obwodzie sterowania?
++ Pozwala małym sygnałem sterować obwodem o większym prądzie lub innym napięciu, z oddzieleniem galwanicznym
+- Mierzy moc
+- Wytwarza napięcie przemienne
+- Ogranicza przepięcia
+! Cewka przekaźnika zasilana z wyjścia sterownika 24 V DC może łączyć styki w obwodzie 230 V AC.
+
+? Do czego służy dioda włączona zaporowo równolegle do cewki przekaźnika zasilanej prądem stałym?
++ Do tłumienia przepięcia powstającego przy wyłączaniu cewki
+- Do zwiększenia siły przyciągania
+- Do zmiany kierunku prądu w cewce
+- Do sygnalizacji zadziałania
+! Przy wyłączaniu cewka indukuje przepięcie, które mogłoby uszkodzić tranzystor sterujący. Dioda zamyka drogę temu prądowi.
+
+? Jakie napięcie występuje na przewodzącej diodzie krzemowej?
++ Około 0,6–0,7 V
+- Około 0,05 V
+- Około 3 V
+- Około 12 V
+! Dla diody germanowej to około 0,3 V, a dla diod LED od około 1,8 do 3,5 V, zależnie od barwy.
+
+? Jak zmieni się napięcie na wyjściu stabilizatora z diodą Zenera 5,1 V, gdy napięcie wejściowe wzrośnie z 9 V do 12 V?
++ Pozostanie w przybliżeniu równe 5,1 V
+- Wzrośnie do około 6,8 V
+- Spadnie do zera
+- Wzrośnie do 12 V
+! Dioda Zenera utrzymuje stałe napięcie, a nadmiar odkłada się na rezystorze szeregowym.
+
+? Z jakich bloków składa się prosty zasilacz napięcia stałego zasilany z sieci 230 V?
++ Z transformatora, prostownika, kondensatora filtrującego i stabilizatora
+- Wyłącznie z rezystora
+- Wyłącznie z kondensatora
+- Z silnika i prądnicy
+! Transformator obniża napięcie, prostownik je prostuje, kondensator wygładza, a stabilizator utrzymuje stałą wartość.
+
+? Do czego służy układ scalony 7805?
++ Do stabilizacji napięcia stałego na poziomie 5 V
+- Do wzmacniania sygnału audio
+- Do prostowania napięcia przemiennego
+- Do pomiaru temperatury
+! Stabilizatory serii 78xx dają napięcie dodatnie podane w oznaczeniu: 7805 – 5 V, 7812 – 12 V.
+
+? Czym tranzystor MOSFET różni się od tranzystora bipolarnego pod względem sterowania?
++ Steruje się nim napięciem bramki i w stanie ustalonym prawie nie pobiera prądu sterującego
+- Steruje się nim prądem bazy
+- Nie może pracować jako łącznik
+- Przewodzi tylko prąd przemienny
+! MOSFET łatwo wysterować wprost z mikrokontrolera, dlatego stosuje się go m.in. w zasilaczach i sterownikach LED.
+
+? Prąd bazy 0,1 mA wywołuje prąd kolektora 20 mA. Ile wynosi wzmocnienie prądowe tranzystora?
++ 200
+- 0,005
+- 20
+- 2
+! β = Ic / Ib = 20 mA / 0,1 mA = 200.
+
+? Do czego służy przetwornik analogowo-cyfrowy w module wejść analogowych sterownika?
++ Do zamiany sygnału analogowego, np. 0–10 V, na liczbę przetwarzaną przez program
+- Do zamiany liczb na napięcie
+- Do prostowania napięcia
+- Do zasilania czujników
+! Moduły wejść analogowych przetwarzają sygnały napięciowe lub prądowe z czujników na wartości liczbowe.
+
+? Jaki jest typowy zakres napięciowego sygnału analogowego w automatyce?
++ 0–10 V
+- 0–230 V
+- 0–1 kV
+- 0–0,1 mV
+! Standardowe sygnały analogowe to 0–10 V oraz 0–20 mA i 4–20 mA.
+
+? Na czym polega regulacja w pętli zamkniętej?
++ Układ porównuje wartość zmierzoną z zadaną i na tej podstawie zmienia sygnał sterujący
+- Układ działa bez informacji o wyniku
+- Układ ma tylko jedno wejście
+- Układ działa wyłącznie ręcznie
+! Przykładem jest termostat: mierzy temperaturę i włącza grzanie, gdy jest niższa od zadanej.
+
+? Co oznacza skrót HMI w automatyce?
++ Panel operatorski, czyli interfejs człowiek–maszyna
+- Wyłącznik nadprądowy
+- Czujnik indukcyjny
+- Moduł zasilania
+! Na panelu HMI operator obserwuje stan procesu i zmienia nastawy.
+
+? Który język programowania PLC to tekstowa lista instrukcji przypominająca asembler?
++ IL (Instruction List)
+- LD
+- FBD
+- SFC
+! IL to język tekstowy niskiego poziomu. LD i FBD są graficzne, a SFC opisuje sekwencje kroków.
+
+? Który język PLC przedstawia program jako sekwencję kroków i przejść?
++ SFC (Sequential Function Chart)
+- LD
+- ST
+- IL
+! SFC przypomina sieć działań: kroki z akcjami i przejścia z warunkami. Dobrze opisuje procesy sekwencyjne.
+
+? Naciśnięcie przycisku START nie załącza stycznika silnika. Co sprawdzić w pierwszej kolejności?
++ Zasilanie obwodu sterowania, styk 95-96 przekaźnika termicznego, przycisk STOP i cewkę stycznika
+- Rezystancję izolacji silnika
+- Kolejność faz silnika
+- Poziom oleju w przekładni
+! Obwód cewki może przerywać zadziałany przekaźnik termiczny, uszkodzony przycisk albo przepalony bezpiecznik obwodu sterowania.
+
+? Silnik sterowany stycznikiem z podtrzymaniem pracuje tylko wtedy, gdy trzymamy wciśnięty START. Jaka jest najbardziej prawdopodobna przyczyna?
++ Brak połączenia lub uszkodzenie styku podtrzymującego stycznika (13-14)
+- Uszkodzony przycisk STOP
+- Zadziałanie przekaźnika termicznego
+- Zła kolejność faz
+! Bez styku podtrzymującego cewka jest zasilana tylko przez wciśnięty przycisk START.
+
+? Co zapobiega jednoczesnemu załączeniu styczników gwiazdy i trójkąta w układzie rozruchowym?
++ Blokada: styki rozwierne w obwodach cewek, czasem także blokada mechaniczna
+- Przekaźnik termiczny
+- Bezpiecznik obwodu sterowania
+- Wyłącznik różnicowoprądowy
+! Jednoczesne załączenie styczników gwiazdy i trójkąta spowodowałoby zwarcie międzyfazowe.
+
+? Jak oznacza się zaciski pomocniczego styku rozwiernego stycznika?
++ Np. 21-22 (druga cyfra 1-2)
+- 13-14
+- A1-A2
+- 2-4
+! Druga cyfra 1-2 oznacza styk rozwierny, a 3-4 zwierny. Pierwsza cyfra to numer kolejny styku.
+
+? Do czego służy przekaźnik programowalny (mały sterownik)?
++ Do realizacji prostych funkcji sterowania, np. czasowych i logicznych, zamiast wielu przekaźników
+- Do pomiaru energii
+- Do ochrony przed przepięciami
+- Do zasilania awaryjnego
+! Ma kilka wejść i wyjść oraz wbudowane timery i liczniki. Programuje się go z panelu albo z komputera.
+
+? Jaką funkcję realizuje szczebel z rysunku?
+@ lad:[I1 I2|I3] (Q1)
++ Q1 = (I1 AND I2) OR I3
+- Q1 = I1 AND (I2 OR I3)
+- Q1 = I1 OR I2 OR I3
+- Q1 = I1 AND I2 AND I3
+! Górna gałąź (I1 i I2 szeregowo) jest połączona równolegle z dolną gałęzią I3.
+
+? Jaką funkcję realizuje szczebel z rysunku?
+@ lad:I1 [I2|I3] (Q1)
++ Q1 = I1 AND (I2 OR I3)
+- Q1 = (I1 AND I2) OR I3
+- Q1 = I1 OR I2 OR I3
+- Q1 = NOT I1 AND I2
+! Styk I1 jest połączony szeregowo z równoległym połączeniem styków I2 i I3.
+
+? Dlaczego wejścia sterowników PLC mają izolację optyczną?
++ Aby oddzielić galwanicznie obwody czujników od elektroniki sterownika i chronić ją przed zakłóceniami i przepięciami
+- Aby zwiększyć napięcie wejściowe do 230 V
+- Aby zmniejszyć liczbę wejść
+- Aby sterownik działał bez zasilania
+! Transoptor przenosi sygnał światłem, więc zakłócenia z długich przewodów czujników nie docierają do procesora.

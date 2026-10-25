@@ -75,7 +75,7 @@
 + 16 A
 - 6 A
 - 10 A
-- 20 A
+- 4 A
 ! Kolory wskaźników wkładek: 2 A różowy, 4 A brązowy, 6 A zielony, 10 A czerwony, 16 A szary, 20 A niebieski, 25 A żółty, 35 A czarny, 50 A biały, 63 A miedziany.
 
 ? Jaki kolor ma wskaźnik zadziałania wkładki topikowej 10 A?
@@ -180,7 +180,7 @@
 + 1,45 In
 - 1,13 In
 - 3 In
-- 10 In
+- 1,25 In
 ! Umowny prąd zadziałania wyłączników nadprądowych to 1,45 In, a prąd niezadziałania 1,13 In.
 
 ? Co należy zrobić, gdy wyłącznik nadprądowy wyłącza obwód zaraz po każdym załączeniu?
@@ -277,7 +277,7 @@
 ? Jaki prąd znamionowy ma wkładka bezpiecznikowa ze wskaźnikiem w kolorze zielonym?
 @ wkladka:zielony
 + 6 A
-- 2 A
+- 16 A
 - 10 A
 - 25 A
 ! Zielony wskaźnik ma wkładka 6 A, czerwony 10 A, szary 16 A, niebieski 20 A.
@@ -285,7 +285,7 @@
 ? Jaki prąd znamionowy ma wkładka bezpiecznikowa ze wskaźnikiem w kolorze niebieskim?
 @ wkladka:niebieski
 + 20 A
-- 16 A
+- 50 A
 - 25 A
 - 35 A
 ! Niebieski wskaźnik ma wkładka 20 A, żółty 25 A, czarny 35 A.

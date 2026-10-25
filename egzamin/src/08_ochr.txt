@@ -65,7 +65,7 @@
 + 2,88 Ω
 - 0,72 Ω
 - 1,44 Ω
-- 14,4 Ω
+- 2,3 Ω
 ! Dla wyłącznika B przyjmuje się Ia = 5 · In = 80 A, więc Zs ≤ 230 V / 80 A ≈ 2,88 Ω.
 
 ? Jaka jest największa dopuszczalna impedancja pętli zwarcia w obwodzie 230 V zabezpieczonym wyłącznikiem C10 w układzie TN?
@@ -86,7 +86,7 @@
 + 50 V
 - 12 V
 - 120 V
-- 230 V
+- 25 V
 ! Bardzo niskie napięcie (SELV, PELV) to napięcie do 50 V prądu przemiennego i do 120 V prądu stałego.
 
 ? Czym różni się układ PELV od SELV?
@@ -135,14 +135,14 @@
 + 6 mm²
 - 1,5 mm²
 - 2,5 mm²
-- 50 mm²
+- 4 mm²
 ! Przewody połączeń wyrównawczych głównych muszą mieć co najmniej 6 mm² Cu (16 mm² Al lub 50 mm² stali).
 
 ? Jaki przekrój powinien mieć przewód ochronny PE, gdy przewód fazowy ma 10 mm² (ten sam materiał)?
 + 10 mm²
 - 4 mm²
 - 6 mm²
-- 16 mm²
+- 2,5 mm²
 ! Do 16 mm² przewód PE ma taki sam przekrój jak fazowy. Od 16 do 35 mm² stosuje się 16 mm², a powyżej 35 mm² połowę przekroju fazowego.
 
 ? Jaki przekrój powinien mieć przewód PE, gdy przewody fazowe mają po 70 mm² Cu?
@@ -240,7 +240,7 @@
 + 120 V
 - 12 V
 - 50 V
-- 230 V
+- 60 V
 ! Dla prądu stałego bez tętnień przyjmuje się 120 V, dla przemiennego 50 V.
 
 ? Co oznacza druga litera N w oznaczeniu układu TN?
@@ -442,7 +442,7 @@
 
 ? Ile wynosi impedancja pętli zwarcia, jeśli spodziewany prąd zwarcia w obwodzie 230 V wynosi 460 A?
 + 0,5 Ω
-- 0,05 Ω
+- 0,87 Ω
 - 2 Ω
 - 5 Ω
 ! Zs = U₀ / Ik = 230 / 460 = 0,5 Ω.

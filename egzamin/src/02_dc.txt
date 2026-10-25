@@ -26,7 +26,7 @@
 ? Ile wynosi rezystancja zastępcza trzech rezystorów 10 Ω połączonych równolegle?
 @ net:par|10 Ω|10 Ω|10 Ω
 + 3,33 Ω
-- 0,3 Ω
+- 5 Ω
 - 10 Ω
 - 30 Ω
 ! n jednakowych rezystorów połączonych równolegle daje R / n = 10 / 3 ≈ 3,33 Ω.
@@ -73,7 +73,7 @@
 + 0,43 A
 - 0,23 A
 - 2,3 A
-- 4,3 A
+- 0,25 A
 ! I = P / U = 100 W / 230 V ≈ 0,43 A.
 
 ? Jak zmieni się rezystancja przewodu, jeżeli jego długość zwiększymy dwukrotnie, a przekrój pozostanie bez zmian?
@@ -94,7 +94,7 @@
 + 0,71 Ω
 - 0,07 Ω
 - 1,4 Ω
-- 7,1 Ω
+- 0,36 Ω
 ! R = l / (γ · S) = 100 / (56 · 2,5) = 100 / 140 ≈ 0,71 Ω.
 
 ? Ile wynosi napięcie U₂ w dzielniku napięcia przedstawionym na rysunku?
@@ -123,7 +123,7 @@
 + 4 A
 - 1 A
 - 5 A
-- 6 A
+- 2 A
 ! Z pierwszego prawa Kirchhoffa: 2 + 3 = 1 + I, więc I = 4 A.
 
 ? Jaki prąd wskaże amperomierz w obwodzie przedstawionym na rysunku?
@@ -206,7 +206,7 @@
 
 ? Jaki ładunek zgromadzi kondensator 100 µF naładowany do napięcia 10 V?
 + 1 mC
-- 10 µC
+- 10 mC
 - 0,1 C
 - 1000 C
 ! Q = C · U = 100 µF · 10 V = 1000 µC = 1 mC.
@@ -229,7 +229,7 @@
 + 3 V
 - 0,013 V
 - 15,2 V
-- 75 V
+- 0,3 V
 ! U = I · R = 0,2 A · 15 Ω = 3 V.
 
 ? Na rezystorze są paski jak na rysunku: brązowy, czarny, czerwony, złoty. Jaką rezystancję ma ten rezystor?
@@ -237,7 +237,7 @@
 + 1 kΩ ±5%
 - 10 Ω ±10%
 - 102 Ω ±5%
-- 100 kΩ ±5%
+- 100 Ω ±5%
 ! Brązowy = 1, czarny = 0, czerwony jako mnożnik = ×100: 10 · 100 = 1000 Ω. Złoty pasek oznacza tolerancję ±5%.
 
 ? Na rezystorze są paski jak na rysunku: żółty, fioletowy, pomarańczowy, złoty. Jaką rezystancję ma ten rezystor?
@@ -304,7 +304,7 @@
 + 8,7 A
 - 0,115 A
 - 4,35 A
-- 460 A
+- 5 A
 ! I = P / U = 2000 W / 230 V ≈ 8,7 A.
 
 ? Napięcie na rezystorze zwiększono dwukrotnie. Jak zmieni się moc wydzielana w rezystorze?
@@ -318,19 +318,19 @@
 + 0,50 zł
 - 0,13 zł
 - 2 zł
-- 30 zł
+- 0,30 zł
 ! W = P · t = 2 kW · 0,25 h = 0,5 kWh, więc koszt wynosi 0,5 · 1 zł = 0,50 zł.
 
 ? Telewizor w trybie czuwania pobiera 2 W. Ile energii zużyje w ten sposób przez 30 dni?
 + 1,44 kWh
 - 0,06 kWh
 - 14,4 kWh
-- 60 kWh
+- 0,72 kWh
 ! W = P · t = 2 W · 30 · 24 h = 1440 Wh = 1,44 kWh.
 
 ? Ile wynosi rezystancja przewodu aluminiowego o długości 200 m i przekroju 10 mm²? Przyjmij γ = 35 m/(Ω·mm²).
 + 0,57 Ω
-- 0,36 Ω
+- 1,14 Ω
 - 1,75 Ω
 - 5,7 Ω
 ! R = l / (γ · S) = 200 / (35 · 10) ≈ 0,57 Ω.
@@ -402,7 +402,7 @@
 
 ? Ile wynosi stała czasowa obwodu RC, w którym R = 10 kΩ, a C = 100 µF?
 + 1 s
-- 0,1 s
+- 5 s
 - 10 s
 - 1000 s
 ! τ = R · C = 10 000 Ω · 0,0001 F = 1 s. Po około 5τ kondensator jest praktycznie naładowany.
@@ -432,12 +432,12 @@
 + 60 C
 - 0,25 C
 - 1 C
-- 240 C
+- 30 C
 ! Q = I · t = 0,5 A · 120 s = 60 C.
 
 ? Jak długo teoretycznie może zasilać odbiornik pobierający 2 A akumulator o pojemności 60 Ah?
 + 30 h
-- 0,03 h
+- 58 h
 - 62 h
 - 120 h
 ! t = Q / I = 60 Ah / 2 A = 30 h. W praktyce krócej, bo akumulatora nie rozładowuje się do zera.
@@ -496,7 +496,7 @@
 ? Jaką rezystancję ma rezystor z paskami jak na rysunku: czerwony, czerwony, brązowy, złoty?
 @ paski:czerwony,czerwony,brazowy,zloty
 + 220 Ω
-- 22 Ω
+- 22 kΩ
 - 221 Ω
 - 2,2 kΩ
 ! Czerwony = 2, czerwony = 2, brązowy jako mnożnik = ×10: 22 · 10 = 220 Ω.

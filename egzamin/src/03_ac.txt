@@ -4,7 +4,7 @@
 + 20 ms
 - 2 ms
 - 10 ms
-- 50 ms
+- 0,2 ms
 ! T = 1 / f = 1 / 50 Hz = 0,02 s = 20 ms.
 
 ? Ile wynosi wartość maksymalna (szczytowa) napięcia sieciowego o wartości skutecznej 230 V?
@@ -18,21 +18,21 @@
 + 400 V
 - 133 V
 - 230 V
-- 690 V
+- 325 V
 ! Napięcie międzyprzewodowe jest √3 razy większe od fazowego: 230 V · 1,73 ≈ 400 V.
 
 ? Ile wynosi reaktancja cewki o indukcyjności 0,1 H przy częstotliwości 50 Hz?
 + 31,4 Ω
 - 5 Ω
 - 15,7 Ω
-- 314 Ω
+- 3,14 Ω
 ! XL = 2πfL = 2 · 3,14 · 50 · 0,1 ≈ 31,4 Ω.
 
 ? Ile wynosi reaktancja kondensatora 100 µF przy częstotliwości 50 Hz?
 + 31,8 Ω
 - 0,0314 Ω
 - 3,18 Ω
-- 318 Ω
+- 0,318 Ω
 ! XC = 1 / (2πfC) = 1 / (314 · 0,0001) ≈ 31,8 Ω.
 
 ? Jak zmieni się reaktancja kondensatora, gdy częstotliwość napięcia wzrośnie dwukrotnie?
@@ -61,7 +61,7 @@
 + 0,8
 - 0,2
 - 0,64
-- 1,25
+- 0,6
 ! cos φ = P / S = 800 W / 1000 VA = 0,8.
 
 ? W jakich jednostkach wyraża się moc bierną?
@@ -73,7 +73,7 @@
 
 ? Silnik jednofazowy pobiera z sieci 230 V prąd 5 A przy cos φ = 0,8. Jaką moc czynną pobiera?
 + 920 W
-- 690 W
+- 1593 W
 - 1150 W
 - 1437 W
 ! P = U · I · cos φ = 230 · 5 · 0,8 = 920 W.
@@ -82,7 +82,7 @@
 + 6,2 kW
 - 2,1 kW
 - 3,6 kW
-- 10,8 kW
+- 4 kW
 ! P = √3 · U · I · cos φ = 1,73 · 400 · 10 · 0,9 ≈ 6235 W ≈ 6,2 kW.
 
 ? Jaki jest związek między prądem przewodowym a fazowym w odbiorniku połączonym w trójkąt?
@@ -124,7 +124,7 @@
 
 ? Ile wynosi moc pozorna S odbiornika, który pobiera moc czynną P = 3 kW i moc bierną Q = 4 kvar?
 + 5 kVA
-- 1 kVA
+- 25 kVA
 - 7 kVA
 - 12 kVA
 ! S = √(P² + Q²) = √(9 + 16) = 5 kVA (trójkąt mocy).
@@ -145,7 +145,7 @@
 
 ? Ile wynosi impedancja dwójnika szeregowego RL, jeśli R = 30 Ω i XL = 40 Ω?
 + 50 Ω
-- 10 Ω
+- 2500 Ω
 - 70 Ω
 - 1200 Ω
 ! Z = √(R² + XL²) = √(900 + 1600) = 50 Ω.
@@ -168,7 +168,7 @@
 + 120°
 - 60°
 - 90°
-- 180°
+- 30°
 ! Trzy napięcia fazowe mają jednakowe wartości skuteczne i są przesunięte o 120°, czyli o jedną trzecią okresu.
 
 ? Co oznacza współczynnik mocy cos φ = 1?
@@ -224,12 +224,12 @@
 + 100 Hz
 - 10 Hz
 - 50 Hz
-- 1000 Hz
+- 0,1 Hz
 ! f = 1 / T = 1 / 0,01 s = 100 Hz.
 
 ? Ile wynosi wartość skuteczna napięcia sinusoidalnego o amplitudzie 141 V?
 + 100 V
-- 70,5 V
+- 282 V
 - 141 V
 - 200 V
 ! U = Um / √2 = 141 / 1,41 ≈ 100 V.
@@ -257,7 +257,7 @@
 
 ? Ile wynosi impedancja szeregowego dwójnika RC, w którym R = 60 Ω i XC = 80 Ω?
 + 100 Ω
-- 20 Ω
+- 10000 Ω
 - 140 Ω
 - 4800 Ω
 ! Z = √(R² + XC²) = √(3600 + 6400) = 100 Ω.
@@ -271,7 +271,7 @@
 
 ? Ile wynosi moc czynna odbiornika jednofazowego, jeśli U = 230 V, I = 2 A, a cos φ = 0,5?
 + 230 W
-- 115 W
+- 398 W
 - 460 W
 - 920 W
 ! P = U · I · cos φ = 230 · 2 · 0,5 = 230 W.
@@ -285,7 +285,7 @@
 
 ? Jaki prąd pobiera z sieci 400 V symetryczny silnik trójfazowy, który pobiera moc 10 kW przy cos φ = 0,8?
 + 18 A
-- 14,4 A
+- 25 A
 - 31,3 A
 - 54,3 A
 ! I = P / (√3 · U · cos φ) = 10 000 / (1,73 · 400 · 0,8) ≈ 18 A.
@@ -351,12 +351,12 @@
 + 5 kVA
 - 3,2 kVA
 - 4 kVA
-- 6,4 kVA
+- 3 kVA
 ! S = P / cos φ = 4 / 0,8 = 5 kVA.
 
 ? Ile wynosi moc bierna odbiornika o mocy pozornej 5 kVA i mocy czynnej 4 kW?
 + 3 kvar
-- 1 kvar
+- 6,4 kvar
 - 9 kvar
 - 20 kvar
 ! Q = √(S² − P²) = √(25 − 16) = 3 kvar.
@@ -370,7 +370,7 @@
 
 ? Jaką indukcyjność ma cewka, która przy częstotliwości 50 Hz ma reaktancję 314 Ω?
 + 1 H
-- 0,1 H
+- 6,28 H
 - 10 H
 - 314 H
 ! L = XL / (2πf) = 314 / 314 = 1 H.
@@ -401,14 +401,14 @@
 + 10 A
 - 5,8 A
 - 17,3 A
-- 30 A
+- 3,3 A
 ! W gwieździe prąd przewodowy jest równy prądowi fazowemu.
 
 ? W odbiorniku połączonym w trójkąt prąd fazowy wynosi 10 A. Ile wynosi prąd przewodowy?
 + 17,3 A
 - 5,8 A
 - 10 A
-- 30 A
+- 14,1 A
 ! W trójkącie I = √3 · If = 1,73 · 10 ≈ 17,3 A.
 
 ? Jaki przebieg napięcia przedstawia rysunek?

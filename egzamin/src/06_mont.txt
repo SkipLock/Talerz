@@ -51,7 +51,7 @@
 
 ? W jakiej odległości od sufitu przebiega górna pozioma strefa instalacyjna?
 + 15–45 cm od sufitu
-- 0–5 cm od sufitu
+- 30–60 cm od sufitu
 - 50–80 cm od sufitu
 - 100–130 cm od sufitu
 ! Górna strefa pozioma ma 30 cm szerokości i zaczyna się 15 cm pod sufitem. Dolna leży 15–45 cm nad podłogą.
@@ -163,7 +163,7 @@
 
 ? Jaką średnicę ma typowa puszka podtynkowa pod łącznik lub gniazdo?
 + 60 mm
-- 25 mm
+- 71 mm
 - 120 mm
 - 200 mm
 ! Standardowe puszki podtynkowe mają średnicę 60 mm, a rozstaw otworów montażowych osprzętu jest do niej dopasowany.
@@ -258,3 +258,500 @@
 - Mierzy zużycie energii
 - Załącza oświetlenie klatki schodowej
 ! Wyłącznik główny (np. rozłącznik izolacyjny) umożliwia szybkie odłączenie wszystkich obwodów, np. w czasie pożaru lub prac w instalacji.
+
+? Czym wykonuje się otwór pod puszkę podtynkową w ścianie z cegły?
++ Wiertłem koronowym do puszek w wiertarce udarowej lub młotowiertarce
+- Wkrętakiem płaskim
+- Ściągaczem izolacji
+- Nożem monterskim
+! Koronka o średnicy dopasowanej do puszki wycina równy otwór, a środek usuwa się dłutem.
+
+? Czym wycina się otwór pod puszkę w płycie gipsowo-kartonowej?
++ Otwornicą o średnicy około 68 mm
+- Bruzdownicą
+- Młotkiem i przecinakiem
+- Zaciskarką
+! W płytach gipsowo-kartonowych stosuje się puszki z łapkami, które mocują się w wyciętym otworze.
+
+? Jakie puszki stosuje się do montażu osprzętu w ścianach z płyt gipsowo-kartonowych?
++ Puszki do ścian pustych, z łapkami dociskowymi
+- Zwykłe puszki podtynkowe mocowane gipsem
+- Puszki natynkowe hermetyczne
+- Puszki do betonu
+! Łapki dociskane śrubami przytrzymują puszkę od tyłu płyty, bo nie da się jej zamurować.
+
+? Jak mocuje się puszkę podtynkową w ścianie murowanej?
++ Zaprawą gipsową, ustawiając jej krawędź równo z przyszłą powierzchnią tynku
+- Klejem do drewna
+- Taśmą izolacyjną
+- Gwoździami przez dno puszki
+! Puszka osadzona prosto i na właściwej głębokości pozwala równo zamontować osprzęt.
+
+? Jaki jest typowy rozstaw osi puszek pod osprzęt montowany w ramkach wielokrotnych?
++ 71 mm
+- 80 mm
+- 100 mm
+- 120 mm
+! Puszki łączone w zestawy mają rozstaw 71 mm, dopasowany do ramek wielokrotnych.
+
+? Jaki zapas przewodu zostawia się w puszce instalacyjnej?
++ Kilkanaście centymetrów, aby wygodnie wykonać, a w przyszłości poprawić połączenia
+- Nie zostawia się żadnego zapasu
+- Około 2 m
+- Dokładnie 1 mm
+! Zapas ułatwia montaż osprzętu i ponowne wykonanie połączeń przy jego wymianie.
+
+? Gdzie wolno łączyć przewody w instalacji podtynkowej?
++ Tylko w puszkach lub skrzynkach z dostępem do połączeń
+- W dowolnym miejscu bruzdy, pod tynkiem
+- W rurach instalacyjnych
+- W ścianie, bez osłon
+! Połączenia muszą być dostępne do kontroli i naprawy.
+
+? Jak prowadzi się przewody elektryczne względem rur wodociągowych i grzewczych?
++ Powyżej tych rur, z zachowaniem odstępu
+- Poniżej rur, bezpośrednio na nich
+- Owinięte wokół rur
+- Wewnątrz rur grzewczych
+! Przewody nad rurami nie są narażone na skraplającą się wodę i przecieki.
+
+? Do którego zacisku gniazda wtyczkowego zaleca się przyłączać przewód fazowy (patrząc od przodu, bolec ochronny u góry)?
++ Do lewego
+- Do prawego
+- Do zacisku bolca
+- Nie ma żadnych zaleceń
+! W Polsce przyjęło się podłączanie fazy do lewego styku, a przewodu neutralnego do prawego. Ujednolicona biegunowość ułatwia pomiary i eksploatację.
+
+? Które odbiorniki zasila się z osobnych, wydzielonych obwodów?
++ Odbiorniki dużej mocy, np. kuchnię elektryczną, piekarnik, pralkę, zmywarkę, bojler
+- Lampki nocne
+- Ładowarki telefonów
+- Dzwonek
+! Wydzielone obwody odciążają obwody gniazd ogólnych i pozwalają dobrać właściwe zabezpieczenia.
+
+? Jak zasila się kuchnię elektryczną trójfazową?
++ Z wydzielonego obwodu trójfazowego z wyłącznikiem trójbiegunowym, na stałe lub przez gniazdo trójfazowe
+- Przez zwykłe gniazdo 230 V i przedłużacz
+- Przez rozgałęźnik z obwodu oświetleniowego
+- Bez zabezpieczenia
+! Kuchnia elektryczna ma moc od kilku do kilkunastu kilowatów, dlatego wymaga osobnego obwodu.
+
+? Jaka jest typowa kolejność aparatów w rozdzielnicy mieszkaniowej, licząc od strony zasilania?
++ Wyłącznik główny, ograniczniki przepięć, wyłączniki różnicowoprądowe, wyłączniki nadprądowe obwodów
+- Wyłączniki nadprądowe obwodów, wyłącznik główny, ograniczniki przepięć
+- Ograniczniki przepięć za wyłącznikami obwodów, na końcu
+- Kolejność jest dowolna
+! Ograniczniki przepięć instaluje się na początku instalacji. Wyłączniki RCD chronią grupy obwodów, a każdy obwód ma własny wyłącznik nadprądowy.
+
+? Do czego służy szyna łączeniowa (grzebieniowa) w rozdzielnicy?
++ Do rozprowadzenia zasilania między aparatami modułowymi w rzędzie
+- Do mocowania aparatów do obudowy
+- Do łączenia przewodów ochronnych
+- Do pomiaru prądu
+! Szyny grzebieniowe zastępują mostki z przewodów i dają pewne, uporządkowane połączenia.
+
+? Jaką szerokość ma jeden moduł aparatu modułowego, np. wyłącznika jednobiegunowego?
++ 17,5–18 mm
+- 45 mm
+- 35 mm
+- 50 mm
+! Wielkość rozdzielnicy podaje się w modułach. Wyłącznik jednobiegunowy zajmuje jeden moduł, a RCD 2P zwykle dwa.
+
+? Na jakiej najmniejszej głębokości układa się w ziemi kabel niskiego napięcia poza drogami?
++ 0,7 m
+- 0,1 m
+- 0,3 m
+- 0,4 m
+! Kable do 1 kV układa się co najmniej 0,7 m pod powierzchnią terenu. Pod drogami prowadzi się je w rurach osłonowych.
+
+? Czym zasypuje się kabel ułożony w rowie kablowym?
++ Warstwą piasku, a następnie gruntem rodzimym, z folią ostrzegawczą nad kablem
+- Gruzem budowlanym
+- Betonem
+- Nie zasypuje się go
+! Piasek chroni kabel przed kamieniami, a folia ostrzega o kablu podczas późniejszych wykopów.
+
+? Po co kabel przechodzący pod drogą układa się w rurze osłonowej?
++ Aby chronić go przed naciskiem i uszkodzeniami oraz móc go wymienić bez rozkopywania drogi
+- Aby zwiększyć jego obciążalność
+- Aby uziemić kabel
+- Aby lepiej się chłodził
+! Rura osłonowa przejmuje obciążenia mechaniczne od ruchu pojazdów.
+
+? Jak przygotować żyłę do przyłączenia w zacisku osprzętu?
++ Zdjąć izolację na długości dopasowanej do zacisku tak, by izolacja dochodziła do zacisku
+- Zdjąć izolację na długości 10 cm
+- Nie zdejmować izolacji
+- Zdjąć izolację i owinąć żyłę taśmą
+! Za długi odizolowany odcinek może dotknąć innych części, a za krótki daje słaby kontakt.
+
+? W którą stronę zagina się oczko z żyły przy zacisku śrubowym bez podkładki dociskowej?
++ Zgodnie z kierunkiem dokręcania śruby
+- Przeciwnie do kierunku dokręcania
+- Nie ma to znaczenia
+- Do góry, prostopadle do śruby
+! Dokręcana śruba wciąga wtedy żyłę pod łeb, zamiast ją wypychać.
+
+? Jak sprawdzić, czy przewód jest bez napięcia, przed rozpoczęciem pracy?
++ Wskaźnikiem napięcia, po wyłączeniu obwodu i sprawdzeniu wskaźnika na pewnym źródle napięcia
+- Dotykając go palcem
+- Mierząc rezystancję izolacji pod napięciem
+- Patrząc na kolor izolacji
+! Wskaźnik sprawdza się przed pomiarem i po nim, aby mieć pewność, że działa.
+
+? Jak należy przygotować się do wymiany gniazda w użytkowanej instalacji mieszkaniowej?
++ Wyłączyć obwód w rozdzielnicy, zabezpieczyć go przed załączeniem i sprawdzić brak napięcia
+- Wystarczy wyjąć wtyczki z gniazda
+- Pracować pod napięciem gołymi rękami
+- Wyłączyć tylko światło w pokoju
+! Obwód, przy którym się pracuje, musi być bez napięcia. Pozostałe obwody mogą działać.
+
+? Dlaczego oprawy oświetleniowe I klasy ochronności łączy się z przewodem PE?
++ Bo ich metalowa obudowa przy uszkodzeniu izolacji mogłaby się znaleźć pod napięciem
+- Bo przewód PE zasila źródło światła
+- Bo zwiększa to jasność
+- Nie łączy się ich z PE
+! Przewód ochronny pozwala płynąć prądowi zwarciowemu, który powoduje samoczynne wyłączenie zasilania.
+
+? Jak zamocować ciężką lampę (żyrandol) do sufitu?
++ Na haku lub uchwycie nośnym, który przenosi jej ciężar
+- Na samych przewodach zasilających
+- Na taśmie izolacyjnej
+- Na złączkach w puszce
+! Przewody nie mogą przenosić ciężaru oprawy.
+
+? Jak zasila się dzwonek w mieszkaniu?
++ Z transformatora dzwonkowego obniżającego napięcie, np. do 8 V
+- Bezpośrednio z sieci 400 V
+- Z baterii 1,5 V w gnieździe
+- Z obwodu przewodu ochronnego
+! Transformator dzwonkowy daje bezpieczne bardzo niskie napięcie w obwodzie przycisku i dzwonka.
+
+? Jakie przewody stosuje się w instalacji dzwonkowej zasilanej z transformatora dzwonkowego?
++ Przewody sygnalizacyjne o małym przekroju, np. 0,5–0,8 mm²
+- Kable 0,6/1 kV 4×16 mm²
+- Przewody 10 mm² Cu
+- Szyny miedziane
+! Obwód dzwonka ma małe napięcie i prąd, więc wystarczą cienkie przewody.
+
+? Co należy zrobić przed kuciem bruzd w zamieszkanym budynku?
++ Ustalić przebieg istniejących instalacji (elektrycznej, wodnej, gazowej) wykrywaczem i z dokumentacji
+- Od razu kuć tam, gdzie wygodnie
+- Wyłączyć gaz w całej okolicy
+- Pomalować ścianę
+! Uszkodzenie przewodu pod napięciem lub rury grozi porażeniem, zalaniem albo wyciekiem gazu.
+
+? Dlaczego nie wolno wykonywać bruzd w ścianach nośnych w dowolnym miejscu i o dowolnej długości?
++ Bo osłabiają konstrukcję ściany; ograniczają je przepisy i zalecenia konstruktora
+- Bo przewody źle się w nich mieszczą
+- Bo każda bruzda pozioma jest niezgodna ze strefami
+- Bo tynk na nich nie trzyma
+! Szczególnie bruzdy poziome i ukośne zmniejszają nośność ściany.
+
+? Jak prowadzi się przewody w podłodze pod wylewką?
++ W rurach osłonowych, np. karbowanych, które chronią przewody i umożliwiają ich wymianę
+- Bezpośrednio w betonie, bez osłon
+- Luzem na styropianie bez zabezpieczeń
+- Owinięte papierem
+! W posadzce przewody są narażone na nacisk i uszkodzenia podczas prac budowlanych.
+
+? Czego używa się do przeciągania przewodów w rurach instalacyjnych?
++ Pilota (sprężyny) do przeciągania przewodów
+- Zaciskarki
+- Megaomomierza
+- Bruzdownicy
+! Pilota wsuwa się do rury, mocuje do niego przewody i przeciąga je na drugą stronę.
+
+? Dlaczego nie dokręca się nadmiernie śrub mocujących łączniki i gniazda?
++ Aby nie pękła obudowa i nie odkształciła się ramka osprzętu
+- Aby łatwiej było je odkręcić złodziejowi
+- Aby zmniejszyć rezystancję styku
+- Dokręca się je jak najmocniej
+! Zbyt mocne dokręcenie niszczy tworzywo. Osprzęt ma przylegać równo do ściany.
+
+? Kiedy stosuje się puszkę głęboką?
++ Gdy w puszce trzeba zmieścić połączenia przewodów razem z osprzętem
+- Przy układaniu kabla w ziemi
+- W instalacji gazowej
+- Gdy puszka ma nie mieć dna
+! Puszki głębokie stosuje się np. pod gniazda z kilkoma przewodami lub osprzęt z elektroniką.
+
+? Jak prowadzi się przewody w budynkach drewnianych?
++ W rurach lub korytach niepalnych albo przewodami o odpowiedniej odporności, z odstępem od palnego podłoża
+- Bezpośrednio na drewnie, bez osłon
+- Przybite gwoździami przez izolację
+- Wewnątrz kanałów wentylacyjnych
+! Drewno jest palne, a przegrzany lub uszkodzony przewód może wywołać pożar.
+
+? W którym pomieszczeniu stosuje się osprzęt o podwyższonym stopniu ochrony IP i przewody w powłoce?
++ W garażu, kotłowni lub piwnicy
+- W salonie
+- W sypialni
+- W gabinecie
+! Pomieszczenia wilgotne, zapylone lub narażone na uszkodzenia wymagają osprzętu hermetycznego.
+
+? Jaki stopień ochrony powinien mieć osprzęt montowany na zewnątrz budynku, narażony na deszcz?
++ Co najmniej IP44
+- IP00
+- IP10
+- IP20
+! Druga cyfra 4 oznacza ochronę przed bryzgami wody. W miejscach narażonych na strumień wody stosuje się IP55 lub wyższy.
+
+? Jak wykonać przejście przewodu przez ścianę zewnętrzną budynku?
++ W rurze osłonowej, z uszczelnieniem przed wnikaniem wody
+- Przez otwór w murze, bez osłony
+- Przez szczelinę okienną
+- Przez komin
+! Rura chroni przewód przed uszkodzeniem, a uszczelnienie zapobiega przeciekaniu wody.
+
+? Ile żył doprowadza się od puszki do łącznika świecznikowego, gdy przewód ochronny nie jest do niego doprowadzany?
++ Trzy: fazę oraz dwie żyły do dwóch grup opraw
+- Dwie
+- Cztery, w tym neutralną
+- Jedną
+! Łącznik świecznikowy ma wspólny zacisk zasilający i dwa zaciski wyjściowe.
+
+? Ile zacisków przyłączeniowych ma łącznik krzyżowy?
++ Cztery
+- Dwa
+- Trzy
+- Sześć
+! Do łącznika krzyżowego dochodzą po dwie żyły korespondencyjne od dwóch łączników schodowych.
+
+? Ile zacisków przyłączeniowych ma łącznik schodowy?
++ Trzy
+- Dwa
+- Cztery
+- Pięć
+! Łącznik schodowy ma zacisk wspólny i dwa zaciski przełączane, do których dochodzą żyły korespondencyjne.
+
+? Co zrobić z nieużywaną żyłą przewodu w puszce?
++ Zaizolować jej koniec, np. w złączce, i w razie potrzeby opisać
+- Pozostawić goły koniec
+- Uziemić ją do rury wodnej
+- Połączyć z przewodem fazowym
+! Niezaizolowany koniec może dotknąć części pod napięciem lub obudowy.
+
+? Do czego służy listwa przypodłogowa z kanałem kablowym?
++ Do prowadzenia przewodów zasilających i teleinformatycznych wzdłuż podłogi
+- Do mocowania aparatów modułowych
+- Do uziemienia pomieszczenia
+- Do ochrony przed przepięciami
+! Kanały przypodłogowe stosuje się w biurach i przy remontach bez kucia ścian.
+
+? Jak prowadzić przewody zasilające i teleinformatyczne w jednym kanale kablowym?
++ W oddzielnych komorach kanału
+- Razem, splecione ze sobą
+- Teleinformatyczne bezpośrednio na zasilających, bez przegród
+- Nie wolno ich prowadzić razem w żaden sposób
+! Przegrody oddzielają obwody o różnych napięciach i ograniczają przenikanie zakłóceń.
+
+? Co zrobić po zamontowaniu nowej rozdzielnicy, a przed podaniem napięcia?
++ Sprawdzić połączenia i dokręcenie zacisków, zmierzyć rezystancję izolacji, opisać obwody
+- Od razu załączyć wszystkie wyłączniki
+- Zamknąć rozdzielnicę bez sprawdzenia
+- Zmostkować wyłączniki RCD
+! Błędy wykryte przed załączeniem nie zdążą spowodować szkody.
+
+? Z jakim momentem dokręca się zaciski aparatów modułowych?
++ Z momentem podanym przez producenta aparatu, najlepiej wkrętakiem dynamometrycznym
+- Jak najmocniej, do oporu
+- Bardzo słabo, żeby łatwo odkręcić
+- Moment nie ma znaczenia
+! Zbyt słabo dokręcony zacisk się nagrzewa, a zbyt mocno dokręcony uszkadza żyłę lub aparat.
+
+? Jak przygotować żyły przewodu giętkiego do zacisków śrubowych gniazda przemysłowego?
++ Zacisnąć na nich końcówki tulejkowe
+- Grubo je ocynować
+- Skręcić druty i zagiąć w pętlę
+- Obciąć część drutów, żeby się zmieściły
+! Obcinanie drutów zmniejsza przekrój, a cynowanie powoduje luzowanie się połączenia pod śrubą.
+
+? Do czego służy odciążka przewodu we wtyczce lub w urządzeniu?
++ Do przejęcia sił rozciągających, aby szarpnięcie przewodu nie wyrwało żył z zacisków
+- Do lepszego przewodzenia prądu
+- Do obniżenia napięcia
+- Do skrócenia przewodu
+! Dzięki odciążce połączenia żył nie są naprężone.
+
+? Która żyła przewodu przyłączeniowego odbiornika klasy I powinna mieć zapas długości przy zaciskach?
++ Żyła ochronna PE
+- Żyła fazowa L
+- Żyła neutralna N
+- Wszystkie powinny być jednakowe
+! Przy wyrwaniu przewodu żyła PE odłączy się jako ostatnia, więc obudowa najdłużej pozostanie chroniona.
+
+? Jak montuje się aparat modułowy na szynie TH35?
++ Zaczepia się go o szynę i dociska, aż zatrzask zaskoczy
+- Przykręca się go do szyny śrubami przez obudowę
+- Przykleja się go
+- Lutuje się go do szyny
+! Przy demontażu zatrzask odciąga się wkrętakiem.
+
+? W jakiej kolejności montuje się instalację natynkową w rurach?
++ Trasowanie, montaż uchwytów i rur, osadzenie puszek, wciągnięcie przewodów, połączenia i osprzęt
+- Osprzęt, wciągnięcie przewodów, trasowanie, montaż rur
+- Tynkowanie, osprzęt, trasowanie
+- Najpierw przewody bez rur, a potem nasunięcie rur
+! Przewody wciąga się do gotowych rur, dzięki czemu można je później wymienić.
+
+? Po co przed montażem wyznacza się trasy instalacji?
++ Aby zaplanować przebieg przewodów i miejsca osprzętu zgodnie z projektem i strefami instalacyjnymi
+- Aby szybciej pomalować ścianę
+- Aby zmierzyć rezystancję izolacji
+- Aby zmierzyć natężenie oświetlenia
+! Trasy zaznacza się np. sznurkiem traserskim lub laserem.
+
+? Co ułatwia wyznaczenie poziomych i pionowych linii tras na ścianie?
++ Laser krzyżowy albo poziomica i sznurek traserski
+- Miernik cęgowy
+- Megaomomierz
+- Zaciskarka
+! Proste trasy ułatwiają późniejsze odnalezienie przewodów w ścianie.
+
+? Gdzie powinna być zamontowana rozdzielnica mieszkaniowa?
++ W łatwo dostępnym, suchym miejscu, z dala od źródeł ciepła i wilgoci
+- W łazience nad wanną
+- Za meblami, bez dostępu
+- Na zewnątrz budynku, bez obudowy
+! Rozdzielnica musi być dostępna, żeby można było szybko wyłączyć obwód.
+
+? Jaki przewód nadaje się do zasilania trójfazowej płyty indukcyjnej 7,2 kW (około 10,4 A na fazę)?
++ 5×2,5 mm² Cu
+- 5×0,75 mm² Cu
+- 3×1 mm² Cu
+- 5×25 mm² Cu
+! Prąd około 10,4 A na fazę z zapasem przenosi przewód 2,5 mm² Cu, zabezpieczony np. wyłącznikiem trójbiegunowym 16 A.
+
+? Co oznacza zapis „B16 1P” przy obwodzie „Gniazda kuchnia” na schemacie rozdzielnicy?
++ Wyłącznik nadprądowy jednobiegunowy o charakterystyce B i prądzie 16 A
+- Bezpiecznik 16 mA
+- Przewód 16 mm²
+- Wyłącznik różnicowoprądowy 16 mA
+! 1P oznacza jeden biegun, 3P trzy bieguny.
+
+? Dlaczego gniazda w kuchni i łazience zasila się z innych obwodów niż gniazda w pokojach?
++ Aby rozdzielić obciążenia dużych odbiorników i ograniczyć skutki zadziałania zabezpieczeń
+- Bo w kuchni jest inne napięcie
+- Bo przewody w kuchni muszą być aluminiowe
+- Nie ma takiej potrzeby
+! W kuchni pracują odbiorniki dużej mocy, a łazienka wymaga szczególnych środków ochrony.
+
+? Co przekazuje się inwestorowi po zakończeniu montażu instalacji?
++ Dokumentację powykonawczą, protokoły pomiarów i opis obwodów
+- Tylko fakturę
+- Nic
+- Klucze do rozdzielnicy, bez dokumentów
+! Dokumentacja jest potrzebna do eksploatacji, okresowych badań i przyszłych przeróbek.
+
+? Kto może wykonywać montaż instalacji elektrycznej w budynku?
++ Osoba ze świadectwem kwalifikacyjnym E, obejmującym prace montażowe
+- Każdy pełnoletni
+- Wyłącznie właściciel budynku
+- Wyłącznie architekt
+! Montaż należy do prac eksploatacyjnych, do których wymagane jest świadectwo kwalifikacyjne.
+
+? Jak przechowuje się bębny z kablami na budowie?
++ Na utwardzonym podłożu, z końcami kabli zabezpieczonymi przed wilgocią
+- W wodzie
+- Rozwinięte na drodze
+- Bez zabezpieczenia końców
+! Woda wnikająca przez nieuszczelnione końce obniża rezystancję izolacji.
+
+? Jak rozwija się kabel z bębna?
++ Bęben ustawia się na stojaku i odwija kabel bez skręcania i przeciągania po ostrych krawędziach
+- Zsuwa się zwoje z boku bębna
+- Ciągnie się kabel samochodem bez kontroli
+- Rozwija się go w silnym mrozie bez podgrzania
+! Skręcanie i za małe promienie gięcia uszkadzają izolację.
+
+? Dlaczego kabli w izolacji PVC nie układa się w temperaturze poniżej 0 °C bez podgrzania?
++ Bo PVC staje się kruche i izolacja może popękać przy zginaniu
+- Bo przewody stają się nadprzewodzące
+- Bo zmienia się kolor izolacji
+- Nie ma takich ograniczeń
+! Producenci podają najniższą temperaturę układania. W zimie kable przechowuje się w cieple przed montażem.
+
+? Co oznacza najmniejszy dopuszczalny promień gięcia kabla?
++ Najmniejszy promień łuku, po którym można wygiąć kabel bez uszkodzenia izolacji i żył
+- Średnicę żyły
+- Długość kabla na bębnie
+- Promień rury osłonowej
+! Producent podaje go zwykle jako wielokrotność średnicy zewnętrznej kabla.
+
+? Jak prowadzi się przewody w rozdzielnicy?
++ Porządnie, w wiązkach lub korytkach, z zachowaniem barw i oznaczeń, bez krzyżowania nad aparatami
+- Najkrótszą drogą przez aparaty
+- Owinięte wokół aparatów
+- Bez izolacji
+! Porządek w rozdzielnicy ułatwia przeglądy, pomiary i szukanie usterek.
+
+? Jak oznacza się przewody w rozdzielnicy, aby łatwo rozpoznać obwody?
++ Oznacznikami z numerami zgodnymi ze schematem
+- Nie oznacza się ich
+- Taśmami w różnych kolorach, bez schematu
+- Napisami flamastrem na ścianie
+! Oznaczniki pozwalają szybko odnaleźć przewód danego obwodu.
+
+? Co należy sprawdzić przed zamontowaniem silnika na fundamencie?
++ Stan izolacji uzwojeń, swobodny obrót wału, zgodność danych z tabliczki z siecią i osiowanie z maszyną napędzaną
+- Tylko kolor obudowy
+- Tylko masę silnika
+- Nic
+! Źle osiowane sprzęgło powoduje drgania i szybkie zużycie łożysk.
+
+? Po co osiuje się wał silnika z wałem maszyny napędzanej?
++ Aby uniknąć drgań, przeciążenia łożysk i uszkodzenia sprzęgła
+- Aby zwiększyć prędkość obrotową
+- Aby zmienić kierunek obrotów
+- Aby obniżyć napięcie
+! Nawet niewielka niewspółosiowość wałów skraca trwałość łożysk i sprzęgła.
+
+? Jak sprawdzić kierunek obrotów silnika przy pierwszym uruchomieniu?
++ Uruchomić go na chwilę, najlepiej bez obciążenia, porównać z wymaganym kierunkiem, a w razie potrzeby zamienić dwie fazy
+- Od razu uruchomić pod pełnym obciążeniem
+- Nie trzeba sprawdzać
+- Zmierzyć rezystancję izolacji
+! Zły kierunek obrotów może uszkodzić np. pompę lub przenośnik.
+
+? Co trzeba zrobić z metalową obudową silnika trójfazowego podczas montażu?
++ Połączyć ją z przewodem ochronnym PE
+- Pomalować ją farbą izolacyjną zamiast łączenia z PE
+- Połączyć ją z przewodem neutralnym
+- Pozostawić bez połączenia
+! Obudowa silnika to część przewodząca dostępna urządzenia klasy I.
+
+? Do których zacisków silnika przyłącza się przewody zasilające?
++ Do U1, V1, W1, przy zworkach ustawionych w gwiazdę lub trójkąt zgodnie z tabliczką
+- Do U2, V2, W2, bez zworek
+- Do dowolnych zacisków, bez zworek
+- Do zacisku uziemienia
+! Zworki ustawia się zgodnie z napięciem sieci i danymi z tabliczki znamionowej.
+
+? Co sprawdza się podczas konserwacji instalacji elektrycznej w mieszkaniu?
++ Stan osprzętu, przewodów i zabezpieczeń, dokręcenie zacisków, działanie wyłączników RCD, a okresowo izolację i skuteczność ochrony
+- Wyłącznie kolor ścian
+- Wyłącznie stan licznika
+- Nic, instalacja nie wymaga konserwacji
+! Regularne przeglądy wykrywają luźne połączenia, uszkodzony osprzęt i pogarszającą się izolację.
+
+? Co oznacza ślad przypalenia lub przebarwienie na gnieździe wtyczkowym?
++ Przegrzewanie się połączenia; gniazdo trzeba wymienić i sprawdzić przewody
+- Prawidłową pracę gniazda
+- Zbyt małe obciążenie
+- Działanie wyłącznika RCD
+! Przegrzewające się połączenie, np. luźny zacisk albo zużyte styki, może doprowadzić do pożaru.
+
+? Co zrobić z pękniętym łącznikiem lub gniazdem?
++ Wyłączyć obwód i wymienić osprzęt na nowy
+- Zakleić pęknięcie taśmą i używać dalej
+- Pomalować farbą
+- Używać dalej, uważając przy dotyku
+! Pęknięta obudowa nie chroni przed dotykiem części czynnych.
+
+? Dlaczego nie łączy się kilku przedłużaczy szeregowo do zasilania odbiorników dużej mocy?
++ Bo przewody i styki mogą się przegrzać, a połączenia luzować, co grozi pożarem
+- Bo spada częstotliwość
+- Bo wyłączniki RCD przestają działać
+- Bo rośnie napięcie
+! Przedłużacze mają ograniczoną obciążalność. Duże odbiorniki powinny mieć stałe gniazda w odpowiednich obwodach.

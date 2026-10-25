@@ -43,7 +43,8 @@ class BuildError(Exception):
 
 
 SYMBOLS = {'√': ' sqrt ', '±': ' pm ', '−': ' minus ', '°': ' deg ', 'Ω': ' ohm ', 'Ω': ' ohm ', 'µ': ' u ', '²': '2', '³': '3',
-           '≥': ' ge ', '≤': ' le ', '≈': ' approx ', '%': ' pct ', '·': ' x ', '/': ' per '}
+           '≥': ' ge ', '≤': ' le ', '≈': ' approx ', '%': ' pct ', '·': ' x ', '/': ' per ', '(': ' lp ', ')': ' rp ',
+           '=': ' eq ', '+': ' plus ', '>': ' gt ', '<': ' lt '}
 
 
 def norm(s):
@@ -155,12 +156,13 @@ def make_question(block, topic, path, start):
     qid = hashlib.sha1(key.encode('utf-8')).hexdigest()[:8]
 
     # Kolejność: liczby rosnąco (jak w arkuszach), resztę mieszamy deterministycznie od id.
+    # Liczby układamy rosnąco (n=1); w aplikacji i tak się je miesza, jeśli włączono mieszanie.
+    # Kolejność ustaloną ręcznie (~ fixed) oznacza x=1 i tej aplikacja nie zmienia.
     order = list(range(4))
     mags = [magnitude(o['t']) if o['t'] and not o['f'] else None for o in opts]
-    keep = fixed
-    if not fixed and all(m is not None for m in mags):
+    numeric = not fixed and all(m is not None for m in mags)
+    if numeric:
         order.sort(key=lambda i: mags[i])
-        keep = True
     elif not fixed:
         random.Random(int(qid, 16)).shuffle(order)
     opts = [opts[i] for i in order]
@@ -177,8 +179,10 @@ def make_question(block, topic, path, start):
         out['of'] = [o['f'] for o in opts]
     if k:
         out['k'] = k
-    if keep:
+    if fixed:
         out['x'] = 1
+    elif numeric:
+        out['n'] = 1
     out['_where'] = where
     return out
 

@@ -81,12 +81,12 @@
 + 1000 lm
 - 10 lm
 - 100 lm
-- 10000 lm
+- 0,1 lm
 ! Φ = η · P = 100 lm/W · 10 W = 1000 lm.
 
 ? Jakie natężenie oświetlenia daje strumień 800 lm rozłożony równomiernie na powierzchni 4 m²?
 + 200 lx
-- 50 lx
+- 800 lx
 - 400 lx
 - 3200 lx
 ! E = Φ / S = 800 lm / 4 m² = 200 lx.
@@ -174,3 +174,241 @@
 - Kompensuje moc bierną
 - Chroni oprawę przed przepięciami atmosferycznymi
 ! Po rozwarciu styków zapłonnika dławik indukuje wysokie napięcie, które zapala wyładowanie w świetlówce.
+
+? Jakie natężenie oświetlenia zaleca się na stanowisku pracy biurowej?
++ Około 500 lx
+- Około 20 lx
+- Około 100 lx
+- Około 5000 lx
+! Norma PN-EN 12464-1 zaleca dla prac biurowych (pisanie, czytanie, praca przy komputerze) 500 lx w polu zadania.
+
+? Jakie natężenie oświetlenia wystarcza zwykle w korytarzu?
++ Około 100 lx
+- Około 5 lx
+- Około 1000 lx
+- Około 2000 lx
+! W ciągach komunikacyjnych zaleca się zwykle około 100 lx.
+
+? Które źródło światła ma najkrótszą trwałość?
++ Żarówka tradycyjna
+- Dioda LED
+- Świetlówka liniowa
+- Lampa sodowa wysokoprężna
+! Żarówka tradycyjna ma trwałość około 1000 godzin, halogenowa 2000–4000 h, a źródła LED 25 000–50 000 h.
+
+? Która lampa wyładowcza daje żółte światło i była powszechnie stosowana w oświetleniu ulic?
++ Lampa sodowa wysokoprężna
+- Lampa rtęciowa
+- Świetlówka kompaktowa
+- Żarówka halogenowa
+! Lampy sodowe mają wysoką skuteczność, ale słabo oddają barwy. Obecnie zastępują je oprawy LED.
+
+? Co jest potrzebne do zapłonu i pracy lampy sodowej lub metalohalogenkowej?
++ Statecznik i zapłonnik albo zasilacz elektroniczny
+- Wyłącznie rezystor
+- Transformator bezpieczeństwa 12 V
+- Nic, podłącza się ją wprost do sieci
+! Lampy wyładowcze potrzebują wysokiego impulsu do zapłonu i ograniczenia prądu podczas pracy.
+
+? Dlaczego lampy wyładowcze, np. sodowe, osiągają pełną jasność dopiero po kilku minutach?
++ Bo muszą się nagrzać, aby ciśnienie par metali w jarzniku osiągnęło wartość roboczą
+- Bo napięcie sieci rośnie powoli
+- Bo zapłonnik działa ze zwłoką
+- Bo mają wbudowany ściemniacz
+! Gorąca lampa sodowa po wyłączeniu zwykle nie zapali się, dopóki nie ostygnie.
+
+? Jaki wskaźnik oddawania barw powinny mieć źródła światła do mieszkań i biur?
++ Ra ≥ 80
+- Ra ≤ 20
+- Ra = 0
+- Ra ≥ 200
+! Ra ≥ 80 zapewnia dobre oddawanie barw, a tam, gdzie liczy się wierność barw, stosuje się Ra ≥ 90.
+
+? Co oznacza parametr UGR w oświetleniu wnętrz?
++ Wskaźnik olśnienia przykrego: im mniejszy, tym mniejsze olśnienie
+- Natężenie oświetlenia
+- Temperaturę barwową
+- Skuteczność świetlną
+! Dla biur zaleca się UGR ≤ 19, aby oprawy nie oślepiały pracowników.
+
+? Jakie oprawy stosuje się w wysokiej hali magazynowej?
++ Oprawy przemysłowe o wąskim rozsyle, np. LED typu high bay
+- Kinkiety dekoracyjne
+- Lampki biurkowe
+- Oprawy podszafkowe
+! Oprawy high bay kierują światło w dół z dużej wysokości.
+
+? Do czego służy oświetlenie awaryjne ewakuacyjne?
++ Do oświetlenia dróg ewakuacyjnych i znaków po zaniku zasilania podstawowego
+- Do oświetlenia reklam
+- Do podświetlenia akwarium
+- Do dekoracyjnego oświetlenia elewacji
+! Oprawy awaryjne mają własne akumulatory albo zasilanie z centralnej baterii.
+
+? Jak długo musi działać oświetlenie ewakuacyjne w większości budynków?
++ Co najmniej 1 h
+- 1 min
+- 5 min
+- 24 h
+! Wymaga się zwykle co najmniej godziny działania, a w niektórych obiektach dłużej.
+
+? Jak oznacza się drogi ewakuacyjne?
++ Podświetlanymi znakami ewakuacyjnymi: zielonymi z białym piktogramem
+- Czerwonymi znakami zakazu
+- Niebieskimi znakami nakazu
+- Nie oznacza się ich
+! Znaki ewakuacyjne muszą być widoczne także po zaniku zasilania podstawowego.
+
+? Do czego służy ściemniacz?
++ Do płynnej regulacji jasności źródeł światła
+- Do pomiaru natężenia oświetlenia
+- Do wyłączania światła po czasie
+- Do sterowania z wielu miejsc
+! Ściemniacz zmienia wartość skuteczną napięcia albo prąd zasilacza LED.
+
+? Jaka jest skuteczność świetlna źródła o mocy 8 W i strumieniu 800 lm?
++ 100 lm/W
+- 0,01 lm/W
+- 8 lm/W
+- 6400 lm/W
+! η = Φ / P = 800 lm / 8 W = 100 lm/W.
+
+? Ile energii rocznie oszczędzi wymiana żarówki 60 W na źródło LED 8 W świecące 3 godziny dziennie?
++ Około 57 kWh
+- Około 0,57 kWh
+- Około 5,7 kWh
+- Około 570 kWh
+! Różnica mocy to 52 W: 52 W · 3 h · 365 dni ≈ 57 kWh.
+
+? Co oznacza klasa energetyczna źródła światła na etykiecie?
++ Efektywność energetyczną źródła w skali od A (najlepsza) do G
+- Klasę ochronności
+- Stopień ochrony IP
+- Napięcie zasilania
+! Od 2021 roku etykiety źródeł światła mają skalę A–G.
+
+? Dlaczego w łazience stosuje się oprawy o podwyższonym stopniu ochrony IP?
++ Bo są narażone na wilgoć i bryzgi wody
+- Bo w łazience jest inne napięcie
+- Bo zwiększa to jasność
+- Bo tak jest taniej
+! Stopień ochrony zależy od strefy łazienki; w strefach 1 i 2 wymaga się co najmniej IPX4.
+
+? Jak zasila się taśmy LED 12 V?
++ Stabilizowanym zasilaczem napięciowym 12 V DC o odpowiedniej mocy
+- Bezpośrednio z sieci 230 V
+- Zasilaczem prądowym 700 mA, bez względu na napięcie
+- Transformatorem 230/400 V
+! Taśmy LED 12 V i 24 V mają wbudowane elementy ograniczające prąd i zasila się je stałym napięciem.
+
+? Jaki zasilacz należy dobrać do 5 m taśmy LED o mocy 9,6 W/m?
++ O mocy około 60 W (48 W z zapasem)
+- O mocy 5 W
+- O mocy 9,6 W
+- O mocy 500 W
+! 5 m · 9,6 W/m = 48 W. Zasilacz dobiera się z zapasem około 20%.
+
+? Jak zmienia się natężenie oświetlenia od punktowego źródła światła wraz z odległością?
++ Maleje z kwadratem odległości
+- Rośnie proporcjonalnie do odległości
+- Nie zmienia się
+- Maleje liniowo
+! Według prawa odwrotności kwadratów E = I / r²: dwa razy dalej natężenie jest cztery razy mniejsze.
+
+? Lampa o światłości 400 cd oświetla prostopadle powierzchnię odległą o 2 m. Jakie jest natężenie oświetlenia?
++ 100 lx
+- 200 lx
+- 800 lx
+- 1600 lx
+! E = I / r² = 400 cd / (2 m)² = 100 lx.
+
+? W jakiej jednostce wyraża się światłość?
++ W kandelach (cd)
+- W luksach (lx)
+- W lumenach (lm)
+- W kelwinach (K)
+! Światłość to strumień świetlny wysyłany w danym kierunku w jednostkowy kąt bryłowy.
+
+? Jaką temperaturę barwową zaleca się do pomieszczeń wypoczynkowych w mieszkaniu?
++ Ciepłą, około 2700–3000 K
+- Około 8000 K
+- Około 6500 K
+- Temperatura barwowa nie ma znaczenia
+! Ciepłe światło sprzyja odpoczynkowi. W miejscach pracy stosuje się często barwę neutralną, około 4000 K.
+
+? Na czym polega działanie odbiorników grzejnych rezystancyjnych?
++ Ciepło wydziela się w elemencie o dużej rezystancji podczas przepływu prądu
+- Ciepło powstaje w uzwojeniach silnika
+- Ciepło wytwarza kondensator
+- Ciepło pochodzi ze spalania gazu
+! Należą do nich grzałki, piekarniki i czajniki. Ich współczynnik mocy wynosi praktycznie 1.
+
+? Na jakiej zasadzie działa płyta indukcyjna?
++ Zmienne pole magnetyczne indukuje prądy wirowe w ferromagnetycznym dnie naczynia, które się nagrzewa
+- Grzałka pod płytą nagrzewa szkło
+- Lampa halogenowa wysyła promieniowanie podczerwone
+- Spala się gaz
+! Dlatego do płyty indukcyjnej potrzebne są naczynia z dnem ferromagnetycznym.
+
+? Jak działa przepływowy podgrzewacz wody?
++ Grzałka dużej mocy ogrzewa wodę w chwili jej przepływu, bez zbiornika
+- Gromadzi wodę w dużym zbiorniku i powoli ją grzeje
+- Grzeje wodę promieniami słońca
+- Działa bez energii elektrycznej
+! Ze względu na dużą moc, często kilkanaście kilowatów, podgrzewacz przepływowy zasila się zwykle trójfazowo.
+
+? Dlaczego bojler często zasila się w tańszej taryfie nocnej?
++ Bo może grzać wodę w tańszych godzinach i przechowywać ją do wykorzystania później
+- Bo w nocy napięcie jest wyższe
+- Bo w dzień nie działa
+- Bo w nocy grzeje szybciej
+! Izolowany zbiornik utrzymuje ciepłą wodę przez wiele godzin.
+
+? Co chroni bojler przed przegrzaniem wody?
++ Termostat regulacyjny i ogranicznik temperatury
+- Wyłącznie wyłącznik różnicowoprądowy
+- Ogranicznik przepięć
+- Bezpiecznik w gnieździe telefonu
+! Termostat utrzymuje zadaną temperaturę, a ogranicznik wyłącza grzałkę przy awarii termostatu.
+
+? Który parametr opisuje efektywność pompy ciepła?
++ Współczynnik COP: stosunek ciepła oddanego do pobranej energii elektrycznej
+- Klasa izolacji
+- Napięcie zwarcia
+- Wskaźnik Ra
+! COP równe 4 oznacza, że z 1 kWh energii elektrycznej pompa dostarcza 4 kWh ciepła.
+
+? Po co oświetlenie zewnętrzne steruje się wyłącznikiem zmierzchowym z zegarem?
++ Aby świeciło tylko po zmroku i w ustalonych godzinach, co oszczędza energię
+- Aby zwiększyć jasność
+- Aby chronić przed przepięciami
+- Aby zmienić barwę światła
+! Zegar pozwala np. wyłączyć część oświetlenia w środku nocy.
+
+? Jak nazywa się elektroniczny zasilacz świetlówki zastępujący dławik i zapłonnik?
++ Statecznik elektroniczny
+- Transformator separacyjny
+- Przekaźnik czasowy
+- Kondensator kompensacyjny
+! Statecznik elektroniczny zasila lampę prądem wysokiej częstotliwości.
+
+? Jakie zalety ma statecznik elektroniczny w porównaniu z dławikiem?
++ Brak migotania i efektu stroboskopowego, mniejsze straty i szybszy zapłon
+- Większy pobór mocy biernej
+- Zawsze niższą cenę
+- Głośniejszą pracę
+! Wysoka częstotliwość pracy usuwa pulsacje 100 Hz typowe dla dławików.
+
+? Dlaczego źródła LED wymagają dobrego odprowadzania ciepła?
++ Bo wysoka temperatura złącza skraca ich trwałość i zmniejsza strumień świetlny
+- Bo LED-y nie wytwarzają ciepła
+- Bo zimne LED-y świecą słabiej
+- Bo bez radiatora zmienia się napięcie sieci
+! Diody zamieniają w światło tylko część energii; resztę jako ciepło musi odprowadzić radiator.
+
+? Co oznacza oznaczenie II klasy ochronności na oprawie oświetleniowej?
++ Oprawa ma izolację podwójną lub wzmocnioną i nie przyłącza się do niej przewodu ochronnego
+- Oprawa wymaga przewodu PE
+- Oprawa jest zasilana napięciem 12 V
+- Oprawa jest wodoszczelna
+! Żyłę PE w puszce izoluje się i pozostawia niepodłączoną, chyba że producent przewidział dla niej zacisk pośredniczący.

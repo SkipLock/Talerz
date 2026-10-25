@@ -67,7 +67,7 @@
 + 1,5 mm²
 - 0,5 mm²
 - 0,75 mm²
-- 2,5 mm²
+- 1 mm²
 ! Według PN-HD 60364-5-52 obwody siłowe i oświetleniowe instalacji stałej wymagają żył miedzianych co najmniej 1,5 mm². 0,5 mm² dopuszcza się w obwodach sygnalizacji i sterowania.
 
 ? Który metal ma najmniejszą rezystywność, czyli najlepiej przewodzi prąd?
@@ -233,7 +233,7 @@
 
 ? Do jakiej najwyższej temperatury może się długotrwale nagrzewać żyła przewodu w izolacji PVC?
 + 70 °C
-- 40 °C
+- 105 °C
 - 90 °C
 - 160 °C
 ! Dla izolacji PVC dopuszczalna temperatura długotrwała wynosi 70 °C, a dla XLPE 90 °C.
@@ -243,7 +243,7 @@
 + 160 °C
 - 70 °C
 - 90 °C
-- 250 °C
+- 120 °C
 ! Przy zwarciu trwającym do 5 s żyła w izolacji PVC może się nagrzać do 160 °C, a w izolacji XLPE do 250 °C.
 
 ? Jaki materiał izolacyjny oznacza się w kablach literą X (np. XLPE)?

@@ -51,7 +51,7 @@
 
 ? Jaki największy spadek napięcia zaleca PN-HD 60364-5-52 dla obwodów oświetleniowych instalacji zasilanej bezpośrednio z publicznej sieci niskiego napięcia?
 + 3%
-- 0,5%
+- 4%
 - 10%
 - 15%
 ! Załącznik G normy zaleca dla takich instalacji spadek do 3% dla oświetlenia i do 5% dla pozostałych odbiorników.
@@ -65,7 +65,7 @@
 
 ? Odbiornik jednofazowy 2,3 kW zasilono przewodem miedzianym 2,5 mm² o długości 25 m (γ = 56 m/(Ω·mm²)). Ile wynosi procentowy spadek napięcia?
 + 1,55%
-- 0,78%
+- 3,57%
 - 3,1%
 - 15,5%
 ! ΔU% = 200 · P · l / (γ · S · U²) = 200 · 2300 · 25 / (56 · 2,5 · 230²) ≈ 1,55%.
@@ -102,7 +102,7 @@
 + 30 °C
 - 0 °C
 - 20 °C
-- 40 °C
+- 25 °C
 ! Tabele przyjmują 30 °C dla przewodów w powietrzu i 20 °C dla kabli w ziemi. W innych temperaturach stosuje się współczynniki poprawkowe.
 
 ? Jak dobiera się przekrój przewodu obwodu odbiorczego?
@@ -135,7 +135,7 @@
 
 ? Na jaki prąd należy nastawić przekaźnik termiczny silnika o prądzie znamionowym 8,2 A?
 + 8,2 A
-- 4,1 A
+- 12,3 A
 - 16,4 A
 - 49,2 A
 ! Przekaźnik termiczny nastawia się na prąd znamionowy silnika z tabliczki.
@@ -165,7 +165,7 @@
 + 3%
 - 0,3%
 - 6,9%
-- 30%
+- 1,7%
 ! ΔU% = ΔU / U · 100% = 6,9 / 230 · 100% = 3%.
 
 ? Którą wielkość porównuje się z prądem zadziałania zabezpieczenia przy sprawdzaniu ochrony przy uszkodzeniu?
@@ -174,3 +174,292 @@
 - Prąd jałowy transformatora
 - Prąd upływu przez izolację przy 500 V DC
 ! Zabezpieczenie zadziała dostatecznie szybko, gdy prąd zwarcia Ik = U₀ / Zs jest nie mniejszy niż prąd Ia wyłączający w wymaganym czasie.
+
+? Ile wynosi prąd obliczeniowy obwodu zasilającego jednofazowy piekarnik o mocy 3,68 kW (230 V)?
++ 16 A
+- 5,3 A
+- 9,2 A
+- 25 A
+! IB = P / U = 3680 W / 230 V = 16 A.
+
+? Odbiornik trójfazowy o mocy 15 kW i cos φ = 0,85 zasilany jest z sieci 400 V. Ile wynosi prąd obliczeniowy?
++ 25,5 A
+- 21,7 A
+- 37,5 A
+- 18,4 A
+! IB = P / (√3 · U · cos φ) = 15 000 / (1,73 · 400 · 0,85) ≈ 25,5 A.
+
+? Jaki wyłącznik dobrać do obwodu o prądzie obliczeniowym 25,5 A, jeśli obciążalność przewodu wynosi 34 A?
++ 32 A
+- 20 A
+- 25 A
+- 16 A
+! Warunek IB ≤ In ≤ Iz: 25,5 A ≤ In ≤ 34 A, więc z typowego szeregu wybiera się 32 A.
+
+? Na podstawie tabeli dobierz najmniejszy przekrój przewodu Cu w izolacji PVC (sposób B1, dwie żyły obciążone) dla obwodu z wyłącznikiem B25.
+@ tab:Przekrój;Iz (B1, 2 żyły)|1,5 mm²;17,5 A|2,5 mm²;24 A|4 mm²;32 A|6 mm²;41 A
++ 4 mm²
+- 1,5 mm²
+- 2,5 mm²
+- 6 mm²
+! Musi być In ≤ Iz, czyli Iz ≥ 25 A. Przewód 2,5 mm² (24 A) jest za słaby, więc wybiera się 4 mm² (32 A).
+
+? Na podstawie tabeli wybierz wyłącznik dla przewodu 2,5 mm² Cu ułożonego sposobem A1, jeśli prąd obliczeniowy wynosi 14 A.
+@ tab:Przekrój;Iz (A1, 2 żyły)|1,5 mm²;14,5 A|2,5 mm²;19,5 A|4 mm²;26 A
++ B16
+- B10
+- B20
+- B25
+! Warunek 14 A ≤ In ≤ 19,5 A spełnia wyłącznik 16 A. B20 przekracza obciążalność przewodu, a B10 nie przeniesie prądu 14 A.
+
+? Jak zmieni się obciążalność przewodu w izolacji PVC, gdy temperatura otoczenia wzrośnie z 30 °C do 40 °C?
++ Zmaleje; współczynnik poprawkowy wynosi około 0,87
+- Wzrośnie
+- Nie zmieni się
+- Spadnie do zera
+! Przy wyższej temperaturze otoczenia przewód gorzej oddaje ciepło, więc może przewodzić mniejszy prąd.
+
+? Przewód ma obciążalność 24 A przy 30 °C. Jaka jest jego obciążalność w otoczeniu o temperaturze 40 °C, jeśli współczynnik poprawkowy wynosi 0,87?
++ 20,9 A
+- 12 A
+- 24 A
+- 27,6 A
+! Iz = 24 A · 0,87 ≈ 20,9 A.
+
+? Trzy obwody ułożono w jednej wiązce, a współczynnik grupowania wynosi 0,7. Jaką obciążalność ma przewód, który ułożony pojedynczo ma 24 A?
++ 16,8 A
+- 8 A
+- 24 A
+- 34,3 A
+! Iz = 24 A · 0,7 = 16,8 A.
+
+? Dlaczego przy długich liniach trzeba sprawdzić spadek napięcia, nawet gdy przekrój dobrano z obciążalności?
++ Bo spadek napięcia rośnie z długością linii i może być za duży mimo właściwej obciążalności
+- Bo spadek napięcia zwiększa obciążalność
+- Bo w długich liniach rośnie częstotliwość
+- Nie trzeba go sprawdzać
+! Przy zbyt dużym spadku napięcia silniki gorzej ruszają, a urządzenia mogą działać nieprawidłowo.
+
+? Oblicz procentowy spadek napięcia w symetrycznej linii trójfazowej: P = 10 kW, l = 50 m, S = 6 mm² Cu (γ = 56), U = 400 V. Wzór: ΔU% = 100 · P · l / (γ · S · U²).
++ 0,93%
+- 1,61%
+- 1,86%
+- 9,3%
+! ΔU% = 100 · 10 000 · 50 / (56 · 6 · 400²) ≈ 0,93%.
+
+? Dlaczego we wzorze na spadek napięcia w symetrycznej linii trójfazowej nie ma mnożnika 2, występującego dla linii jednofazowej?
++ Bo przy obciążeniu symetrycznym przewodem neutralnym nie płynie prąd
+- Bo przewody trójfazowe nie mają rezystancji
+- Bo napięcie trójfazowe jest stałe
+- Bo w linii trójfazowej nie ma spadku napięcia
+! W obwodzie jednofazowym prąd płynie przewodem L i N, dlatego rezystancję linii liczy się podwójnie.
+
+? Jak dobiera się przewód zasilający silnik?
++ Według prądu znamionowego silnika i warunków ułożenia, a zabezpieczenie zwarciowe tak, by nie zadziałało podczas rozruchu
+- Według prądu rozruchowego silnika
+- Według mocy silnika w kW, bez przeliczeń
+- Zawsze 1,5 mm²
+! Prąd rozruchowy płynie krótko i nie nagrzewa znacząco przewodu. Przed przeciążeniem chroni przekaźnik termiczny.
+
+? Jaki jest w przybliżeniu prąd zwarcia na zaciskach transformatora 630 kVA, 15/0,4 kV, o napięciu zwarcia uₖ = 6%?
++ Około 15 kA
+- Około 0,9 kA
+- Około 5,5 kA
+- Około 150 kA
+! In = 630 000 / (1,73 · 400) ≈ 909 A, a Ik ≈ In / uₖ = 909 / 0,06 ≈ 15 kA.
+
+? Jak długość obwodu wpływa na prąd zwarcia na jego końcu?
++ Im dłuższy obwód, tym większa impedancja pętli i mniejszy prąd zwarcia
+- Dłuższy obwód zwiększa prąd zwarcia
+- Długość nie ma wpływu
+- Dłuższy obwód podwyższa napięcie
+! Na końcu długich obwodów trzeba sprawdzić, czy zabezpieczenie zadziała dostatecznie szybko.
+
+? Na końcu długiego obwodu z wyłącznikiem C16 impedancja pętli zwarcia jest za duża. Co można zrobić?
++ Zwiększyć przekrój przewodu, zastosować wyłącznik B16 albo dodać wyłącznik różnicowoprądowy
+- Zastąpić wyłącznik wyłącznikiem C32
+- Odłączyć przewód ochronny
+- Nic nie robić
+! Większy przekrój zmniejsza impedancję, charakterystyka B wymaga mniejszego prądu zwarcia, a RCD wyłącza nawet przy małym prądzie uszkodzeniowym.
+
+? Na czym polega sprawdzenie wytrzymałości zwarciowej przewodu?
++ Czas wyłączenia zwarcia musi być krótszy od czasu, po którym żyła nagrzeje się do temperatury granicznej: t ≤ (k · S / I)²
+- Prąd zwarcia musi być mniejszy od prądu znamionowego
+- Przewód musi mieć izolację silikonową
+- Zwarcie musi trwać co najmniej 5 s
+! Współczynnik k zależy od materiału żyły i izolacji; dla miedzi w izolacji PVC k = 115.
+
+? Ile wynosi dopuszczalny czas trwania zwarcia dla przewodu Cu/PVC 2,5 mm² przy prądzie zwarciowym 1000 A (k = 115)?
++ Około 0,08 s
+- Około 0,008 s
+- Około 0,8 s
+- Około 8 s
+! t = (k · S / I)² = (115 · 2,5 / 1000)² ≈ 0,083 s. Wyłącznik nadprądowy wyłączy taki prąd szybciej.
+
+? Jaki jest najmniejszy przekrój przewodu PEN wykonanego z aluminium?
++ 16 mm²
+- 2,5 mm²
+- 10 mm²
+- 6 mm²
+! Przewód PEN musi mieć co najmniej 10 mm² Cu albo 16 mm² Al.
+
+? Odbiornik pobiera 18 A i jest zasilany przewodem o obciążalności 24 A. Który wyłącznik spełnia warunek ochrony przed przeciążeniem?
++ 20 A
+- 40 A
+- 25 A
+- 32 A
+! IB ≤ In ≤ Iz: 18 A ≤ In ≤ 24 A, więc pasuje wyłącznik 20 A.
+
+? Do czego służy współczynnik zapotrzebowania (jednoczesności) przy obliczaniu mocy?
++ Uwzględnia, że nie wszystkie odbiorniki pracują jednocześnie z pełną mocą
+- Zwiększa moc o 50%
+- Opisuje sprawność transformatora
+- Opisuje rezystancję przewodów
+! Moc zapotrzebowana to suma mocy zainstalowanych pomnożona przez współczynnik zapotrzebowania.
+
+? Moc zainstalowana w mieszkaniu wynosi 20 kW, a współczynnik zapotrzebowania 0,5. Ile wynosi moc zapotrzebowana?
++ 10 kW
+- 5 kW
+- 20 kW
+- 40 kW
+! Pz = kz · Pi = 0,5 · 20 kW = 10 kW.
+
+? Jaki prąd płynie w trójfazowej linii zasilającej mieszkanie o mocy zapotrzebowanej 12,5 kW przy cos φ = 1?
++ 18 A
+- 10,4 A
+- 31,3 A
+- 54,3 A
+! I = P / (√3 · U · cos φ) = 12 500 / (1,73 · 400) ≈ 18 A.
+
+? Jaki spadek napięcia zaleca PN-HD 60364-5-52 dla obwodów innych niż oświetleniowe (instalacja zasilana z publicznej sieci nN)?
++ 5%
+- 8%
+- 10%
+- 20%
+! Załącznik G normy zaleca 3% dla oświetlenia i 5% dla pozostałych odbiorników.
+
+? Przewód 4×10 mm² Cu ma obciążalność 50 A. Którą wkładkę gG można zastosować przy prądzie obciążenia 35 A?
++ 35 A
+- 25 A
+- 50 A
+- 32 A
+! Dla wkładek gG I₂ ≈ 1,6 · In, więc musi być 1,6 · In ≤ 1,45 · 50 A, czyli In ≤ 45 A, oraz In ≥ 35 A. Pasuje wkładka 35 A.
+
+? Dlaczego dla wkładek gG warunek I₂ ≤ 1,45 · Iz jest ostrzejszy niż dla wyłączników nadprądowych?
++ Bo umowny prąd zadziałania wkładek gG wynosi około 1,6 In, a wyłączników 1,45 In
+- Bo wkładki nie chronią przed przeciążeniem
+- Bo wkładki działają tylko przy zwarciu
+- Nie jest ostrzejszy
+! Z warunku 1,6 In ≤ 1,45 Iz wynika dla wkładek In ≤ 0,9 Iz, a dla wyłączników wystarcza In ≤ Iz.
+
+? Ile wynosi rezystancja pętli L–PE przewodu 2,5 mm² Cu o długości 30 m (γ = 56)?
++ 0,43 Ω
+- 0,04 Ω
+- 0,21 Ω
+- 4,3 Ω
+! Jedna żyła ma 30 / (56 · 2,5) ≈ 0,214 Ω, a pętla obejmuje przewód fazowy i ochronny: 2 · 0,214 ≈ 0,43 Ω.
+
+? Od czego zależy wybór charakterystyki wyłącznika nadprądowego (B, C, D)?
++ Od prądów załączania odbiorników oraz od tego, czy obwód zapewni prąd zwarcia potrzebny do zadziałania
+- Od koloru obudowy
+- Od napięcia sieci
+- Wyłącznie od długości obwodu
+! Obwody z silnikami lub transformatorami wymagają charakterystyki C lub D, ale wtedy potrzebna jest mniejsza impedancja pętli zwarcia.
+
+? Jaki przekrój przewodu PE dobrać dla przewodów fazowych 6 mm² Cu?
++ 6 mm²
+- 2,5 mm²
+- 4 mm²
+- 1,5 mm²
+! Do 16 mm² przekrój przewodu PE jest równy przekrojowi przewodu fazowego.
+
+? Dlaczego tabele obciążalności przewodów w izolacji PVC odnoszą się do temperatury żyły 70 °C?
++ Bo to dopuszczalna długotrwała temperatura pracy izolacji PVC
+- Bo w 70 °C miedź się topi
+- Bo taka jest temperatura otoczenia w Polsce
+- Bo tak łatwiej liczyć
+! Przekroczenie tej temperatury przyspiesza starzenie izolacji i skraca jej trwałość.
+
+? Obwód jednofazowy ma długość 40 m i przewód Cu 2,5 mm² (γ = 56). Odbiornik pobiera 16 A. Ile wynosi spadek napięcia?
++ Około 9,1 V
+- Około 0,9 V
+- Około 4,6 V
+- Około 18,3 V
+! ΔU = 2 · I · l / (γ · S) = 2 · 16 · 40 / (56 · 2,5) ≈ 9,1 V, czyli około 4% napięcia 230 V.
+
+? Jak zmieni się prąd w linii, gdy przy tej samej mocy czynnej współczynnik mocy odbiornika spadnie z 1 do 0,5?
++ Wzrośnie dwukrotnie
+- Zmaleje dwukrotnie
+- Nie zmieni się
+- Wzrośnie czterokrotnie
+! I = P / (U · cos φ), więc przy cos φ = 0,5 prąd jest dwa razy większy niż przy cos φ = 1.
+
+? Co oznacza sposób ułożenia D w PN-HD 60364-5-52?
++ Kable ułożone w ziemi, bezpośrednio albo w osłonach
+- Przewody na ścianie
+- Przewody w izolacji termicznej
+- Kable na drabinkach w powietrzu
+! Dla sposobu D obciążalność zależy też od rezystywności cieplnej gruntu.
+
+? Który parametr wyłącznika porównuje się ze spodziewanym prądem zwarcia w miejscu montażu?
++ Znamionową zwarciową zdolność łączeniową, np. 6 kA
+- Prąd znamionowy In
+- Liczbę biegunów
+- Klasę ograniczania energii
+! Spodziewany prąd zwarcia nie może przekraczać zdolności łączeniowej, bo aparat mógłby zostać zniszczony.
+
+? Jak oblicza się moc zainstalowaną w budynku?
++ Jako sumę mocy znamionowych wszystkich przyłączonych odbiorników
+- Jako moc największego odbiornika
+- Jako iloczyn napięcia i prądu zabezpieczenia głównego
+- Jako średnią moc pobieraną w nocy
+! Moc zapotrzebowana jest mniejsza od zainstalowanej, bo odbiorniki nie pracują jednocześnie.
+
+? Jaką moc można pobierać przy trójfazowym zabezpieczeniu przedlicznikowym 25 A (400 V, cos φ = 1)?
++ Około 17 kW
+- Około 5,75 kW
+- Około 10 kW
+- Około 30 kW
+! P = √3 · U · I = 1,73 · 400 · 25 ≈ 17,3 kW.
+
+? Dlaczego kabel zasilający budynek dobiera się z zapasem przekroju?
++ Aby przy wzroście zapotrzebowania na moc nie trzeba było go wymieniać
+- Bo większy kabel ma mniejszą obciążalność
+- Bo wymaga tego kolor kabla
+- Nie dobiera się go z zapasem
+! Wymiana kabla ułożonego w ziemi jest kosztowna, a zapotrzebowanie na moc z czasem rośnie, np. przez pompy ciepła i ładowarki samochodów.
+
+? Ile wynosi prąd obliczeniowy pompy ciepła o mocy elektrycznej 6 kW zasilanej trójfazowo (400 V, cos φ = 0,9)?
++ 9,6 A
+- 8,7 A
+- 15 A
+- 7,8 A
+! IB = 6000 / (1,73 · 400 · 0,9) ≈ 9,6 A.
+
+? Ile wynosi prąd ładowarki samochodu elektrycznego o mocy 11 kW zasilanej trójfazowo (cos φ ≈ 1)?
++ Około 16 A
+- Około 11 A
+- Około 27,5 A
+- Około 48 A
+! I = 11 000 / (1,73 · 400) ≈ 15,9 A na fazę.
+
+? Jaki wyłącznik różnicowoprądowy zaleca się zwykle w obwodzie ładowarki samochodu elektrycznego, jeśli ładowarka nie ma wbudowanej detekcji prądu stałego 6 mA?
++ Typu B
+- Typu AC
+- Typu S bez dodatkowych wymagań
+- Żaden nie jest potrzebny
+! Ładowarki mogą wytwarzać prąd różnicowy stały, który zaślepia wyłączniki typu AC i A. Producenci często stosują typ A z detekcją DC 6 mA albo wymagają typu B.
+
+? Jak dobiera się przekrój przewodów przy dużym udziale wyższych harmonicznych w obwodzie trójfazowym?
++ Uwzględniając prąd w przewodzie neutralnym, który może przekraczać prąd fazowy, i stosując współczynniki redukcyjne
+- Przekrój przewodu N można zmniejszyć o połowę
+- Harmoniczne nie mają wpływu
+- Wystarczy dobrać przewód według napięcia
+! Trzecia harmoniczna z trzech faz sumuje się w przewodzie N, więc przewód neutralny może być najbardziej obciążony.
+
+? Ile wynosi prąd jednofazowego czajnika o mocy 2,3 kW i jakie zabezpieczenie obwodu gniazd go wystarczy?
++ 10 A; wystarczy obwód gniazd z wyłącznikiem B16
+- 23 A; potrzebny wyłącznik B25
+- 2,3 A; wystarczy wyłącznik B2
+- 100 A; potrzebny bezpiecznik 100 A
+! I = 2300 W / 230 V = 10 A, co mieści się w typowym obwodzie gniazd B16, o ile inne odbiorniki nie pracują jednocześnie z dużą mocą.
