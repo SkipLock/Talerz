@@ -217,3 +217,278 @@
 - Wyłącznie w obwodach prądu stałego
 - Zamiast wyłącznika nadprądowego
 ! Wyłącznik S działa ze zwłoką i ma zwykle większy prąd IΔn, np. 100 lub 300 mA, dzięki czemu nie wyłącza całej instalacji przy upływie w jednym obwodzie.
+
+? W jakim zakresie prądu wyzwala natychmiastowo wyłącznik nadprądowy o charakterystyce C?
++ Od 5 do 10 krotności prądu znamionowego
+- Od 3 do 5 krotności prądu znamionowego
+- Od 10 do 20 krotności prądu znamionowego
+- Od 1,13 do 1,45 krotności prądu znamionowego
+! Wyzwalacz elektromagnetyczny wyłącznika C działa natychmiastowo przy prądzie 5–10 In.
+
+? W jakim zakresie prądu wyzwala natychmiastowo wyłącznik nadprądowy o charakterystyce D?
++ Od 10 do 20 krotności prądu znamionowego
+- Od 3 do 5 krotności prądu znamionowego
+- Od 5 do 10 krotności prądu znamionowego
+- Od 20 do 50 krotności prądu znamionowego
+! Wyłączniki D stosuje się tam, gdzie występują bardzo duże prądy załączania, np. przy transformatorach i dużych silnikach.
+
+? W obwodzie popłynął prąd zwarciowy 100 A. Który wyłącznik na pewno zadziała natychmiastowo?
++ B16; wyłącznik C16 nie musi zadziałać natychmiastowo
+- C16; wyłącznik B16 nie zadziała
+- Żaden z nich
+- Oba na pewno
+! B16 wyzwala natychmiastowo najpóźniej przy 5 · 16 = 80 A. C16 ma pewne wyzwolenie natychmiastowe dopiero przy 10 · 16 = 160 A.
+
+? Co oznacza cyfra 3 w kwadracie na wyłączniku nadprądowym?
++ Klasę ograniczania energii (3 oznacza najlepsze ograniczanie)
+- Liczbę biegunów
+- Prąd znamionowy 3 A
+- Charakterystykę C
+! Klasa ograniczania energii mówi, jak skutecznie wyłącznik ogranicza energię przepuszczaną podczas zwarcia.
+
+? Czym różni się wkładka topikowa od wyłącznika nadprądowego?
++ Wkładkę po zadziałaniu trzeba wymienić, a wyłącznik można ponownie załączyć
+- Wkładka nie chroni przed zwarciem
+- Wyłącznik nie chroni przed przeciążeniem
+- Wkładkę stosuje się tylko w obwodach prądu stałego
+! Topik przepala się bezpowrotnie. Wyłącznik po usunięciu przyczyny załącza się dźwignią.
+
+? Które bezpieczniki mają wkładki ze stykami nożowymi?
++ Bezpieczniki mocy NH
+- Bezpieczniki D (gwintowe)
+- Bezpieczniki D0
+- Bezpieczniki aparaturowe 5×20 mm
+! Wkładki NH (np. NH00, NH1, NH2) wymienia się specjalnym uchwytem, w rękawicy i osłonie twarzy.
+
+? Które wkładki bezpiecznikowe przerywają tylko prądy zwarciowe i służą głównie do zabezpieczania silników?
++ aM
+- gG
+- gPV
+- gTr
+! Litera a oznacza wyłączanie tylko w części zakresu (prądów zwarciowych). Przed przeciążeniem silnik chroni wtedy przekaźnik termiczny.
+
+? Do czego służą wkładki bezpiecznikowe gR i aR?
++ Do ochrony elementów półprzewodnikowych (diod, tyrystorów) przed zwarciami
+- Do ochrony silników przed przeciążeniem
+- Do ochrony instalacji przed przepięciami
+- Do ochrony przewodów w mieszkaniach
+! Półprzewodniki mają bardzo małą przeciążalność, więc ultraszybkie wkładki muszą przerwać zwarcie, zanim element się zniszczy.
+
+? Jaki prąd znamionowy ma wkładka bezpiecznikowa ze wskaźnikiem w kolorze zielonym?
+@ wkladka:zielony
++ 6 A
+- 2 A
+- 10 A
+- 25 A
+! Zielony wskaźnik ma wkładka 6 A, czerwony 10 A, szary 16 A, niebieski 20 A.
+
+? Jaki prąd znamionowy ma wkładka bezpiecznikowa ze wskaźnikiem w kolorze niebieskim?
+@ wkladka:niebieski
++ 20 A
+- 16 A
+- 25 A
+- 35 A
+! Niebieski wskaźnik ma wkładka 20 A, żółty 25 A, czarny 35 A.
+
+? Jaki kolor ma wskaźnik wkładki topikowej 25 A?
++ Żółty
+- Szary
+- Niebieski
+- Czarny
+! Wkładka 25 A ma wskaźnik żółty, 20 A niebieski, a 35 A czarny.
+
+? Jaki kolor ma wskaźnik wkładki topikowej 35 A?
++ Czarny
+- Biały
+- Żółty
+- Miedziany
+! Czarny wskaźnik ma wkładka 35 A, biały 50 A, miedziany 63 A.
+
+? Co oznacza opis wyłącznika różnicowoprądowego: 4P, 40 A, 30 mA?
++ Czterobiegunowy, prąd znamionowy 40 A, znamionowy prąd różnicowy 30 mA
+- Cztery wyłączniki po 40 mA
+- Wyłącznik 30 A, który zadziała przy 40 mA
+- Wyłącznik dla czterech obwodów po 30 A
+! 4P oznacza cztery tory (L1, L2, L3, N). 40 A to dopuszczalny prąd ciągły styków, a nie prąd zadziałania.
+
+? Czy wyłącznik różnicowoprądowy o prądzie znamionowym 40 A chroni przewody przed przeciążeniem?
++ Nie, obwód musi mieć osobne zabezpieczenie nadprądowe
+- Tak, wyłącza przy prądzie 40 A
+- Tak, wyłącza przy prądzie 30 mA
+- Tylko przy zwarciu
+! Prąd 40 A to obciążalność styków. Sam wyłącznik różnicowoprądowy reaguje tylko na prąd różnicowy.
+
+? Co może powodować wyłączanie się wyłącznika różnicowoprądowego bez widocznej przyczyny?
++ Upływ prądu w zawilgoconej instalacji lub uszkodzonym urządzeniu albo połączenie N z PE za wyłącznikiem
+- Zbyt mała moc odbiorników
+- Zbyt niskie napięcie w sieci
+- Przewody miedziane zamiast aluminiowych
+! Najczęstsze przyczyny to wilgoć, uszkodzona izolacja grzałki lub silnika oraz błędne połączenie przewodu N z PE.
+
+? Dlaczego za wyłącznikiem różnicowoprądowym nie wolno łączyć przewodu N z PE?
++ Bo część prądu roboczego wracałaby przewodem PE i wyłącznik by zadziałał albo działał nieprawidłowo
+- Bo zwiększa to napięcie w gniazdach
+- Bo przewód N ma inny kolor
+- Bo dopuszcza się to tylko w kuchni
+! Wyłącznik porównuje prądy w L i N. Jeśli prąd wraca częściowo przez PE, pojawia się różnica i wyłącznik się otwiera.
+
+? Dlaczego w mieszkaniu stosuje się kilka wyłączników różnicowoprądowych zamiast jednego?
++ Aby upływ w jednym obwodzie nie wyłączał całej instalacji
+- Bo jeden wyłącznik nie zadziała przy 30 mA
+- Bo przepisy zakazują jednego wyłącznika
+- Bo wtedy nie trzeba wyłączników nadprądowych
+! Podział obwodów na grupy chronione różnymi RCD zwiększa niezawodność i ułatwia szukanie usterek.
+
+? Czym różni się ogranicznik przepięć typu 2 od typu 1?
++ Typ 2 chroni przed przepięciami indukowanymi i łączeniowymi (prąd 8/20 µs), a typ 1 odprowadza też część prądu pioruna (10/350 µs)
+- Typ 2 chroni przed przeciążeniem, a typ 1 przed zwarciem
+- Typ 2 działa przy prądzie stałym, a typ 1 przy przemiennym
+- Nie różnią się niczym
+! Ograniczniki typu 2 montuje się w rozdzielnicach, a typu 1 na wejściu instalacji budynków z instalacją odgromową.
+
+? Co oznacza poziom ochrony Up ogranicznika przepięć?
++ Największe napięcie występujące na zaciskach ogranicznika podczas jego działania
+- Napięcie znamionowe sieci
+- Znamionowy prąd wyładowczy
+- Czas zadziałania ogranicznika
+! Im niższy poziom ochrony Up, tym lepiej chronione są urządzenia. Musi on być mniejszy od wytrzymałości udarowej sprzętu.
+
+? Do czego służy stycznik modułowy w rozdzielnicy mieszkaniowej?
++ Do sterowania obwodem sygnałem, np. załączania bojlera w tańszej taryfie
+- Do ochrony przed porażeniem
+- Do pomiaru zużycia energii
+- Do ochrony przed przepięciami
+! Stycznik modułowy załącza obwód np. na sygnał z zegara sterującego albo z licznika strefowego.
+
+? Do czego służy przekaźnik priorytetowy (odciążający)?
++ Wyłącza mniej ważne odbiorniki, gdy prąd w obwodzie głównym przekroczy nastawioną wartość
+- Załącza oświetlenie awaryjne
+- Mierzy zużycie energii
+- Chroni silnik przed pracą na dwóch fazach
+! Pozwala np. zasilić przepływowy podgrzewacz wody i kuchenkę przy ograniczonej mocy przyłączeniowej, wyłączając chwilowo jedno z nich.
+
+? Do czego służy przekaźnik kontroli faz w zasilaniu silników?
++ Wyłącza zasilanie przy zaniku fazy, złej kolejności faz lub dużej asymetrii napięć
+- Mierzy prędkość obrotową
+- Kompensuje moc bierną
+- Ogranicza prąd rozruchowy
+! Praca na dwóch fazach albo ze złą kolejnością faz może uszkodzić silnik lub napędzaną maszynę.
+
+? Jak działa wyłącznik nadprądowy przy zwarciu?
++ Wyzwalacz elektromagnetyczny natychmiast otwiera styki, a łuk gaśnie w komorze gaszeniowej
+- Wyzwalacz bimetalowy otwiera styki po kilku minutach
+- Wyłącznik nie reaguje na zwarcia
+- Zwarcie wyłącza tylko wyłącznik różnicowoprądowy
+! Duży prąd zwarciowy przyciąga zworę wyzwalacza w ciągu kilku milisekund.
+
+? Co grozi, gdy przewód zabezpieczono wyłącznikiem o zbyt dużym prądzie znamionowym?
++ Przegrzewanie się przewodu przy przeciążeniu, bo wyłącznik nie zadziała na czas
+- Częste wyłączanie się wyłącznika
+- Spadek napięcia w gniazdach
+- Nic, im większy wyłącznik, tym lepiej
+! Prąd znamionowy zabezpieczenia nie może przekraczać obciążalności przewodu (In ≤ Iz).
+
+? Jaki wyłącznik stosuje się najczęściej w obwodzie oświetleniowym mieszkania wykonanym przewodem 1,5 mm² Cu?
++ 10 A
+- 25 A
+- 32 A
+- 63 A
+! Dla przewodu 1,5 mm² w ścianie stosuje się zwykle wyłącznik B10, a dla gniazd z przewodem 2,5 mm² wyłącznik B16.
+
+? Który aparat zapewnia przerwę izolacyjną, ale nie wyłącza samoczynnie przy zwarciu?
++ Rozłącznik izolacyjny
+- Wyłącznik nadprądowy
+- Wyłącznik różnicowoprądowy
+- Ogranicznik przepięć
+! Rozłącznik izolacyjny nie ma wyzwalaczy. Służy np. jako wyłącznik główny albo do odłączania obwodów na czas prac.
+
+? Do czego służy przekaźnik napięciowy w rozdzielnicy?
++ Odłącza instalację przy zbyt wysokim lub zbyt niskim napięciu sieci
+- Mierzy prąd upływu
+- Ogranicza przepięcia atmosferyczne
+- Podwyższa napięcie przy jego spadku
+! Chroni odbiorniki np. przed skutkami przerwania przewodu PEN w sieci, gdy napięcie fazowe może znacznie wzrosnąć.
+
+? Co oznacza symbol IΔn na wyłączniku różnicowoprądowym?
++ Znamionowy prąd różnicowy zadziałania
+- Prąd znamionowy ciągły
+- Zwarciową zdolność łączeniową
+- Napięcie znamionowe
+! IΔn to prąd różnicowy, przy którym wyłącznik musi zadziałać, np. 30 mA.
+
+? Jaki znamionowy prąd różnicowy ma wyłącznik stosowany jako ochrona uzupełniająca?
++ Nie większy niż 30 mA
+- 100 mA
+- 300 mA
+- 500 mA
+! Prąd 30 mA przy krótkim czasie przepływu nie wywołuje migotania komór serca.
+
+? Który typ wyłącznika różnicowoprądowego jest przeznaczony do prądów różnicowych o mieszanej częstotliwości, np. w pralkach z falownikiem jednofazowym?
++ Typ F
+- Typ AC
+- Typ S
+- Typ G
+! Typ F wykrywa prądy sinusoidalne, pulsujące i o mieszanej częstotliwości do 1 kHz.
+
+? Co się dzieje w wyłączniku nadprądowym, gdy prąd wynosi 1,5 In?
++ Po pewnym czasie (rzędu minut) zadziała wyzwalacz termiczny
+- Od razu zadziała wyzwalacz elektromagnetyczny
+- Wyłącznik nigdy nie zadziała
+- Zadziała wyłącznie wyłącznik różnicowoprądowy
+! Przy umiarkowanym przeciążeniu bimetal nagrzewa się stopniowo. Czas zadziałania pokazuje charakterystyka czasowo-prądowa.
+
+? Jak nazywa się wykres zależności czasu zadziałania zabezpieczenia od wartości prądu?
++ Charakterystyka czasowo-prądowa
+- Charakterystyka mechaniczna
+- Charakterystyka napięciowa
+- Wykres wskazowy
+! Charakterystyki czasowo-prądowe pozwalają porównać zabezpieczenia i sprawdzić ich selektywność.
+
+? Co należy zrobić przy wymianie przepalonej wkładki bezpiecznikowej?
++ Usunąć przyczynę zadziałania i założyć wkładkę o tym samym prądzie znamionowym i charakterystyce
+- Założyć wkładkę o większym prądzie, żeby się nie przepalała
+- Naprawić wkładkę kawałkiem drutu
+- Zmostkować podstawę bezpiecznika
+! Naprawianie wkładek drutem jest niedopuszczalne, bo zabezpieczenie przestaje działać i grozi pożarem.
+
+? Jaka jest zaleta rozłącznika bezpiecznikowego z wkładkami NH?
++ Łączy funkcję rozłącznika i zabezpieczenia zwarciowego oraz pozwala bezpiecznie wymienić wkładki
+- Mierzy energię
+- Chroni przed porażeniem prądem różnicowym
+- Ogranicza przepięcia
+! Rozłącznik bezpiecznikowy można otworzyć pod obciążeniem, a wkładki wymienia się bez dostępu do części pod napięciem.
+
+? Dlaczego silnik trójfazowy zabezpiecza się wyłącznikiem trójbiegunowym, a nie trzema jednobiegunowymi działającymi osobno?
++ Aby zadziałanie zabezpieczenia w jednej fazie odłączyło wszystkie fazy i silnik nie pracował na dwóch fazach
+- Bo trzy wyłączniki są droższe
+- Bo wyłączniki jednobiegunowe nie działają przy 400 V
+- Nie ma to znaczenia
+! Odłączenie tylko jednej fazy powoduje pracę niepełnofazową i przegrzanie silnika.
+
+? Do czego służy zegar sterujący (programator czasowy) w rozdzielnicy?
++ Do załączania i wyłączania obwodów o zaprogramowanych porach
+- Do pomiaru czasu pracy instalacji
+- Do ochrony przed przepięciami
+- Do kompensacji mocy biernej
+! Zegary sterujące stosuje się np. do oświetlenia reklam, ogrzewania albo bojlera w taryfie nocnej.
+
+? Który element w rozdzielnicy pokazuje obecność napięcia w poszczególnych fazach?
++ Lampki sygnalizacyjne (kontrolki)
+- Wyłącznik różnicowoprądowy
+- Rozłącznik izolacyjny
+- Szyna TH35
+! Modułowe kontrolki świecą, gdy w danej fazie jest napięcie.
+
+? Jakie są skutki długotrwałego przeciążenia przewodu?
++ Przegrzanie i przyspieszone starzenie izolacji, a w skrajnym przypadku pożar
+- Wzrost rezystancji izolacji
+- Obniżenie temperatury przewodu
+- Brak jakichkolwiek skutków
+! Izolacja PVC przegrzewana powyżej 70 °C twardnieje, pęka i traci właściwości izolacyjne.
+
+? Którego aparatu używa się do ochrony przewodów przed przeciążeniem i zwarciem w obwodzie gniazd?
++ Wyłącznika nadprądowego
+- Wyłącznika różnicowoprądowego bez członu nadprądowego
+- Ogranicznika przepięć
+- Przekaźnika czasowego
+! Wyłącznik nadprądowy ma wyzwalacz termiczny (przeciążenia) i elektromagnetyczny (zwarcia).

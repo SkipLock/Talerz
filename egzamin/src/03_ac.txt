@@ -219,3 +219,245 @@
 - Ze strat w uzwojeniach
 - Z oporu powietrza wirnika
 ! Prąd magnesujący, potrzebny do wytworzenia strumienia w rdzeniu, jest opóźniony o 90° względem napięcia. Odpowiada mu moc bierna indukcyjna.
+
+? Ile wynosi częstotliwość napięcia, którego okres wynosi 10 ms?
++ 100 Hz
+- 10 Hz
+- 50 Hz
+- 1000 Hz
+! f = 1 / T = 1 / 0,01 s = 100 Hz.
+
+? Ile wynosi wartość skuteczna napięcia sinusoidalnego o amplitudzie 141 V?
++ 100 V
+- 70,5 V
+- 141 V
+- 200 V
+! U = Um / √2 = 141 / 1,41 ≈ 100 V.
+
+? Ile wynosi wartość międzyszczytowa napięcia sieciowego 230 V?
++ Około 650 V
+- 230 V
+- Około 325 V
+- 460 V
+! Upp = 2 · Um = 2 · 325 V ≈ 650 V.
+
+? Jak przesunięty jest prąd względem napięcia w obwodzie z idealnym kondensatorem?
++ Prąd wyprzedza napięcie o 90°
+- Prąd opóźnia się względem napięcia o 90°
+- Prąd jest w fazie z napięciem
+- Prąd jest przesunięty o 180°
+! Prąd ładowania jest największy, gdy napięcie przechodzi przez zero, więc w kondensatorze prąd wyprzedza napięcie o ćwierć okresu.
+
+? Jak zmieni się reaktancja cewki, gdy częstotliwość wzrośnie trzykrotnie?
++ Wzrośnie trzykrotnie
+- Zmaleje trzykrotnie
+- Nie zmieni się
+- Wzrośnie dziewięciokrotnie
+! XL = 2πfL, więc reaktancja indukcyjna rośnie proporcjonalnie do częstotliwości.
+
+? Ile wynosi impedancja szeregowego dwójnika RC, w którym R = 60 Ω i XC = 80 Ω?
++ 100 Ω
+- 20 Ω
+- 140 Ω
+- 4800 Ω
+! Z = √(R² + XC²) = √(3600 + 6400) = 100 Ω.
+
+? Jaki prąd popłynie przez cewkę o reaktancji 46 Ω i pomijalnej rezystancji przy napięciu 230 V, 50 Hz?
++ 5 A
+- 0,2 A
+- 4,6 A
+- 10 A
+! I = U / XL = 230 V / 46 Ω = 5 A.
+
+? Ile wynosi moc czynna odbiornika jednofazowego, jeśli U = 230 V, I = 2 A, a cos φ = 0,5?
++ 230 W
+- 115 W
+- 460 W
+- 920 W
+! P = U · I · cos φ = 230 · 2 · 0,5 = 230 W.
+
+? Ile wynosi moc pozorna odbiornika jednofazowego 230 V, który pobiera prąd 4 A?
++ 920 VA
+- 57,5 VA
+- 234 VA
+- 460 VA
+! S = U · I = 230 · 4 = 920 VA, niezależnie od współczynnika mocy.
+
+? Jaki prąd pobiera z sieci 400 V symetryczny silnik trójfazowy, który pobiera moc 10 kW przy cos φ = 0,8?
++ 18 A
+- 14,4 A
+- 31,3 A
+- 54,3 A
+! I = P / (√3 · U · cos φ) = 10 000 / (1,73 · 400 · 0,8) ≈ 18 A.
+
+? Co przedstawia trójkąt mocy?
++ Zależność S² = P² + Q² między mocą pozorną, czynną i bierną
+- Połączenie trzech odbiorników w trójkąt
+- Rozkład mocy na trzy fazy
+- Charakterystykę obciążenia transformatora
+! Przyprostokątne trójkąta to moce czynna i bierna, przeciwprostokątna to moc pozorna, a kąt między S i P to kąt φ.
+
+? Jak zmienia się współczynnik mocy silnika indukcyjnego pracującego z małym obciążeniem?
++ Maleje
+- Rośnie do 1
+- Nie zmienia się
+- Staje się ujemny
+! Prąd magnesujący jest prawie stały, a składowa czynna prądu przy małym obciążeniu maleje, więc cos φ spada. Dlatego nie należy przewymiarowywać silników.
+
+? Które odbiorniki mają charakter rezystancyjny (cos φ ≈ 1)?
++ Grzejniki, czajniki i żarówki tradycyjne
+- Silniki indukcyjne
+- Transformatory w stanie jałowym
+- Dławiki świetlówek
+! W elementach grzejnych prąd jest w fazie z napięciem. Silniki, dławiki i transformatory pobierają też moc bierną indukcyjną.
+
+? W jakim połączeniu napięcie na każdej fazie odbiornika trójfazowego wynosi 230 V w sieci 230/400 V?
++ W gwieździe
+- W trójkącie
+- W obu tak samo
+- W żadnym
+! W gwieździe faza odbiornika dostaje napięcie fazowe 230 V, a w trójkącie napięcie międzyprzewodowe 400 V.
+
+? Co się stanie z napięciami na odbiornikach jednofazowych zasilanych z różnych faz, gdy przy niesymetrycznym obciążeniu przerwie się przewód neutralny?
++ Napięcia się zmienią: na jednych odbiornikach spadną, a na innych wzrosną nawet do wartości bliskich 400 V
+- Napięcia pozostaną równe 230 V
+- Wszystkie odbiorniki wyłączą się bez skutków
+- Napięcie wzrośnie tylko w przewodzie ochronnym
+! Bez przewodu N punkt neutralny odbiorników się przesuwa. Słabo obciążone fazy dostają za wysokie napięcie, co niszczy urządzenia.
+
+? Jak nazywa się kolejność, w jakiej napięcia fazowe osiągają maksimum?
++ Kolejność faz
+- Przesunięcie fazowe
+- Częstotliwość
+- Współczynnik mocy
+! Kolejność faz L1–L2–L3 decyduje o kierunku wirowania pola magnetycznego w silnikach trójfazowych.
+
+? Ile w przybliżeniu wynosi częstotliwość rezonansowa obwodu LC o L = 1 mH i C = 1 µF? Skorzystaj ze wzoru f = 1 / (2π√(LC)).
+~ k=05
++ Około 5 kHz
+- Około 50 Hz
+- Około 500 Hz
+- Około 50 kHz
+! √(LC) = √(10⁻³ · 10⁻⁶) ≈ 3,16 · 10⁻⁵ s, więc f₀ = 1 / (6,28 · 3,16 · 10⁻⁵) ≈ 5030 Hz.
+
+? Do czego potrzebny jest przewód neutralny w czteroprzewodowej sieci trójfazowej?
++ Utrzymuje stałe napięcie fazowe 230 V na odbiornikach jednofazowych przy niesymetrycznym obciążeniu
+- Zwiększa częstotliwość
+- Zastępuje przewód ochronny PE
+- Obniża napięcie międzyprzewodowe
+! Przewód N odprowadza prąd wynikający z niesymetrii obciążenia i utrzymuje punkt neutralny na właściwym potencjale.
+
+? Odbiornik pobiera moc czynną 4 kW przy cos φ = 0,8. Ile wynosi moc pozorna?
++ 5 kVA
+- 3,2 kVA
+- 4 kVA
+- 6,4 kVA
+! S = P / cos φ = 4 / 0,8 = 5 kVA.
+
+? Ile wynosi moc bierna odbiornika o mocy pozornej 5 kVA i mocy czynnej 4 kW?
++ 3 kvar
+- 1 kvar
+- 9 kvar
+- 20 kvar
+! Q = √(S² − P²) = √(25 − 16) = 3 kvar.
+
+? Jakie są skutki niskiego współczynnika mocy w instalacji?
++ Większy prąd przy tej samej mocy czynnej, większe straty i spadki napięcia
+- Mniejsze zużycie energii czynnej
+- Wyższa częstotliwość sieci
+- Mniejszy prąd w przewodach
+! Przy niskim cos φ przewody i transformatory przenoszą dodatkowy prąd bierny, który nie wykonuje pracy, a powoduje straty.
+
+? Jaką indukcyjność ma cewka, która przy częstotliwości 50 Hz ma reaktancję 314 Ω?
++ 1 H
+- 0,1 H
+- 10 H
+- 314 H
+! L = XL / (2πf) = 314 / 314 = 1 H.
+
+? Co oznacza znak „~” na tabliczce znamionowej urządzenia?
++ Prąd przemienny
+- Prąd stały
+- Uziemienie
+- Izolację podwójną
+! Znak ~ oznacza prąd przemienny (AC), a poziome kreski – prąd stały (DC).
+
+? Ile wynosi kąt przesunięcia fazowego, gdy cos φ = 1?
++ 0°
+- 45°
+- 90°
+- 180°
+! cos 0° = 1, więc prąd i napięcie są w fazie.
+
+? Jak nazywa się obwód z cewką i kondensatorem połączonymi równolegle, który przy częstotliwości rezonansowej ma bardzo dużą impedancję?
+~ k=05
++ Obwód rezonansowy równoległy
+- Obwód rezonansowy szeregowy
+- Dzielnik napięcia
+- Mostek Wheatstone'a
+! W rezonansie równoległym prądy cewki i kondensatora się znoszą, więc obwód pobiera ze źródła bardzo mały prąd. Wykorzystuje się to w filtrach.
+
+? Odbiornik połączony w gwiazdę ma prąd fazowy 10 A. Jaki prąd płynie w przewodzie zasilającym?
++ 10 A
+- 5,8 A
+- 17,3 A
+- 30 A
+! W gwieździe prąd przewodowy jest równy prądowi fazowemu.
+
+? W odbiorniku połączonym w trójkąt prąd fazowy wynosi 10 A. Ile wynosi prąd przewodowy?
++ 17,3 A
+- 5,8 A
+- 10 A
+- 30 A
+! W trójkącie I = √3 · If = 1,73 · 10 ≈ 17,3 A.
+
+? Jaki przebieg napięcia przedstawia rysunek?
+@ wave:prost
++ Prostokątny
+- Sinusoidalny
+- Trójkątny
+- Sinusoidalny wyprostowany
+! Napięcie przyjmuje na przemian dwie stałe wartości i zmienia się skokowo.
+
+? Jaki przebieg przedstawia rysunek?
+@ wave:troj
++ Trójkątny
+- Prostokątny
+- Sinusoidalny wyprostowany
+- Stały
+! Napięcie narasta i opada liniowo, tworząc trójkąty.
+
+? Ile wynosi wartość średnia napięcia sinusoidalnego liczona za cały okres?
++ 0 V
+- Um / √2
+- Um
+- 2 · Um / π
+! Dodatnia i ujemna połówka są jednakowe, więc średnia za okres wynosi zero. Dlatego dla przebiegów przemiennych używa się wartości skutecznej.
+
+? Jaki prąd popłynie przez kondensator 10 µF dołączony do napięcia 230 V, 50 Hz? Reaktancja kondensatora wynosi około 318 Ω.
++ 0,72 A
+- 0,07 A
+- 1,38 A
+- 7,2 A
+! I = U / XC = 230 V / 318 Ω ≈ 0,72 A.
+
+? Dlaczego energię przesyła się na duże odległości liniami o napięciu setek kilowoltów?
++ Bo przy wyższym napięciu ta sama moc wymaga mniejszego prądu, więc straty w przewodach są mniejsze
+- Bo wysokie napięcie jest bezpieczniejsze
+- Bo transformatory nie działają przy niskich napięciach
+- Bo przy 230 V nie da się uzyskać 50 Hz
+! Straty w linii rosną z kwadratem prądu (ΔP = I² · R). Dziesięć razy wyższe napięcie to dziesięć razy mniejszy prąd i sto razy mniejsze straty.
+
+? Jaką moc pobiera symetryczny odbiornik trójfazowy, jeśli każda faza pobiera 2 kW?
++ 6 kW
+- 0,67 kW
+- 2 kW
+- 3,46 kW
+! Moc odbiornika trójfazowego to suma mocy trzech faz: 3 · 2 kW = 6 kW.
+
+? Jak zmieni się prąd kondensatora, gdy przy tej samej wartości skutecznej napięcia częstotliwość wzrośnie dwukrotnie?
++ Wzrośnie dwukrotnie
+- Zmaleje dwukrotnie
+- Nie zmieni się
+- Wzrośnie czterokrotnie
+! Reaktancja kondensatora maleje dwukrotnie, więc przy tym samym napięciu prąd rośnie dwukrotnie.

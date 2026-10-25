@@ -261,3 +261,257 @@
 - 8 Ω
 - 16 Ω
 ! 1/R = 1/R1 + 1/R2, więc 1/R2 = 1/4 − 1/12 = 2/12, czyli R2 = 6 Ω.
+
+? Ile wynosi rezystancja zastępcza układu przedstawionego na rysunku?
+@ net:sp|R1 = 2 Ω|R2 = 3 Ω|R3 = 6 Ω
++ 4 Ω
+- 1 Ω
+- 5 Ω
+- 11 Ω
+! R2 ‖ R3 = 3 · 6 / 9 = 2 Ω, a razem z szeregowym R1: 2 + 2 = 4 Ω.
+
+? Ile wynosi rezystancja zastępcza między zaciskami A i B?
+@ net:ps|R1 = 10 Ω|R2 = 10 Ω|R3 = 20 Ω
++ 10 Ω
+- 4 Ω
+- 20 Ω
+- 40 Ω
+! R1 + R2 = 20 Ω, a 20 Ω równolegle z R3 = 20 Ω daje 10 Ω.
+
+? Cztery rezystory po 100 Ω połączono jak na rysunku. Ile wynosi rezystancja zastępcza?
+@ net:ser|R1|R2|R3|R4
++ 400 Ω
+- 25 Ω
+- 100 Ω
+- 200 Ω
+! Rezystancje szeregowe się dodaje: 4 · 100 Ω = 400 Ω.
+
+? Przez rezystor płynie prąd 0,5 A, a napięcie na nim wynosi 24 V. Jaka jest jego rezystancja?
++ 48 Ω
+- 0,02 Ω
+- 12 Ω
+- 24,5 Ω
+! R = U / I = 24 V / 0,5 A = 48 Ω.
+
+? Jaka moc wydziela się w rezystorze 10 Ω, przez który płynie prąd 3 A?
++ 90 W
+- 0,9 W
+- 3,33 W
+- 30 W
+! P = I² · R = 3² · 10 = 90 W.
+
+? Jaki prąd pobiera grzałka o mocy 2 kW zasilana napięciem 230 V?
++ 8,7 A
+- 0,115 A
+- 4,35 A
+- 460 A
+! I = P / U = 2000 W / 230 V ≈ 8,7 A.
+
+? Napięcie na rezystorze zwiększono dwukrotnie. Jak zmieni się moc wydzielana w rezystorze?
++ Wzrośnie czterokrotnie
+- Wzrośnie dwukrotnie
+- Nie zmieni się
+- Zmaleje dwukrotnie
+! P = U² / R, więc przy dwukrotnie większym napięciu moc rośnie 2² = 4 razy.
+
+? Ile kosztuje 15 minut pracy czajnika o mocy 2 kW, jeśli 1 kWh energii kosztuje 1 zł?
++ 0,50 zł
+- 0,13 zł
+- 2 zł
+- 30 zł
+! W = P · t = 2 kW · 0,25 h = 0,5 kWh, więc koszt wynosi 0,5 · 1 zł = 0,50 zł.
+
+? Telewizor w trybie czuwania pobiera 2 W. Ile energii zużyje w ten sposób przez 30 dni?
++ 1,44 kWh
+- 0,06 kWh
+- 14,4 kWh
+- 60 kWh
+! W = P · t = 2 W · 30 · 24 h = 1440 Wh = 1,44 kWh.
+
+? Ile wynosi rezystancja przewodu aluminiowego o długości 200 m i przekroju 10 mm²? Przyjmij γ = 35 m/(Ω·mm²).
++ 0,57 Ω
+- 0,36 Ω
+- 1,75 Ω
+- 5,7 Ω
+! R = l / (γ · S) = 200 / (35 · 10) ≈ 0,57 Ω.
+
+? Który przewód o tej samej długości i przekroju ma większą rezystancję?
++ Aluminiowy
+- Miedziany
+- Oba mają taką samą
+- Zależy to od napięcia
+! Aluminium ma większą rezystywność, a więc mniejszą konduktywność (około 35 m/(Ω·mm²)) niż miedź (około 56 m/(Ω·mm²)).
+
+? Ile wynosi rezystancja zastępcza n jednakowych rezystorów R połączonych równolegle?
++ R / n
+- n · R
+- R · n²
+- R + n
+! Każdy kolejny równoległy rezystor tworzy nową drogę dla prądu, więc rezystancja zastępcza maleje n razy.
+
+? Dlaczego żarówka tradycyjna w chwili włączenia pobiera dużo większy prąd niż po rozgrzaniu?
++ Bo zimne włókno ma kilkanaście razy mniejszą rezystancję
+- Bo w chwili włączenia napięcie sieci jest wyższe
+- Bo żarówka ma kondensator rozruchowy
+- Bo na początku płynie prąd stały
+! Rezystancja wolframu rośnie z temperaturą. Udar prądu przy włączeniu jest duży i właśnie wtedy żarówki najczęściej się przepalają.
+
+? W obwodzie z rysunku woltomierz dołączony do R2 wskazuje 6 V. Jaki prąd płynie w obwodzie?
+@ loop:U = 12 V|R1 = 3 Ω|R2|V@1
++ 2 A
+- 0,5 A
+- 4 A
+- 6 A
+! Na R1 odkłada się 12 − 6 = 6 V, więc I = 6 V / 3 Ω = 2 A. Ten sam prąd płynie przez R2.
+
+? W obwodzie z rysunku źródło ma 12 V, R1 = 3 Ω, a woltomierz na R2 wskazuje 6 V. Ile wynosi R2?
+@ loop:U = 12 V|R1 = 3 Ω|R2|V@1
++ 3 Ω
+- 1,5 Ω
+- 6 Ω
+- 12 Ω
+! Na R1 też jest 6 V, więc I = 2 A, a R2 = 6 V / 2 A = 3 Ω.
+
+? Dwa rezystory 3 Ω i 6 Ω połączone równolegle zasilono napięciem 12 V. Jaki prąd płynie przez rezystor 6 Ω?
++ 2 A
+- 1,33 A
+- 4 A
+- 6 A
+! Na każdym z równoległych rezystorów jest pełne napięcie 12 V, więc I = 12 V / 6 Ω = 2 A.
+
+? Jaki prąd pobiera ze źródła 12 V układ dwóch równolegle połączonych rezystorów 3 Ω i 6 Ω?
++ 6 A
+- 1,33 A
+- 2 A
+- 4 A
+! Rezystancja zastępcza wynosi 2 Ω, więc I = 12 / 2 = 6 A: 4 A płynie przez 3 Ω i 2 A przez 6 Ω.
+
+? Jak zmieni się prąd, jeśli przy stałym napięciu rezystancja obwodu wzrośnie trzykrotnie?
++ Zmaleje trzykrotnie
+- Wzrośnie trzykrotnie
+- Nie zmieni się
+- Zmaleje dziewięciokrotnie
+! Z prawa Ohma I = U / R: prąd jest odwrotnie proporcjonalny do rezystancji.
+
+? Ile energii gromadzi kondensator 1000 µF naładowany do napięcia 20 V?
++ 0,2 J
+- 0,02 J
+- 0,4 J
+- 20 J
+! W = C · U² / 2 = 0,001 F · 400 V² / 2 = 0,2 J.
+
+? Ile wynosi stała czasowa obwodu RC, w którym R = 10 kΩ, a C = 100 µF?
++ 1 s
+- 0,1 s
+- 10 s
+- 1000 s
+! τ = R · C = 10 000 Ω · 0,0001 F = 1 s. Po około 5τ kondensator jest praktycznie naładowany.
+
+? Do jakiego napięcia naładuje się kondensator w obwodzie RC po czasie równym jednej stałej czasowej, jeśli źródło ma 10 V?
++ Około 6,3 V
+- Około 3,7 V
+- 5 V
+- 10 V
+! Po czasie τ napięcie kondensatora osiąga około 63% napięcia źródła.
+
+? Jak nazywa się zjawisko wydzielania ciepła przy przepływie prądu przez przewodnik?
++ Zjawisko Joule'a-Lenza
+- Zjawisko Halla
+- Zjawisko fotoelektryczne
+- Zjawisko piezoelektryczne
+! Ilość ciepła Q = I² · R · t. Wykorzystują to grzejniki, ale w przewodach to samo zjawisko powoduje straty.
+
+? Co jest jednostką ładunku elektrycznego?
++ Kulomb (C)
+- Wolt (V)
+- Wat (W)
+- Tesla (T)
+! 1 C to ładunek przeniesiony przez prąd 1 A w ciągu 1 s.
+
+? Jaki ładunek przepływa przez przewód w ciągu 2 minut przy prądzie 0,5 A?
++ 60 C
+- 0,25 C
+- 1 C
+- 240 C
+! Q = I · t = 0,5 A · 120 s = 60 C.
+
+? Jak długo teoretycznie może zasilać odbiornik pobierający 2 A akumulator o pojemności 60 Ah?
++ 30 h
+- 0,03 h
+- 62 h
+- 120 h
+! t = Q / I = 60 Ah / 2 A = 30 h. W praktyce krócej, bo akumulatora nie rozładowuje się do zera.
+
+? Dwie grzałki 1 kW / 230 V połączono szeregowo i zasilono napięciem 230 V. Jaką moc łącznie pobierają?
++ 500 W
+- 250 W
+- 1000 W
+- 2000 W
+! Każda grzałka ma R = 230² / 1000 ≈ 52,9 Ω. Szeregowo to 105,8 Ω, więc P = 230² / 105,8 ≈ 500 W.
+
+? Jak zmieni się moc grzałki, jeśli zasilimy ją napięciem 115 V zamiast znamionowego 230 V?
++ Zmaleje czterokrotnie
+- Zmaleje dwukrotnie
+- Nie zmieni się
+- Wzrośnie dwukrotnie
+! Moc jest proporcjonalna do kwadratu napięcia: (115 / 230)² = 1/4.
+
+? Jaki prąd wskaże amperomierz w obwodzie przedstawionym na rysunku?
+@ loop:E = 24 V|R1 = 10 Ω|R2 = 2 Ω|A
++ 2 A
+- 0,5 A
+- 2,4 A
+- 12 A
+! I = E / (R1 + R2) = 24 V / 12 Ω = 2 A.
+
+? Jak połączyć trzy rezystory po 30 Ω, aby otrzymać rezystancję zastępczą 10 Ω?
++ Wszystkie równolegle
+- Wszystkie szeregowo
+- Dwa szeregowo, a trzeci równolegle do nich
+- Dwa równolegle, a trzeci szeregowo z nimi
+! 30 / 3 = 10 Ω. Szeregowo byłoby 90 Ω, dwa szeregowo z trzecim równolegle dają 20 Ω, a dwa równolegle z trzecim szeregowo 45 Ω.
+
+? Jakie napięcie jest na zaciskach ogniwa o SEM 1,5 V i rezystancji wewnętrznej 0,5 Ω, gdy płynie z niego prąd 1 A?
++ 1 V
+- 0,5 V
+- 1,5 V
+- 2 V
+! U = E − I · Rw = 1,5 − 1 · 0,5 = 1 V.
+
+? Po co stosuje się rezystory o większej mocy znamionowej, np. 5 W zamiast 0,25 W?
++ Aby mogły rozproszyć więcej ciepła bez przegrzania
+- Aby miały większą rezystancję
+- Aby przewodziły prąd przemienny
+- Aby obniżyć napięcie zasilania
+! Moc znamionowa mówi, ile ciepła rezystor może wydzielać bez uszkodzenia. Rezystancja od niej nie zależy.
+
+? Ile wynosi napięcie na rezystorze R1 w dzielniku przedstawionym na rysunku?
+@ net:dzielnik|R1 = 2 kΩ|R2 = 6 kΩ|U = 24 V|U₂
++ 6 V
+- 8 V
+- 12 V
+- 18 V
+! Prąd dzielnika I = 24 V / 8 kΩ = 3 mA, więc na R1 jest 3 mA · 2 kΩ = 6 V, a na R2 18 V.
+
+? Jaką rezystancję ma rezystor z paskami jak na rysunku: czerwony, czerwony, brązowy, złoty?
+@ paski:czerwony,czerwony,brazowy,zloty
++ 220 Ω
+- 22 Ω
+- 221 Ω
+- 2,2 kΩ
+! Czerwony = 2, czerwony = 2, brązowy jako mnożnik = ×10: 22 · 10 = 220 Ω.
+
+? Jaką rezystancję ma rezystor z paskami jak na rysunku: brązowy, czarny, pomarańczowy, złoty?
+@ paski:brazowy,czarny,pomaranczowy,zloty
++ 10 kΩ
+- 103 Ω
+- 1 kΩ
+- 100 kΩ
+! Brązowy = 1, czarny = 0, pomarańczowy jako mnożnik = ×1000: 10 · 1000 = 10 kΩ.
+
+? Co oznacza złoty pasek umieszczony jako ostatni na rezystorze?
++ Tolerancję ±5%
+- Tolerancję ±1%
+- Mnożnik ×1000
+- Moc 5 W
+! Ostatni pasek to tolerancja: złoty ±5%, srebrny ±10%, brązowy ±1%, czerwony ±2%.

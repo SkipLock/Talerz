@@ -241,3 +241,310 @@
 - 2 V
 - −20%
 ! Błąd względny δ = (Ux − U) / U · 100% = (98 − 100) / 100 · 100% = −2%.
+
+? Ile wynosi stała amperomierza o zakresie 5 A i skali o 100 działkach?
++ 0,05 A/dz.
+- 0,5 A/dz.
+- 5 A/dz.
+- 20 A/dz.
+! Stała miernika C = zakres / liczba działek = 5 A / 100 dz. = 0,05 A/dz.
+
+? Woltomierz o zakresie 150 V ma skalę o 75 działkach. Jakie napięcie wskazuje przy wychyleniu jak na rysunku?
+@ skala:75|60|zakres 150 V
++ 120 V
+- 60 V
+- 80 V
+- 150 V
+! Stała miernika: 150 V / 75 dz. = 2 V/dz., więc U = 60 dz. · 2 V/dz. = 120 V.
+
+? Miliamperomierz o zakresie 30 mA ma skalę o 30 działkach. Jaki prąd wskazuje przy wychyleniu jak na rysunku?
+@ skala:30|12|zakres 30 mA
++ 12 mA
+- 1,2 mA
+- 24 mA
+- 36 mA
+! Stała miernika: 30 mA / 30 dz. = 1 mA/dz., więc I = 12 mA.
+
+? Amperomierz klasy 0,5 o zakresie 10 A wskazał 4 A. Ile wynosi największy możliwy błąd względny pomiaru?
++ ±1,25%
+- ±0,2%
+- ±0,5%
+- ±5%
+! Błąd bezwzględny: 0,5% · 10 A = ±0,05 A. Błąd względny: 0,05 / 4 · 100% = ±1,25%.
+
+? Co oznacza klasa dokładności miernika analogowego, np. 1,5?
++ Największy dopuszczalny błąd bezwzględny wyrażony w procentach zakresu
+- Liczbę zakresów miernika
+- Rezystancję wewnętrzną w kΩ
+- Czas pomiaru w sekundach
+! Dla klasy 1,5 i zakresu 100 V błąd może wynosić ±1,5 V w każdym miejscu skali.
+
+? Jak podaje się dokładność multimetru cyfrowego?
++ Jako ±(procent wartości mierzonej + liczba cyfr najmniej znaczących)
+- Jedną liczbą klasy, jak w miernikach analogowych
+- Wyłącznie rozdzielczością wyświetlacza
+- Nie podaje się jej
+! Np. ±(0,5% + 2 cyfry) oznacza błąd 0,5% wskazania plus dwie jednostki ostatniej cyfry.
+
+? Multimetr o dokładności ±(1% + 2 cyfry) wskazał 230,0 V przy rozdzielczości 0,1 V. Ile wynosi graniczny błąd pomiaru?
+~ k=05
++ ±2,5 V
+- ±0,2 V
+- ±2,3 V
+- ±4,6 V
+! 1% z 230 V to 2,3 V, a 2 cyfry to 2 · 0,1 V = 0,2 V. Razem ±2,5 V.
+
+? Co oznacza wyświetlacz „3½ cyfry” w multimetrze?
++ Że wyświetla wartości do 1999 (najstarsza cyfra to tylko 0 lub 1)
+- Że wyświetla trzy liczby jednocześnie
+- Że ma dokładność 3,5%
+- Że mierzy tylko do 3,5 V
+! Wyświetlacz 3½ cyfry ma zakres 0–1999, a 4½ cyfry 0–19999.
+
+? Do pomiaru jakiej wielkości służy mostek Wheatstone'a?
++ Rezystancji
+- Mocy biernej
+- Częstotliwości
+- Natężenia oświetlenia
+! W stanie równowagi mostka, gdy wskaźnik pokazuje zero, nieznaną rezystancję oblicza się z proporcji pozostałych rezystancji.
+
+? Który przyrząd bezpośrednio mierzy moc czynną odbiornika?
++ Watomierz
+- Woltomierz
+- Amperomierz
+- Omomierz
+! Watomierz ma cewkę prądową i napięciową i wskazuje U · I · cos φ.
+
+? Jak zmierzyć moc czynną symetrycznego odbiornika trójfazowego jednym watomierzem (z dostępnym punktem neutralnym)?
++ Zmierzyć moc jednej fazy i pomnożyć wynik przez 3
+- Zmierzyć moc jednej fazy i pomnożyć przez 2
+- Nie da się tego zrobić
+- Zmierzyć moc jednej fazy i podzielić przez 3
+! Przy obciążeniu symetrycznym każda faza pobiera tę samą moc, więc P = 3 · P₁f.
+
+? Watomierze w układzie Arona wskazują 3 kW i 1,5 kW. Ile wynosi moc czynna odbiornika?
++ 4,5 kW
+- 1,5 kW
+- 2,25 kW
+- 3 kW
+! W układzie Arona moc całkowita to suma algebraiczna wskazań: 3 + 1,5 = 4,5 kW.
+
+? Jak zmierzyć prąd upływu odbiornika jednofazowego miernikiem cęgowym?
++ Objąć cęgami jednocześnie przewód fazowy i neutralny zasilające odbiornik
+- Objąć cęgami jednocześnie przewód ochronny i fazowy
+- Objąć tylko przewód fazowy
+- Zewrzeć przewody i zmierzyć prąd zwarcia
+! Prądy robocze w L i N się znoszą, a wskazanie pokazuje prąd płynący inną drogą. Można też objąć sam przewód PE.
+
+? Czym mierzy się temperaturę połączeń w rozdzielnicy bez dotykania?
++ Kamerą termowizyjną lub pirometrem
+- Megaomomierzem
+- Luksomierzem
+- Watomierzem
+! Przegrzane połączenia widać na obrazie termowizyjnym. Pomiar wykonuje się przy obciążonej instalacji.
+
+? Między którymi przewodami mierzy się rezystancję izolacji w obwodzie jednofazowym?
++ Między L i N, L i PE oraz N i PE, przy wyłączonym zasilaniu i odłączonych odbiornikach
+- Tylko między L i N, pod napięciem
+- Tylko między PE a ziemią
+- Między stykami załączonego łącznika
+! Bada się izolację między żyłami czynnymi oraz między nimi a przewodem ochronnym.
+
+? Pomiar rezystancji izolacji obwodu 230 V dał wynik 0,3 MΩ. Co to oznacza?
++ Izolacja nie spełnia wymagań (minimum 1 MΩ) i trzeba znaleźć przyczynę
+- Izolacja jest bardzo dobra
+- Izolacja spełnia wymagania z dużym zapasem
+- Wynik nie ma znaczenia dla bezpieczeństwa
+! Dla obwodów do 500 V wymaga się co najmniej 1 MΩ. Niski wynik wskazuje np. na zawilgocenie lub uszkodzenie izolacji.
+
+? W tabeli zestawiono wyniki pomiaru rezystancji izolacji obwodów 230 V. Który obwód nie spełnia wymagań?
+@ tab:Obwód;Rezystancja izolacji|Oświetlenie kuchni;150 MΩ|Gniazda pokój;2,5 MΩ|Gniazda łazienka;0,6 MΩ|Oświetlenie korytarza;>999 MΩ
++ Gniazda łazienka
+- Oświetlenie kuchni
+- Gniazda pokój
+- Oświetlenie korytarza
+! Wymagane jest co najmniej 1 MΩ. Wynik 0,6 MΩ jest za mały, a 2,5 MΩ spełnia warunek.
+
+? W tabeli zestawiono wyniki badania bezzwłocznych wyłączników RCD 30 mA. Który wyłącznik jest niesprawny?
+@ tab:Wyłącznik;Prąd zadziałania;Czas przy IΔn|RCD1;21 mA;28 ms|RCD2;24 mA;35 ms|RCD3;27 mA;410 ms|RCD4;18 mA;19 ms
++ RCD3, bo czas zadziałania przekracza 300 ms
+- RCD1
+- RCD2
+- RCD4, bo prąd zadziałania jest za mały
+! Bezzwłoczny RCD musi zadziałać w czasie do 300 ms przy IΔn, a prąd zadziałania musi się mieścić w granicach 15–30 mA. RCD4 (18 mA) jest sprawny.
+
+? W tabeli zestawiono wyniki pomiaru impedancji pętli zwarcia (U₀ = 230 V). W którym obwodzie ochrona nie jest skuteczna?
+@ tab:Obwód;Zabezpieczenie;Zs|1;B10;1,8 Ω|2;B16;2,1 Ω|3;C16;1,9 Ω|4;B20;0,9 Ω
++ W obwodzie 3
+- W obwodzie 1
+- W obwodzie 2
+- W obwodzie 4
+! Dla C16 dopuszczalna impedancja to 230 / 160 ≈ 1,44 Ω, a zmierzono 1,9 Ω. Pozostałe obwody mają zapas (B10: 4,6 Ω, B16: 2,88 Ω, B20: 2,3 Ω).
+
+? Jakim napięciem mierzy się rezystancję izolacji uzwojeń silnika 400 V?
++ 500 V DC lub 1000 V DC, zgodnie z zaleceniem producenta
+- 50 V AC
+- 230 V AC
+- 10 kV DC
+! Urządzenia niskiego napięcia bada się megaomomierzem 500 V lub 1000 V prądu stałego.
+
+? Jaka jest wymagana rezystancja izolacji obwodów zasilających maszyny według PN-EN 60204-1 (napięcie probiercze 500 V DC)?
+~ k=05
++ Co najmniej 1 MΩ
+- Co najmniej 10 kΩ
+- Co najmniej 0,1 MΩ
+- Co najmniej 100 MΩ
+! Norma wymaga co najmniej 1 MΩ między przewodami obwodów zasilających a obwodem przewodów ochronnych.
+
+? Czym jest wskaźnik polaryzacji (PI) przy badaniu izolacji?
+~ k=05
++ Stosunkiem rezystancji izolacji zmierzonej po 10 minutach do zmierzonej po 1 minucie
+- Stosunkiem napięcia do prądu
+- Rezystancją izolacji po 1 sekundzie
+- Ilorazem prądu upływu i prądu znamionowego
+! Sucha, czysta izolacja ma PI powyżej około 2. Wartość bliska 1 wskazuje na zawilgocenie lub zabrudzenie.
+
+? Czym jest współczynnik absorpcji przy pomiarze rezystancji izolacji?
+~ k=05
++ Stosunkiem rezystancji izolacji zmierzonej po 60 s do zmierzonej po 15 s
+- Stosunkiem prądu do napięcia
+- Ilorazem rezystancji przy 500 V i przy 1000 V
+- Różnicą temperatur uzwojeń
+! Współczynnik absorpcji powyżej około 1,3 świadczy o dobrej, suchej izolacji.
+
+? Co należy zrobić z uzwojeniami lub długim kablem po pomiarze rezystancji izolacji?
++ Rozładować je, zwierając na chwilę do ziemi (wiele mierników robi to samo)
+- Od razu dotknąć zacisków, żeby sprawdzić temperaturę
+- Załączyć napięcie sieci bez rozładowania
+- Nic nie trzeba robić
+! Uzwojenia i kable mają pojemność i po pomiarze mogą pozostać naładowane do napięcia probierczego.
+
+? Jak rozmieszcza się zwykle sondy przy pomiarze rezystancji uziomu pionowego metodą techniczną?
+~ k=05
++ Sondę prądową około 40 m od uziomu, a napięciową około 20 m, mniej więcej w połowie
+- Obie sondy 1 m od uziomu
+- Sondę prądową 5 m, a napięciową 10 m od uziomu
+- Sondy wbija się bezpośrednio w uziom
+! Sondy muszą być poza strefą oddziaływania uziomu. Wynik sprawdza się, przesuwając sondę napięciową o kilka metrów.
+
+? Do czego służy dwucęgowa metoda pomiaru rezystancji uziemienia?
+~ k=05
++ Do pomiaru bez sond pomocniczych i bez rozłączania uziomów w układach wielokrotnie uziemionych
+- Do pomiaru izolacji kabla
+- Do pomiaru mocy biernej
+- Do pomiaru pojedynczego uziomu bez żadnych innych połączeń
+! Jedne cęgi wymuszają napięcie, a drugie mierzą prąd w pętli tworzonej przez badany uziom i pozostałe uziemienia.
+
+? Jak sprawdza się ciągłość przewodów ochronnych w instalacji?
++ Mierząc rezystancję między szyną PE w rozdzielnicy a stykami ochronnymi gniazd i obudowami urządzeń
+- Mierząc napięcie między L i N
+- Mierząc natężenie oświetlenia
+- Sprawdzając kolor izolacji
+! Rezystancja rzędu ułamków oma potwierdza, że przewód PE jest ciągły i dobrze połączony.
+
+? Co mierzy miernik impedancji pętli zwarcia podłączony do gniazda?
++ Impedancję obwodu L–PE i spodziewany prąd zwarcia
+- Rezystancję izolacji
+- Moc odbiornika
+- Prąd upływu
+! Miernik na chwilę obciąża obwód i z różnicy napięć oblicza impedancję pętli zwarcia.
+
+? Dlaczego próbnik neonowy (wkrętak z neonówką) nie może być jedynym sposobem sprawdzenia braku napięcia przed pracą?
++ Bo jego wskazanie zależy od warunków, np. stanowiska i oświetlenia, i nie jest pewne
+- Bo zawsze pokazuje napięcie
+- Bo działa tylko przy prądzie stałym
+- Bo zużywa dużo energii
+! Do sprawdzania braku napięcia stosuje się dwubiegunowe wskaźniki napięcia spełniające wymagania norm.
+
+? Jak mierzy się rzeczywisty prąd zadziałania wyłącznika RCD?
++ Miernik zwiększa stopniowo prąd różnicowy, aż wyłącznik zadziała, i zapisuje tę wartość
+- Mierzy się napięcie na zaciskach wyłącznika
+- Mierzy się rezystancję styków
+- Naciska się przycisk TEST i odczytuje prąd z tabliczki
+! Pomiar prądem narastającym pokazuje rzeczywisty próg zadziałania, który powinien wynosić od 0,5 do 1 IΔn.
+
+? Co obejmują oględziny instalacji przy odbiorze?
++ Sprawdzenie zgodności z dokumentacją, doboru i oznaczenia przewodów i zabezpieczeń, stanu osprzętu oraz ochrony przed dotykiem
+- Wyłącznie pomiar napięcia
+- Wyłącznie odczyt licznika
+- Malowanie rozdzielnicy
+! Oględziny wykonuje się przed pomiarami, zwykle przy odłączonym zasilaniu.
+
+? Watomierz wskazał 1150 W, woltomierz 230 V, a amperomierz 6,25 A. Ile wynosi współczynnik mocy odbiornika?
++ 0,8
+- 0,5
+- 0,6
+- 1,25
+! S = 230 · 6,25 = 1437,5 VA, więc cos φ = 1150 / 1437,5 = 0,8.
+
+? Którym przyrządem mierzy się prędkość obrotową wału silnika?
++ Tachometrem (obrotomierzem)
+- Luksomierzem
+- Megaomomierzem
+- Wskaźnikiem kolejności faz
+! Tachometry optyczne mierzą prędkość bezdotykowo, na podstawie znacznika odblaskowego na wale.
+
+? Jak zmierzyć prąd pracującego silnika trójfazowego bez przerywania obwodu?
++ Miernikiem cęgowym, obejmując kolejno każdy przewód fazowy
+- Woltomierzem między fazami
+- Megaomomierzem
+- Omomierzem na zaciskach silnika
+! Porównanie prądów w trzech fazach pozwala też wykryć asymetrię zasilania albo uszkodzenie uzwojenia.
+
+? Na co wskazuje wyraźna różnica prądów w trzech fazach silnika zasilanego napięciem symetrycznym?
++ Na możliwe uszkodzenie uzwojenia, np. zwarcie międzyzwojowe, albo złe połączenie
+- Na prawidłową pracę silnika
+- Na zbyt małe obciążenie
+- Na wysoką sprawność silnika
+! W sprawnym silniku przy symetrycznym zasilaniu prądy fazowe są prawie równe.
+
+? Do czego służy analizator jakości energii?
+~ k=05
++ Do rejestracji parametrów napięcia i prądu, m.in. harmonicznych, zapadów, wahań napięcia i mocy
+- Do pomiaru rezystancji izolacji
+- Do sprawdzania ciągłości przewodu PE
+- Do pomiaru oświetlenia
+! Analizator rejestruje dane przez dłuższy czas, np. tydzień, co pozwala ocenić zgodność z PN-EN 50160.
+
+? Jak sprawdzić, czy łącznik jednobiegunowy przerywa przewód fazowy?
++ Po wyłączeniu łącznika sprawdzić wskaźnikiem napięcia, czy na oprawce nie ma napięcia względem PE
+- Zmierzyć natężenie oświetlenia
+- Zmierzyć moc żarówki
+- Zmierzyć rezystancję izolacji podłogi
+! To sprawdzenie biegunowości: łącznik jednobiegunowy musi przerywać przewód fazowy.
+
+? Jak sprawdzić poprawność podłączenia gniazda wtyczkowego?
++ Miernikiem instalacji lub testerem gniazd, mierząc napięcia L–N, L–PE i N–PE
+- Megaomomierzem pod napięciem
+- Luksomierzem
+- Watomierzem bez obciążenia
+! W poprawnie podłączonym gnieździe L–N i L–PE wynoszą około 230 V, a N–PE prawie 0 V.
+
+? Co może oznaczać napięcie kilkudziesięciu woltów między przewodami N i PE w gnieździe pod obciążeniem?
++ Duży spadek napięcia na przewodzie N, np. przez luźne połączenie, albo przerwę w przewodzie N
+- Prawidłową pracę instalacji
+- Bardzo dobrą izolację
+- Zastosowanie wyłącznika RCD
+! W sprawnej instalacji napięcie N–PE pod obciążeniem wynosi zwykle kilka woltów.
+
+? Jaką rezystancję wskaże omomierz dołączony do zimnej żarówki 100 W / 230 V?
++ Kilkadziesiąt omów, znacznie mniej niż w stanie świecenia
+- Dokładnie 529 Ω
+- 0 Ω
+- Nieskończenie wielką
+! Rozgrzane włókno ma 230² / 100 = 529 Ω, ale na zimno jego rezystancja jest kilkanaście razy mniejsza.
+
+? Woltomierz o zakresie 600 V ma skalę o 150 działkach. Jakie napięcie wskazuje przy wychyleniu jak na rysunku?
+@ skala:150|100|zakres 600 V
++ 400 V
+- 100 V
+- 150 V
+- 600 V
+! Stała miernika: 600 V / 150 dz. = 4 V/dz., więc U = 100 dz. · 4 V/dz. = 400 V.
+
+? Dlaczego przed pomiarem impedancji pętli zwarcia trzeba sprawdzić, że obwód nie jest obciążony dużymi odbiornikami?
++ Bo prądy obciążenia zniekształcają pomiar spadku napięcia
+- Bo miernik uszkodzi odbiorniki
+- Bo przy obciążeniu impedancja wynosi zero
+- Nie trzeba tego sprawdzać
+! Miernik oblicza impedancję ze spadku napięcia przy krótkim obciążeniu. Zmiany prądu innych odbiorników zakłócają ten pomiar.

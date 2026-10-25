@@ -242,3 +242,263 @@
 - 50 V
 - 230 V
 ! Dla prądu stałego bez tętnień przyjmuje się 120 V, dla przemiennego 50 V.
+
+? Co oznacza druga litera N w oznaczeniu układu TN?
++ Części przewodzące dostępne są połączone przewodami ochronnymi z uziemionym punktem neutralnym źródła
+- Części przewodzące są uziemione niezależnie od źródła
+- Źródło jest izolowane od ziemi
+- W układzie nie ma przewodu neutralnego
+! W układzie TN prąd zwarcia z obudową płynie przewodem ochronnym do źródła, dzięki czemu zabezpieczenie może szybko wyłączyć zasilanie.
+
+? Co oznacza litera S w oznaczeniu TN-S?
++ Oddzielne przewody neutralny N i ochronny PE
+- Wspólny przewód PEN
+- Sieć odizolowaną od ziemi
+- Sieć zasilaną napięciem SELV
+! S pochodzi od angielskiego separated (oddzielny), a C od combined (połączony w PEN).
+
+? Co oznacza litera C w oznaczeniu TN-C?
++ Jeden przewód PEN pełni funkcje przewodu neutralnego i ochronnego
+- Przewód ochronny jest miedziany
+- Sieć jest kablowa
+- Części przewodzące są uziemione oddzielnie
+! C pochodzi od angielskiego combined (połączony).
+
+? W którym układzie sieci pierwsze doziemienie nie powoduje dużego prądu zwarciowego i nie musi od razu wyłączać zasilania?
++ IT
+- TN-C
+- TN-S
+- TT
+! W układzie IT źródło jest izolowane od ziemi, więc pojedyncze doziemienie nie zamyka obwodu dużego prądu. Usterkę trzeba jednak szybko usunąć.
+
+? Jakie urządzenie wykrywa pierwsze doziemienie w układzie IT?
++ Urządzenie do ciągłej kontroli stanu izolacji
+- Wyłącznik nadprądowy B
+- Ogranicznik przepięć
+- Licznik energii
+! Kontroler izolacji sygnalizuje spadek rezystancji izolacji, zanim drugie doziemienie spowoduje zwarcie.
+
+? Gdzie stosuje się układ sieci IT?
++ Tam, gdzie przerwa w zasilaniu jest niebezpieczna, np. w salach operacyjnych i niektórych zakładach przemysłowych
+- W każdym mieszkaniu
+- Wyłącznie w oświetleniu ulicznym
+- Wyłącznie w instalacjach samochodowych
+! Układ IT pozwala pracować dalej po pierwszym doziemieniu, co zwiększa ciągłość zasilania.
+
+? Jaki jest największy dopuszczalny czas wyłączenia w układzie TT dla obwodu odbiorczego do 32 A przy U₀ = 230 V?
++ 0,2 s
+- 0,4 s
+- 1 s
+- 5 s
+! W układzie TT wymagania są ostrzejsze niż w TN, bo prąd zwarciowy jest mniejszy, ograniczony rezystancją uziemień.
+
+? Jaki czas wyłączenia dopuszcza się w obwodach rozdzielczych w układzie TN?
++ Do 5 s
+- Do 0,1 s
+- Do 0,4 s
+- Do 60 s
+! Obwody rozdzielcze, np. WLZ, mogą być w układzie TN wyłączane w czasie do 5 s.
+
+? Jaki prąd zwarcia musi co najmniej popłynąć, aby wyłącznik C16 zadziałał natychmiastowo?
++ 160 A
+- 16 A
+- 80 A
+- 320 A
+! Dla charakterystyki C przyjmuje się Ia = 10 · In = 10 · 16 A = 160 A.
+
+? Jaki prąd zwarcia musi co najmniej popłynąć, aby wyłącznik B10 zadziałał natychmiastowo?
++ 50 A
+- 10 A
+- 30 A
+- 100 A
+! Dla charakterystyki B przyjmuje się Ia = 5 · In = 5 · 10 A = 50 A.
+
+? Obwód z wyłącznikiem B10 ma zmierzoną impedancję pętli zwarcia 2 Ω (U₀ = 230 V). Czy ochrona jest skuteczna?
++ Tak, bo prąd zwarcia 115 A jest większy od wymaganych 50 A
+- Nie, bo prąd zwarcia jest za mały
+- Nie, bo impedancja powinna wynosić 0 Ω
+- Tak, ale tylko przy przeciążeniu
+! Ik = 230 / 2 = 115 A ≥ Ia = 5 · 10 = 50 A, więc wyłącznik zadziała natychmiastowo.
+
+? Jaka jest największa dopuszczalna impedancja pętli zwarcia w obwodzie 230 V z wyłącznikiem B20?
++ 2,3 Ω
+- 1,15 Ω
+- 4,6 Ω
+- 11,5 Ω
+! Ia = 5 · 20 A = 100 A, więc Zs ≤ 230 / 100 = 2,3 Ω.
+
+? Jaka jest największa dopuszczalna impedancja pętli zwarcia w obwodzie 230 V z wyłącznikiem C16?
++ 1,44 Ω
+- 0,72 Ω
+- 2,88 Ω
+- 14,4 Ω
+! Ia = 10 · 16 A = 160 A, więc Zs ≤ 230 / 160 ≈ 1,44 Ω.
+
+? Dlaczego przy ocenie zmierzonej impedancji pętli zwarcia stosuje się często współczynnik 2/3 (Zs ≤ 2/3 · U₀ / Ia)?
+~ k=05
++ Aby uwzględnić wzrost rezystancji przewodów nagrzanych podczas zwarcia oraz niepewność pomiaru
+- Bo napięcie sieci jest o 1/3 wyższe od znamionowego
+- Bo tak wymaga norma dla obwodów SELV
+- Bo miernik zawsze zawyża wynik
+! Impedancja mierzona na zimno jest mniejsza niż podczas zwarcia, gdy przewody się nagrzewają.
+
+? Na czym polega ochrona przez umieszczenie poza zasięgiem ręki?
++ Części czynne są tak rozmieszczone, że nie można ich dotknąć ręką bez użycia przedmiotów
+- Na zasilaniu napięciem SELV
+- Na owinięciu przewodów taśmą izolacyjną
+- Na stosowaniu wyłączników różnicowoprądowych
+! To środek ochrony podstawowej stosowany głównie tam, gdzie dostęp mają tylko osoby wykwalifikowane, np. przy liniach napowietrznych.
+
+? Jaki stopień ochrony obudowy chroni przed dotknięciem części czynnych palcem?
++ Co najmniej IP2X
+- IP0X
+- IPX4
+- Wyłącznie IP5X
+! Pierwsza cyfra 2 oznacza ochronę przed ciałami stałymi o średnicy powyżej 12,5 mm, czyli m.in. przed palcem.
+
+? Co oznacza określenie „część przewodząca obca”?
++ Część przewodzącą niebędącą częścią instalacji elektrycznej, która może wprowadzić potencjał, np. metalową rurę wodociągową
+- Obudowę urządzenia elektrycznego I klasy
+- Przewód fazowy
+- Przewód neutralny
+! Części przewodzące obce, takie jak rury i konstrukcje stalowe, łączy się połączeniami wyrównawczymi.
+
+? Co oznacza określenie „część przewodząca dostępna”?
++ Dostępną część urządzenia, np. metalową obudowę, która normalnie nie jest pod napięciem, ale może się pod nim znaleźć przy uszkodzeniu
+- Przewód fazowy w gnieździe
+- Metalową rurę gazową
+- Przewód neutralny
+! Części przewodzące dostępne urządzeń I klasy łączy się z przewodem ochronnym PE.
+
+? Jakim napięciem może być zasilana np. lampka ogrodowa w ochronie SELV?
++ 12 V z transformatora bezpieczeństwa
+- 230 V z gniazda
+- 400 V
+- 110 V z autotransformatora
+! SELV to napięcie do 50 V AC z bezpiecznego źródła; w praktyce często 12 V lub 24 V.
+
+? Na czym polega ochrona przez izolowanie stanowiska?
++ Na izolowaniu podłogi i ścian w otoczeniu stanowiska, aby nie można było jednocześnie dotknąć części o różnych potencjałach
+- Na zwiększeniu prądu zwarciowego
+- Na zasilaniu stanowiska z układu IT
+- Na ograniczeniu zużycia energii
+! To środek stosowany tylko w szczególnych przypadkach, pod nadzorem osób wykwalifikowanych.
+
+? Jakie wymagania musi spełniać przewód ochronny?
++ Nie może być przerywany łącznikami, musi mieć odpowiedni przekrój i barwę zielono-żółtą
+- Musi przechodzić przez wyłącznik różnicowoprądowy
+- Musi być zabezpieczony bezpiecznikiem
+- Może mieć dowolną barwę
+! Przewód ochronny musi być zawsze ciągły. Inaczej przy uszkodzeniu nie popłynie prąd, który wyłączy zasilanie.
+
+? Jaki przekrój musi mieć oddzielnie prowadzony przewód ochronny chroniony przed uszkodzeniami mechanicznymi?
++ Co najmniej 2,5 mm² Cu
+- Co najmniej 0,5 mm² Cu
+- Co najmniej 1 mm² Cu
+- Co najmniej 25 mm² Cu
+! Oddzielny przewód ochronny musi mieć co najmniej 2,5 mm² Cu, gdy jest chroniony mechanicznie, i 4 mm² Cu, gdy nie jest.
+
+? Jaki przekrój musi mieć oddzielny przewód ochronny bez ochrony przed uszkodzeniami mechanicznymi?
++ Co najmniej 4 mm² Cu
+- Co najmniej 1,5 mm² Cu
+- Co najmniej 2,5 mm² Cu
+- Co najmniej 10 mm² Cu
+! Przewód niechroniony łatwiej uszkodzić, dlatego wymaga się dla niego większego przekroju.
+
+? Gdzie stosuje się miejscowe (dodatkowe) połączenia wyrównawcze?
++ W miejscach o zwiększonym zagrożeniu, np. w łazienkach z metalowymi elementami, przy basenach, w pomieszczeniach dla zwierząt
+- W każdej sypialni
+- Wyłącznie w garażach
+- Nigdzie
+! Tam, gdzie ciało ma mniejszą impedancję (woda, wilgoć), połączenia wyrównawcze dodatkowo zmniejszają napięcia dotykowe.
+
+? Czy rura instalacji gazowej może być przewodem ochronnym lub uziomem?
++ Nie, instalację gazową łączy się tylko połączeniami wyrównawczymi
+- Tak, zawsze
+- Tak, jeśli jest stalowa
+- Tak, ale tylko w układzie TT
+! Instalacji gazowej nie wolno wykorzystywać jako przewodu ochronnego ani uziomu.
+
+? Dlaczego metalowych rur wodociągowych nie traktuje się dziś jako pewnego uziomu?
++ Bo instalacje często mają odcinki z tworzyw sztucznych, które przerywają metalową drogę do ziemi
+- Bo woda za dobrze przewodzi prąd
+- Bo rury są za grube
+- Bo przepisy nakazują je malować
+! Rury z tworzyw nie przewodzą prądu, więc wodociąg nie zapewnia ciągłości połączenia z ziemią.
+
+? Jaki jest cel połączeń wyrównawczych?
++ Wyrównanie potencjałów części przewodzących, aby ograniczyć napięcia dotykowe
+- Zwiększenie mocy dostarczanej do odbiorników
+- Zmniejszenie rachunków za energię
+- Ochrona przewodów przed przeciążeniem
+! Gdy wszystkie dostępne metalowe części mają ten sam potencjał, jednoczesne dotknięcie dwóch z nich nie jest groźne.
+
+? Czy wyłącznik różnicowoprądowy 30 mA ochroni osobę stojącą na izolującym podłożu, która dotknie jednocześnie przewodu fazowego i neutralnego?
++ Nie, bo prąd płynie przez ciało z L do N i nie powstaje prąd różnicowy
+- Tak, zawsze
+- Tak, jeśli wyłącznik jest typu B
+- Tak, jeśli wyłącznik jest selektywny
+! RCD reaguje tylko na prąd uciekający do ziemi. Przepływ z L do N przez ciało jest dla niego zwykłym obciążeniem.
+
+? Ile wynosi impedancja pętli zwarcia, jeśli spodziewany prąd zwarcia w obwodzie 230 V wynosi 460 A?
++ 0,5 Ω
+- 0,05 Ω
+- 2 Ω
+- 5 Ω
+! Zs = U₀ / Ik = 230 / 460 = 0,5 Ω.
+
+? Jaką największą rezystancję uziemienia RA dopuszcza się w układzie TT chronionym wyłącznikiem RCD 300 mA (UL = 50 V)?
++ RA ≤ 166 Ω
+- RA ≤ 1666 Ω
+- RA ≤ 30 Ω
+- RA ≤ 10 Ω
+! Z warunku RA · IΔn ≤ 50 V: RA ≤ 50 / 0,3 ≈ 166 Ω.
+
+? Który obwód wymaga ochrony uzupełniającej wyłącznikiem RCD 30 mA?
++ Obwód zasilający urządzenia przenośne używane na zewnątrz budynku
+- Obwód SELV 12 V
+- Obwód z transformatorem separacyjnym zasilającym jeden odbiornik
+- Oświetlenie rozdzielni dostępnej tylko dla elektryków
+! Norma wymaga RCD 30 mA dla obwodów do 32 A zasilających na zewnątrz urządzenia ruchome.
+
+? Czy w przewodach ruchomych, np. przedłużaczach, wolno stosować przewód PEN?
++ Nie, przewód PEN dopuszcza się tylko w instalacjach ułożonych na stałe o odpowiednim przekroju
+- Tak, zawsze
+- Tak, jeśli przewód jest giętki
+- Tak, jeśli przedłużacz ma bezpiecznik
+! Przewód ruchomy łatwo uszkodzić, a przerwa w PEN wprowadziłaby napięcie na obudowę odbiornika.
+
+? Jakie napięcie może się pojawić na obudowie włączonego urządzenia klasy I po przerwaniu przewodu PEN w układzie TN-C?
++ Napięcie bliskie fazowemu, czyli niebezpieczne
+- 0 V
+- 12 V
+- Tylko napięcie stałe 5 V
+! Przez obciążenie potencjał fazy przenosi się na przewód PEN za miejscem przerwy, a z nim na obudowy połączone z PEN.
+
+? Jakie urządzenie stosuje się w ochronie przez separację elektryczną?
++ Transformator separacyjny
+- Autotransformator
+- Dławik
+- Przekładnik prądowy
+! Transformator separacyjny ma uzwojenia oddzielone izolacją wzmocnioną. Napięcie wtórne może wynosić np. 230 V.
+
+? Czy obwód zasilany z transformatora separacyjnego można uziemić?
++ Nie, obwód wtórny nie może być połączony z ziemią ani z przewodami ochronnymi innych obwodów
+- Tak, to wymagane
+- Tak, ale tylko jeden biegun
+- Tak, przez przewód PEN
+! Uziemienie obwodu wtórnego otworzyłoby drogę prądu przez ciało do ziemi i zniweczyło ochronę.
+
+? Co zapewnia ochronę przy uszkodzeniu w obwodzie gniazd w mieszkaniu z układem TN-S?
++ Samoczynne wyłączenie zasilania przez wyłącznik nadprądowy oraz wyłącznik różnicowoprądowy
+- Wyłącznie ogranicznik przepięć
+- Wyłącznie licznik energii
+- Uziemienie przewodu neutralnego w gnieździe
+! Przy zwarciu z obudową przez PE płynie duży prąd, który wyłącza wyłącznik nadprądowy, a RCD dodatkowo reaguje na prąd upływu.
+
+? Dlaczego na placu budowy chętnie stosuje się narzędzia II klasy ochronności?
++ Bo ich ochrona nie zależy od ciągłości przewodu ochronnego, który na budowie łatwo uszkodzić
+- Bo mają większą moc
+- Bo zużywają mniej energii
+- Bo nie wymagają wyłączników w obwodzie
+! Izolacja podwójna chroni użytkownika nawet wtedy, gdy przewód ochronny przedłużacza zostanie przerwany.

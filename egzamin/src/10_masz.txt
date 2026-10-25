@@ -262,3 +262,404 @@
 - Wyłącznie straty w szczotkach
 - Transformator nie ma strat
 ! Straty w rdzeniu prawie nie zależą od obciążenia, a straty w uzwojeniach rosną z kwadratem prądu.
+
+? Ile wynosi prędkość synchroniczna silnika sześciobiegunowego zasilanego napięciem 50 Hz?
++ 1000 obr/min
+- 750 obr/min
+- 1500 obr/min
+- 3000 obr/min
+! Silnik sześciobiegunowy ma 3 pary biegunów: n₁ = 60 · 50 / 3 = 1000 obr/min.
+
+? Ile wynosi prędkość synchroniczna silnika ośmiobiegunowego zasilanego napięciem 50 Hz?
++ 750 obr/min
+- 375 obr/min
+- 1000 obr/min
+- 1500 obr/min
+! p = 4, więc n₁ = 3000 / 4 = 750 obr/min.
+
+? Silnik o prędkości synchronicznej 1000 obr/min pracuje z poślizgiem 5%. Z jaką prędkością się obraca?
++ 950 obr/min
+- 50 obr/min
+- 995 obr/min
+- 1050 obr/min
+! n = n₁ · (1 − s) = 1000 · 0,95 = 950 obr/min.
+
+? Ile wynosi poślizg silnika indukcyjnego w chwili rozruchu, gdy wirnik jest jeszcze nieruchomy?
++ 1 (100%)
+- 0
+- 0,05
+- 0,5
+! s = (n₁ − 0) / n₁ = 1. Przy prędkości synchronicznej poślizg byłby równy 0.
+
+? Dlaczego wirnik silnika indukcyjnego nie osiąga prędkości synchronicznej przy pracy silnikowej?
++ Bo przy prędkości synchronicznej w wirniku nie indukowałby się prąd i silnik nie wytwarzałby momentu
+- Bo przeszkadza mu tarcie w łożyskach
+- Bo napięcie sieci jest za małe
+- Bo wirnik jest za ciężki
+! Moment powstaje dzięki prądom indukowanym w wirniku, a te pojawiają się tylko wtedy, gdy pole wiruje względem wirnika.
+
+? Ile razy prąd rozruchowy silnika klatkowego przy rozruchu bezpośrednim jest zwykle większy od znamionowego?
++ Około 5–8 razy
+- Około 1,1 raza
+- Około 2 razy
+- Około 50 razy
+! Duży prąd rozruchowy powoduje spadki napięcia w sieci, dlatego większe silniki uruchamia się układem gwiazda-trójkąt, softstartem lub falownikiem.
+
+? Jak zmienia się prąd silnika indukcyjnego, gdy rośnie obciążenie na wale?
++ Rośnie
+- Maleje
+- Nie zmienia się
+- Spada do zera
+! Większy moment obciążenia zwiększa poślizg, a z nim prądy w wirniku i w stojanie.
+
+? Co oznacza oznaczenie IE3 na tabliczce silnika?
++ Klasę sprawności energetycznej (sprawność premium)
+- Stopień ochrony obudowy
+- Klasę izolacji
+- Rodzaj pracy
+! Klasy sprawności to IE1 (standardowa), IE2 (wysoka), IE3 (premium) i IE4 (super premium).
+
+? Co oznacza oznaczenie IM B3 silnika?
++ Silnik na łapach, do montażu poziomego
+- Silnik kołnierzowy pionowy
+- Silnik z izolacją trzeciej klasy
+- Silnik trójfazowy z hamulcem
+! Kody IM opisują sposób montażu: B3 – na łapach, B5 – kołnierzowy, V1 – pionowy z kołnierzem i wałem skierowanym w dół.
+
+? Jak sprawdzić, czy uzwojenia silnika trójfazowego są symetryczne?
++ Zmierzyć rezystancje trzech uzwojeń; powinny być prawie równe
+- Zmierzyć prędkość obrotową
+- Zmierzyć napięcie na łożyskach
+- Zmierzyć temperaturę obudowy
+! Wyraźna różnica rezystancji wskazuje na zwarcie międzyzwojowe, przerwę albo złe połączenie.
+
+? Ile zacisków ma tabliczka zaciskowa silnika trójfazowego, który można połączyć w gwiazdę lub trójkąt?
++ 6
+- 3
+- 4
+- 9
+! Wyprowadzone są początki i końce trzech uzwojeń: U1, V1, W1 oraz U2, V2, W2.
+
+? Silnik ma tabliczkę 400/690 V Δ/Y. Jak go połączyć do normalnej pracy w sieci 3×400 V?
++ W trójkąt
+- W gwiazdę
+- W zygzak
+- Nie da się go zasilić z tej sieci
+! Uzwojenia są przystosowane do 400 V, więc w sieci 400 V łączy się je w trójkąt. Taki silnik nadaje się do rozruchu gwiazda-trójkąt.
+
+? Jakie napięcie jest na każdym uzwojeniu silnika połączonego w gwiazdę i zasilanego z sieci 400 V?
++ 230 V
+- 133 V
+- 400 V
+- 690 V
+! W gwieździe uzwojenie jest pod napięciem fazowym: 400 V / √3 ≈ 230 V.
+
+? Co się stanie, gdy silnik z tabliczką 230/400 V Δ/Y omyłkowo połączymy w trójkąt i zasilimy z sieci 3×400 V?
++ Uzwojenia dostaną 400 V zamiast 230 V, prąd gwałtownie wzrośnie i silnik się przegrzeje
+- Będzie pracował poprawnie z większą mocą
+- Nie ruszy, ale nic mu się nie stanie
+- Zmieni kierunek obrotów
+! Przy √3 razy większym napięciu rdzeń się nasyca i prąd magnesujący bardzo rośnie; zabezpieczenie powinno wyłączyć silnik.
+
+? Co się stanie, gdy silnik z tabliczką 400/690 V Δ/Y omyłkowo połączymy w gwiazdę w sieci 400 V i obciążymy znamionowo?
++ Uzwojenia mają za niskie napięcie, moment maleje trzykrotnie, silnik się przeciąża lub nie rusza
+- Będzie pracował lepiej niż w trójkącie
+- Przekroczy prędkość synchroniczną
+- Pobierze mniej energii i będzie działał bez zmian
+! Moment silnika jest proporcjonalny do kwadratu napięcia. Przy pełnym obciążeniu za mały moment powoduje duży poślizg i przeciążenie.
+
+? Jak przyłączyć silnik trójfazowy do sieci jednofazowej 230 V w układzie Steinmetza?
++ Silnik z uzwojeniami na 230 V łączy się w trójkąt, a do trzeciego zacisku dołącza się kondensator pracy
+- Wystarczy podłączyć dwa przewody bez kondensatora
+- Łączy się go w gwiazdę bez kondensatora
+- Zamienia się przewód neutralny z ochronnym
+! Kondensator tworzy przesunięcie fazowe zastępujące trzecią fazę. Silnik oddaje wtedy tylko około 60–70% mocy znamionowej.
+
+? Jaką pojemność kondensatora pracy dobiera się orientacyjnie w układzie Steinmetza przy 230 V?
+~ k=05
++ Około 70 µF na każdy kilowat mocy silnika
+- Około 1 µF na kilowat
+- Około 1000 µF na kilowat
+- Pojemność nie ma znaczenia
+! To reguła orientacyjna. Dokładną wartość dobiera się tak, aby prądy w uzwojeniach były zbliżone.
+
+? Jak zmieni się moment rozruchowy silnika indukcyjnego, gdy napięcie zasilania spadnie o 10%?
++ Zmaleje o około 19%
+- Zmaleje o 10%
+- Wzrośnie o 10%
+- Nie zmieni się
+! Moment jest proporcjonalny do kwadratu napięcia: 0,9² = 0,81, czyli moment spada do około 81%.
+
+? Jakie łożyska stosuje się najczęściej w małych i średnich silnikach indukcyjnych?
++ Łożyska toczne kulkowe
+- Łożyska ślizgowe smarowane wodą
+- Łożyska magnetyczne
+- Łożyska drewniane
+! Łożyska kulkowe są tanie, trwałe i wymagają niewielkiej obsługi.
+
+? Jakie objawy wskazują na zużycie łożysk silnika?
++ Zwiększony hałas, drgania i nagrzewanie się tarcz łożyskowych
+- Wzrost rezystancji izolacji
+- Spadek prądu jałowego
+- Zmiana koloru tabliczki znamionowej
+! Zaniedbane łożyska mogą doprowadzić do ocierania wirnika o stojan i uszkodzenia uzwojenia.
+
+? Do czego służy wentylator na wale silnika zamkniętego?
++ Do chłodzenia obudowy silnika strumieniem powietrza
+- Do zwiększenia momentu obrotowego
+- Do zmniejszenia prądu rozruchowego
+- Do pomiaru prędkości
+! Wentylator pod osłoną owiewa użebrowany kadłub, odbierając ciepło strat.
+
+? Jakie zalety ma silnik klatkowy w porównaniu z pierścieniowym?
++ Prostą budowę, niezawodność, małą obsługę i niską cenę
+- Łatwą regulację prędkości rezystorami
+- Mały prąd rozruchowy bez dodatkowych urządzeń
+- Możliwość pracy przy prądzie stałym
+! Silnik klatkowy nie ma szczotek ani pierścieni, dlatego jest najczęściej stosowanym silnikiem w przemyśle.
+
+? Do czego służy transformator?
++ Do zmiany wartości napięcia przemiennego przy niezmienionej częstotliwości
+- Do zamiany prądu przemiennego na stały
+- Do zmiany częstotliwości
+- Do magazynowania energii
+! Transformator działa dzięki indukcji elektromagnetycznej, dlatego pracuje tylko przy prądzie przemiennym.
+
+? Dlaczego transformatora nie wolno zasilać napięciem stałym?
++ Bo nie indukuje się napięcie wtórne, a uzwojenie pierwotne o małej rezystancji pobrałoby bardzo duży prąd
+- Bo napięcie wtórne wzrośnie dwukrotnie
+- Bo rdzeń się rozmagnesuje
+- Bo zmieni się kierunek prądu
+! Przy prądzie stałym strumień się nie zmienia, więc nie powstaje siła elektromotoryczna ograniczająca prąd.
+
+? Ile wynosi przekładnia napięciowa transformatora 15 kV / 0,4 kV?
++ 37,5
+- 0,027
+- 6
+- 15,4
+! ϑ = U₁ / U₂ = 15 000 V / 400 V = 37,5.
+
+? Jaki prąd znamionowy płynie po stronie niskiego napięcia transformatora 400 kVA, 15/0,4 kV?
+~ k=05
++ Około 577 A
+- Około 15 A
+- Około 333 A
+- Około 1000 A
+! I₂ = S / (√3 · U₂) = 400 000 / (1,73 · 400) ≈ 577 A.
+
+? Co oznacza napięcie zwarcia uₖ = 6% transformatora?
+~ k=05
++ Przy zwartym uzwojeniu wtórnym prąd znamionowy płynie, gdy uzwojenie pierwotne zasila się napięciem równym 6% znamionowego
+- Transformator można przeciążyć o 6%
+- Sprawność transformatora wynosi 94%
+- Napięcie wtórne spada o 6% w stanie jałowym
+! Napięcie zwarcia decyduje o prądzie zwarciowym: przy uₖ = 6% prąd zwarcia na zaciskach wynosi około 100 / 6 ≈ 16,7 prądu znamionowego.
+
+? Jakie warunki muszą spełniać dwa transformatory pracujące równolegle?
+~ k=05
++ Jednakowe przekładnie, tę samą grupę połączeń i zbliżone napięcia zwarcia
+- Wystarczy ta sama moc znamionowa
+- Wystarczy ten sam producent
+- Różne grupy połączeń
+! Inne przekładnie lub grupy połączeń powodują prądy wyrównawcze, a różne napięcia zwarcia nierówny podział obciążenia.
+
+? Do czego służy transformator bezpieczeństwa?
++ Do zasilania obwodów bardzo niskim napięciem (SELV, PELV) z oddzieleniem ochronnym od sieci
+- Do podwyższania napięcia do 400 V
+- Do kompensacji mocy biernej
+- Do pomiaru prądu
+! Uzwojenia transformatora bezpieczeństwa oddziela izolacja podwójna lub wzmocniona, a napięcie wtórne nie przekracza 50 V AC.
+
+? Do czego służy przekładnik prądowy?
++ Do zmniejszenia dużego prądu do wartości mierzalnej (np. 5 A lub 1 A) i oddzielenia obwodów pomiarowych od sieci
+- Do zasilania odbiorników
+- Do podwyższania napięcia
+- Do zmiany częstotliwości
+! Przekładnik np. 400/5 A pozwala zmierzyć prąd 400 A amperomierzem o zakresie 5 A.
+
+? Przez amperomierz dołączony do przekładnika prądowego 200/5 A płynie 3 A. Jaki prąd płynie w przewodzie pierwotnym?
++ 120 A
+- 15 A
+- 66,7 A
+- 600 A
+! Przekładnia wynosi 200 / 5 = 40, więc I₁ = 40 · 3 A = 120 A.
+
+? Jakie zadanie ma uzwojenie wzbudzenia w maszynie prądu stałego?
++ Wytwarza główny strumień magnetyczny maszyny
+- Przewodzi prąd obciążenia
+- Chłodzi komutator
+- Mierzy prędkość obrotową
+! Strumień wzbudzenia współdziała z prądem twornika, wytwarzając moment w silniku albo napięcie w prądnicy.
+
+? Jakie rodzaje silników prądu stałego wyróżnia się ze względu na sposób wzbudzenia?
++ Obcowzbudne, bocznikowe, szeregowe i szeregowo-bocznikowe
+- Klatkowe i pierścieniowe
+- Synchroniczne i asynchroniczne
+- Jednofazowe i trójfazowe
+! Sposób połączenia uzwojenia wzbudzenia z twornikiem decyduje o charakterystyce mechanicznej silnika.
+
+? Który silnik prądu stałego ma bardzo duży moment rozruchowy i był typowy dla trakcji, np. w tramwajach?
++ Szeregowy
+- Bocznikowy
+- Obcowzbudny z magnesami
+- Krokowy
+! W silniku szeregowym moment rośnie w przybliżeniu z kwadratem prądu, co daje bardzo duży moment przy ruszaniu.
+
+? Co powoduje nadmierne iskrzenie szczotek w maszynie komutatorowej?
++ Zużyte lub źle dociśnięte szczotki, zabrudzony albo owalny komutator, przeciążenie
+- Zbyt niska temperatura otoczenia
+- Zbyt dobra izolacja uzwojeń
+- Zbyt mały prąd obciążenia
+! Iskrzenie przyspiesza zużycie komutatora. Trzeba sprawdzić szczotki, sprężyny dociskowe i powierzchnię komutatora.
+
+? Kiedy należy wymienić szczotki maszyny komutatorowej?
++ Gdy zużyją się do granicy podanej przez producenta
+- Codziennie
+- Dopiero gdy silnik się zatrzyma
+- Nigdy, szczotki się nie zużywają
+! Zbyt krótka szczotka ma za mały docisk, co powoduje iskrzenie, a w skrajnym przypadku uszkodzenie komutatora.
+
+? Na czym polega działanie prądnicy?
++ Zamienia energię mechaniczną na elektryczną dzięki indukcji elektromagnetycznej
+- Zamienia energię elektryczną na mechaniczną
+- Magazynuje energię elektryczną
+- Zamienia napięcie przemienne na stałe bez ruchu
+! W przewodach poruszających się w polu magnetycznym indukuje się siła elektromotoryczna.
+
+? Czym silnik synchroniczny różni się od indukcyjnego?
++ Jego wirnik obraca się dokładnie z prędkością pola i ma własne wzbudzenie (magnesy albo uzwojenie zasilane prądem stałym)
+- Nie ma stojana
+- Zawsze ma komutator
+- Silnik indukcyjny zasila się prądem stałym
+! Silnik synchroniczny nie ma poślizgu. Jego prędkość zależy tylko od częstotliwości i liczby par biegunów.
+
+? Do czego służy silnik krokowy?
++ Do dokładnego pozycjonowania, bo każdy impuls sterujący obraca wał o stały kąt
+- Do napędu dużych pomp ze stałą prędkością
+- Do wytwarzania energii elektrycznej
+- Do kompensacji mocy biernej
+! Silniki krokowe stosuje się np. w drukarkach 3D, ploterach i małych obrabiarkach CNC.
+
+? Co oznacza praca dorywcza S2 silnika?
++ Pracę przez określony krótki czas, po którym silnik musi ostygnąć do temperatury otoczenia
+- Pracę ciągłą bez przerw
+- Pracę z częstymi rozruchami
+- Pracę przy zmiennej częstotliwości
+! Silnik oznaczony np. S2 30 min może oddawać moc znamionową tylko przez 30 minut.
+
+? Ile wynosi sprawność silnika, który pobiera z sieci 5 kW i oddaje na wale 4,25 kW?
++ 85%
+- 15%
+- 80%
+- 117%
+! η = P₂ / P₁ = 4,25 / 5 = 0,85 = 85%.
+
+? Jakie straty występują w silniku indukcyjnym?
++ Straty w uzwojeniach, w rdzeniu oraz straty mechaniczne (tarcie i wentylacja)
+- Wyłącznie straty w szczotkach
+- Wyłącznie straty mechaniczne
+- Silnik nie ma strat
+! Suma strat to różnica między mocą pobieraną a oddawaną. Zamienia się ona w ciepło.
+
+? Co oznacza wartość cos φ = 0,82 na tabliczce silnika?
++ Współczynnik mocy przy obciążeniu znamionowym
+- Sprawność 82%
+- Poślizg 0,82%
+- Stosunek prądu rozruchowego do znamionowego
+! Silnik pobiera moc bierną do magnesowania, dlatego jego współczynnik mocy jest mniejszy od 1.
+
+? Jaki prąd pobiera z sieci 400 V silnik trójfazowy o mocy na wale 5,5 kW, sprawności 0,88 i cos φ = 0,85?
+~ k=05
++ 10,6 A
+- 9,3 A
+- 13,8 A
+- 18,4 A
+! P₁ = P₂ / η = 6,25 kW, a I = P₁ / (√3 · U · cos φ) = 6250 / (1,73 · 400 · 0,85) ≈ 10,6 A.
+
+? Dlaczego hamulec elektromagnetyczny silnika trzyma wał, gdy silnik jest wyłączony?
++ Bo hamulec zaciska sprężyna, a elektromagnes zwalnia go tylko podczas zasilania
+- Bo silnik pracuje wtedy jak prądnica
+- Bo w uzwojeniu stojana płynie stale prąd stały
+- Bo łożyska się blokują
+! Hamulec sprężynowy działa w stanie beznapięciowym, co zapewnia bezpieczeństwo np. w dźwigach przy zaniku zasilania.
+
+? Jakie zjawisko wykorzystuje transformator?
++ Indukcję elektromagnetyczną (wzajemną)
+- Zjawisko fotoelektryczne
+- Zjawisko Joule'a-Lenza
+- Elektrolizę
+! Zmienny strumień wytworzony przez uzwojenie pierwotne indukuje napięcie w uzwojeniu wtórnym.
+
+? Jaki jest prąd jałowy typowego transformatora rozdzielczego w porównaniu z prądem znamionowym?
+~ k=05
++ Kilka procent prądu znamionowego lub mniej
+- Około 50% prądu znamionowego
+- Taki sam jak znamionowy
+- Dwa razy większy niż znamionowy
+! Prąd jałowy służy głównie do magnesowania rdzenia i pokrycia strat w żelazie.
+
+? Do czego służy konserwator (zbiornik wyrównawczy) transformatora olejowego?
+~ k=05
++ Przejmuje zmiany objętości oleju przy zmianach temperatury i ogranicza jego kontakt z powietrzem
+- Chłodzi uzwojenia wodą
+- Mierzy prąd obciążenia
+- Służy do zmiany przekładni
+! Olej rozszerza się przy nagrzewaniu. Powietrze zasysane do konserwatora osusza odwilżacz.
+
+? Co oznacza oznaczenie ONAN na tabliczce transformatora?
+~ k=05
++ Chłodzenie olejem o naturalnym obiegu i powietrzem o naturalnym obiegu
+- Transformator suchy w obudowie
+- Chłodzenie wymuszone wodą
+- Transformator bez chłodzenia
+! O – olej, N – obieg naturalny, A – powietrze, N – obieg naturalny.
+
+? Jaka jest główna zaleta transformatorów suchych (żywicznych)?
+~ k=05
++ Brak oleju, a więc mniejsze zagrożenie pożarowe i możliwość instalowania w budynkach
+- Brak jakichkolwiek strat
+- Możliwość pracy przy prądzie stałym
+- Dowolnie duża przeciążalność
+! Transformatory suche stosuje się m.in. w budynkach użyteczności publicznej, szpitalach i biurowcach.
+
+? Po co stosuje się silniki dwubiegowe, np. z uzwojeniem Dahlandera?
++ Aby uzyskać dwie prędkości obrotowe przez zmianę liczby par biegunów
+- Aby dwukrotnie zwiększyć moc
+- Aby silnik mógł pracować przy prądzie stałym
+- Aby zmniejszyć prąd jałowy
+! Układ Dahlandera daje prędkości w stosunku 1:2, np. 1500 i 3000 obr/min.
+
+? Co może być przyczyną, że silnik trójfazowy po włączeniu buczy, ale nie rusza?
++ Brak napięcia w jednej fazie, np. przepalony bezpiecznik, albo zablokowany wirnik
+- Za duża rezystancja izolacji
+- Zbyt dobra wentylacja
+- Prawidłowa kolejność faz
+! Silnik zasilany z dwóch faz nie wytwarza pola wirującego i nie ma momentu rozruchowego. Trzeba go natychmiast wyłączyć.
+
+? Ile zwojów musi mieć uzwojenie wtórne transformatora 230/24 V, jeśli pierwotne ma 920 zwojów?
++ 96
+- 24
+- 230
+- 8817
+! N₂ = N₁ · U₂ / U₁ = 920 · 24 / 230 = 96 zwojów.
+
+? Jaką moc podaje się na tabliczce znamionowej transformatora?
++ Moc pozorną w VA lub kVA
+- Moc czynną w W
+- Moc bierną w var
+- Moc mechaniczną w KM
+! Prąd obciąża transformator niezależnie od współczynnika mocy odbiorników, dlatego podaje się moc pozorną.
+
+? Co oznacza stopień ochrony IP23 silnika?
++ Ochronę przed ciałami stałymi większymi niż 12,5 mm i przed wodą padającą natryskiem
+- Pełną wodoszczelność
+- Brak jakiejkolwiek ochrony
+- Budowę przeciwwybuchową
+! Silniki IP23 nadają się tylko do suchych pomieszczeń. Na zewnątrz stosuje się co najmniej IP54 lub IP55.
+
+? Jaka jest przyczyna zmiany kierunku obrotów silnika po zamianie kolejności faz?
++ Zmienia się kierunek wirowania pola magnetycznego stojana
+- Zmienia się częstotliwość napięcia
+- Zmienia się liczba par biegunów
+- Poślizg staje się ujemny
+! Kierunek pola wirującego wynika z kolejności faz zasilających kolejne uzwojenia.

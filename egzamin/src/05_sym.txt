@@ -228,3 +228,228 @@
 - Specyfikacja przetargowa
 - Karta katalogowa aparatu
 ! Dokumentacja powykonawcza uwzględnia wszystkie zmiany wprowadzone w czasie budowy. Jest potrzebna do eksploatacji i przyszłych napraw.
+
+? Który symbol oznacza woltomierz?
++ @sym:woltomierz
+- @sym:amperomierz
+- @sym:watomierz
+- @sym:omomierz
+! Mierniki rysuje się jako okrąg z literą: V – woltomierz, A – amperomierz, W – watomierz, Ω – omomierz.
+
+? Który symbol oznacza watomierz?
++ @sym:watomierz
+- @sym:woltomierz
+- @sym:amperomierz
+- @sym:licznik
+! Watomierz oznacza się literą W w okręgu. Licznik energii rysuje się jako prostokąt z jednostką kWh.
+
+? Jaki element przedstawia symbol?
+@ sym:cewka
++ Cewkę (dławik) bez rdzenia
+- Rezystor
+- Kondensator
+- Transformator
+! Cewkę rysuje się jako szereg półokręgów (zwojów).
+
+? Jaki element przedstawia symbol?
+@ sym:cewka_rdzen
++ Dławik (cewkę) z rdzeniem ferromagnetycznym
+- Cewkę bez rdzenia
+- Kondensator nastawny
+- Rezystor drutowy
+! Linia równoległa do zwojów oznacza rdzeń ferromagnetyczny, który zwiększa indukcyjność cewki.
+
+? Co oznacza symbol przedstawiony na rysunku?
+@ sym:uziemienie
++ Uziemienie
+- Bezpiecznik
+- Kondensator
+- Zacisk przewodu neutralnego
+! Symbol z trzema skracającymi się kreskami oznacza połączenie z ziemią.
+
+? Który symbol oznacza źródło światła (lampę)?
++ @sym:zarowka
+- @sym:woltomierz
+- @sym:silnik_1f
+- @sym:bateria
+! Lampę na schematach rysuje się jako okrąg przekreślony krzyżykiem.
+
+? Jaki element przedstawia symbol?
+@ sym:diak
++ Diak
+- Triak
+- Tyrystor
+- Mostek prostowniczy
+! Diak ma dwie przeciwsobne struktury i nie ma bramki. Stosuje się go do wyzwalania triaków.
+
+? Jaki element przedstawia symbol?
+@ sym:fotorezystor
++ Fotorezystor
+- Potencjometr
+- Termistor
+- Dioda LED
+! Strzałki skierowane do rezystora oznaczają, że jego rezystancja zależy od padającego światła.
+
+? Jaki element przedstawia symbol?
+@ sym:rezystor_regulowany
++ Rezystor o regulowanej (nastawnej) rezystancji
+- Potencjometr z trzema wyprowadzeniami
+- Fotorezystor
+- Bezpiecznik zwłoczny
+! Ukośna strzałka przechodząca przez element oznacza możliwość zmiany jego parametru.
+
+? Który symbol oznacza prądnicę prądu przemiennego trójfazowego?
++ @sym:pradnica
+- @sym:silnik
+- @sym:silnik_dc
+- @sym:transformator
+! Litera G oznacza prądnicę (generator), a 3~ prąd przemienny trójfazowy.
+
+? Jaki element przedstawia symbol?
+@ sym:licznik
++ Licznik energii elektrycznej
+- Watomierz
+- Rezystor
+- Bezpiecznik
+! Licznik energii oznacza się prostokątem z jednostką kWh.
+
+? Jaką bramkę logiczną przedstawia symbol?
+@ bramka:xor
++ XOR (różnica symetryczna)
+- OR
+- AND
+- NAND
+! Znak =1 oznacza, że wyjście ma stan 1, gdy dokładnie jedno wejście ma stan 1.
+
+? Jaką bramkę logiczną przedstawia symbol?
+@ bramka:not
++ NOT (negator)
+- Bufor
+- NAND
+- XOR
+! Jedno wejście, cyfra 1 i kółko na wyjściu oznaczają negację: wyjście ma stan przeciwny do wejścia.
+
+? Jaką bramkę logiczną przedstawia symbol?
+@ bramka:nor
++ NOR
+- OR
+- NAND
+- XOR
+! Znak ≥1 (suma) z kółkiem na wyjściu (negacja) to bramka NOR.
+
+? Jaką bramkę logiczną przedstawia symbol?
+@ bramka:and
++ AND
+- OR
+- NAND
+- NOT
+! Znak & oznacza iloczyn logiczny: wyjście ma stan 1 tylko wtedy, gdy wszystkie wejścia mają stan 1.
+
+? Który symbol oznacza silnik prądu stałego?
++ @sym:silnik_dc
+- @sym:silnik
+- @sym:pradnica
+- @sym:silnik_1f
+! Litera M oznacza silnik, a symbol prądu stałego pod nią rozróżnia go od silników prądu przemiennego.
+
+? Który symbol oznacza styk rozwierny?
++ @sym:styk_rozwierny
+- @sym:styk_zwierny
+- @sym:przycisk_zwierny
+- @sym:cewka_stycznika
+! Styk rozwierny w spoczynku jest zamknięty: ruchomy styk opiera się o kreskę styku nieruchomego.
+
+? Co oznaczają cyfry 1, 3, 5 oraz 2, 4, 6 przy stykach głównych stycznika?
++ Zaciski od strony zasilania (1, 3, 5) i od strony odbiornika (2, 4, 6)
+- Numery cewek
+- Zaciski styków pomocniczych zwiernych
+- Prądy znamionowe styków
+! Styki główne oznacza się jedną cyfrą: nieparzyste od strony zasilania, parzyste od strony odbiornika.
+
+? Jak oznacza się według normy zaciski uzwojeń silnika trójfazowego?
++ U1, V1, W1 oraz U2, V2, W2
+- L1, L2, L3 oraz N
+- A1, A2, B1, B2
+- R, S, T
+! Początki uzwojeń to U1, V1, W1, a końce U2, V2, W2. Dawniej używano oznaczeń U, V, W i X, Y, Z.
+
+? Czym charakteryzuje się schemat jednokreskowy?
++ Kilka przewodów obwodu rysuje się jedną linią i zaznacza ich liczbę
+- Rysuje się go jednym kolorem
+- Zawiera tylko jeden element
+- Przedstawia wyłącznie jedną puszkę
+! Schematy jednokreskowe stosuje się dla rozdzielnic i sieci. Liczbę przewodów zaznacza się ukośnymi kreskami lub cyfrą.
+
+? Co oznaczają trzy ukośne kreski przecinające linię na schemacie jednokreskowym?
++ Trzy przewody
+- Trzy rezystory
+- Trzykrotnie dłuższy przewód
+- Uziemienie
+! Liczba ukośnych kresek oznacza liczbę przewodów w danym połączeniu.
+
+? Który dokument zawiera opis techniczny, obliczenia, rysunki instalacji i zestawienie materiałów?
++ Projekt techniczny instalacji
+- Instrukcja obsługi odbiornika
+- Faktura za materiały
+- Świadectwo kwalifikacyjne
+! Projekt jest podstawą wykonania instalacji. Na jego podstawie sporządza się przedmiar i kosztorys.
+
+? Co przedstawia plan instalacji elektrycznej?
++ Rozmieszczenie osprzętu, opraw, rozdzielnic i tras przewodów na rzucie budynku
+- Budowę wewnętrzną łącznika
+- Wykres obciążenia sieci w ciągu doby
+- Kolejność montażu aparatów w rozdzielnicy
+! Plan rysuje się na podkładzie architektonicznym, używając symboli instalacyjnych.
+
+? Jak nazywa się zestawienie ilości robót do wykonania (np. metrów przewodu, liczby gniazd) sporządzone na podstawie projektu?
++ Przedmiar robót
+- Protokół odbioru
+- Dziennik budowy
+- Świadectwo charakterystyki energetycznej
+! Przedmiar jest podstawą kosztorysu. Po wykonaniu robót sporządza się obmiar, czyli zestawienie robót faktycznie wykonanych.
+
+? Co przedstawia rysunek?
+@ uklad:jednopolowkowy
++ Prostownik jednopołówkowy
+- Prostownik mostkowy
+- Dzielnik napięcia
+- Stabilizator z diodą Zenera
+! Jedna dioda szeregowo z obciążeniem przepuszcza prąd tylko w jednej połówce okresu.
+
+? Co przedstawia rysunek?
+@ net:dzielnik|R1|R2|U|U₂
++ Dzielnik napięcia
+- Mostek Wheatstone'a
+- Prostownik
+- Układ RC całkujący
+! Dwa rezystory szeregowe dzielą napięcie wejściowe U; napięcie wyjściowe U₂ odbiera się z rezystora R2.
+
+? Jak na tabliczkach i schematach oznacza się prąd stały?
++ Kreską (ciągłą nad przerywaną) albo skrótem DC
+- Falą ~ albo skrótem AC
+- Literą N
+- Symbolem uziemienia
+! Prąd przemienny oznacza się falą ~ (AC), a prąd stały kreską lub skrótem DC.
+
+? Co w języku drabinkowym LD oznacza symbol -| |-?
++ Styk zwierny, który przewodzi, gdy zmienna ma stan 1
+- Styk rozwierny
+- Cewkę wyjścia
+- Licznik
+! Styk -|/|- przewodzi, gdy zmienna ma stan 0, a cewkę wyjścia rysuje się jako -( )-.
+
+? Jaką funkcję pełni element oznaczony na schemacie podtrzymania jako S1?
+@ uklad:podtrzymanie
++ Przycisk STOP ze stykiem rozwiernym
+- Przycisk START ze stykiem zwiernym
+- Styk pomocniczy stycznika
+- Bezpiecznik obwodu sterowania
+! S1 jest połączony szeregowo z resztą obwodu i w spoczynku zamknięty. Jego naciśnięcie przerywa zasilanie cewki K1.
+
+? Na schemacie układu schodowego z rysunku lampa świeci, gdy:
+@ uklad:schodowy
++ Ruchome styki obu łączników są ustawione na ten sam przewód korespondencyjny
+- Oba łączniki są w położeniu dolnym, niezależnie od przewodów
+- Przewody korespondencyjne są zwarte ze sobą
+- Przewód N jest przerwany
+! Obwód się zamyka, gdy oba łączniki wybierają ten sam przewód korespondencyjny. Przełączenie dowolnego z nich go przerywa.

@@ -209,3 +209,235 @@
 - Polietylen
 - Porcelana
 ! PVC zawiera chlor. W budynkach użyteczności publicznej stosuje się przewody bezhalogenowe (oznaczenie H, np. N2XH), które przy spalaniu nie wydzielają tych gazów.
+
+? Co oznacza litera L w krajowym oznaczeniu przewodu LY?
++ Żyłę wielodrutową (linkę)
+- Żyłę aluminiową
+- Izolację lakierowaną
+- Przewód do lamp
+! D oznacza drut (żyłę jednodrutową), L linkę, Lg linkę giętką, a Y izolację z polwinitu.
+
+? Który przewód ma żyłę wielodrutową giętką w izolacji PVC?
++ LgY (H07V-K)
+- DY (H07V-U)
+- YDYp
+- YKY
+! Lg oznacza linkę giętką. Taki przewód stosuje się m.in. do połączeń w rozdzielnicach.
+
+? Jaką konduktywność miedzi przyjmuje się w obliczeniach przewodów?
++ Około 56 m/(Ω·mm²)
+- Około 35 m/(Ω·mm²)
+- Około 7 m/(Ω·mm²)
+- Około 560 m/(Ω·mm²)
+! Konduktywność miedzi to około 56–58 m/(Ω·mm²), aluminium około 34–35 m/(Ω·mm²).
+
+? Do jakiej najwyższej temperatury może się długotrwale nagrzewać żyła przewodu w izolacji PVC?
++ 70 °C
+- 40 °C
+- 90 °C
+- 160 °C
+! Dla izolacji PVC dopuszczalna temperatura długotrwała wynosi 70 °C, a dla XLPE 90 °C.
+
+? Do jakiej temperatury może się nagrzać żyła przewodu w izolacji PVC podczas zwarcia (przekroje do 300 mm²)?
+~ k=05
++ 160 °C
+- 70 °C
+- 90 °C
+- 250 °C
+! Przy zwarciu trwającym do 5 s żyła w izolacji PVC może się nagrzać do 160 °C, a w izolacji XLPE do 250 °C.
+
+? Jaki materiał izolacyjny oznacza się w kablach literą X (np. XLPE)?
++ Polietylen usieciowany
+- Polwinit
+- Gumę silikonową
+- Papier nasycany
+! Polietylen usieciowany ma lepsze właściwości cieplne niż PVC i pracuje długotrwale do 90 °C.
+
+? Który przewód jest bezhalogenowy i nadaje się do budynków użyteczności publicznej?
++ N2XH
+- YDY
+- YKY
+- H05VV-F
+! Litera H w takich oznaczeniach oznacza materiał bezhalogenowy. Podczas pożaru nie wydziela on żrących gazów z chlorem.
+
+? Co oznacza zapis 5×2,5 w oznaczeniu przewodu?
++ Pięć żył o przekroju 2,5 mm² każda
+- Pięć metrów przewodu o przekroju 2,5 mm²
+- Jedną żyłę o przekroju 12,5 mm²
+- Przewód na napięcie 2,5 kV
+! Pierwsza liczba oznacza liczbę żył, druga przekrój jednej żyły w mm².
+
+? Dlaczego starą instalację z przewodami aluminiowymi o małych przekrojach wymienia się na miedzianą?
++ Bo aluminium gorzej przewodzi, łatwo się utlenia i z czasem luzuje się w zaciskach
+- Bo aluminium jest droższe od miedzi
+- Bo aluminium nie przewodzi prądu przemiennego
+- Bo przewody aluminiowe są za ciężkie
+! Połączenia aluminiowe często się przegrzewają. W nowych instalacjach przewody aluminiowe stosuje się dopiero od 16 mm².
+
+? Który z wymienionych materiałów nie jest izolatorem?
++ Grafit
+- Porcelana
+- Szkło
+- Mika
+! Grafit przewodzi prąd i wykonuje się z niego m.in. szczotki maszyn elektrycznych. Porcelana, szkło i mika są izolatorami.
+
+? Z jakiego materiału wykonuje się szczotki maszyn komutatorowych?
++ Z grafitu lub grafitu z dodatkiem miedzi
+- Z porcelany
+- Z aluminium
+- Z gumy
+! Grafit dobrze przewodzi, ma właściwości smarne i mało ściera komutator.
+
+? Z jakiego materiału wykonuje się spirale grzejne?
++ Ze stopów oporowych, np. chromoniklowych
+- Z miedzi elektrolitycznej
+- Z aluminium
+- Ze srebra
+! Stopy oporowe mają dużą rezystywność i wysoką temperaturę topnienia oraz są odporne na utlenianie w wysokiej temperaturze.
+
+? Co oznacza wytrzymałość elektryczna izolatora?
++ Największe natężenie pola elektrycznego, np. w kV/mm, które materiał wytrzymuje bez przebicia
+- Odporność materiału na rozciąganie
+- Największy prąd, jaki materiał może przewodzić
+- Temperaturę topnienia materiału
+! Po przekroczeniu wytrzymałości elektrycznej następuje przebicie i izolacja zaczyna przewodzić.
+
+? Jak oznacza się przewód PEN?
++ Kolorem zielono-żółtym z niebieskimi oznaczeniami na końcach (albo niebieskim z zielono-żółtymi oznaczeniami)
+- Kolorem brązowym
+- Kolorem czarnym z czerwonym paskiem
+- Wyłącznie kolorem szarym
+! PEN łączy funkcje przewodów PE i N, więc jego oznaczenie łączy kolory obu.
+
+? Którego koloru izolacji nie wolno stosować dla przewodu fazowego?
++ Zielono-żółtego
+- Brązowego
+- Czarnego
+- Szarego
+! Barwa zielono-żółta jest zarezerwowana dla przewodów ochronnych. Fazowy przewód w tym kolorze grozi śmiertelnym porażeniem.
+
+? Po co układa się przewody w rurach instalacyjnych karbowanych?
++ Aby chronić przewody i móc je później wymienić bez kucia ścian
+- Aby zwiększyć obciążalność przewodów
+- Aby uziemić instalację
+- Aby połączyć miedź z aluminium
+! Przewody w rurach można wyciągnąć i wymienić. Rury karbowane łatwo się układa w ścianach, stropach i posadzkach.
+
+? Jaką rolę pełni powłoka zewnętrzna przewodu kabelkowego, np. YDY?
++ Chroni izolację żył przed uszkodzeniami mechanicznymi i wpływem otoczenia
+- Przewodzi prąd ochronny
+- Zwiększa przekrój żył
+- Ekranuje przed zakłóceniami
+! Powłoka scala żyły w jeden przewód i dodatkowo chroni ich izolację.
+
+? Co oznacza napis 450/750 V na przewodzie?
++ Napięcie znamionowe: 450 V względem ziemi i 750 V między żyłami
+- Napięcia probiercze 450 V i 750 V
+- Zakres pracy od 450 V do 750 V
+- 450 V prądu przemiennego i 750 V prądu stałego
+! Pierwsza wartość (U₀) to napięcie między żyłą a ziemią, druga (U) między żyłami.
+
+? Który przewód nadaje się do miejsc o podwyższonej temperaturze, np. w pobliżu pieca, do 180 °C?
++ Przewód w izolacji silikonowej
+- Przewód w izolacji PVC
+- Przewód H03VV-F
+- Przewód YDYp
+! Silikon wytrzymuje wysoką temperaturę, a PVC mięknie i szybko się starzeje powyżej 70 °C.
+
+? Jakie właściwości mają materiały magnetycznie miękkie?
++ Łatwo się magnesują i rozmagnesowują, mają wąską pętlę histerezy
+- Trwale zachowują namagnesowanie
+- Nie przewodzą strumienia magnetycznego
+- Są izolatorami elektrycznymi
+! Blacha krzemowa i ferryty mają małe straty histerezowe, dlatego wykonuje się z nich rdzenie. Magnesy trwałe są z materiałów magnetycznie twardych.
+
+? Z jakiego materiału wykonuje się silne magnesy trwałe w nowoczesnych silnikach?
++ Ze stopu neodymu, żelaza i boru (NdFeB)
+- Z miedzi
+- Z blachy krzemowej
+- Z aluminium
+! Magnesy neodymowe mają bardzo dużą energię magnetyczną, dlatego stosuje się je np. w silnikach bezszczotkowych.
+
+? Co oznacza klasa PH90 kabla ognioodpornego?
++ Zachowanie ciągłości obwodu przez 90 minut w warunkach pożaru (w odpowiednim systemie mocowań)
+- Przekrój 90 mm²
+- Temperaturę pracy 90 °C
+- Napięcie znamionowe 90 V
+! Klasy PH15, PH30, PH90 określają, jak długo przewód z mocowaniami zapewnia zasilanie podczas pożaru.
+
+? Dlaczego w serwerowniach i budynkach użyteczności publicznej stosuje się przewody bezhalogenowe?
++ Bo podczas pożaru nie wydzielają żrących i trujących gazów
+- Bo mają mniejszą rezystancję
+- Bo są tańsze od przewodów PVC
+- Bo nie wymagają przewodu ochronnego
+! Gazy z palącego się PVC tworzą z wilgocią kwas solny, który niszczy urządzenia i jest groźny dla ludzi.
+
+? Jak najlepiej przyłączyć żyłę miedzianą o dużym przekroju do zacisku śrubowego aparatu?
++ Zaprasować na niej końcówkę kablową odpowiednią praską
+- Skręcić druty ręcznie
+- Owinąć żyłę taśmą izolacyjną
+- Docisnąć żyłę gwoździem
+! Zaprasowana końcówka daje trwałe połączenie o małej rezystancji przejścia.
+
+? Co trzeba zastosować przy łączeniu przewodów aluminiowych w zaciskach śrubowych?
++ Zaciski przystosowane do aluminium i pastę stykową; połączenia trzeba okresowo dokręcać
+- Wystarczą zwykłe zaciski do miedzi
+- Lutowanie cyną bez topnika
+- Owinięcie żyły taśmą miedzianą
+! Aluminium pokrywa się tlenkiem i z czasem odkształca się pod dociskiem, co luzuje połączenie.
+
+? Która złączka pozwala połączyć przewody bez narzędzi, przez wciśnięcie żyły?
++ Złączka sprężynowa
+- Końcówka oczkowa
+- Dławnica
+- Opaska zaciskowa
+! Sprężyna stale dociska żyłę, a montaż jest szybki.
+
+? Jakim przewodem wykonuje się połączenie wyrównawcze główne w budynku mieszkalnym?
++ Przewodem miedzianym zielono-żółtym o przekroju co najmniej 6 mm²
+- Przewodem niebieskim 1,5 mm²
+- Przewodem brązowym 2,5 mm²
+- Dowolnym gołym przewodem 0,75 mm²
+! Połączenia wyrównawcze wykonuje się przewodami ochronnymi o przekroju dobranym do głównego przewodu ochronnego, nie mniejszym niż 6 mm² Cu.
+
+? Jakie zadanie ma ekran (oplot) w przewodzie sterowniczym?
++ Ogranicza wpływ zakłóceń elektromagnetycznych na sygnały
+- Zwiększa obciążalność prądową
+- Zastępuje izolację żył
+- Pełni funkcję przewodu neutralnego
+! Ekran połączony z masą przejmuje zakłócenia, które inaczej indukowałyby się w żyłach sygnałowych.
+
+? Z czego wykonuje się izolatory linii napowietrznych?
++ Z porcelany, szkła hartowanego lub kompozytów silikonowych
+- Z miedzi
+- Z lakierowanego drewna
+- Z papieru
+! Izolatory muszą wytrzymywać wysokie napięcie, warunki atmosferyczne i obciążenia mechaniczne.
+
+? Który przewód nadaje się do zasilania gniazd w warsztacie, z przewodami ułożonymi na korytkach?
++ YDY 3×2,5 mm² 450/750 V
+- H03VV-F 2×0,75
+- H07V-U 2,5 bez osłony
+- Przewód telekomunikacyjny
+! Przewód kabelkowy w powłoce nadaje się do układania na korytkach i na tynku. Przewody jednożyłowe trzeba prowadzić w rurach lub listwach.
+
+? Do czego służą listwy instalacyjne?
++ Do prowadzenia przewodów na tynku w zamykanej osłonie
+- Do mocowania aparatów w rozdzielnicy
+- Do łączenia przewodów w puszce
+- Do uziemiania rur
+! Listwy stosuje się, gdy nie można lub nie opłaca się kuć ścian, np. przy rozbudowie instalacji.
+
+? Z jakiego materiału wykonuje się obudowy urządzeń II klasy ochronności?
++ Z tworzyw izolacyjnych, np. poliwęglanu
+- Z gołej stali ocynkowanej
+- Z aluminium bez powłoki
+- Z miedzi
+! Obudowa z tworzywa stanowi dodatkową izolację, więc urządzenia nie trzeba łączyć z przewodem ochronnym.
+
+? Jak rozpoznać żyły w kablu, w którym wszystkie żyły mają czarną izolację?
++ Po nadrukowanych na izolacji cyfrach lub oznaczeniach (np. 1, 2, 3, PE)
+- Po grubości żył
+- Nie da się ich rozpoznać
+- Po kolorze powłoki zewnętrznej
+! W kablach sterowniczych i niektórych energetycznych żyły numeruje się nadrukiem, a żyła ochronna zwykle i tak jest zielono-żółta.

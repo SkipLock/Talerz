@@ -245,3 +245,248 @@
 - Przykładamy lusterko do ust na 2 minuty
 - Sprawdzamy reakcję źrenic na światło
 ! Ocena oddechu trwa do 10 sekund. Brak prawidłowego oddechu oznacza konieczność wezwania pomocy i rozpoczęcia resuscytacji.
+
+? Kto wydaje polecenie wykonania pracy przy urządzeniach elektroenergetycznych w warunkach szczególnego zagrożenia?
++ Poleceniodawca, czyli osoba upoważniona przez pracodawcę, mająca świadectwo kwalifikacyjne w zakresie dozoru (D)
+- Każdy pracownik zakładu
+- Wyłącznie inspektor Państwowej Inspekcji Pracy
+- Sam wykonawca, bez niczyjej zgody
+! Poleceniodawcę wyznacza pracodawca. Musi on mieć kwalifikacje D dla danej grupy urządzeń.
+
+? W jakiej formie wydaje się polecenie wykonania pracy w warunkach szczególnego zagrożenia?
++ Pisemnej albo ustnej, przy czym polecenie ustne się rejestruje
+- Wyłącznie ustnej, bez żadnego zapisu
+- Polecenie nie jest wymagane, jeśli pracownik ma świadectwo E
+- Wyłącznie w umowie o pracę
+! Instrukcja organizacji bezpiecznej pracy określa, które prace wymagają polecenia pisemnego, a które wystarczy wydać ustnie i zarejestrować.
+
+? Jaką rolę pełni dopuszczający przy pracy na polecenie?
++ Sprawdza przygotowanie miejsca pracy, wskazuje zespołowi zagrożenia i dopuszcza go do pracy
+- Wykonuje wyłącznie prace biurowe
+- Zatwierdza projekt budowlany
+- Zamawia usługę u wykonawcy
+! Dopuszczenie do pracy następuje dopiero po sprawdzeniu, że miejsce pracy przygotowano zgodnie z poleceniem.
+
+? Co trzeba zrobić przed rozpoczęciem pracy elektronarzędziem?
++ Sprawdzić stan obudowy, przewodu zasilającego i wtyczki
+- Zdjąć osłony ochronne, żeby lepiej widzieć
+- Odłączyć przewód ochronny we wtyczce
+- Nic, elektronarzędzia są zawsze bezpieczne
+! Uszkodzona izolacja przewodu lub obudowy grozi porażeniem. Uszkodzonego narzędzia nie wolno używać.
+
+? Jakie środki ochrony indywidualnej należy stosować podczas wycinania bruzd bruzdownicą?
++ Okulary lub przyłbicę, ochronniki słuchu, półmaskę przeciwpyłową i rękawice
+- Wyłącznie rękawice dielektryczne
+- Wyłącznie szelki bezpieczeństwa
+- Żadnych, jeśli praca trwa krótko
+! Bruzdownica wytwarza hałas, pył i odpryski, więc trzeba chronić oczy, słuch i drogi oddechowe.
+
+? Od jakiej wysokości pracę uważa się za pracę na wysokości?
++ Od 1 m nad poziomem podłogi lub ziemi
+- Od 3 m
+- Od 5 m
+- Od 10 m
+! Według ogólnych przepisów BHP pracą na wysokości jest praca na powierzchni położonej co najmniej 1 m nad podłogą lub ziemią.
+
+? Przed czym chronią szelki bezpieczeństwa z linką asekuracyjną?
++ Przed upadkiem z wysokości
+- Przed porażeniem prądem
+- Przed hałasem
+- Przed oparzeniem łukiem
+! Szelki przypięte do pewnego punktu kotwiczenia zatrzymują upadek, np. przy pracach na słupach i dachach.
+
+? Jakie są możliwe skutki przepływu prądu przez ciało człowieka?
++ Skurcze mięśni, zaburzenia rytmu serca, oparzenia, a nawet zatrzymanie krążenia
+- Wyłącznie krótkotrwałe mrowienie skóry
+- Poprawa krążenia krwi
+- Przy napięciu 230 V nie ma żadnych skutków
+! Prąd działa na mięśnie i serce, a także termicznie (oparzenia). Napięcie sieciowe 230 V może zabić.
+
+? Od czego najbardziej zależą skutki porażenia prądem?
++ Od wartości prądu, czasu jego przepływu i drogi przez ciało
+- Od koloru izolacji przewodu
+- Od mocy znamionowej urządzenia
+- Od pory dnia
+! Groźne są duże prądy, długi czas przepływu i droga prowadząca przez serce.
+
+? Dlaczego wilgotna skóra zwiększa zagrożenie porażeniem?
++ Bo impedancja ciała maleje, więc przy tym samym napięciu płynie większy prąd
+- Bo wilgoć podwyższa napięcie sieci
+- Bo wilgoć zwiększa rezystancję izolacji
+- Wilgoć nie ma wpływu na porażenie
+! Mokra skóra przewodzi znacznie lepiej niż sucha. Dlatego w łazienkach i na budowach stosuje się dodatkowe środki ochrony.
+
+? Co oznacza tablica „Nie załączać! Pracują ludzie” zawieszona na napędzie łącznika?
++ Że przy wyłączonym urządzeniu trwa praca i nie wolno załączać napięcia
+- Że urządzenie jest uszkodzone i przeznaczone do kasacji
+- Że w pobliżu nikt nie może przebywać
+- Że urządzenie pracuje w trybie automatycznym
+! Tablicę wywiesza się na łącznikach, którymi wyłączono napięcie, aby nikt przez pomyłkę go nie załączył.
+
+? Kiedy wolno podjąć pracę przy urządzeniu elektroenergetycznym bez polecenia?
++ Przy ratowaniu życia lub zdrowia ludzi, z zachowaniem zasad bezpieczeństwa
+- Zawsze, gdy pracownik się spieszy
+- Gdy przełożony jest na urlopie
+- Nigdy, nawet przy zagrożeniu życia
+! Przepisy pozwalają działać bez polecenia, gdy trzeba ratować ludzi, ale ratujący nadal musi chronić siebie przed porażeniem.
+
+? Co należy zrobić po zakończeniu pracy przy urządzeniu wyłączonym spod napięcia, zanim zostanie ono ponownie załączone?
++ Usunąć ludzi i narzędzia, zdjąć uziemiacze i tablice, zgłosić zakończenie pracy, a dopiero potem załączyć
+- Od razu załączyć napięcie, żeby sprawdzić działanie
+- Załączyć urządzenie, pozostawiając uziemiacze
+- Załączyć urządzenie bez informowania kogokolwiek
+! Likwidacja miejsca pracy obejmuje sprawdzenie, że nikt nie pozostał w strefie pracy, usunięcie uziemiaczy i osłon oraz zgłoszenie zakończenia pracy.
+
+? Który obowiązek należy do pracownika w zakresie BHP?
++ Znać i przestrzegać przepisy BHP oraz stosować środki ochrony indywidualnej
+- Samodzielnie ustalać przepisy BHP w zakładzie
+- Kontrolować pracodawcę w imieniu państwa
+- Tylko podpisać umowę o pracę
+! Obowiązki pracownika określa art. 211 Kodeksu pracy, m.in. udział w szkoleniach, dbanie o sprzęt i poddawanie się badaniom lekarskim.
+
+? Kiedy przechodzi się szkolenie wstępne BHP?
++ Przed dopuszczeniem do pracy
+- Po pierwszym roku pracy
+- Tylko po wypadku przy pracy
+- Raz na 10 lat
+! Szkolenie wstępne (instruktaż ogólny i stanowiskowy) odbywa się przed rozpoczęciem pracy, później przechodzi się szkolenia okresowe.
+
+? Jak wygląda znak zakazu?
++ Białe koło z czerwonym obramowaniem i czerwonym przekreśleniem
+- Niebieskie koło z białym symbolem
+- Żółty trójkąt z czarnym obramowaniem
+- Zielony prostokąt z białym symbolem
+! Znaki zakazu są okrągłe z czerwonym obramowaniem i przekreśleniem. Nakazu – niebieskie koła, ostrzegawcze – żółte trójkąty, ewakuacyjne – zielone prostokąty.
+
+? Jak wygląda znak nakazu, np. „Nakaz stosowania rękawic ochronnych”?
++ Niebieskie koło z białym symbolem
+- Żółty trójkąt z czarnym symbolem
+- Białe koło z czerwonym przekreśleniem
+- Zielony prostokąt z białym symbolem
+! Znaki nakazu mają biały piktogram na niebieskim, okrągłym tle.
+
+? Jaki kolor mają znaki ewakuacyjne?
++ Zielony z białym symbolem
+- Niebieski z białym symbolem
+- Żółty z czarnym symbolem
+- Czerwony z białym symbolem
+! Znaki ewakuacyjne i pierwszej pomocy są zielone. Czerwone są znaki ochrony przeciwpożarowej, np. oznaczenie gaśnicy.
+
+? Co należy zrobić po zauważeniu pożaru w rozdzielni elektrycznej?
++ W miarę możliwości wyłączyć napięcie, zaalarmować otoczenie i straż pożarną, gasić gaśnicą do urządzeń elektrycznych
+- Gasić wodą z węża
+- Otworzyć okna i odejść
+- Najpierw sporządzić notatkę służbową
+! Wyłączenie zasilania usuwa źródło zapłonu i zagrożenie porażeniem. Urządzenia pod napięciem gasi się gaśnicą proszkową lub śniegową.
+
+? Z jakiej odległości gasi się urządzenia pod napięciem do 1000 V gaśnicą proszkową lub śniegową?
++ Z odległości co najmniej 1 m
+- Z odległości 10 cm
+- Z dowolnej, nawet dotykając dyszą urządzenia
+- Z odległości co najmniej 30 m
+! Gaśnice dopuszczone do urządzeń pod napięciem do 1000 V mają na etykiecie podaną bezpieczną odległość, zwykle co najmniej 1 m.
+
+? Po czym świadek zdarzenia rozpoznaje zatrzymanie krążenia u poszkodowanego?
++ Po braku przytomności i braku prawidłowego oddechu
+- Po szybkim, równym oddechu
+- Po silnym bólu głowy przy zachowanej przytomności
+- Po zaczerwienieniu skóry
+! Brak reakcji i brak prawidłowego oddechu oznaczają, że trzeba wezwać pomoc i od razu rozpocząć resuscytację.
+
+? Do czego służy AED?
++ Do automatycznej defibrylacji serca podczas resuscytacji
+- Do pomiaru ciśnienia krwi
+- Do sztucznej wentylacji płuc
+- Do ochrony przed porażeniem prądem
+! Automatyczny defibrylator zewnętrzny sam analizuje rytm serca i w razie potrzeby wyzwala impuls. Prowadzi ratującego komunikatami głosowymi.
+
+? Na jaką głębokość uciska się klatkę piersiową dorosłego podczas resuscytacji?
++ Około 5–6 cm
+- Około 1 cm
+- Około 2–3 cm
+- Około 10–12 cm
+! Klatkę uciska się na 5–6 cm w tempie 100–120 na minutę, pozwalając jej się w pełni unieść po każdym ucisku.
+
+? Czym jest praca pod napięciem?
++ Pracą, podczas której pracownik dotyka części pod napięciem lub wkracza w strefę prac pod napięciem, używając specjalnego sprzętu
+- Każdą pracą przy urządzeniu elektrycznym
+- Pracą przy urządzeniu odłączonym i uziemionym
+- Pracą biurową w budynku z instalacją elektryczną
+! Prace pod napięciem wykonują specjalnie przeszkoleni pracownicy według zatwierdzonych technologii.
+
+? Jak należy przechowywać i sprawdzać rękawice dielektryczne?
++ W suchym miejscu, z dala od olejów i źródeł ciepła; przed użyciem obejrzeć, a okresowo poddawać badaniom
+- W skrzynce razem z ostrymi narzędziami
+- Na słońcu, żeby nie zawilgły
+- W pojemniku z olejem transformatorowym
+! Przed każdym użyciem rękawice ogląda się i sprawdza ich szczelność, np. przez zwinięcie mankietu z powietrzem w środku.
+
+? Co zrobić z rękawicami dielektrycznymi, w których przed użyciem zauważono pęknięcie?
++ Wycofać je z użycia
+- Zakleić pęknięcie taśmą izolacyjną
+- Używać ich tylko przy napięciu do 230 V
+- Założyć na nie rękawice robocze
+! Uszkodzony sprzęt izolacyjny nie chroni przed porażeniem i nie wolno go używać.
+
+? Kiedy pracownik przechodzi badania lekarskie związane z pracą?
++ Przed przyjęciem do pracy oraz okresowo, na skierowanie pracodawcy
+- Tylko raz w życiu
+- Wyłącznie po wypadku
+- Nie są wymagane
+! Pracodawca kieruje na badania wstępne, okresowe i kontrolne. Bez aktualnego orzeczenia nie wolno dopuścić pracownika do pracy.
+
+? Co oznacza strefa zagrożenia wybuchem przy doborze urządzeń elektrycznych?
++ Miejsce, w którym może wystąpić atmosfera wybuchowa, więc potrzebne są urządzenia w wykonaniu przeciwwybuchowym (Ex)
+- Pomieszczenie o dużej wilgotności
+- Pomieszczenie z urządzeniami wysokiego napięcia
+- Strefę instalacyjną w ścianie
+! W strefach Ex iskra albo nagrzana powierzchnia urządzenia mogłyby zapalić mieszaninę gazu, par lub pyłu z powietrzem.
+
+? Jak bezpiecznie wymienić źródło światła w oprawie sufitowej?
++ Wyłączyć obwód w rozdzielnicy i sprawdzić brak napięcia
+- Wystarczy wyłączyć łącznik ścienny, bo zawsze przerywa fazę
+- Wymieniać mokrymi rękami
+- Wymieniać pod napięciem, stojąc na metalowej drabinie
+! Łącznik mógł zostać błędnie włączony w przewód N i wtedy oprawka pozostaje pod napięciem. Wyłączenie obwodu w rozdzielnicy jest pewniejsze.
+
+? Jak udzielić pierwszej pomocy przy silnym krwawieniu z rany przedramienia?
++ Ucisnąć ranę jałowym opatrunkiem i założyć opatrunek uciskowy
+- Polać ranę spirytusem
+- Usunąć z rany wszystkie głęboko tkwiące ciała obce
+- Pozostawić ranę bez opatrunku
+! Bezpośredni ucisk na ranę tamuje krwawienie. Ratujący powinien używać rękawiczek jednorazowych.
+
+? Na czym polega instruktaż stanowiskowy?
++ Na zapoznaniu pracownika z zagrożeniami i sposobami bezpiecznej pracy na konkretnym stanowisku
+- Na nauce obsługi komputera
+- Na zapoznaniu z historią firmy
+- Na egzaminie na prawo jazdy
+! Instruktaż stanowiskowy prowadzi przełożony albo wyznaczony pracownik przed dopuszczeniem do pracy na danym stanowisku.
+
+? Którym przedmiotem można odsunąć przewód pod napięciem (nN) od poszkodowanego?
++ Suchym drewnianym kijem
+- Metalowym prętem
+- Mokrym ręcznikiem
+- Aluminiową drabiną
+! Suche drewno słabo przewodzi prąd. Przedmioty metalowe i mokre przewodzą i narażają ratującego na porażenie.
+
+? Kto odpowiada za stan bezpieczeństwa i higieny pracy w zakładzie?
++ Pracodawca
+- Wyłącznie pracownik służby BHP
+- Państwowa Inspekcja Pracy
+- Każdy pracownik tylko za siebie
+! Według art. 207 Kodeksu pracy za stan BHP odpowiada pracodawca. Służba BHP mu doradza i kontroluje warunki pracy.
+
+? Przed czym chronią okulary ochronne podczas prac elektrycznych?
++ Przed odpryskami, pyłem oraz, w wersji z filtrem, przed promieniowaniem łuku
+- Przed porażeniem prądem
+- Przed hałasem
+- Przed przegrzaniem organizmu
+! Okulary chronią oczy przed uszkodzeniami mechanicznymi i jasnym światłem łuku. Nie chronią przed porażeniem.
+
+? Jakie zadanie ma nadzorujący przy pracy na polecenie?
++ Nadzoruje bezpieczeństwo pracowników, którzy nie mają wymaganych kwalifikacji albo nie należą do personelu zakładu
+- Zawsze wykonuje całą pracę za zespół
+- Zajmuje się wyłącznie zamawianiem materiałów
+- Odpowiada wyłącznie za dokumentację finansową
+! Nadzorujący pilnuje np. pracowników firm budowlanych pracujących w pobliżu urządzeń elektroenergetycznych.
