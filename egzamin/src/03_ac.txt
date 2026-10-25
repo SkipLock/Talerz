@@ -1,0 +1,221 @@
+## ac | Prąd przemienny i układy trójfazowe | Prąd zmienny | 02,05
+
+? Ile wynosi okres napięcia sieciowego o częstotliwości 50 Hz?
++ 20 ms
+- 2 ms
+- 10 ms
+- 50 ms
+! T = 1 / f = 1 / 50 Hz = 0,02 s = 20 ms.
+
+? Ile wynosi wartość maksymalna (szczytowa) napięcia sieciowego o wartości skutecznej 230 V?
++ Około 325 V
+- 230 V
+- Około 163 V
+- 400 V
+! Dla przebiegu sinusoidalnego Um = √2 · U ≈ 1,41 · 230 V ≈ 325 V.
+
+? Jakie napięcie występuje między dwoma przewodami fazowymi w sieci 230/400 V?
++ 400 V
+- 133 V
+- 230 V
+- 690 V
+! Napięcie międzyprzewodowe jest √3 razy większe od fazowego: 230 V · 1,73 ≈ 400 V.
+
+? Ile wynosi reaktancja cewki o indukcyjności 0,1 H przy częstotliwości 50 Hz?
++ 31,4 Ω
+- 5 Ω
+- 15,7 Ω
+- 314 Ω
+! XL = 2πfL = 2 · 3,14 · 50 · 0,1 ≈ 31,4 Ω.
+
+? Ile wynosi reaktancja kondensatora 100 µF przy częstotliwości 50 Hz?
++ 31,8 Ω
+- 0,0314 Ω
+- 3,18 Ω
+- 318 Ω
+! XC = 1 / (2πfC) = 1 / (314 · 0,0001) ≈ 31,8 Ω.
+
+? Jak zmieni się reaktancja kondensatora, gdy częstotliwość napięcia wzrośnie dwukrotnie?
++ Zmaleje dwukrotnie
+- Wzrośnie dwukrotnie
+- Nie zmieni się
+- Wzrośnie czterokrotnie
+! XC = 1 / (2πfC), więc reaktancja kondensatora jest odwrotnie proporcjonalna do częstotliwości. Reaktancja cewki rośnie z częstotliwością.
+
+? Jak przesunięty jest prąd względem napięcia w obwodzie z idealną cewką?
++ Prąd opóźnia się względem napięcia o 90°
+- Prąd wyprzedza napięcie o 90°
+- Prąd i napięcie są w fazie
+- Prąd opóźnia się o 180°
+! W idealnej cewce prąd jest opóźniony o ćwierć okresu (90°). W idealnym kondensatorze prąd wyprzedza napięcie o 90°.
+
+? Rysunek przedstawia przebiegi napięcia u (linia ciągła) i prądu i (linia przerywana) odbiornika. Jaki charakter ma odbiornik?
+@ wave:ui|60
++ Rezystancyjno-indukcyjny
+- Czysto rezystancyjny
+- Rezystancyjno-pojemnościowy
+- Czysto pojemnościowy
+! Prąd osiąga maksimum później niż napięcie, ale mniej niż o ćwierć okresu. Jest więc opóźniony, czyli odbiornik ma charakter RL.
+
+? Ile wynosi współczynnik mocy odbiornika, który pobiera moc czynną 800 W i moc pozorną 1000 VA?
++ 0,8
+- 0,2
+- 0,64
+- 1,25
+! cos φ = P / S = 800 W / 1000 VA = 0,8.
+
+? W jakich jednostkach wyraża się moc bierną?
++ W warach (var)
+- W watach (W)
+- W woltoamperach (VA)
+- W dżulach (J)
+! Moc czynną podaje się w watach, pozorną w woltoamperach, a bierną w warach.
+
+? Silnik jednofazowy pobiera z sieci 230 V prąd 5 A przy cos φ = 0,8. Jaką moc czynną pobiera?
++ 920 W
+- 690 W
+- 1150 W
+- 1437 W
+! P = U · I · cos φ = 230 · 5 · 0,8 = 920 W.
+
+? Jaką moc czynną pobiera symetryczny odbiornik trójfazowy zasilany napięciem 400 V, jeśli prąd przewodowy wynosi 10 A, a cos φ = 0,9?
++ 6,2 kW
+- 2,1 kW
+- 3,6 kW
+- 10,8 kW
+! P = √3 · U · I · cos φ = 1,73 · 400 · 10 · 0,9 ≈ 6235 W ≈ 6,2 kW.
+
+? Jaki jest związek między prądem przewodowym a fazowym w odbiorniku połączonym w trójkąt?
++ Prąd przewodowy jest √3 razy większy od fazowego
+- Prąd przewodowy jest równy fazowemu
+- Prąd fazowy jest √3 razy większy od przewodowego
+- Prąd przewodowy jest 3 razy większy od fazowego
+! W trójkącie napięcie na fazie odbiornika równa się napięciu międzyprzewodowemu, a prąd przewodowy jest √3 razy większy od fazowego. W gwieździe jest odwrotnie.
+
+? Jak połączony jest odbiornik trójfazowy przedstawiony na rysunku?
+@ uklad:gwiazda
++ W gwiazdę
+- W trójkąt
+- W zygzak
+- Szeregowo
+! Każda impedancja jednym końcem łączy się z przewodem fazowym, a drugie końce tworzą wspólny punkt gwiazdowy.
+
+? Jak połączony jest odbiornik trójfazowy przedstawiony na rysunku?
+@ uklad:trojkat
++ W trójkąt
+- W gwiazdę
+- W gwiazdę z przewodem neutralnym
+- Równolegle z jednym przewodem fazowym
+! Impedancje tworzą zamknięty trójkąt, a przewody fazowe dochodzą do jego wierzchołków. Każda impedancja jest pod napięciem międzyprzewodowym.
+
+? Jaki prąd płynie w przewodzie neutralnym przy idealnie symetrycznym obciążeniu odbiornika połączonego w gwiazdę?
++ 0 A
+- Taki sam jak prąd fazowy
+- √3 razy większy niż prąd fazowy
+- Trzy razy większy niż prąd fazowy
+! Przy symetrycznym obciążeniu suma trzech prądów przesuniętych o 120° jest równa zeru, więc przewodem N prąd nie płynie.
+
+? Ile razy wzrośnie moc odbiornika trójfazowego, jeżeli jego impedancje przełączymy z gwiazdy w trójkąt przy tym samym napięciu sieci?
++ 3 razy
+- √3 razy
+- 2 razy
+- Nie zmieni się
+! W trójkącie na każdej impedancji jest napięcie √3 razy większe, więc prąd też √3 razy większy. Moc rośnie (√3)² = 3 razy.
+
+? Ile wynosi moc pozorna S odbiornika, który pobiera moc czynną P = 3 kW i moc bierną Q = 4 kvar?
++ 5 kVA
+- 1 kVA
+- 7 kVA
+- 12 kVA
+! S = √(P² + Q²) = √(9 + 16) = 5 kVA (trójkąt mocy).
+
+? Co charakteryzuje szeregowy obwód RLC w stanie rezonansu?
++ Reaktancje cewki i kondensatora są równe, a impedancja jest najmniejsza i równa R
+- Impedancja obwodu jest największa
+- Prąd w obwodzie jest równy zeru
+- Napięcie na rezystorze jest równe zeru
+! W rezonansie szeregowym XL = XC, reaktancje się znoszą, Z = R, a prąd osiąga maksimum.
+
+? Jaką wartość napięcia przemiennego wskazuje typowy multimetr ustawiony na pomiar V~?
++ Wartość skuteczną
+- Wartość szczytową
+- Wartość międzyszczytową
+- Wartość chwilową
+! Mierniki napięcia przemiennego są wyskalowane w wartościach skutecznych. Napięcie 230 V w gniazdku to właśnie wartość skuteczna.
+
+? Ile wynosi impedancja dwójnika szeregowego RL, jeśli R = 30 Ω i XL = 40 Ω?
++ 50 Ω
+- 10 Ω
+- 70 Ω
+- 1200 Ω
+! Z = √(R² + XL²) = √(900 + 1600) = 50 Ω.
+
+? Ile wynosi współczynnik mocy odbiornika o rezystancji 30 Ω i reaktancji indukcyjnej 40 Ω połączonych szeregowo?
++ 0,6
+- 0,75
+- 0,8
+- 1,33
+! Z = √(30² + 40²) = 50 Ω, a cos φ = R / Z = 30 / 50 = 0,6.
+
+? Ile wynosi pulsacja (częstotliwość kątowa) napięcia o częstotliwości 50 Hz?
++ 314 rad/s
+- 50 rad/s
+- 100 rad/s
+- 157 rad/s
+! ω = 2πf = 2 · 3,14 · 50 ≈ 314 rad/s.
+
+? O jaki kąt są przesunięte względem siebie napięcia fazowe w sieci trójfazowej?
++ 120°
+- 60°
+- 90°
+- 180°
+! Trzy napięcia fazowe mają jednakowe wartości skuteczne i są przesunięte o 120°, czyli o jedną trzecią okresu.
+
+? Co oznacza współczynnik mocy cos φ = 1?
++ Odbiornik pobiera wyłącznie moc czynną, a prąd jest w fazie z napięciem
+- Odbiornik pobiera wyłącznie moc bierną
+- Odbiornik nie pobiera żadnej mocy
+- Prąd wyprzedza napięcie o 90°
+! Przy cos φ = 1 (np. grzałka) moc pozorna równa się mocy czynnej, a moc bierna wynosi zero.
+
+? Dlaczego w zakładach przemysłowych kompensuje się moc bierną indukcyjną?
++ Aby zmniejszyć prądy w sieci, straty energii i opłaty za energię bierną
+- Aby zwiększyć moc czynną silników
+- Aby podwyższyć częstotliwość napięcia
+- Aby obniżyć napięcie zasilania odbiorników
+! Moc bierna nie wykonuje pracy, ale obciąża przewody i transformatory. Kondensatory dostarczają ją na miejscu, więc z sieci płynie mniejszy prąd.
+
+? Grzejnik trójfazowy ma trzy jednakowe elementy po 50 Ω połączone w gwiazdę i zasilane z sieci 400 V. Jaki prąd płynie w przewodzie fazowym?
++ 4,6 A
+- 2,7 A
+- 8 A
+- 13,8 A
+! W gwieździe na każdym elemencie jest napięcie fazowe 230 V, więc I = 230 V / 50 Ω = 4,6 A.
+
+? Te same trzy elementy grzejne po 50 Ω połączono w trójkąt (sieć 400 V). Jaki prąd płynie w przewodzie zasilającym?
++ 13,9 A
+- 4,6 A
+- 8 A
+- 24 A
+! Prąd fazowy w trójkącie: 400 V / 50 Ω = 8 A. Prąd przewodowy jest √3 razy większy: 1,73 · 8 ≈ 13,9 A, czyli trzy razy więcej niż w gwieździe.
+
+? Jak nazywa się wartość prądu przemiennego, która wydziela w rezystorze tyle samo ciepła co prąd stały o tej samej wartości?
++ Wartość skuteczna
+- Wartość średnia
+- Wartość szczytowa
+- Wartość chwilowa
+! Tak definiuje się wartość skuteczną. Dla sinusoidy wynosi ona Um / √2.
+
+? Jaką moc bierną pobiera odbiornik zasilany napięciem 230 V, który pobiera prąd 10 A przy cos φ = 0,8?
++ 1380 var
+- 1840 var
+- 2300 var
+- 2875 var
+! sin φ = √(1 − 0,8²) = 0,6, więc Q = U · I · sin φ = 230 · 10 · 0,6 = 1380 var.
+
+? Z czego wynika moc bierna pobierana przez silniki indukcyjne?
++ Z potrzeby wytworzenia pola magnetycznego w obwodzie magnetycznym silnika
+- Z tarcia w łożyskach
+- Ze strat w uzwojeniach
+- Z oporu powietrza wirnika
+! Prąd magnesujący, potrzebny do wytworzenia strumienia w rdzeniu, jest opóźniony o 90° względem napięcia. Odpowiada mu moc bierna indukcyjna.

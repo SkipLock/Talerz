@@ -1,0 +1,176 @@
+## osw | Oświetlenie i odbiorniki energii | Oświetlenie | 02
+
+? W jakich jednostkach mierzy się natężenie oświetlenia?
++ W luksach (lx)
+- W lumenach (lm)
+- W kandelach (cd)
+- W watach (W)
+! Natężenie oświetlenia to strumień świetlny padający na powierzchnię: 1 lx = 1 lm/m².
+
+? Jaką wielkość wyraża się w lumenach?
++ Strumień świetlny
+- Natężenie oświetlenia
+- Światłość
+- Luminancję
+! Lumen (lm) to jednostka strumienia świetlnego, czyli ilości światła wysyłanego przez źródło.
+
+? Co oznacza skuteczność świetlna źródła światła?
++ Stosunek strumienia świetlnego do pobieranej mocy, w lm/W
+- Czas pracy źródła do wymiany
+- Barwę światła w kelwinach
+- Kąt rozsyłu światła
+! Skuteczność świetlna mówi, ile lumenów daje źródło z każdego wata. Dla LED to zwykle ponad 100 lm/W, dla żarówki tradycyjnej około 10–15 lm/W.
+
+? Które źródło światła ma najwyższą skuteczność świetlną?
++ Dioda LED
+- Żarówka tradycyjna
+- Żarówka halogenowa
+- Lampa rtęciowa
+! Współczesne źródła LED osiągają ponad 100–150 lm/W, żarówka tradycyjna 10–15 lm/W, halogenowa około 15–25 lm/W.
+
+? Jaką barwę ma światło o temperaturze barwowej 2700 K?
++ Ciepłą białą
+- Zimną białą (dzienną)
+- Neutralną białą
+- Niebieską
+! Im niższa temperatura barwowa, tym cieplejsze światło: 2700–3000 K to barwa ciepła, około 4000 K neutralna, 5000–6500 K zimna.
+
+? Co określa wskaźnik oddawania barw Ra?
++ Jak wiernie źródło światła oddaje barwy oświetlanych przedmiotów
+- Moc źródła światła
+- Natężenie oświetlenia w luksach
+- Trwałość źródła w godzinach
+! Ra = 100 oznacza oddawanie barw jak w świetle odniesienia. W pomieszczeniach pracy wymaga się zwykle Ra ≥ 80.
+
+? Jaką rolę pełni statecznik (dławik) w oprawie ze świetlówką?
++ Ogranicza prąd lampy i razem z zapłonnikiem umożliwia jej zapłon
+- Podwyższa napięcie sieci do 400 V
+- Kompensuje moc bierną
+- Zmienia barwę światła
+! Świetlówka ma ujemną charakterystykę, więc bez elementu ograniczającego prąd uległaby zniszczeniu. Dławik daje też impuls napięcia przy zapłonie.
+
+? Do czego służy kondensator dołączony równolegle do zasilania oprawy świetlówkowej z dławikiem?
++ Do kompensacji mocy biernej indukcyjnej dławika
+- Do zapłonu świetlówki
+- Do ograniczenia prądu lampy
+- Do usunięcia migotania
+! Dławik pobiera dużą moc bierną, a kondensator poprawia współczynnik mocy oprawy.
+
+? Jak ograniczyć efekt stroboskopowy przy oświetleniu świetlówkami z dławikami w hali z wirującymi maszynami?
++ Zasilić sąsiednie oprawy z różnych faz albo zastosować stateczniki elektroniczne
+- Zastosować świetlówki o większej mocy
+- Zmniejszyć liczbę opraw
+- Zastosować świetlówki o barwie zimnej
+! Strumień świetlny świetlówki z dławikiem pulsuje z częstotliwością 100 Hz. Zasilanie z różnych faz przesuwa pulsacje, a statecznik elektroniczny zasila lampę prądem o wysokiej częstotliwości.
+
+? Na czym polega niebezpieczny efekt stroboskopowy?
++ Wirujące części maszyn przy pulsującym oświetleniu mogą wydawać się nieruchome
+- Natężenie oświetlenia gwałtownie rośnie
+- Rośnie temperatura barwowa światła
+- W sieci pojawiają się przepięcia
+! Pracownik może uznać obracające się wrzeciono za zatrzymane i sięgnąć do niego ręką.
+
+? Którym przyrządem mierzy się natężenie oświetlenia?
++ Luksomierzem
+- Megaomomierzem
+- Watomierzem
+- Tachometrem
+! Luksomierz ma fotoogniwo z filtrem dopasowującym czułość do oka i wskazuje natężenie oświetlenia w luksach.
+
+? Jaki strumień świetlny daje źródło LED o mocy 10 W i skuteczności świetlnej 100 lm/W?
++ 1000 lm
+- 10 lm
+- 100 lm
+- 10000 lm
+! Φ = η · P = 100 lm/W · 10 W = 1000 lm.
+
+? Jakie natężenie oświetlenia daje strumień 800 lm rozłożony równomiernie na powierzchni 4 m²?
++ 200 lx
+- 50 lx
+- 400 lx
+- 3200 lx
+! E = Φ / S = 800 lm / 4 m² = 200 lx.
+
+? Które urządzenie automatycznie załącza oświetlenie po zmroku?
++ Wyłącznik zmierzchowy
+- Automat schodowy
+- Przekaźnik termiczny
+- Wyłącznik różnicowoprądowy
+! Wyłącznik zmierzchowy ma czujnik światła i załącza obwód, gdy natężenie oświetlenia spadnie poniżej nastawionego progu.
+
+? Do czego służy automat schodowy?
++ Do załączania oświetlenia klatki schodowej na nastawiony czas po naciśnięciu przycisku
+- Do sterowania oświetleniem z dwóch miejsc łącznikami schodowymi
+- Do regulacji jasności
+- Do pomiaru zużycia energii na klatce
+! Po naciśnięciu dowolnego przycisku automat załącza światło i po nastawionym czasie sam je wyłącza.
+
+? Czym zasila się diody LED dużej mocy w oprawach oświetleniowych?
++ Zasilaczem (driverem) o stabilizowanym prądzie
+- Bezpośrednio z sieci 230 V, bez dodatkowych elementów
+- Przez dławik i zapłonnik
+- Transformatorem bez stabilizacji
+! Jasność i trwałość diod zależą od prądu. Zasilacz prądowy utrzymuje stały prąd niezależnie od temperatury i rozrzutu napięć diod.
+
+? Który grzejnik elektryczny gromadzi ciepło w nocy, przy tańszej taryfie, i oddaje je w dzień?
++ Piec akumulacyjny
+- Termowentylator
+- Promiennik podczerwieni
+- Grzejnik konwektorowy
+! Piec akumulacyjny ma rdzeń z materiału o dużej pojemności cieplnej, nagrzewany energią z tańszej strefy taryfy, np. G12.
+
+? Jaką moc ma grzałka bojlera, która pobiera z sieci 230 V prąd 8,7 A?
++ Około 2 kW
+- Około 26 W
+- Około 200 W
+- Około 20 kW
+! P = U · I = 230 V · 8,7 A ≈ 2000 W.
+
+? Co oznacza oznaczenie E27 na źródle światła?
++ Rodzaj trzonka: gwint Edisona o średnicy 27 mm
+- Moc 27 W
+- Klasę efektywności energetycznej E
+- Temperaturę barwową 2700 K
+! E27 i E14 to trzonki gwintowane o średnicy 27 i 14 mm. GU10 czy G9 to trzonki wtykowe.
+
+? Jak należy przyłączyć przewody do oprawki gwintowanej E27?
++ Przewód fazowy (od łącznika) do styku środkowego, a neutralny do gwintu
+- Przewód fazowy do gwintu, a neutralny do styku środkowego
+- Przewód ochronny do styku środkowego
+- Dowolnie, bo żarówka świeci w obu przypadkach
+! Gwint jest najłatwiej dostępny podczas wymiany żarówki. Gdy jest połączony z N, ryzyko porażenia jest mniejsze.
+
+? Czym oprawa oświetleniowa IP65 różni się od oprawy IP20?
++ Jest pyłoszczelna i odporna na strugi wody
+- Ma większy strumień świetlny
+- Może pracować tylko wewnątrz budynków
+- Ma niższą temperaturę barwową
+! IP65 to pełna ochrona przed pyłem i strugą wody. IP20 chroni tylko przed dotknięciem palcem i nie ma ochrony przed wodą.
+
+? Do czego służy czujnik ruchu w instalacji oświetleniowej?
++ Do załączania oświetlenia, gdy wykryje obecność ludzi, i wyłączania po nastawionym czasie
+- Do mierzenia natężenia oświetlenia w luksach
+- Do ochrony obwodu przed przeciążeniem
+- Do kompensacji mocy biernej
+! Czujniki ruchu (najczęściej na podczerwień, PIR) oszczędzają energię w korytarzach, garażach i na zewnątrz budynków.
+
+? Dlaczego przy wymianie żarówek tradycyjnych na LED w obwodzie ze ściemniaczem trzeba sprawdzić oznaczenia źródeł?
++ Bo nie każde źródło LED nadaje się do ściemniania; potrzebne są źródła z oznaczeniem „ściemnialne”
+- Bo LED-y zawsze świecą jaśniej po ściemnieniu
+- Bo ściemniacz zwiększa napięcie sieci
+- Bo LED-y wymagają przewodu PEN
+! Zwykłe źródła LED ze ściemniaczem mogą migotać, buczeć lub szybko się uszkodzić.
+
+? Która wielkość opisuje, jak silnie świeci powierzchnia źródła lub oświetlanego przedmiotu w danym kierunku (wpływa na olśnienie)?
++ Luminancja
+- Strumień świetlny
+- Skuteczność świetlna
+- Temperatura barwowa
+! Luminancję wyraża się w cd/m². Zbyt duża luminancja opraw w polu widzenia powoduje olśnienie.
+
+? Jaką funkcję pełni zapłonnik (starter) w oprawie świetlówkowej z dławikiem?
++ Na chwilę zamyka obwód elektrod, aby je podgrzać, a po otwarciu wywołuje impuls napięcia zapłonowego w dławiku
+- Stale ogranicza prąd lampy
+- Kompensuje moc bierną
+- Chroni oprawę przed przepięciami atmosferycznymi
+! Po rozwarciu styków zapłonnika dławik indukuje wysokie napięcie, które zapala wyładowanie w świetlówce.

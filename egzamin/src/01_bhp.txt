@@ -1,0 +1,247 @@
+## bhp | BHP, ochrona przeciwpożarowa i pierwsza pomoc | BHP | 02,05
+
+? Który środek gaśniczy można stosować do gaszenia urządzeń elektrycznych pod napięciem do 1000 V?
++ Gaśnicę proszkową lub śniegową (CO₂)
+- Gaśnicę pianową
+- Wodę z hydrantu wewnętrznego
+- Piasek zwilżony wodą
+! Proszek gaśniczy i dwutlenek węgla nie przewodzą prądu, dlatego takie gaśnice są dopuszczone do urządzeń pod napięciem do 1000 V. Woda i piana przewodzą prąd.
+
+? Co należy zrobić w pierwszej kolejności, gdy poszkodowany nadal jest pod działaniem prądu elektrycznego?
++ Uwolnić go spod działania prądu, najlepiej wyłączając napięcie
+- Rozpocząć resuscytację krążeniowo-oddechową
+- Ułożyć go w pozycji bocznej ustalonej
+- Podać mu coś do picia
+! Najpierw trzeba przerwać przepływ prądu, bo inaczej ratujący sam może zostać porażony. Dopiero potem ocenia się stan poszkodowanego.
+
+? W jakim stosunku wykonuje się uciśnięcia klatki piersiowej i oddechy ratownicze podczas resuscytacji osoby dorosłej?
++ 30 uciśnięć na 2 oddechy
+- 15 uciśnięć na 2 oddechy
+- 5 uciśnięć na 1 oddech
+- 30 uciśnięć na 5 oddechów
+! U dorosłych wykonuje się cykle: 30 uciśnięć klatki piersiowej, potem 2 oddechy ratownicze.
+
+? Z jaką częstotliwością należy uciskać klatkę piersiową podczas resuscytacji osoby dorosłej?
++ 100–120 razy na minutę
+- 30–40 razy na minutę
+- 60–80 razy na minutę
+- 150–180 razy na minutę
+! Zalecane tempo to 100–120 uciśnięć na minutę, na głębokość około 5–6 cm, na środku klatki piersiowej.
+
+? Który numer alarmowy obowiązuje we wszystkich krajach Unii Europejskiej?
++ 112
+- 997
+- 998
+- 999
+! 112 to ogólnoeuropejski numer alarmowy. W Polsce działają też numery 999 (pogotowie ratunkowe), 998 (straż pożarna) i 997 (policja).
+
+? Która kolejność czynności przy przygotowaniu miejsca pracy przy urządzeniu wyłączonym spod napięcia jest prawidłowa?
++ Wyłączyć napięcie, zabezpieczyć przed ponownym załączeniem, sprawdzić brak napięcia, uziemić i zewrzeć, osłonić sąsiednie części czynne
+- Sprawdzić brak napięcia, wyłączyć napięcie, uziemić i zewrzeć, zabezpieczyć przed ponownym załączeniem, osłonić części czynne
+- Uziemić i zewrzeć, wyłączyć napięcie, sprawdzić brak napięcia, zabezpieczyć przed ponownym załączeniem, osłonić części czynne
+- Wyłączyć napięcie, uziemić i zewrzeć, sprawdzić brak napięcia, osłonić części czynne, zabezpieczyć przed ponownym załączeniem
+! To pięć zasad bezpiecznej pracy. Uziemiać i zwierać wolno dopiero po sprawdzeniu, że napięcia nie ma.
+
+? Do czego służy wskaźnik napięcia przy pracach przy urządzeniach elektrycznych?
++ Do sprawdzenia braku napięcia przed rozpoczęciem pracy
+- Do pomiaru rezystancji izolacji
+- Do pomiaru impedancji pętli zwarcia
+- Do uziemiania wyłączonych przewodów
+! Brak napięcia sprawdza się wskaźnikiem napięcia bezpośrednio przed pracą, w miejscu jej wykonywania, na wszystkich biegunach.
+
+? Który zestaw zalicza się do sprzętu izolacyjnego używanego przy urządzeniach elektroenergetycznych?
++ Rękawice dielektryczne, chodniki izolacyjne, narzędzia izolowane
+- Rękawice skórzane, kask, obuwie z metalowym podnoskiem
+- Okulary ochronne, nauszniki, półmaska przeciwpyłowa
+- Szelki bezpieczeństwa, linka asekuracyjna, kask
+! Sprzęt izolacyjny oddziela człowieka od części pod napięciem albo od ziemi. Pozostałe zestawy chronią przed innymi zagrożeniami: mechanicznymi, hałasem, upadkiem z wysokości.
+
+? Co oznacza symbol przedstawiony na rysunku, umieszczony na rękojeści wkrętaka?
+@ sym:izolowane1000
++ Narzędzie izolowane do pracy pod napięciem do 1000 V AC
+- Narzędzie przeznaczone wyłącznie do obwodów 1000 V DC
+- Narzędzie do pomiaru napięcia do 1000 V
+- Narzędzie, którego nie wolno używać pod napięciem
+! Podwójny trójkąt z napisem 1000 V oznacza narzędzie do prac pod napięciem według PN-EN 60900, czyli do 1000 V prądu przemiennego (1500 V prądu stałego).
+
+? Który znak ostrzega przed napięciem elektrycznym?
++ @sym:uwaga_napiecie
+- @sym:klasa2
+- @sym:uziemienie_ochronne
+- @sym:klasa3
+! Żółty trójkąt z czarną błyskawicą to znak „Uwaga, napięcie elektryczne”. Pozostałe symbole oznaczają II i III klasę ochronności oraz zacisk uziemienia ochronnego.
+
+? Jaki prąd przemienny 50 Hz płynący przez ciało człowieka uważa się w przybliżeniu za próg samouwolnienia?
++ Około 10 mA
+- Około 0,5 mA
+- Około 100 mA
+- Około 1 A
+! Powyżej około 10 mA skurcz mięśni może uniemożliwić puszczenie trzymanego przewodu. Próg odczuwania to około 0,5 mA.
+
+? Od jakiej wartości prądu przemiennego płynącego przez ciało człowieka wyraźnie rośnie ryzyko migotania komór serca?
++ Od kilkudziesięciu miliamperów, przyjmuje się około 30 mA
+- Od kilku mikroamperów
+- Od około 1 mA
+- Dopiero od kilku amperów
+! Dlatego wyłączniki różnicowoprądowe stosowane jako ochrona uzupełniająca mają znamionowy prąd różnicowy 30 mA.
+
+? Która droga przepływu prądu przez ciało człowieka stwarza największe zagrożenie dla serca?
++ Lewa ręka – klatka piersiowa
+- Prawa ręka – plecy
+- Stopa – stopa
+- Dłoń – łokieć tej samej ręki
+! Najgroźniejsze są drogi, które prowadzą przez serce. Według IEC 60479 droga lewa ręka – klatka piersiowa ma największy współczynnik prądu serca.
+
+? Jaki dokument uprawnia do wykonywania prac eksploatacyjnych przy urządzeniach elektroenergetycznych?
++ Świadectwo kwalifikacyjne w zakresie eksploatacji (E) dla danej grupy urządzeń
+- Zaświadczenie o ukończeniu szkolenia wstępnego BHP
+- Wyłącznie świadectwo w zakresie dozoru (D)
+- Prawo jazdy kategorii B
+! Do obsługi, konserwacji, napraw, montażu i pomiarów potrzebne jest świadectwo E dla odpowiedniej grupy, np. grupy 1 obejmującej urządzenia elektroenergetyczne.
+
+? Jak długo jest ważne świadectwo kwalifikacyjne do eksploatacji urządzeń elektroenergetycznych?
++ 5 lat od dnia wydania
+- 1 rok od dnia wydania
+- 3 lata od dnia wydania
+- Bezterminowo
+! Według Prawa energetycznego (art. 54) świadectwo kwalifikacyjne traci ważność po upływie 5 lat od dnia jego wydania.
+
+? Ile osób co najmniej powinno wykonywać prace w warunkach szczególnego zagrożenia przy urządzeniach elektroenergetycznych, jeśli instrukcja nie stanowi inaczej?
++ Dwie
+- Jedna
+- Trzy
+- Cztery
+! Praca w warunkach szczególnego zagrożenia, np. pod napięciem, wymaga co najmniej dwóch osób, żeby jedna mogła natychmiast pomóc drugiej.
+
+? Jak bezpiecznie uwolnić poszkodowanego spod działania prądu w instalacji niskiego napięcia, gdy nie da się szybko wyłączyć zasilania?
++ Stojąc na suchym, izolującym podłożu, odciągnąć go za suchą odzież lub odsunąć przewód suchym drewnianym przedmiotem
+- Chwycić go gołymi rękami za nadgarstki i mocno szarpnąć
+- Polać go wodą, żeby przerwać przepływ prądu
+- Przeciąć przewód metalowymi nożycami bez izolacji
+! Ratujący musi odizolować się od ziemi i od części pod napięciem. Nie dotyka skóry poszkodowanego i używa przedmiotów nieprzewodzących.
+
+? Jaki kolor ma element sterowniczy urządzenia zatrzymania awaryjnego?
++ Czerwony, na żółtym tle
+- Zielony, na białym tle
+- Niebieski, na szarym tle
+- Czarny, na pomarańczowym tle
+! Przycisk zatrzymania awaryjnego jest czerwony, a tło za nim (o ile występuje) żółte, zgodnie z PN-EN ISO 13850 i PN-EN 60204-1.
+
+? Jak nazywa się pracę, podczas której pracownik może znaleźć się w strefie zbliżenia do nieosłoniętych części pod napięciem, ale ich nie dotyka?
++ Praca w pobliżu napięcia
+- Praca pod napięciem
+- Praca przy urządzeniu wyłączonym spod napięcia
+- Praca kontrolno-pomiarowa
+! Pracą pod napięciem jest dopiero dotykanie części czynnych lub wejście w strefę prac pod napięciem. Praca w strefie zbliżenia to praca w pobliżu napięcia.
+
+? Jaką pozycję należy nadać nieprzytomnemu poszkodowanemu, który prawidłowo oddycha?
++ Pozycję boczną ustaloną
+- Pozycję siedzącą z głową odchyloną do tyłu
+- Na brzuchu, z rękami wzdłuż tułowia
+- Na plecach, z uniesionymi nogami
+! Pozycja boczna ustalona chroni drogi oddechowe przed zachłyśnięciem i zapadaniem się języka. Oddech trzeba nadal kontrolować.
+
+? Co należy zrobić z osobą porażoną prądem, która po wypadku czuje się dobrze?
++ Skierować ją do lekarza, bo skutki porażenia mogą się ujawnić później
+- Pozwolić jej wrócić do pracy, skoro nie ma objawów
+- Podać jej lek przeciwbólowy i odesłać do domu
+- Polecić jej odpocząć kilka minut i dokończyć pracę
+! Po porażeniu mogą wystąpić opóźnione zaburzenia rytmu serca i oparzenia wewnętrzne, dlatego poszkodowanego zawsze powinien zbadać lekarz.
+
+? Jak należy zabezpieczyć wyłączony łącznik przed ponownym załączeniem podczas pracy przy instalacji?
++ Zablokować napęd (np. kłódką) lub wyjąć wkładki i wywiesić tablicę „Nie załączać! Pracują ludzie”
+- Wystarczy ustnie poprosić współpracowników, aby nie załączali
+- Zakleić dźwignię łącznika taśmą izolacyjną
+- Odłączyć przewód ochronny PE od łącznika
+! Zabezpieczenie polega na mechanicznym zablokowaniu napędu albo usunięciu wkładek bezpiecznikowych oraz wywieszeniu tablicy ostrzegawczej.
+
+? Jakie drabiny należy stosować przy pracach przy urządzeniach elektrycznych lub w ich pobliżu?
++ Wykonane z materiałów nieprzewodzących, np. z tworzywa wzmocnionego włóknem szklanym
+- Aluminiowe, bo są lekkie
+- Stalowe, bo są najbardziej wytrzymałe
+- Dowolne, jeśli pracownik ma rękawice robocze
+! Drabina z materiału nieprzewodzącego nie stworzy drogi przepływu prądu do ziemi, gdy pracownik dotknie części pod napięciem.
+
+? Kto ma obowiązek zapewnić pracownikom środki ochrony indywidualnej?
++ Pracodawca, nieodpłatnie
+- Pracownik, na własny koszt
+- Państwowa Inspekcja Pracy
+- Producent maszyn używanych w zakładzie
+! Według Kodeksu pracy pracodawca dostarcza nieodpłatnie środki ochrony indywidualnej odpowiednie do zagrożeń na stanowisku.
+
+? Pożary jakich materiałów można gasić gaśnicą oznaczoną literami A, B, C?
++ Ciał stałych, cieczy palnych i gazów
+- Wyłącznie metali lekkich
+- Wyłącznie tłuszczów kuchennych
+- Wyłącznie ciał stałych
+! Grupy pożarów: A – ciała stałe, B – ciecze i topiące się ciała stałe, C – gazy, D – metale, F – tłuszcze i oleje w urządzeniach kuchennych.
+
+? Przed jakim zagrożeniem chronią przyłbica i odzież łukoochronna?
++ Przed skutkami termicznymi łuku elektrycznego
+- Przed porażeniem przy dotyku bezpośrednim
+- Przed polem elektromagnetycznym
+- Przed hałasem w rozdzielni
+! Łuk elektryczny wydziela ogromne ilości ciepła i promieniowania. Odzież łukoochronna i przyłbica ograniczają oparzenia ciała i oczu.
+
+? Jaka jest dopuszczalna masa przedmiotu przenoszonego ręcznie przez jednego mężczyznę przy pracy stałej?
++ 30 kg
+- 12 kg
+- 50 kg
+- 75 kg
+! Przy pracy stałej mężczyzna może ręcznie przenosić przedmioty do 30 kg, a przy pracy dorywczej do 50 kg. Dla kobiet limity wynoszą 12 kg i 20 kg.
+
+? Kiedy pracownik ma prawo powstrzymać się od wykonywania pracy?
++ Gdy warunki pracy nie odpowiadają przepisom BHP i stwarzają bezpośrednie zagrożenie dla jego zdrowia lub życia
+- Zawsze, gdy praca jest dla niego nieprzyjemna
+- Tylko po uzyskaniu zgody inspektora pracy
+- Nigdy, polecenie przełożonego trzeba wykonać
+! Daje mu to art. 210 Kodeksu pracy. Pracownik musi niezwłocznie zawiadomić o tym przełożonego.
+
+? W jakiej kolejności zakłada się przenośny uziemiacz na wyłączone przewody?
++ Najpierw zacisk uziemiający łączy się z uziomem, potem zakłada się zaciski na przewody
+- Najpierw zaciski zakłada się na przewody, potem łączy z uziomem
+- Kolejność nie ma znaczenia
+- Najpierw zwiera się przewody ręką w rękawicy roboczej
+! Uziemiacz najpierw łączy się z ziemią, a dopiero potem z przewodami. Zdejmuje się go w odwrotnej kolejności.
+
+? Kiedy wolno zdjąć uziemiacze założone na czas pracy?
++ Po zakończeniu pracy, gdy ludzie i narzędzia opuścili miejsce pracy, na polecenie osoby uprawnionej
+- W dowolnym momencie, gdy przeszkadzają w pracy
+- Przed rozpoczęciem pracy, po sprawdzeniu braku napięcia
+- Zaraz po wywieszeniu tablic ostrzegawczych
+! Uziemiacze usuwa się w ramach likwidacji miejsca pracy, dopiero gdy nikt nie może już dotknąć wyłączonych przewodów.
+
+? Kto ustala okoliczności i przyczyny wypadku przy pracy?
++ Zespół powypadkowy powołany przez pracodawcę
+- Sam poszkodowany pracownik
+- Lekarz udzielający pomocy
+- Policja, w każdym przypadku
+! Zespół powypadkowy (najczęściej pracownik służby BHP i społeczny inspektor pracy) bada wypadek i sporządza protokół powypadkowy.
+
+? Co według przepisów BHP oznacza ryzyko zawodowe?
++ Prawdopodobieństwo wystąpienia niepożądanych zdarzeń związanych z pracą, powodujących straty, zwłaszcza szkody dla zdrowia
+- Liczbę wszystkich wypadków w zakładzie w danym roku
+- Kwotę odszkodowania wypłacanego po wypadku przy pracy
+- Liczbę dni zwolnienia lekarskiego po wypadku
+! Pracodawca ma obowiązek ocenić i udokumentować ryzyko zawodowe na każdym stanowisku oraz poinformować o nim pracowników.
+
+? Jak należy postąpić z oparzeniem termicznym dłoni powstałym od łuku elektrycznego, gdy poszkodowany jest przytomny?
++ Chłodzić oparzone miejsce czystą, chłodną wodą przez kilkanaście minut i wezwać pomoc
+- Posmarować oparzenie tłuszczem lub masłem
+- Przekłuć pęcherze i zdezynfekować spirytusem
+- Mocno zabandażować dłoń bez chłodzenia
+! Chłodzenie wodą ogranicza głębokość oparzenia i ból. Pęcherzy się nie przekłuwa, a tłuszcze utrudniają odprowadzanie ciepła.
+
+? Co należy sprawdzić w pierwszej kolejności, podchodząc do poszkodowanego leżącego przy urządzeniu elektrycznym?
++ Czy miejsce jest bezpieczne dla ratującego, w tym czy poszkodowany nie jest pod napięciem
+- Czy poszkodowany ma przy sobie dokumenty
+- Ile czasu minęło od wypadku
+- Kto jest winny wypadku
+! Bezpieczeństwo ratującego jest zawsze na pierwszym miejscu. Dopiero potem ocenia się przytomność i oddech poszkodowanego.
+
+? Jak oceniamy oddech u nieprzytomnego poszkodowanego?
++ Po udrożnieniu dróg oddechowych obserwujemy ruchy klatki piersiowej, słuchamy i wyczuwamy oddech przez nie dłużej niż 10 sekund
+- Mierzymy tętno na nadgarstku przez minutę
+- Przykładamy lusterko do ust na 2 minuty
+- Sprawdzamy reakcję źrenic na światło
+! Ocena oddechu trwa do 10 sekund. Brak prawidłowego oddechu oznacza konieczność wezwania pomocy i rozpoczęcia resuscytacji.

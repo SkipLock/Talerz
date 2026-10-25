@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Faza: egzamin ELE.02 i ELE.05</title>
+<meta name="description" content="Nauka do egzaminu zawodowego ELE.02 i ELE.05: pytania z wyjaśnieniami, egzamin próbny 40 pytań w 60 minut, powtórka błędów.">
+<meta name="theme-color" content="#E8EBEA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11161B" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preload" href="fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="app"><div class="boot"><svg class="logo boot-logo" viewBox="0 0 48 48" aria-hidden="true"><use href="#logo"/></svg></div></div>
+
+<div id="sheet" class="sheet-wrap" hidden>
+  <div class="scrim" data-act="sheet-close"></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="sheet-head"><h2 id="sheet-title"></h2><button type="button" class="ib" data-act="sheet-close" aria-label="Zamknij"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div id="sheet-body" class="sheet-body"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" hidden></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="pe" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="12" height="12" fill="#2E9E3E"/><rect width="6" height="12" fill="#F4C800"/>
+    </pattern>
+    <symbol id="logo" viewBox="0 0 48 48">
+      <rect width="48" height="48" rx="12" fill="url(#pe)"/>
+      <rect x="9" y="9" width="30" height="30" rx="8" fill="#1C2630"/>
+      <path d="M16.5 24.5l5 5 10-11" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<script src="figs.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

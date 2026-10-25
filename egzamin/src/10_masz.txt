@@ -1,0 +1,264 @@
+## masz | Maszyny elektryczne i transformatory | Maszyny | 02,05
+
+? Ile wynosi prędkość synchroniczna silnika indukcyjnego czterobiegunowego (p = 2) zasilanego napięciem 50 Hz?
++ 1500 obr/min
+- 750 obr/min
+- 1000 obr/min
+- 3000 obr/min
+! n₁ = 60 · f / p = 60 · 50 / 2 = 1500 obr/min.
+
+? Na tabliczce silnika indukcyjnego podano prędkość 1420 obr/min (50 Hz). Ile par biegunów ma silnik?
++ 2 pary (4 bieguny)
+- 1 parę (2 bieguny)
+- 3 pary (6 biegunów)
+- 4 pary (8 biegunów)
+! Prędkość znamionowa jest nieco mniejsza od synchronicznej. Najbliższa wyższa prędkość synchroniczna to 1500 obr/min, czyli p = 2.
+
+? Ile wynosi poślizg silnika o prędkości synchronicznej 1500 obr/min, który obraca się z prędkością 1440 obr/min?
++ 4%
+- 2%
+- 6%
+- 96%
+! s = (n₁ − n) / n₁ = (1500 − 1440) / 1500 = 0,04 = 4%.
+
+? Jak zmienić kierunek obrotów trójfazowego silnika indukcyjnego?
++ Zamienić miejscami dwa dowolne przewody fazowe zasilające silnik
+- Zamienić przewód neutralny z ochronnym
+- Przesunąć cyklicznie wszystkie trzy przewody fazowe
+- Przełączyć uzwojenia z gwiazdy w trójkąt
+! Zamiana dwóch faz zmienia kierunek wirowania pola magnetycznego stojana, a więc i obrotów wirnika. Cykliczne przesunięcie trzech faz nic nie zmienia.
+
+? Na tabliczce silnika podano 230/400 V Δ/Y. Jak połączyć uzwojenia przy zasilaniu z sieci 3×400 V?
++ W gwiazdę
+- W trójkąt
+- W zygzak
+- Połączenie nie ma znaczenia
+! Każde uzwojenie jest przystosowane do 230 V. W gwieździe dostaje napięcie fazowe 230 V, a w trójkącie dostałoby 400 V i by się spaliło.
+
+? Jakie połączenie uzwojeń silnika przedstawia tabliczka zaciskowa na rysunku?
+@ box:tr
++ Trójkąt
+- Gwiazdę
+- Gwiazdę podwójną
+- Uzwojenia rozłączone
+! Trzy pionowe zwory łączą koniec jednego uzwojenia z początkiem następnego (W2-U1, U2-V1, V2-W1), co daje trójkąt.
+
+? Jakie połączenie uzwojeń silnika przedstawia tabliczka zaciskowa na rysunku?
+@ box:gw
++ Gwiazdę
+- Trójkąt
+- Zygzak
+- Połączenie szeregowe wszystkich uzwojeń
+! Pozioma zwora łączy końce uzwojeń W2, U2, V2 we wspólny punkt gwiazdowy, a początki U1, V1, W1 są przyłączone do sieci.
+
+? Który sposób rozruchu silnika indukcyjnego zmniejsza prąd rozruchowy pobierany z sieci około trzykrotnie?
++ Rozruch gwiazda-trójkąt
+- Rozruch bezpośredni
+- Rozruch z zamianą dwóch faz
+- Rozruch przy podwyższonym napięciu
+! W gwieździe na uzwojeniu jest √3 razy mniejsze napięcie, więc prąd pobierany z sieci i moment rozruchowy maleją trzykrotnie.
+
+? Jaki warunek musi spełniać silnik, żeby można było zastosować rozruch gwiazda-trójkąt w sieci 400 V?
++ Uzwojenia muszą być przystosowane do pracy w trójkącie przy 400 V (tabliczka 400/690 V Δ/Y)
+- Silnik musi mieć tabliczkę 230/400 V Δ/Y
+- Musi to być silnik pierścieniowy
+- Silnik musi mieć dwa uzwojenia stojana
+! Po rozruchu silnik pracuje w trójkącie, więc jego uzwojenia muszą wytrzymywać pełne napięcie międzyprzewodowe 400 V.
+
+? Co oznacza moc znamionowa podana na tabliczce silnika?
++ Moc mechaniczną oddawaną na wale w warunkach znamionowych
+- Moc elektryczną pobieraną z sieci
+- Moc bierną pobieraną przez silnik
+- Moc pozorną silnika
+! Na tabliczce silnika podaje się moc użyteczną. Moc pobierana z sieci jest większa o straty: P₁ = P₂ / η.
+
+? Silnik oddaje moc 7,5 kW przy sprawności 0,9. Jaką moc czynną pobiera z sieci?
++ 8,33 kW
+- 6,75 kW
+- 7,5 kW
+- 9 kW
+! P₁ = P₂ / η = 7,5 / 0,9 ≈ 8,33 kW. Różnica to straty w silniku.
+
+? Jaki moment obrotowy rozwija silnik o mocy 3 kW przy prędkości 1432 obr/min?
++ 20 N·m
+- 2 N·m
+- 4,8 N·m
+- 200 N·m
+! M = 9550 · P / n = 9550 · 3 / 1432 ≈ 20 N·m (P w kW, n w obr/min).
+
+? Która część silnika indukcyjnego klatkowego jest zbudowana z prętów zwartych na końcach pierścieniami?
++ Wirnik
+- Stojan
+- Komutator
+- Tarcza łożyskowa
+! Wirnik klatkowy ma pręty, najczęściej aluminiowe, zwarte pierścieniami. Nie ma szczotek ani pierścieni ślizgowych.
+
+? Co się stanie, gdy trójfazowy silnik indukcyjny pracujący pod obciążeniem utraci zasilanie jednej fazy?
++ Będzie się obracał dalej, ale pobierze większy prąd i zacznie się przegrzewać
+- Natychmiast się zatrzyma i przestanie pobierać prąd
+- Zwiększy prędkość obrotową
+- Zmieni kierunek obrotów
+! Przy pracy niepełnofazowej prąd w pozostałych fazach rośnie. Bez zabezpieczenia uzwojenie się przegrzeje. Zatrzymany silnik w takim stanie nie ruszy, tylko buczy.
+
+? Do czego służy kondensator w jednofazowym silniku indukcyjnym?
++ Przesuwa w fazie prąd uzwojenia pomocniczego, dzięki czemu powstaje pole wirujące i moment rozruchowy
+- Kompensuje moc czynną
+- Podwyższa napięcie zasilania
+- Chroni silnik przed przepięciami
+! Jedno uzwojenie zasilane prądem jednofazowym wytwarza pole pulsujące. Kondensator przesuwa prąd w uzwojeniu pomocniczym i powstaje pole wirujące.
+
+? Jak nazywa się próba transformatora, podczas której uzwojenie wtórne jest rozwarte, a pierwotne zasilane napięciem znamionowym?
++ Próba stanu jałowego
+- Próba zwarcia
+- Próba obciążenia
+- Próba izolacji
+! W stanie jałowym mierzy się prąd jałowy i straty w rdzeniu (straty w żelazie).
+
+? Co wyznacza się podczas próby zwarcia transformatora?
++ Straty w uzwojeniach (w miedzi) i napięcie zwarcia
+- Straty w rdzeniu i prąd jałowy
+- Rezystancję izolacji uzwojeń
+- Przekładnię napięciową w stanie jałowym
+! Przy zwartym uzwojeniu wtórnym podnosi się napięcie zasilania, aż popłyną prądy znamionowe. To napięcie to napięcie zwarcia, a pobierana moc to straty w uzwojeniach.
+
+? Transformator ma 1000 zwojów uzwojenia pierwotnego i 50 zwojów wtórnego. Jakie napięcie będzie na uzwojeniu wtórnym przy zasilaniu uzwojenia pierwotnego napięciem 230 V?
++ 11,5 V
+- 4,6 V
+- 23 V
+- 4600 V
+! U₂ = U₁ · N₂ / N₁ = 230 · 50 / 1000 = 11,5 V.
+
+? Transformator 230/12 V zasila odbiornik pobierający 5 A. Jaki prąd w przybliżeniu płynie po stronie pierwotnej?
++ 0,26 A
+- 2,6 A
+- 5 A
+- 95,8 A
+! Pomijając straty, moc po obu stronach jest równa: I₁ = I₂ · U₂ / U₁ = 5 · 12 / 230 ≈ 0,26 A.
+
+? Co oznacza symbol grupy połączeń Dyn11 transformatora rozdzielczego?
++ Uzwojenie górnego napięcia w trójkąt, dolnego w gwiazdę z wyprowadzonym punktem neutralnym, przesunięcie fazowe 330°
+- Uzwojenie górnego napięcia w gwiazdę, dolnego w trójkąt, przesunięcie 11°
+- Oba uzwojenia w trójkąt, przesunięcie 110°
+- Uzwojenie dolnego napięcia w zygzak z 11 zaczepami
+! D – trójkąt po stronie GN, y – gwiazda po stronie DN, n – wyprowadzony punkt neutralny, 11 – przesunięcie 11 · 30° = 330°.
+
+? Do czego służy komutator w maszynie prądu stałego?
++ Zmienia kierunek prądu w zezwojach twornika tak, aby moment obrotowy miał stały kierunek
+- Reguluje napięcie sieci
+- Chłodzi uzwojenia
+- Mierzy prędkość obrotową
+! Komutator ze szczotkami działa jak mechaniczny przełącznik, który odwraca prąd w zezwojach w odpowiednim momencie obrotu.
+
+? Dlaczego silnika szeregowego prądu stałego nie wolno uruchamiać bez obciążenia?
++ Bo jego prędkość gwałtownie rośnie i może dojść do rozbiegania i zniszczenia silnika
+- Bo nie wytwarza momentu rozruchowego
+- Bo pobiera wtedy prąd zwarciowy
+- Bo zmienia kierunek obrotów
+! W silniku szeregowym strumień zależy od prądu obciążenia. Bez obciążenia strumień jest mały, a prędkość rośnie niebezpiecznie.
+
+? Jak zmienić kierunek obrotów silnika bocznikowego prądu stałego?
++ Zmienić kierunek prądu w tworniku albo w uzwojeniu wzbudzenia, ale nie w obu naraz
+- Zmienić biegunowość napięcia zasilającego cały silnik
+- Zwiększyć napięcie wzbudzenia
+- Zamienić szczotki miejscami
+! Moment zależy od strumienia i prądu twornika. Zmiana kierunku jednego z nich odwraca obroty, a zmiana obu, np. przez odwrócenie zasilania całego silnika, niczego nie zmienia.
+
+? W jakim celu stosuje się rozrusznik w silniku prądu stałego?
++ Aby ograniczyć duży prąd twornika w chwili rozruchu
+- Aby zwiększyć prędkość ponad znamionową
+- Aby zmienić kierunek obrotów
+- Aby wytworzyć napięcie wzbudzenia
+! Nieobracający się twornik nie wytwarza siły elektromotorycznej, więc prąd ograniczałaby tylko mała rezystancja uzwojenia. Rozrusznik dodaje rezystancję na czas rozruchu.
+
+? Jak płynnie i ekonomicznie regulować prędkość obrotową silnika indukcyjnego klatkowego?
++ Przemiennikiem częstotliwości (falownikiem), zmieniając częstotliwość i napięcie
+- Rezystorem w obwodzie wirnika
+- Zmieniając kolejność faz
+- Wyłącznie przez zmianę liczby par biegunów
+! Prędkość synchroniczna jest proporcjonalna do częstotliwości. Falownik zmienia częstotliwość, utrzymując stały stosunek U/f.
+
+? Czym silnik pierścieniowy różni się od klatkowego?
++ Uzwojenie wirnika jest wyprowadzone przez pierścienie ślizgowe i szczotki, co pozwala włączyć rezystory rozruchowe
+- Nie ma uzwojenia stojana
+- Jest zasilany prądem stałym
+- Ma komutator jak maszyna prądu stałego
+! Rezystancja dołączona do obwodu wirnika zmniejsza prąd rozruchowy i zwiększa moment rozruchowy.
+
+? Co oznacza symbol S1 na tabliczce znamionowej silnika?
++ Pracę ciągłą
+- Pracę dorywczą
+- Pracę przerywaną
+- Pierwszą klasę sprawności
+! Rodzaje pracy: S1 – ciągła, S2 – dorywcza, S3 – przerywana okresowa i dalsze.
+
+? Do jakiej temperatury może pracować izolacja uzwojeń klasy F?
++ 155 °C
+- 105 °C
+- 130 °C
+- 180 °C
+! Klasy izolacji: A – 105 °C, E – 120 °C, B – 130 °C, F – 155 °C, H – 180 °C.
+
+? Ile wynosi poślizg znamionowy silnika, którego tabliczkę przedstawiono na rysunku?
+@ tabl:Silnik indukcyjny 3~|Typ Sg 100L-4|2,2 kW|400 V Y|4,9 A|1420 obr/min|cos φ 0,81|50 Hz|IP55
++ 5,3%
+- 2,7%
+- 8%
+- 52,7%
+! Silnik jest czterobiegunowy (oznaczenie -4, prędkość bliska 1500 obr/min): s = (1500 − 1420) / 1500 ≈ 0,053 = 5,3%.
+
+? Jaką moc czynną pobiera z sieci 400 V silnik, którego tabliczkę przedstawiono na rysunku, przy obciążeniu znamionowym?
+@ tabl:Silnik indukcyjny 3~|Typ Sg 100L-4|2,2 kW|400 V Y|4,9 A|1420 obr/min|cos φ 0,81|50 Hz|IP55
++ 2,75 kW
+- 1,59 kW
+- 2,2 kW
+- 3,39 kW
+! P₁ = √3 · U · I · cos φ = 1,73 · 400 · 4,9 · 0,81 ≈ 2750 W. Moc 2,2 kW z tabliczki to moc oddawana na wale.
+
+? Co oznacza stopień ochrony IP55 na tabliczce silnika?
++ Ochronę przed pyłem w stopniu niezakłócającym pracy i przed strugą wody z dowolnego kierunku
+- Pełną szczelność przy zanurzeniu
+- Brak ochrony przed wodą
+- Budowę przeciwwybuchową
+! Pierwsza cyfra 5 – pył może wnikać tylko w ilości niezakłócającej pracy, druga cyfra 5 – ochrona przed strugą wody.
+
+? Która maszyna elektryczna obraca się z prędkością dokładnie równą prędkości wirowania pola magnetycznego?
++ Maszyna synchroniczna
+- Silnik indukcyjny klatkowy
+- Silnik indukcyjny pierścieniowy
+- Silnik szeregowy prądu stałego
+! Wirnik maszyny synchronicznej obraca się synchronicznie z polem stojana. W maszynie indukcyjnej występuje poślizg.
+
+? Które uzwojenie transformatora ma przewód o większym przekroju?
++ Uzwojenie dolnego napięcia, bo płynie w nim większy prąd
+- Uzwojenie górnego napięcia, bo jest na nim większe napięcie
+- Oba mają ten sam przekrój
+- To zależy wyłącznie od koloru izolacji
+! Moc po obu stronach jest prawie taka sama, więc po stronie niższego napięcia płynie większy prąd i potrzebny jest grubszy przewód.
+
+? Jak nazywa się transformator, w którym uzwojenia pierwotne i wtórne mają część wspólną?
++ Autotransformator
+- Transformator separacyjny
+- Przekładnik prądowy
+- Transformator bezpieczeństwa
+! Autotransformator ma jedno uzwojenie z odczepem. Jest tańszy, ale nie oddziela galwanicznie obwodów, więc nie nadaje się do zasilania SELV ani do separacji.
+
+? Dlaczego nie wolno rozwierać obwodu wtórnego przekładnika prądowego, gdy przez uzwojenie pierwotne płynie prąd?
++ Bo na zaciskach wtórnych może się pojawić bardzo wysokie napięcie, a rdzeń się przegrzewa
+- Bo przekładnik przestanie mierzyć napięcie
+- Bo zmieni się przekładnia napięciowa sieci
+- Bo zadziała wyłącznik różnicowoprądowy
+! Przekładnik prądowy pracuje w stanie bliskim zwarcia. Po rozwarciu cały prąd pierwotny magnesuje rdzeń, co grozi przebiciem izolacji i porażeniem.
+
+? Ile wynosi prędkość synchroniczna silnika dwubiegunowego zasilanego napięciem 50 Hz?
++ 3000 obr/min
+- 1500 obr/min
+- 1000 obr/min
+- 6000 obr/min
+! Silnik dwubiegunowy ma jedną parę biegunów: n₁ = 60 · 50 / 1 = 3000 obr/min.
+
+? Jakie straty występują w transformatorze?
++ Straty w rdzeniu (na histerezę i prądy wirowe) oraz straty w uzwojeniach
+- Wyłącznie straty mechaniczne na tarcie
+- Wyłącznie straty w szczotkach
+- Transformator nie ma strat
+! Straty w rdzeniu prawie nie zależą od obciążenia, a straty w uzwojeniach rosną z kwadratem prądu.

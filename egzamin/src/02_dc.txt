@@ -1,0 +1,263 @@
+## dc | Obwody prądu stałego | Prąd stały | 02,05
+
+? Jaki prąd płynie przez rezystor 20 Ω, do którego przyłożono napięcie 12 V?
++ 0,6 A
+- 0,06 A
+- 1,67 A
+- 240 A
+! Z prawa Ohma I = U / R = 12 V / 20 Ω = 0,6 A.
+
+? Ile wynosi rezystancja zastępcza układu przedstawionego na rysunku?
+@ net:ser|R1 = 10 Ω|R2 = 20 Ω|R3 = 30 Ω
++ 60 Ω
+- 5,45 Ω
+- 20 Ω
+- 6000 Ω
+! Rezystancje połączone szeregowo się dodaje: 10 + 20 + 30 = 60 Ω.
+
+? Ile wynosi rezystancja zastępcza między zaciskami A i B?
+@ net:par|R1 = 6 Ω|R2 = 3 Ω
++ 2 Ω
+- 4,5 Ω
+- 9 Ω
+- 18 Ω
+! Dla dwóch rezystorów połączonych równolegle R = R1 · R2 / (R1 + R2) = 18 / 9 = 2 Ω.
+
+? Ile wynosi rezystancja zastępcza trzech rezystorów 10 Ω połączonych równolegle?
+@ net:par|10 Ω|10 Ω|10 Ω
++ 3,33 Ω
+- 0,3 Ω
+- 10 Ω
+- 30 Ω
+! n jednakowych rezystorów połączonych równolegle daje R / n = 10 / 3 ≈ 3,33 Ω.
+
+? Ile wynosi rezystancja zastępcza układu przedstawionego na rysunku?
+@ net:sp|R1 = 4 Ω|R2 = 12 Ω|R3 = 12 Ω
++ 10 Ω
+- 2,4 Ω
+- 16 Ω
+- 28 Ω
+! R2 i R3 połączone równolegle dają 6 Ω, a razem z szeregowym R1: 4 + 6 = 10 Ω.
+
+? Ile wynosi rezystancja zastępcza układu przedstawionego na rysunku?
+@ net:ps|R1 = 2 Ω|R2 = 4 Ω|R3 = 6 Ω
++ 3 Ω
+- 1,09 Ω
+- 6 Ω
+- 12 Ω
+! R1 i R2 połączone szeregowo dają 6 Ω, a 6 Ω równolegle z R3 = 6 Ω daje 3 Ω.
+
+? Ile wynosi rezystancja zastępcza między zaciskami A i B?
+@ net:pp|R1 = 10 Ω|R2 = 10 Ω|R3 = 20 Ω|R4 = 20 Ω
++ 15 Ω
+- 3,33 Ω
+- 30 Ω
+- 60 Ω
+! R1 ‖ R2 = 5 Ω, R3 ‖ R4 = 10 Ω, a obie pary są połączone szeregowo: 5 + 10 = 15 Ω.
+
+? Jaką moc pobiera grzałka o rezystancji 46 Ω zasilana napięciem 230 V?
++ 1150 W
+- 5 W
+- 2300 W
+- 10580 W
+! P = U² / R = 230² / 46 = 52 900 / 46 = 1150 W.
+
+? Ile energii zużyje odbiornik o mocy 2 kW pracujący przez 3 godziny?
++ 6 kWh
+- 0,67 kWh
+- 1,5 kWh
+- 5 kWh
+! W = P · t = 2 kW · 3 h = 6 kWh.
+
+? Jaki prąd pobiera z sieci 230 V żarówka o mocy 100 W?
++ 0,43 A
+- 0,23 A
+- 2,3 A
+- 4,3 A
+! I = P / U = 100 W / 230 V ≈ 0,43 A.
+
+? Jak zmieni się rezystancja przewodu, jeżeli jego długość zwiększymy dwukrotnie, a przekrój pozostanie bez zmian?
++ Wzrośnie dwukrotnie
+- Zmaleje dwukrotnie
+- Wzrośnie czterokrotnie
+- Nie zmieni się
+! R = ρ · l / S, więc rezystancja jest wprost proporcjonalna do długości przewodu.
+
+? Jak zmieni się rezystancja przewodu, jeśli przy tej samej długości zwiększymy jego przekrój z 1,5 mm² do 3 mm²?
++ Zmaleje dwukrotnie
+- Wzrośnie dwukrotnie
+- Zmaleje czterokrotnie
+- Nie zmieni się
+! Rezystancja jest odwrotnie proporcjonalna do przekroju: dwa razy większy przekrój to dwa razy mniejsza rezystancja.
+
+? Ile wynosi rezystancja przewodu miedzianego o długości 100 m i przekroju 2,5 mm²? Przyjmij konduktywność miedzi γ = 56 m/(Ω·mm²).
++ 0,71 Ω
+- 0,07 Ω
+- 1,4 Ω
+- 7,1 Ω
+! R = l / (γ · S) = 100 / (56 · 2,5) = 100 / 140 ≈ 0,71 Ω.
+
+? Ile wynosi napięcie U₂ w dzielniku napięcia przedstawionym na rysunku?
+@ net:dzielnik|R1 = 3 kΩ|R2 = 1 kΩ|U = 12 V|U₂ = ?
++ 3 V
+- 4 V
+- 9 V
+- 12 V
+! U₂ = U · R2 / (R1 + R2) = 12 V · 1 / 4 = 3 V.
+
+? Co mówi pierwsze prawo Kirchhoffa?
++ Suma prądów wpływających do węzła jest równa sumie prądów z niego wypływających
+- Suma napięć w oczku jest równa iloczynowi prądu i rezystancji
+- Prąd jest wprost proporcjonalny do napięcia
+- Moc jest równa iloczynowi napięcia i prądu
+! Pierwsze prawo Kirchhoffa dotyczy węzła: ładunek się w nim nie gromadzi, więc ile prądu wpływa, tyle wypływa.
+
+? Co mówi drugie prawo Kirchhoffa?
++ W zamkniętym oczku suma napięć źródłowych jest równa sumie spadków napięć na elementach
+- Suma prądów w węźle jest równa zeru
+- Rezystancja przewodu zależy od jego długości
+- Napięcie jest odwrotnie proporcjonalne do prądu
+! Drugie prawo Kirchhoffa dotyczy oczka: obchodząc je dookoła, suma wszystkich napięć (z uwzględnieniem znaków) wynosi zero.
+
+? Do węzła wpływają prądy 2 A i 3 A, a wypływa z niego prąd 1 A oraz prąd I. Ile wynosi prąd I?
++ 4 A
+- 1 A
+- 5 A
+- 6 A
+! Z pierwszego prawa Kirchhoffa: 2 + 3 = 1 + I, więc I = 4 A.
+
+? Jaki prąd wskaże amperomierz w obwodzie przedstawionym na rysunku?
+@ loop:U = 12 V|R1 = 4 Ω|A|R2 = 2 Ω
++ 2 A
+- 1 A
+- 3 A
+- 6 A
+! Rezystory są połączone szeregowo, R = 6 Ω, więc I = 12 V / 6 Ω = 2 A. W obwodzie szeregowym prąd jest wszędzie taki sam.
+
+? Jak należy włączyć amperomierz, aby zmierzyć prąd odbiornika?
++ Szeregowo z odbiornikiem
+- Równolegle do odbiornika
+- Równolegle do źródła
+- Między przewód ochronny a ziemię
+! Przez amperomierz musi płynąć mierzony prąd, dlatego włącza się go szeregowo. Woltomierz włącza się równolegle.
+
+? Jaką rezystancję wewnętrzną powinien mieć idealny woltomierz?
++ Nieskończenie dużą
+- Równą zeru
+- Równą rezystancji badanego odbiornika
+- Około 1 Ω
+! Woltomierz włącza się równolegle. Im większa jego rezystancja, tym mniejszy prąd pobiera i tym mniej zmienia warunki w obwodzie.
+
+? Trzy jednakowe żarówki połączono szeregowo i zasilono napięciem 230 V. Jakie napięcie jest na każdej z nich?
++ Około 76,7 V
+- 230 V
+- 115 V
+- 690 V
+! Przy połączeniu szeregowym jednakowych odbiorników napięcie dzieli się po równo: 230 V / 3 ≈ 76,7 V.
+
+? Jak zmienia się rezystancja metali, np. miedzi, wraz ze wzrostem temperatury?
++ Rośnie
+- Maleje
+- Nie zmienia się
+- Spada do zera
+! Metale mają dodatni współczynnik temperaturowy rezystancji. Zimne włókno żarówki ma kilkanaście razy mniejszą rezystancję niż rozgrzane.
+
+? Ogniwo o SEM 1,5 V i rezystancji wewnętrznej 0,5 Ω zwarto przewodem o pomijalnej rezystancji. Jaki prąd popłynie?
++ 3 A
+- 0,33 A
+- 0,75 A
+- 1,5 A
+! Prąd zwarcia źródła Iz = E / Rw = 1,5 V / 0,5 Ω = 3 A.
+
+? Do źródła o SEM E = 12 V i rezystancji wewnętrznej Rw = 1 Ω dołączono odbiornik o rezystancji 5 Ω. Jakie napięcie jest na zaciskach źródła?
++ 10 V
+- 2 V
+- 11 V
+- 12 V
+! I = E / (R + Rw) = 12 / 6 = 2 A, a napięcie na zaciskach U = I · R = 2 · 5 = 10 V. Pozostałe 2 V odkłada się na rezystancji wewnętrznej.
+
+? Jak łączy się ogniwa, aby uzyskać większe napięcie baterii?
++ Szeregowo
+- Równolegle
+- W trójkąt
+- Przeciwsobnie, biegunami jednoimiennymi do siebie
+! Przy połączeniu szeregowym napięcia ogniw się sumują. Połączenie równoległe zwiększa dopuszczalny prąd i pojemność, ale nie napięcie.
+
+? Jaka jest jednostka konduktancji?
++ Simens (S)
+- Om (Ω)
+- Henr (H)
+- Farad (F)
+! Konduktancja jest odwrotnością rezystancji, G = 1 / R. Jej jednostką jest simens, 1 S = 1 / Ω.
+
+? Kondensatory 2 µF i 3 µF połączono równolegle. Ile wynosi pojemność zastępcza?
++ 5 µF
+- 1,2 µF
+- 2,5 µF
+- 6 µF
+! Pojemności połączone równolegle się dodaje: 2 + 3 = 5 µF. Przy połączeniu szeregowym byłoby 1,2 µF.
+
+? Kondensatory 6 µF i 3 µF połączono szeregowo. Ile wynosi pojemność zastępcza?
++ 2 µF
+- 4,5 µF
+- 9 µF
+- 18 µF
+! Dla dwóch kondensatorów szeregowo C = C1 · C2 / (C1 + C2) = 18 / 9 = 2 µF, czyli tak jak dla rezystorów połączonych równolegle.
+
+? Jaki ładunek zgromadzi kondensator 100 µF naładowany do napięcia 10 V?
++ 1 mC
+- 10 µC
+- 0,1 C
+- 1000 C
+! Q = C · U = 100 µF · 10 V = 1000 µC = 1 mC.
+
+? Dwa rezystory 100 Ω i 300 Ω połączono szeregowo i zasilono napięciem 20 V. Jaka moc wydzieli się w rezystorze 300 Ω?
++ 0,75 W
+- 0,25 W
+- 1 W
+- 1,33 W
+! I = 20 V / 400 Ω = 0,05 A, więc P = I² · R = 0,0025 · 300 = 0,75 W.
+
+? Przez rezystor 50 Ω płynie prąd 2 A przez 10 minut. Ile ciepła się wydzieli?
++ 120 kJ
+- 2 kJ
+- 12 kJ
+- 60 kJ
+! Q = I² · R · t = 2² · 50 · 600 s = 120 000 J = 120 kJ. Czas trzeba podstawić w sekundach.
+
+? Ile wynosi spadek napięcia na rezystorze 15 Ω, przez który płynie prąd 0,2 A?
++ 3 V
+- 0,013 V
+- 15,2 V
+- 75 V
+! U = I · R = 0,2 A · 15 Ω = 3 V.
+
+? Na rezystorze są paski jak na rysunku: brązowy, czarny, czerwony, złoty. Jaką rezystancję ma ten rezystor?
+@ paski:brazowy,czarny,czerwony,zloty
++ 1 kΩ ±5%
+- 10 Ω ±10%
+- 102 Ω ±5%
+- 100 kΩ ±5%
+! Brązowy = 1, czarny = 0, czerwony jako mnożnik = ×100: 10 · 100 = 1000 Ω. Złoty pasek oznacza tolerancję ±5%.
+
+? Na rezystorze są paski jak na rysunku: żółty, fioletowy, pomarańczowy, złoty. Jaką rezystancję ma ten rezystor?
+@ paski:zolty,fioletowy,pomaranczowy,zloty
++ 47 kΩ
+- 473 Ω
+- 470 Ω
+- 4,7 kΩ
+! Żółty = 4, fioletowy = 7, pomarańczowy jako mnożnik = ×1000: 47 · 1000 Ω = 47 kΩ.
+
+? Ile wynosi rezystancja żarówki o mocy 60 W przystosowanej do napięcia 230 V (w stanie świecenia)?
++ Około 882 Ω
+- Około 3,8 Ω
+- Około 0,26 Ω
+- Około 13 800 Ω
+! R = U² / P = 230² / 60 = 52 900 / 60 ≈ 882 Ω.
+
+? Dwa rezystory połączone równolegle mają rezystancję zastępczą 4 Ω. Jeden z nich ma 12 Ω. Ile ma drugi?
++ 6 Ω
+- 3 Ω
+- 8 Ω
+- 16 Ω
+! 1/R = 1/R1 + 1/R2, więc 1/R2 = 1/4 − 1/12 = 2/12, czyli R2 = 6 Ω.

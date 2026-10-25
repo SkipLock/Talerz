@@ -1,0 +1,176 @@
+## jez | Język obcy zawodowy i organizacja pracy | Język i praca | 02,05
+
+? Co oznacza angielskie określenie „circuit breaker”?
++ Wyłącznik nadprądowy
+- Wyłącznik różnicowoprądowy
+- Bezpiecznik topikowy
+- Przerwę w obwodzie
+! Circuit breaker to wyłącznik samoczynny. Wyłącznik różnicowoprądowy to residual current device (RCD), a bezpiecznik topikowy to fuse.
+
+? Jak po angielsku nazywa się wyłącznik różnicowoprądowy?
++ Residual current device (RCD)
+- Surge protective device (SPD)
+- Miniature circuit breaker (MCB)
+- Power supply unit (PSU)
+! SPD to ogranicznik przepięć, MCB to modułowy wyłącznik nadprądowy, a PSU to zasilacz.
+
+? Co oznacza słowo „earthing” w dokumentacji instalacji?
++ Uziemienie
+- Izolację
+- Zwarcie
+- Przeciążenie
+! Earthing (w USA grounding) to uziemienie, insulation to izolacja, short circuit to zwarcie, overload to przeciążenie.
+
+? Jak przetłumaczyć nazwę narzędzia „wire stripper”?
++ Ściągacz izolacji
+- Szczypce boczne
+- Zaciskarka
+- Wkrętak
+! Szczypce boczne to side cutters, zaciskarka to crimping tool, a wkrętak to screwdriver.
+
+? Co oznacza napis „rated current” na tabliczce znamionowej?
++ Prąd znamionowy
+- Prąd zwarciowy
+- Prąd rozruchowy
+- Prąd upływu
+! Rated znaczy znamionowy: rated voltage to napięcie znamionowe, rated power – moc znamionowa.
+
+? Co oznacza ostrzeżenie „Danger! High voltage”?
++ Niebezpieczeństwo! Wysokie napięcie
+- Uwaga! Duży prąd
+- Wstęp tylko dla upoważnionych
+- Niebezpieczeństwo! Gorąca powierzchnia
+! High voltage to wysokie napięcie. Hot surface oznacza gorącą powierzchnię, a authorized personnel only – wstęp tylko dla upoważnionych.
+
+? Jak po angielsku nazywa się uzwojenie maszyny elektrycznej?
++ Winding
+- Bearing
+- Brush
+- Shaft
+! Bearing to łożysko, brush – szczotka, shaft – wał.
+
+? Co oznacza termin „insulation resistance test”?
++ Pomiar rezystancji izolacji
+- Pomiar impedancji pętli zwarcia
+- Próbę ciągłości przewodów
+- Badanie wyłącznika różnicowoprądowego
+! Loop impedance test to pomiar impedancji pętli zwarcia, continuity test – próba ciągłości, RCD test – badanie wyłącznika różnicowoprądowego.
+
+? Jak przetłumaczyć słowo „switchboard”?
++ Rozdzielnica
+- Łącznik schodowy
+- Tablica ogłoszeń
+- Przełącznik sieciowy komputera
+! Switchboard (także distribution board) to rozdzielnica. Łącznik oświetlenia to light switch.
+
+? Co oznacza słowo „troubleshooting” w instrukcji urządzenia?
++ Wykrywanie i usuwanie usterek
+- Instalowanie urządzenia
+- Utylizację urządzenia
+- Dane techniczne
+! Troubleshooting to rozdział instrukcji z typowymi usterkami, ich przyczynami i sposobami usunięcia.
+
+? Co oznacza określenie „squirrel cage rotor”?
++ Wirnik klatkowy
+- Wirnik pierścieniowy
+- Stojan
+- Komutator
+! Pręty zwarte pierścieniami przypominają klatkę dla wiewiórki (squirrel cage), stąd angielska nazwa.
+
+? Jak po angielsku nazywa się gniazdo wtyczkowe?
++ Socket outlet
+- Junction box
+- Cable gland
+- Light fitting
+! Junction box to puszka rozgałęźna, cable gland – dławnica kablowa, light fitting – oprawa oświetleniowa.
+
+? Co oznacza polecenie „isolate the supply before starting work”?
++ Odłącz zasilanie przed rozpoczęciem pracy
+- Zaizoluj przewody po zakończeniu pracy
+- Zmierz napięcie zasilania
+- Zgłoś pracę przełożonemu
+! Isolate the supply oznacza odłączenie zasilania i zapewnienie przerwy izolacyjnej.
+
+? Brygadzista dzieli pracę w zespole monterów. Którą zasadą powinien się kierować?
++ Przydzielać zadania zgodnie z kwalifikacjami i umiejętnościami pracowników
+- Przydzielać najtrudniejsze zadania najmłodszym pracownikom
+- Wykonywać wszystkie zadania samodzielnie
+- Przydzielać zadania losowo
+! Dopasowanie zadań do uprawnień i doświadczenia zwiększa bezpieczeństwo i jakość pracy. Prace eksploatacyjne mogą wykonywać tylko osoby z odpowiednimi świadectwami.
+
+? Klient zgłasza zastrzeżenia do wykonanej instalacji. Jak powinien się zachować elektryk?
++ Spokojnie wysłuchać klienta, sprawdzić zgłoszony problem i zaproponować rozwiązanie
+- Przerwać rozmowę i wyjść
+- Obwiniać innych wykonawców
+- Odpowiedzieć podniesionym głosem
+! Spokojna, rzeczowa rozmowa i sprawdzenie zgłoszenia to podstawa profesjonalnej obsługi i rozwiązania konfliktu.
+
+? Co oznacza postawa asertywna?
++ Wyrażanie własnego zdania i potrzeb stanowczo, ale z szacunkiem dla innych
+- Bezwarunkowe podporządkowanie się innym
+- Narzucanie innym swojego zdania
+- Unikanie wszelkich rozmów
+! Asertywność to obrona własnych praw bez naruszania praw innych, np. odmowa wykonania pracy niezgodnej z przepisami BHP.
+
+? Które działanie pomaga radzić sobie ze stresem w pracy?
++ Planowanie zadań i ustalanie priorytetów
+- Odkładanie wszystkich zadań na ostatnią chwilę
+- Praca bez przerw przez wiele godzin
+- Ukrywanie problemów przed przełożonym
+! Plan pracy i ustalenie, co jest najważniejsze, zmniejszają presję czasu i ryzyko błędów.
+
+? Za co odpowiada kierujący zespołem przy pracach przy urządzeniach elektroenergetycznych?
++ Za bezpieczny sposób wykonania pracy i przestrzeganie przepisów przez członków zespołu
+- Wyłącznie za wypłatę wynagrodzeń
+- Nie musi przebywać w miejscu pracy
+- Wyłącznie za prace biurowe
+! Kierujący zespołem pilnuje, aby zespół stosował sprzęt ochronny i pracował zgodnie z poleceniem i przepisami.
+
+? Dlaczego elektryk powinien stale aktualizować wiedzę zawodową?
++ Bo zmieniają się przepisy, normy i technologie
+- Bo przepisy nie zmieniają się od lat
+- Bo wymagają tego wyłącznie klienci prywatni
+- Nie powinien, wystarczy wiedza ze szkoły
+! Normy, urządzenia i technologie (np. fotowoltaika, LED, automatyka budynkowa) szybko się zmieniają.
+
+? Co oznacza zachowanie tajemnicy zawodowej w pracy elektryka?
++ Nieujawnianie osobom trzecim informacji o kliencie i jego zabezpieczeniach poznanych w czasie pracy
+- Ukrywanie przed klientem wad instalacji
+- Niepodawanie klientowi ceny usługi
+- Niezgłaszanie wypadków przełożonemu
+! Elektryk ma dostęp np. do systemów alarmowych i rozkładu pomieszczeń. Ujawnianie takich informacji jest nieetyczne i może być niebezpieczne.
+
+? Co oznacza angielski skrót „PPE” w przepisach BHP?
++ Środki ochrony indywidualnej
+- Przewód ochronno-neutralny
+- Instalację fotowoltaiczną
+- Plan pracy elektryka
+! PPE (personal protective equipment) to m.in. rękawice, okulary, kask i obuwie ochronne.
+
+? Jak przetłumaczyć „voltage drop”?
++ Spadek napięcia
+- Przepięcie
+- Zanik napięcia
+- Napięcie probiercze
+! Przepięcie to overvoltage (surge), zanik napięcia – power failure, napięcie probiercze – test voltage.
+
+? Co oznacza „nameplate” w dokumentacji silnika?
++ Tabliczkę znamionową
+- Nazwę producenta w katalogu
+- Płytę montażową
+- Schemat połączeń
+! Na tabliczce znamionowej (nameplate) są dane silnika: moc, napięcie, prąd, prędkość, cos φ i inne.
+
+? Jak przetłumaczyć „contactor”?
++ Stycznik
+- Przekaźnik czasowy
+- Przewód łączeniowy
+- Złączka
+! Contactor to stycznik, relay – przekaźnik, timer relay – przekaźnik czasowy.
+
+? Jak należy postąpić, gdy w trakcie pracy zespołowej zauważysz, że kolega pracuje bez wymaganych rękawic dielektrycznych?
++ Zwrócić mu uwagę i w razie potrzeby powiadomić kierującego zespołem
+- Nie reagować, to jego sprawa
+- Wyśmiać go przy innych
+- Samemu zdjąć rękawice, żeby było sprawiedliwie
+! Każdy pracownik powinien reagować na zagrożenia. Zwrócenie uwagi może zapobiec wypadkowi.

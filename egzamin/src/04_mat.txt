@@ -1,0 +1,211 @@
+## mat | Materiały, przewody i kable | Przewody | 02,05
+
+? Co oznacza litera Y w oznaczeniu przewodu YDY?
++ Izolację lub powłokę z polwinitu (PVC)
+- Żyłę aluminiową
+- Żyłę wielodrutową giętką
+- Izolację gumową
+! W krajowych oznaczeniach Y to polwinit. YDY to przewód z żyłami jednodrutowymi (D) w izolacji i powłoce z PVC.
+
+? Który z wymienionych przewodów ma żyły aluminiowe?
++ YAKY
+- YKY
+- YDY
+- LgY
+! Litera A w oznaczeniu (np. YAKY, ADY) oznacza żyły aluminiowe. Pozostałe przewody mają żyły miedziane.
+
+? Jaki kolor izolacji ma przewód ochronny PE?
++ Zielono-żółty
+- Niebieski
+- Brązowy
+- Czarny
+! Połączenie barw zielonej i żółtej jest zarezerwowane wyłącznie dla przewodu ochronnego (oraz PEN z niebieskim oznaczeniem na końcach).
+
+? Jaki kolor izolacji ma przewód neutralny N?
++ Niebieski
+- Zielono-żółty
+- Czarny
+- Szary
+! Przewód neutralny oznacza się kolorem niebieskim. Przewody fazowe mają kolory brązowy, czarny i szary.
+
+? Jakie kolory izolacji stosuje się dla przewodów fazowych L1, L2, L3?
++ Brązowy, czarny, szary
+- Niebieski, zielono-żółty, czarny
+- Czerwony, żółty, niebieski
+- Biały, czerwony, zielony
+! Według PN-EN 60445 przewody fazowe oznacza się kolorami brązowym, czarnym i szarym. Niebieski jest dla N, a zielono-żółty dla PE.
+
+? Co oznacza oznaczenie H07V-K?
++ Przewód zharmonizowany 450/750 V w izolacji PVC, z żyłą giętką do układania na stałe
+- Przewód do 700 V w izolacji gumowej z żyłą jednodrutową
+- Kabel 0,6/1 kV z żyłami aluminiowymi
+- Przewód 300/500 V w izolacji silikonowej
+! H – przewód zharmonizowany, 07 – 450/750 V, V – izolacja PVC, K – żyła giętka do instalacji stałych (U – jednodrutowa, R – wielodrutowa).
+
+? Co oznacza liczba 05 w oznaczeniu przewodu H05VV-F?
++ Napięcie znamionowe 300/500 V
+- Przekrój żył 0,5 mm²
+- Liczbę żył równą 5
+- Temperaturę pracy 50 °C
+! W oznaczeniach zharmonizowanych 03 oznacza 300/300 V, 05 – 300/500 V, a 07 – 450/750 V.
+
+? Który przewód nadaje się do zasilania odbiornika ruchomego, np. jako przewód przedłużacza?
++ H05VV-F 3G1,5
+- H07V-U 1,5
+- YDYp 3×1,5
+- YKY 3×1,5
+! Do odbiorników ruchomych stosuje się przewody o żyłach giętkich (oznaczenie -F). Żyły jednodrutowe pękają przy wielokrotnym zginaniu.
+
+? Co oznacza zapis 3G2,5 w oznaczeniu przewodu?
++ Trzy żyły o przekroju 2,5 mm², w tym jedna zielono-żółta
+- Trzy żyły o przekroju 2,5 mm² bez żyły ochronnej
+- Żyły 3 mm² na napięcie 2,5 kV
+- Trzy przewody jednożyłowe 2,5 mm² w rurce
+! Litera G oznacza, że jedna z żył ma izolację zielono-żółtą. Litera X oznacza przewód bez takiej żyły.
+
+? Jaki jest najmniejszy dopuszczalny przekrój żył miedzianych w obwodach siłowych i oświetleniowych instalacji ułożonej na stałe?
++ 1,5 mm²
+- 0,5 mm²
+- 0,75 mm²
+- 2,5 mm²
+! Według PN-HD 60364-5-52 obwody siłowe i oświetleniowe instalacji stałej wymagają żył miedzianych co najmniej 1,5 mm². 0,5 mm² dopuszcza się w obwodach sygnalizacji i sterowania.
+
+? Który metal ma najmniejszą rezystywność, czyli najlepiej przewodzi prąd?
++ Srebro
+- Miedź
+- Aluminium
+- Stal
+! Najlepiej przewodzi srebro, potem miedź, złoto i aluminium. Ze względu na cenę w przewodach stosuje się miedź i aluminium.
+
+? Który materiał jest półprzewodnikiem?
++ Krzem
+- Miedź
+- Porcelana
+- Aluminium
+! Z krzemu (i germanu) wytwarza się diody, tranzystory i tyrystory. Miedź i aluminium są przewodnikami, porcelana izolatorem.
+
+? Do czego stosuje się blachę elektrotechniczną krzemową?
++ Do budowy rdzeni transformatorów i maszyn elektrycznych
+- Do produkcji styków przekaźników
+- Do wykonywania uziomów
+- Do wyrobu żył przewodów
+! Blacha krzemowa ma małą stratność magnetyczną, a złożenie rdzenia z izolowanych blach ogranicza prądy wirowe.
+
+? Dlaczego rdzenie transformatorów wykonuje się z cienkich, izolowanych blach, a nie z litego żelaza?
++ Aby ograniczyć straty od prądów wirowych
+- Aby zwiększyć prąd jałowy
+- Aby zmniejszyć masę uzwojeń
+- Aby rdzeń lepiej przewodził prąd
+! W litym rdzeniu zmienny strumień indukowałby duże prądy wirowe, które grzałyby rdzeń. Izolowane blachy przerywają drogę tych prądów.
+
+? Który przewód jest ognioodporny i może zasilać urządzenia, które muszą działać w czasie pożaru?
++ HDGs
+- YDYp
+- H03VV-F
+- H07V-U
+! Przewody ognioodporne (np. HDGs w izolacji silikonowej) utrzymują zasilanie przez określony czas pożaru, np. 90 minut w odpowiednim systemie mocowań.
+
+? Który kabel można ułożyć bezpośrednio w ziemi jako linię zasilającą budynek?
++ YKY 0,6/1 kV
+- YDYp 450/750 V
+- H05VV-F 300/500 V
+- H03VV-F 300/300 V
+! Kable elektroenergetyczne na napięcie 0,6/1 kV (np. YKY, YAKY, YKXS) można układać w ziemi. Przewody instalacyjne się do tego nie nadają.
+
+? Do czego służą końcówki tulejkowe zaciskane na żyłach giętkich?
++ Zapobiegają rozplataniu się drutów linki i zapewniają pewne połączenie w zacisku
+- Służą do przedłużania przewodów bez puszki
+- Izolują nieużywane żyły
+- Umożliwiają łączenie miedzi z aluminium
+! Bez tulejki druciki linki rozchodzą się pod śrubą zacisku, połączenie słabnie i może się nagrzewać.
+
+? Dlaczego nie należy łączyć przewodów miedzianych z aluminiowymi bezpośrednio w zwykłym zacisku?
++ Bo powstaje ogniwo galwaniczne, połączenie koroduje, a jego rezystancja rośnie
+- Bo aluminium przewodzi lepiej niż miedź
+- Bo miedź topi się w niższej temperaturze
+- Bo dopuszcza się tylko połączenia lutowane
+! Styk dwóch różnych metali w obecności wilgoci tworzy ogniwo galwaniczne. Stosuje się złączki przystosowane do połączeń Cu-Al.
+
+? Która właściwość decyduje o przydatności materiału jako izolatora?
++ Bardzo duża rezystywność i duża wytrzymałość elektryczna
+- Duża przewodność cieplna i mała gęstość
+- Duża przenikalność magnetyczna
+- Mała rezystywność i duża twardość
+! Izolator musi bardzo słabo przewodzić prąd i wytrzymywać wysokie napięcie bez przebicia.
+
+? Który przewód ma jedną żyłę jednodrutową w izolacji PVC na napięcie 450/750 V?
++ H07V-U (dawniej DY)
+- H05VV-F (dawniej OWY)
+- H07RN-F (dawniej OnPd)
+- H03VV-F (dawniej OMY)
+! Litera U oznacza żyłę jednodrutową. Taki przewód układa się na stałe, np. w rurkach instalacyjnych.
+
+? Co oznacza oznaczenie kabla YKY 4×16 0,6/1 kV?
++ Kabel z żyłami miedzianymi w izolacji i powłoce PVC, 4 żyły po 16 mm², napięcie 0,6/1 kV
+- Przewód z żyłami aluminiowymi 16 × 4 mm² na 600 V
+- Kabel z izolacją gumową, 16 żył po 4 mm²
+- Kabel sygnalizacyjny z czterema parami żył
+! Y – izolacja PVC, K – kabel, Y – powłoka PVC. Brak litery A oznacza miedź. 4×16 to liczba żył i ich przekrój.
+
+? Który przewód jest odpowiedni do zasilania urządzenia pracującego na zewnątrz, narażonego na oleje i uszkodzenia mechaniczne, np. betoniarki?
++ H07RN-F
+- H03VV-F
+- H07V-U
+- YDYp
+! Przewody oponowe w izolacji gumowej (H07RN-F, dawniej OnPd) są giętkie i odporne na oleje, warunki atmosferyczne i uszkodzenia mechaniczne.
+
+? Która izolacja pozwala na najwyższą temperaturę pracy żyły?
++ Guma silikonowa
+- Polwinit (PVC)
+- Polietylen usieciowany (XLPE)
+- Papier nasycany
+! Izolacja silikonowa pracuje w temperaturze do około 180 °C, polietylen usieciowany do 90 °C, a polwinit do 70 °C.
+
+? Co oznacza litera p w oznaczeniu YDYp?
++ Przewód płaski
+- Przewód podwójnie izolowany
+- Przewód do pomieszczeń wilgotnych
+- Przewód z żyłą ochronną
+! YDYp to przewód kabelkowy płaski z żyłami jednodrutowymi w izolacji i powłoce PVC. Bez litery p przewód jest okrągły.
+
+? Z jakiego materiału wykonuje się styki łączników, aby były odporne na opalanie łukiem?
++ Ze spieków na bazie srebra, np. srebra z tlenkiem cyny
+- Z aluminium
+- Z ołowiu
+- Z mosiądzu bez pokrycia
+! Styki muszą dobrze przewodzić i być odporne na erozję łukową, dlatego stosuje się spieki srebra z tlenkami metali.
+
+? Który materiał ma właściwości ferromagnetyczne?
++ Żelazo
+- Miedź
+- Aluminium
+- Mosiądz
+! Ferromagnetykami są żelazo, nikiel, kobalt i ich stopy. Mają dużą przenikalność magnetyczną, dlatego stosuje się je na rdzenie.
+
+? Który przewód jest przeznaczony do układania pod tynkiem, bezpośrednio na ścianie (instalacja wtynkowa)?
++ YDYt
+- H05VV-F
+- H07RN-F
+- YKY
+! YDYt to płaski przewód wtynkowy. Mocuje się go na surowej ścianie i pokrywa tynkiem.
+
+? Który przewód stosuje się do zasilania lekkich odbiorników ruchomych, np. lampki biurkowej?
++ H03VV-F (dawniej OMY)
+- H07V-U (dawniej DY)
+- YKY
+- YAKY
+! Przewody H03VV-F mają żyły giętkie i napięcie 300/300 V; nadają się do lekkich urządzeń przenośnych o małym poborze prądu.
+
+? Do czego służy dławnica kablowa?
++ Do szczelnego wprowadzenia kabla do obudowy i odciążenia go od naprężeń
+- Do łączenia żył przewodów
+- Do zabezpieczenia przewodu przed przeciążeniem
+- Do pomiaru średnicy kabla
+! Dławnica uszczelnia przepust (zachowuje stopień ochrony IP obudowy) i zaciska powłokę kabla, aby nie wyrwał się z zacisków.
+
+? Który materiał izolacyjny wydziela przy spalaniu żrące i toksyczne gazy zawierające chlor?
++ Polwinit (PVC)
+- Guma silikonowa
+- Polietylen
+- Porcelana
+! PVC zawiera chlor. W budynkach użyteczności publicznej stosuje się przewody bezhalogenowe (oznaczenie H, np. N2XH), które przy spalaniu nie wydzielają tych gazów.

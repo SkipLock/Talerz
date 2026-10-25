@@ -1,0 +1,219 @@
+## zab | Aparatura łączeniowa i zabezpieczenia | Aparaty | 02,05
+
+? W jakim zakresie prądu działa natychmiastowo wyzwalacz elektromagnetyczny wyłącznika nadprądowego o charakterystyce B?
++ Od 3 do 5 krotności prądu znamionowego
+- Od 1,13 do 1,45 krotności prądu znamionowego
+- Od 5 do 10 krotności prądu znamionowego
+- Od 10 do 20 krotności prądu znamionowego
+! Wyłącznik B wyzwala natychmiastowo przy prądzie od 3 do 5 In, C przy 5–10 In, a D przy 10–20 In.
+
+? Wyłącznik o jakiej charakterystyce należy wybrać do obwodu silnika o dużym prądzie rozruchowym?
++ C lub D
+- Wyłącznie B, bo działa najszybciej
+- Charakterystyka nie ma znaczenia
+- Wyłącznie A
+! Wyłączniki C i D mają wyższe progi wyzwalania natychmiastowego, więc nie wyłączają obwodu podczas rozruchu. Charakterystyka B jest typowa dla obwodów oświetlenia i gniazd.
+
+? Co oznacza liczba 6000 w prostokącie na wyłączniku nadprądowym?
++ Znamionową zwarciową zdolność łączeniową 6000 A (6 kA)
+- Prąd znamionowy 6000 mA
+- Liczbę dopuszczalnych łączeń
+- Napięcie probiercze 6000 V
+! To największy prąd zwarcia, który wyłącznik bezpiecznie przerwie. Musi być większy od spodziewanego prądu zwarcia w miejscu montażu.
+
+? Co oznacza napis B16 na wyłączniku nadprądowym?
++ Charakterystykę B i prąd znamionowy 16 A
+- Prąd zadziałania 16 mA i typ B
+- Szerokość aparatu 16 mm
+- Napięcie 16 V i obudowę typu B
+! Litera oznacza charakterystykę czasowo-prądową, a liczba prąd znamionowy wyłącznika.
+
+? Przed czym chroni wyłącznik różnicowoprądowy o IΔn = 30 mA?
++ Przed porażeniem prądem elektrycznym
+- Przed przeciążeniem przewodów
+- Przed zwarciem międzyfazowym
+- Przed przepięciami atmosferycznymi
+! Wyłącznik RCD wykrywa prąd upływający do ziemi. Nie chroni przed przeciążeniem i zwarciem, dlatego obwód potrzebuje też zabezpieczenia nadprądowego (albo stosuje się wyłącznik RCBO).
+
+? Na jakiej zasadzie działa wyłącznik różnicowoprądowy?
++ Porównuje prądy w przewodach czynnych (L i N) i wyłącza, gdy ich różnica przekroczy próg zadziałania
+- Mierzy temperaturę przewodów
+- Wyłącza, gdy napięcie przekroczy 253 V
+- Wyłącza, gdy prąd obciążenia przekroczy prąd znamionowy
+! W przekładniku sumującym prądy L i N się znoszą. Gdy część prądu ucieka do ziemi, np. przez ciało człowieka, pojawia się różnica i wyłącznik się otwiera.
+
+? Który przewód nie może przechodzić przez wyłącznik różnicowoprądowy?
++ Przewód ochronny PE
+- Przewód neutralny N
+- Przewód fazowy L1
+- Przewód fazowy L2
+! Przez przekładnik RCD prowadzi się wszystkie przewody czynne (L i N). Gdyby przeszedł przez niego PE, prąd upływu by się znosił i wyłącznik by nie zadziałał.
+
+? Do czego służy przycisk TEST na wyłączniku różnicowoprądowym?
++ Do okresowego sprawdzenia mechanizmu wyłączającego przez wytworzenie sztucznego prądu różnicowego
+- Do pomiaru prądu zadziałania wyłącznika
+- Do sprawdzenia rezystancji izolacji obwodu
+- Do ręcznego załączania wyłącznika
+! Po wciśnięciu przycisku TEST wyłącznik powinien zadziałać. Producenci zalecają robić to regularnie. Przycisk nie zastępuje pomiaru miernikiem.
+
+? Który typ wyłącznika różnicowoprądowego wykrywa prądy przemienne sinusoidalne i pulsujące jednokierunkowe, ale nie wykrywa prądów stałych wygładzonych?
++ Typ A
+- Typ AC
+- Typ B
+- Typ S, przeznaczony tylko do prądu stałego
+! Typ AC wykrywa tylko prądy sinusoidalne, typ A także pulsujące jednokierunkowe, a typ B dodatkowo stałe wygładzone. Litera S oznacza wyłącznik selektywny (zwłoczny).
+
+? Do czego stosuje się wyłączniki różnicowoprądowe o IΔn = 300 mA?
++ Do ochrony przeciwpożarowej
+- Do ochrony uzupełniającej przed porażeniem w łazienkach
+- Do ochrony przed przepięciami
+- Do ochrony silników przed przeciążeniem
+! Prąd 300 mA jest za duży do ochrony uzupełniającej (ta wymaga 30 mA), ale wystarcza, by wykryć upływ grożący pożarem.
+
+? Jaki prąd znamionowy ma wkładka bezpiecznikowa ze wskaźnikiem w kolorze pokazanym na rysunku (szary)?
+@ wkladka:szary
++ 16 A
+- 6 A
+- 10 A
+- 20 A
+! Kolory wskaźników wkładek: 2 A różowy, 4 A brązowy, 6 A zielony, 10 A czerwony, 16 A szary, 20 A niebieski, 25 A żółty, 35 A czarny, 50 A biały, 63 A miedziany.
+
+? Jaki kolor ma wskaźnik zadziałania wkładki topikowej 10 A?
++ Czerwony
+- Zielony
+- Szary
+- Niebieski
+! Wkładka 10 A ma wskaźnik czerwony, 6 A zielony, 16 A szary, a 20 A niebieski.
+
+? Co oznacza symbol gG na wkładce topikowej?
++ Wkładkę ogólnego przeznaczenia o pełnozakresowej zdolności wyłączania
+- Wkładkę do zabezpieczania wyłącznie silników
+- Wkładkę do zabezpieczania półprzewodników
+- Wkładkę zwłoczną do transformatorów
+! g oznacza pełny zakres wyłączania (przeciążenia i zwarcia), G przeznaczenie ogólne, np. do przewodów. aM to wkładki niepełnozakresowe do silników, a gR i aR do półprzewodników.
+
+? Do czego służy wstawka kalibrowa w bezpieczniku typu D?
++ Uniemożliwia założenie wkładki o większym prądzie znamionowym niż przewidziany
+- Zwiększa zdolność wyłączania wkładki
+- Sygnalizuje przepalenie wkładki
+- Łączy bezpiecznik z przewodem PE
+! Wkładka o większym prądzie ma grubszą stopkę, która nie zmieści się we wstawce o mniejszym otworze.
+
+? Jakie zadanie ma ogranicznik przepięć typu 1 instalowany w złączu lub rozdzielnicy głównej?
++ Odprowadza do ziemi część prądu pioruna przy wyładowaniu w budynek lub linię
+- Chroni przewody przed przeciążeniem
+- Wyłącza obwód przy prądzie upływu 30 mA
+- Ogranicza prąd rozruchowy silników
+! Ograniczniki typu 1 są badane prądem udarowym 10/350 µs. Stosuje się je na wejściu instalacji w budynkach z instalacją odgromową lub zasilanych linią napowietrzną.
+
+? Gdzie instaluje się ograniczniki przepięć typu 3?
++ Bezpośrednio przy chronionych urządzeniach, np. w gniazdach lub listwach zasilających
+- W złączu kablowym budynku
+- W stacji transformatorowej SN
+- Na dachu, przy zwodach
+! Typ 3 to ostatni stopień ochrony: ogranicza przepięcia do poziomu bezpiecznego dla elektroniki. Typ 1 montuje się na wejściu instalacji, a typ 2 w rozdzielnicach.
+
+? Do czego służy stycznik w układach sterowania silników?
++ Do zdalnego załączania i wyłączania obwodów głównych za pomocą cewki
+- Do ochrony silnika przed zwarciem
+- Do pomiaru prądu silnika
+- Do zmiany częstotliwości napięcia
+! Stycznik to łącznik elektromagnetyczny: prąd cewki przyciąga zworę i zamyka styki główne. Sam w sobie nie chroni silnika.
+
+? Jak oznacza się zaciski cewki stycznika?
++ A1 i A2
+- L1 i L2
+- 13 i 14
+- 95 i 96
+! A1–A2 to cewka, 1-2, 3-4, 5-6 to styki główne, 13-14 typowy styk pomocniczy zwierny, a 95-96 styk rozwierny przekaźnika termicznego.
+
+? Jak oznacza się zaciski pomocniczego styku zwiernego stycznika?
++ Liczbami, których druga cyfra to 3 i 4, np. 13-14
+- Liczbami, których druga cyfra to 1 i 2, np. 21-22
+- Symbolami A1-A2
+- Literami L i N
+! Druga cyfra 3-4 oznacza styk zwierny, 1-2 rozwierny. Pierwsza cyfra to numer kolejny styku.
+
+? Które zaciski przekaźnika termicznego włącza się w obwód cewki stycznika, aby przeciążenie wyłączało silnik?
++ 95-96 (styk rozwierny)
+- 97-98 (styk zwierny)
+- 1-2 (tor prądowy)
+- A1-A2
+! Styk 95-96 otwiera się po zadziałaniu przekaźnika i przerywa zasilanie cewki. Styk 97-98 służy zwykle do sygnalizacji zadziałania.
+
+? Na jaki prąd nastawia się przekaźnik termiczny chroniący silnik?
++ Na prąd znamionowy silnika podany na tabliczce znamionowej
+- Na prąd rozruchowy silnika
+- Na prąd zwarciowy sieci
+- Na połowę prądu znamionowego
+! Nastawa równa prądowi znamionowemu pozwala na pracę ciągłą, a przy dłuższym przeciążeniu przekaźnik zadziała.
+
+? Czym różni się wyłącznik silnikowy od zwykłego wyłącznika nadprądowego?
++ Ma nastawiany wyzwalacz przeciążeniowy dopasowywany do prądu silnika oraz wyzwalacz zwarciowy
+- Nie ma wyzwalacza zwarciowego
+- Działa wyłącznie w obwodach prądu stałego
+- Nie da się go załączyć ręcznie
+! Wyłącznik silnikowy łączy funkcje łącznika oraz zabezpieczenia przeciążeniowego z regulowaną nastawą (np. 4–6,3 A) i zwarciowego.
+
+? Jaką funkcję pełni rozłącznik izolacyjny w rozdzielnicy?
++ Łączy i rozłącza prądy robocze, a w stanie otwartym zapewnia przerwę izolacyjną
+- Wyłącza samoczynnie przy zwarciu
+- Wykrywa prądy upływu
+- Ogranicza przepięcia
+! Rozłącznik nie ma wyzwalaczy. Zwarcia musi wyłączać zabezpieczenie nadprądowe zainstalowane przed nim lub za nim.
+
+? Na czym polega selektywność zabezpieczeń?
++ Przy zwarciu działa tylko zabezpieczenie najbliższe miejsca zakłócenia, a zabezpieczenia wyższego poziomu pozostają załączone
+- Wszystkie zabezpieczenia działają jednocześnie
+- Zabezpieczenia działają tylko w określonych godzinach
+- Zabezpieczenia dobiera się według koloru obudowy
+! Dzięki selektywności awaria jednego obwodu nie wyłącza całej instalacji. Uzyskuje się ją przez dobór prądów znamionowych i charakterystyk.
+
+? Który aparat łączy funkcje wyłącznika różnicowoprądowego i nadprądowego?
++ Wyłącznik różnicowonadprądowy (RCBO)
+- Rozłącznik bezpiecznikowy
+- Ogranicznik przepięć
+- Stycznik modułowy
+! RCBO chroni obwód przed przeciążeniem, zwarciem i prądem upływu. Pozwala dać każdemu obwodowi osobną ochronę różnicowoprądową.
+
+? Przy jakiej krotności prądu znamionowego wyłącznik nadprądowy musi zadziałać w czasie umownym (1 h dla In ≤ 63 A)?
++ 1,45 In
+- 1,13 In
+- 3 In
+- 10 In
+! Umowny prąd zadziałania wyłączników nadprądowych to 1,45 In, a prąd niezadziałania 1,13 In.
+
+? Co należy zrobić, gdy wyłącznik nadprądowy wyłącza obwód zaraz po każdym załączeniu?
++ Znaleźć i usunąć przyczynę (zwarcie lub przeciążenie), a nie wymieniać wyłącznika na większy
+- Wymienić wyłącznik na taki o większym prądzie znamionowym
+- Zmostkować wyłącznik
+- Unieruchomić dźwignię w pozycji załączonej
+! Zadziałanie zabezpieczenia oznacza zakłócenie. Zwiększenie prądu wyłącznika ponad obciążalność przewodu grozi jego przegrzaniem i pożarem.
+
+? Do czego służy przekaźnik bistabilny w instalacji oświetleniowej?
++ Do zmiany stanu obwodu (załącz–wyłącz) po każdym impulsie z dowolnego przycisku
+- Do ochrony obwodu przed zwarciem
+- Do pomiaru zużycia energii przez oświetlenie
+- Do regulacji jasności żarówek
+! Każdy impuls przełącza styki na przeciwne położenie. Przyciski łączy się równolegle, więc można sterować z wielu miejsc.
+
+? Co oznacza zdolność łączeniowa łącznika?
++ Największy prąd, jaki łącznik może bezpiecznie załączyć lub wyłączyć w określonych warunkach
+- Liczbę styków łącznika
+- Najmniejsze napięcie, przy którym łącznik działa
+- Masę łącznika
+! Za mała zdolność łączeniowa grozi spawaniem styków lub zniszczeniem aparatu łukiem elektrycznym.
+
+? Jaką rolę pełni wyzwalacz termiczny (bimetalowy) w wyłączniku nadprądowym?
++ Wyłącza obwód przy przeciążeniu, ze zwłoką zależną od wartości prądu
+- Wyłącza obwód natychmiast przy zwarciu
+- Wykrywa prąd upływu do ziemi
+- Ogranicza przepięcia
+! Bimetal wygina się pod wpływem ciepła wydzielanego przez prąd przeciążenia. Im większy prąd, tym szybciej zadziała. Zwarcia wyłącza wyzwalacz elektromagnetyczny.
+
+? Wyłącznik selektywny różnicowoprądowy (typu S) instaluje się:
++ Przed zwykłymi wyłącznikami RCD, aby przy upływie zadziałał tylko wyłącznik najbliższy uszkodzenia
+- Za każdym gniazdem wtyczkowym
+- Wyłącznie w obwodach prądu stałego
+- Zamiast wyłącznika nadprądowego
+! Wyłącznik S działa ze zwłoką i ma zwykle większy prąd IΔn, np. 100 lub 300 mA, dzięki czemu nie wyłącza całej instalacji przy upływie w jednym obwodzie.

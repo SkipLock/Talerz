@@ -1,0 +1,230 @@
+## ster | Sterowanie, automatyka i elektronika | Sterowanie | 02,05
+
+? Jaką funkcję pełni styk K1 połączony równolegle z przyciskiem S2 w układzie na rysunku?
+@ uklad:podtrzymanie
++ Podtrzymuje zasilanie cewki stycznika po zwolnieniu przycisku START
+- Wyłącza stycznik po naciśnięciu przycisku STOP
+- Chroni silnik przed przeciążeniem
+- Blokuje jednoczesne załączenie dwóch styczników
+! Po zadziałaniu stycznika jego styk zwierny K1 omija przycisk S2, więc cewka jest zasilana dalej. To układ z podtrzymaniem.
+
+? Dlaczego w układzie nawrotnym silnika stosuje się blokadę stykową (styk rozwierny jednego stycznika w obwodzie cewki drugiego)?
++ Aby nie dopuścić do jednoczesnego załączenia obu styczników i zwarcia międzyfazowego
+- Aby zwiększyć prędkość silnika
+- Aby silnik nie mógł zmienić kierunku obrotów
+- Aby zmniejszyć prąd rozruchowy
+! Styczniki „w prawo” i „w lewo” zamieniają dwie fazy. Załączone razem zwarłyby te fazy.
+
+? Dlaczego silnik sterowany przez stycznik z podtrzymaniem nie uruchomi się sam po powrocie napięcia po jego zaniku?
++ Bo przy zaniku napięcia stycznik odpada, a do ponownego załączenia trzeba nacisnąć START
+- Bo przy każdym zaniku napięcia przepala się bezpiecznik
+- Bo zawsze zadziała przekaźnik termiczny
+- Bo cewka stycznika ulega uszkodzeniu
+! To zabezpieczenie zanikowe: chroni ludzi przed niespodziewanym ruszeniem maszyny po przywróceniu zasilania.
+
+? Jak w języku drabinkowym LD realizuje się iloczyn logiczny (AND) dwóch wejść?
++ Dwa styki łączy się szeregowo przed cewką wyjścia
+- Dwa styki łączy się równolegle
+- Stosuje się styk rozwierny
+- Stosuje się dwie cewki
+! Sygnał dotrze do cewki tylko wtedy, gdy oba styki szeregowe są zamknięte, czyli oba wejścia mają stan 1.
+
+? Jaką funkcję realizuje szczebel programu przedstawiony na rysunku?
+@ lad:[I1|I2] (Q1)
++ Q1 = I1 OR I2
+- Q1 = I1 AND I2
+- Q1 = NOT I1
+- Q1 = I1 XOR I2
+! Styki połączone równolegle tworzą sumę logiczną: wyjście Q1 jest załączone, gdy zamknięty jest styk I1 lub I2.
+
+? I1 to przycisk START, a I2 to przycisk STOP (oba ze stykiem zwiernym, podłączone do wejść sterownika). Co realizuje szczebel z rysunku?
+@ lad:[I1|Q1] /I2 (Q1)
++ Załączenie wyjścia Q1 z podtrzymaniem i jego wyłączenie przyciskiem STOP
+- Załączenie Q1 tylko na czas trzymania przycisku I1
+- Miganie wyjścia Q1
+- Zliczanie impulsów z wejścia I1
+! Styk Q1 równoległy do I1 podtrzymuje wyjście. Styk I2 jest w programie rozwierny, więc naciśnięcie STOP (stan 1 na wejściu I2) przerywa szczebel.
+
+? Który język programowania sterowników PLC jest graficzny i przypomina schematy przekaźnikowe?
++ LD (Ladder Diagram)
+- ST (Structured Text)
+- IL (lista instrukcji)
+- C++
+! Norma PN-EN 61131-3 przewiduje m.in. języki graficzne LD i FBD oraz tekstowe ST i IL. LD przypomina schematy styczników i przekaźników.
+
+? Jak wygląda cykl pracy sterownika PLC?
++ Odczyt wejść, wykonanie programu, ustawienie wyjść, powtarzane cyklicznie
+- Ustawienie wyjść, odczyt wejść, wykonanie programu, tylko raz po włączeniu
+- Wykonanie programu tylko po naciśnięciu przycisku
+- Odczyt wejść tylko po zmianie programu
+! Sterownik cyklicznie zapamiętuje stan wejść, przetwarza program i na końcu aktualizuje wyjścia. Cykl trwa zwykle kilka milisekund.
+
+? Do czego służy timer TON w sterowniku PLC?
++ Do opóźnienia załączenia: wyjście timera zmienia stan po upływie nastawionego czasu od pojawienia się sygnału
+- Do opóźnienia wyłączenia
+- Do zliczania impulsów
+- Do porównywania dwóch liczb
+! TON opóźnia załączenie, TOF opóźnia wyłączenie, a liczniki CTU i CTD zliczają impulsy.
+
+? Który czujnik wykrywa bezdotykowo wyłącznie przedmioty metalowe?
++ Czujnik indukcyjny
+- Czujnik pojemnościowy
+- Czujnik optyczny refleksyjny
+- Łącznik krańcowy z dźwignią
+! Czujnik indukcyjny wytwarza zmienne pole magnetyczne, które metal tłumi. Czujnik pojemnościowy wykrywa także drewno, tworzywa i ciecze.
+
+? Który standardowy sygnał analogowy pozwala wykryć przerwę w obwodzie czujnika?
++ 4–20 mA
+- 0–10 V
+- 0–20 mA
+- 0–5 V
+! W sygnale 4–20 mA minimum zakresu to 4 mA (żywe zero), więc prąd 0 mA oznacza przerwę w obwodzie.
+
+? Jakie są kolory żył typowego trójprzewodowego czujnika zbliżeniowego?
++ Brązowy – plus zasilania, niebieski – minus, czarny – wyjście
+- Czarny – plus, brązowy – minus, niebieski – wyjście
+- Niebieski – plus, czarny – minus, brązowy – wyjście
+- Wszystkie żyły czarne, numerowane
+! Czujniki zgodne z PN-EN 60947-5-2 mają żyły: BN (brązowy) +, BU (niebieski) −, BK (czarny) wyjście.
+
+? Na którą elektrodę diody trzeba podać wyższy potencjał, żeby dioda przewodziła?
++ Na anodę
+- Na katodę
+- Na bramkę
+- Na emiter
+! Dioda przewodzi, gdy anoda ma wyższy potencjał od katody, dla diody krzemowej o około 0,6–0,7 V.
+
+? W jakim stanie pracuje dioda Zenera w stabilizatorze napięcia?
++ W kierunku zaporowym, w zakresie przebicia
+- W kierunku przewodzenia
+- Bez polaryzacji
+- Jako źródło światła
+! W zakresie przebicia napięcie na diodzie Zenera prawie się nie zmienia przy zmianach prądu, co wykorzystuje się do stabilizacji.
+
+? Jaka jest częstotliwość tętnień napięcia na wyjściu prostownika dwupołówkowego zasilanego z sieci 50 Hz?
++ 100 Hz
+- 25 Hz
+- 50 Hz
+- 150 Hz
+! Prostownik dwupołówkowy wykorzystuje obie połówki okresu, więc na każdy okres sieci przypadają dwa impulsy napięcia.
+
+? Jaki przebieg napięcia otrzymuje się na rezystorze obciążenia prostownika jednopołówkowego?
++ @wave:pol
+- @wave:cala
+- @wave:sin
+- @wave:prost
+! Dioda przepuszcza tylko dodatnie połówki sinusoidy. W czasie ujemnych połówek napięcie na obciążeniu wynosi zero.
+
+? Linia ciągła na rysunku przedstawia napięcie na wyjściu prostownika dwupołówkowego. Jaki element sprawił, że napięcie nie spada do zera między szczytami?
+@ wave:wygl
++ Kondensator filtrujący dołączony równolegle do obciążenia
+- Rezystor szeregowy w obwodzie obciążenia
+- Dioda LED w obwodzie wyjściowym
+- Bezpiecznik w obwodzie pierwotnym transformatora
+! Kondensator ładuje się w szczytach napięcia i oddaje energię między nimi, dzięki czemu tętnienia są małe.
+
+? Jak pracuje tranzystor używany jako łącznik (klucz)?
++ Przełącza się między stanem nasycenia (przewodzi) a stanem zatkania (nie przewodzi) w zależności od prądu bazy
+- Prostuje napięcie przemienne
+- Stabilizuje częstotliwość sieci
+- Wytwarza światło
+! Mały prąd bazy steruje dużym prądem kolektora. W nasyceniu tranzystor działa jak zamknięty łącznik, a w zatkaniu jak otwarty.
+
+? Jaki stan ma wyjście bramki AND, gdy A = 1 i B = 0?
++ 0
+- 1
+- Zależy od poprzedniego stanu
+- Stan nieokreślony
+! Bramka AND daje 1 tylko wtedy, gdy wszystkie wejścia mają stan 1.
+
+? Jaki stan ma wyjście bramki NOR, gdy oba wejścia mają stan 0?
++ 1
+- 0
+- Stan wysokiej impedancji
+- Zależy od napięcia zasilania
+! NOR to negacja sumy: 0 OR 0 = 0, a po negacji 1.
+
+? Do czego służy transoptor?
++ Do przekazywania sygnału z galwanicznym oddzieleniem obwodów
+- Do pomiaru natężenia oświetlenia
+- Do prostowania prądu dużej mocy
+- Do podwyższania napięcia
+! Dioda LED i fototranzystor w jednej obudowie przenoszą sygnał światłem, więc obwody wejściowy i wyjściowy nie są połączone elektrycznie.
+
+? Który element półprzewodnikowy stosuje się w ściemniaczach do regulacji mocy żarówek i grzałek zasilanych prądem przemiennym?
++ Triak
+- Dioda Zenera
+- Fotorezystor
+- Kondensator elektrolityczny
+! Triak przewodzi w obu kierunkach i można go załączać w wybranym momencie każdej połówki okresu, co zmienia wartość skuteczną napięcia na odbiorniku.
+
+? Jak wyłącza się tyrystor przewodzący w obwodzie prądu przemiennego?
++ Samoczynnie, gdy prąd spadnie poniżej prądu podtrzymania, np. przy przejściu napięcia przez zero
+- Przez zdjęcie sygnału z bramki
+- Przez podanie na bramkę napięcia przemiennego
+- Przez zwiększenie prądu obciążenia
+! Bramka służy tylko do załączenia. Załączony tyrystor przewodzi, dopóki prąd anodowy nie spadnie poniżej prądu podtrzymania.
+
+? Jak nazywa się przekaźnik, który przełącza styki dopiero po nastawionym czasie od podania napięcia na cewkę?
++ Przekaźnik czasowy z opóźnionym załączeniem
+- Przekaźnik bistabilny
+- Przekaźnik termiczny
+- Przekaźnik priorytetowy
+! Przekaźnik czasowy odlicza nastawiony czas i dopiero wtedy przełącza styki. Stosuje się go np. w układzie gwiazda-trójkąt.
+
+? Do czego służy przekaźnik czasowy w układzie rozruchu gwiazda-trójkąt?
++ Do przełączenia silnika z gwiazdy w trójkąt po jego rozpędzeniu
+- Do ochrony silnika przed przeciążeniem
+- Do zmiany kierunku obrotów
+- Do pomiaru prędkości silnika
+! Silnik rusza w gwieździe przy zmniejszonym prądzie, a po nastawionym czasie przekaźnik przełącza styczniki na trójkąt.
+
+? Jakiego koloru nie wolno stosować dla przycisku START według PN-EN 60204-1?
++ Czerwonego
+- Białego
+- Zielonego
+- Czarnego
+! Czerwony jest zarezerwowany dla funkcji zatrzymania, zwłaszcza awaryjnego. Dla START zaleca się biały, dopuszcza się też szary, czarny i zielony.
+
+? Co oznacza stan 1 na wejściu cyfrowym sterownika PLC zasilanego napięciem 24 V DC?
++ Na wejściu jest napięcie bliskie 24 V
+- Na wejściu jest 0 V
+- Na wejściu jest 230 V AC
+- Wejście jest uszkodzone
+! Typowe wejścia 24 V DC rozpoznają jako 1 napięcie powyżej około 15 V, a jako 0 napięcie poniżej około 5 V.
+
+? Do czego służy rezystor włączony szeregowo z diodą LED?
++ Ogranicza prąd płynący przez diodę
+- Zwiększa jasność diody ponad znamionową
+- Zmienia kolor świecenia
+- Prostuje napięcie
+! Dioda LED przewodząca ma bardzo małą rezystancję dynamiczną. Bez rezystora prąd byłby za duży i dioda by się uszkodziła.
+
+? Jaki rezystor należy szeregowo połączyć z diodą LED (2 V, 20 mA) zasilaną napięciem 12 V?
++ 500 Ω
+- 100 Ω
+- 600 Ω
+- 5 kΩ
+! R = (U − U_LED) / I = (12 − 2) V / 0,02 A = 500 Ω. W praktyce wybiera się najbliższą wartość z szeregu, np. 510 Ω.
+
+? Jaki element wykrywa położenie krańcowe ruchomej części maszyny przez mechaniczny kontakt?
++ Łącznik krańcowy (wyłącznik krańcowy)
+- Czujnik indukcyjny
+- Termistor
+- Przekaźnik czasowy
+! Łącznik krańcowy ma dźwignię lub popychacz, który naciskany przez ruchomą część zmienia stan styków.
+
+? Która funkcja logiczna odpowiada szeregowemu połączeniu styku zwiernego I1 i rozwiernego I2 przed cewką Q1?
+@ lad:I1 /I2 (Q1)
++ Q1 = I1 AND NOT I2
+- Q1 = I1 OR I2
+- Q1 = NOT I1 AND I2
+- Q1 = I1 AND I2
+! Styk rozwierny przewodzi, gdy wejście I2 ma stan 0, więc Q1 = 1 tylko przy I1 = 1 i I2 = 0.
+
+? Jakie urządzenie stosuje się do zasilania sterownika PLC i obwodów czujników napięciem 24 V DC?
++ Zasilacz impulsowy 230 V AC / 24 V DC
+- Autotransformator 230/24 V AC
+- Dzielnik napięcia z rezystorów
+- Bateria kondensatorów
+! Zasilacz impulsowy daje stabilizowane napięcie stałe 24 V i oddziela obwody sterowania od sieci.

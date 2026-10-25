@@ -45,6 +45,8 @@ self.addEventListener('fetch', event => {
   }
 
   if (url.origin !== self.location.origin) return;
+  // The exam app in /egzamin/ has its own service worker and cache.
+  if (url.pathname.includes('/egzamin/')) return;
 
   // App files: network first with a short timeout, cache as fallback.
   event.respondWith((async () => {

@@ -1,0 +1,260 @@
+## mont | Montaż instalacji elektrycznych | Montaż | 02
+
+? Do czego służy łącznik schodowy?
++ Do sterowania oświetleniem z dwóch miejsc
+- Do sterowania dwiema grupami lamp z jednego miejsca
+- Do sterowania z trzech i więcej miejsc bez innych łączników
+- Do regulacji jasności świecenia
+! Dwa łączniki schodowe pozwalają włączać i wyłączać światło z dwóch miejsc, np. na dole i na górze schodów.
+
+? Jaki łącznik należy zastosować między dwoma łącznikami schodowymi, aby sterować oświetleniem z trzech miejsc?
++ Łącznik krzyżowy
+- Łącznik świecznikowy
+- Łącznik dwubiegunowy
+- Łącznik jednobiegunowy
+! Łącznik krzyżowy włącza się w przewody korespondencyjne między dwoma łącznikami schodowymi. Każdy kolejny łącznik krzyżowy dodaje następne miejsce sterowania.
+
+? Do czego służy łącznik świecznikowy?
++ Do niezależnego załączania dwóch obwodów (grup źródeł światła) z jednego miejsca
+- Do sterowania jednym obwodem z dwóch miejsc
+- Do załączania obwodów 400 V
+- Do wyłączania światła po nastawionym czasie
+! Łącznik świecznikowy ma dwa klawisze i wspólny zacisk zasilający, np. do żyrandola z dwiema grupami żarówek.
+
+? Jakie urządzenie najlepiej zastosować, gdy oświetlenie korytarza ma być sterowane z pięciu miejsc?
++ Przekaźnik bistabilny (impulsowy) sterowany przyciskami
+- Pięć łączników świecznikowych
+- Jeden łącznik dwubiegunowy
+- Ściemniacz
+! Przyciski połączone równolegle wysyłają impulsy do przekaźnika bistabilnego, który przy każdym impulsie zmienia stan. Liczba miejsc sterowania nie jest praktycznie ograniczona.
+
+? Który przewód powinien przerywać łącznik jednobiegunowy w obwodzie oświetleniowym?
++ Przewód fazowy L
+- Przewód neutralny N
+- Przewód ochronny PE
+- Dowolny przewód
+! Łącznik w przewodzie fazowym odłącza napięcie od oprawy. Gdyby przerywał N, wyłączona oprawa wciąż byłaby pod napięciem.
+
+? Którego przewodu nie wolno przerywać łącznikami ani zabezpieczać bezpiecznikami?
++ Ochronnego PE (oraz PEN)
+- Fazowego L1
+- Neutralnego N w łączniku dwubiegunowym
+- Fazowego L3
+! Przerwanie przewodu ochronnego odebrałoby ochronę przy uszkodzeniu wszystkim urządzeniom za tym miejscem.
+
+? Jak prowadzi się przewody w instalacji podtynkowej?
++ Pionowo i poziomo, w wyznaczonych strefach instalacyjnych
+- Ukośnie, najkrótszą drogą między puszkami
+- Wyłącznie pionowo
+- Dowolnie, bo i tak są niewidoczne
+! Przewody w strefach instalacyjnych biegną w przewidywalnych miejscach, więc łatwo ich nie uszkodzić podczas wiercenia.
+
+? W jakiej odległości od sufitu przebiega górna pozioma strefa instalacyjna?
++ 15–45 cm od sufitu
+- 0–5 cm od sufitu
+- 50–80 cm od sufitu
+- 100–130 cm od sufitu
+! Górna strefa pozioma ma 30 cm szerokości i zaczyna się 15 cm pod sufitem. Dolna leży 15–45 cm nad podłogą.
+
+? W jakiej odległości od krawędzi otworów drzwiowych i okiennych przebiegają pionowe strefy instalacyjne?
++ 10–30 cm od krawędzi otworu
+- 0–10 cm od krawędzi otworu
+- 40–60 cm od krawędzi otworu
+- Dokładnie w osi otworu
+! Pionowe strefy mają 20 cm szerokości i zaczynają się 10 cm od krawędzi ościeży oraz od naroży ścian.
+
+? Jakiego narzędzia używa się do wykonania bruzd pod przewody w ścianie murowanej?
++ Bruzdownicy
+- Zaciskarki
+- Ściągacza izolacji
+- Wkrętarki akumulatorowej
+! Bruzdownica wycina dwie równoległe szczeliny, a materiał między nimi usuwa się dłutem lub młotowiertarką.
+
+? Do czego służy ściągacz izolacji?
++ Do usuwania izolacji z żył bez uszkadzania przewodnika
+- Do zaciskania końcówek kablowych
+- Do cięcia kabli o dużym przekroju
+- Do mierzenia przekroju żył
+! Ściągacz zdejmuje izolację na ustalonej długości i nie nacina miedzi. Nacięta żyła łatwo pęka.
+
+? Do czego służy zaciskarka (praska)?
++ Do zaciskania końcówek i tulejek na żyłach przewodów
+- Do wyginania rur stalowych
+- Do usuwania izolacji
+- Do wiercenia otworów w puszkach
+! Końcówka zaciśnięta właściwą praską daje trwałe połączenie o małej rezystancji.
+
+? Jak należy łączyć przewody w puszce instalacyjnej?
++ Za pomocą złączek przeznaczonych do tego celu, np. zacisków śrubowych lub sprężynowych
+- Przez skręcenie żył i owinięcie taśmą izolacyjną
+- Przez lutowanie bez izolowania połączenia
+- Przez zgniecenie żył kombinerkami
+! Połączenie musi być pewne i trwałe. Skręcone i owinięte taśmą żyły z czasem się luzują i nagrzewają.
+
+? Ile przewodów korespondencyjnych łączy dwa łączniki schodowe?
++ Dwa
+- Jeden
+- Cztery
+- Pięć
+! Łączniki schodowe łączy się dwoma przewodami korespondencyjnymi. Do jednego łącznika dochodzi ponadto faza, a od drugiego przewód do oprawy.
+
+? Do czego służy puszka rozgałęźna?
++ Do wykonywania połączeń i odgałęzień przewodów
+- Do mocowania opraw oświetleniowych
+- Do zabezpieczania obwodów przed przeciążeniem
+- Do pomiaru zużycia energii
+! W puszce rozgałęźnej łączy się przewody i wykonuje odgałęzienia do łączników, gniazd i opraw.
+
+? Jaki osprzęt należy zastosować w pomieszczeniu wilgotnym, np. w piwnicy?
++ Osprzęt hermetyczny o stopniu ochrony co najmniej IP44 i przewody w powłoce
+- Zwykły osprzęt IP20 i przewody jednożyłowe bez osłon
+- Przewody gołe na izolatorach
+- Dowolny osprzęt, jeśli obwód ma bezpiecznik
+! W pomieszczeniach wilgotnych osprzęt musi być chroniony przed bryzgami wody, czyli druga cyfra IP musi wynosić co najmniej 4.
+
+? Co oznacza stopień ochrony IP44?
++ Ochronę przed ciałami stałymi większymi niż 1 mm i przed bryzgami wody z dowolnego kierunku
+- Pełną pyłoszczelność i wodoszczelność przy zanurzeniu
+- Brak ochrony przed wodą
+- Ochronę wyłącznie przed dotykiem palcem
+! Pierwsza cyfra 4 – ochrona przed ciałami stałymi większymi niż 1 mm, druga cyfra 4 – ochrona przed bryzgami wody.
+
+? Która cyfra kodu IP określa ochronę przed wnikaniem wody?
++ Druga
+- Pierwsza
+- Obie jednocześnie
+- Żadna, wodę oznacza się literą
+! Pierwsza cyfra (0–6) dotyczy ochrony przed dotykiem i ciałami stałymi, druga (0–9) ochrony przed wodą.
+
+? Jaki stopień ochrony musi mieć sprzęt instalowany w strefie 0 łazienki (wnętrze wanny lub brodzika)?
++ Co najmniej IPX7
+- Co najmniej IPX4
+- Co najmniej IP20
+- Co najmniej IPX1
+! W strefie 0 sprzęt może być zanurzony, dlatego wymaga się co najmniej IPX7. W strefach 1 i 2 wystarcza IPX4.
+
+? Czy w strefie 1 łazienki (nad wanną, do wysokości 2,25 m) wolno zainstalować gniazdo wtyczkowe 230 V ogólnego przeznaczenia?
++ Nie
+- Tak, jeśli ma stopień ochrony IP44
+- Tak, jeśli obwód ma wyłącznik różnicowoprądowy 30 mA
+- Tak, jeśli gniazdo ma bolec ochronny
+! Gniazd 230 V ogólnego przeznaczenia nie instaluje się w strefach 0, 1 i 2. Dopuszcza się tam tylko sprzęt przystosowany do danej strefy.
+
+? Jakie zabezpieczenie dodatkowe musi mieć każdy obwód zasilający urządzenia w łazience?
++ Wyłącznik różnicowoprądowy o prądzie zadziałania nie większym niż 30 mA
+- Bezpiecznik topikowy gG 25 A
+- Ogranicznik przepięć typu 1
+- Przekaźnik termiczny
+! Norma PN-HD 60364-7-701 wymaga, aby wszystkie obwody łazienki były chronione wyłącznikiem RCD o IΔn ≤ 30 mA (poza obwodami SELV i separowanymi).
+
+? W jakiej kolejności wykonuje się instalację podtynkową w nowym budynku?
++ Trasowanie, wykucie bruzd i otworów na puszki, ułożenie przewodów i puszek, tynkowanie, montaż osprzętu
+- Tynkowanie, trasowanie, ułożenie przewodów, montaż osprzętu
+- Montaż osprzętu, ułożenie przewodów, tynkowanie, trasowanie
+- Ułożenie przewodów, trasowanie, montaż osprzętu, tynkowanie
+! Najpierw wyznacza się trasy i miejsca osprzętu, potem wykonuje bruzdy i układa przewody. Łączniki i gniazda montuje się po tynkowaniu i malowaniu.
+
+? Co należy zrobić po zakończeniu montażu instalacji, przed oddaniem jej do użytku?
++ Wykonać sprawdzenie odbiorcze, czyli oględziny i pomiary, a wyniki zapisać w protokole
+- Od razu załączyć wszystkie obwody pod pełnym obciążeniem
+- Zamalować wszystkie puszki
+- Usunąć opisy obwodów z rozdzielnicy
+! Nowa instalacja musi przejść sprawdzenie odbiorcze według PN-HD 60364-6, potwierdzone protokołem.
+
+? Jaką średnicę ma typowa puszka podtynkowa pod łącznik lub gniazdo?
++ 60 mm
+- 25 mm
+- 120 mm
+- 200 mm
+! Standardowe puszki podtynkowe mają średnicę 60 mm, a rozstaw otworów montażowych osprzętu jest do niej dopasowany.
+
+? Który przewód nadaje się do wykonania instalacji podtynkowej w budynku mieszkalnym?
++ YDYp 3×2,5 mm² 450/750 V
+- H05VV-F 3G0,75
+- H03VV-F 2×0,5
+- Przewód jednodrutowy bez izolacji
+! Przewody kabelkowe płaskie z żyłami jednodrutowymi są typowe do instalacji pod tynkiem. Przewody giętkie służą do odbiorników ruchomych.
+
+? Jakie zabezpieczenie i jaki przekrój przewodu stosuje się najczęściej w obwodzie gniazd wtyczkowych w mieszkaniu?
++ Wyłącznik nadprądowy B16 i przewód miedziany 2,5 mm²
+- Wyłącznik B6 i przewód 0,75 mm²
+- Wyłącznik C32 i przewód 1,5 mm²
+- Bezpiecznik 63 A i przewód 1 mm²
+! Typowy obwód gniazd to przewód 3×2,5 mm² i wyłącznik B16. Obwody oświetleniowe najczęściej mają przewód 1,5 mm² i wyłącznik B10.
+
+? Na czym polega instalacja wtynkowa?
++ Przewody wtynkowe mocuje się bezpośrednio na ścianie i przykrywa warstwą tynku
+- Przewody prowadzi się w listwach na tynku
+- Przewody wciąga się do rur stalowych na tynku
+- Przewody zawiesza się na linkach nośnych
+! Przewody wtynkowe (np. YDYt) mocuje się do surowej ściany, a następnie pokrywa tynkiem o odpowiedniej grubości.
+
+? Do czego służy szyna PE w rozdzielnicy mieszkaniowej?
++ Do przyłączenia przewodów ochronnych wszystkich obwodów
+- Do przyłączenia przewodów fazowych za wyłącznikami
+- Do łączenia przewodów neutralnych z fazowymi
+- Do mocowania wyłączników nadprądowych
+! Szyna PE zbiera przewody ochronne obwodów i łączy je z głównym przewodem ochronnym. Przewody N podłącza się do osobnej szyny N.
+
+? Do czego służy szyna TH35 w rozdzielnicy?
++ Do mocowania aparatów modułowych, np. wyłączników nadprądowych
+- Do łączenia przewodów neutralnych
+- Jako uziom rozdzielnicy
+- Do prowadzenia przewodów zasilających
+! Szyna TH35 ma szerokość 35 mm i umożliwia zatrzaskowe mocowanie aparatów modułowych.
+
+? Co należy umieścić w rozdzielnicy mieszkaniowej po zakończeniu montażu?
++ Opis obwodów (do czego służy każdy aparat) i schemat rozdzielnicy
+- Wyłącznie numer telefonu instalatora
+- Nic, opis jest zbędny
+- Kopię faktury za materiały
+! Opis obwodów pozwala szybko wyłączyć właściwy obwód i ułatwia późniejszą eksploatację.
+
+? Którą wtyczką można przyłączyć odbiornik trójfazowy 400 V, 16 A do gniazda przemysłowego?
++ Pięciostykową (3P+N+PE) w obudowie czerwonej
+- Dwustykową z bolcem ochronnym w obudowie białej
+- Trzystykową w obudowie niebieskiej
+- Siedmiostykową w obudowie zielonej
+! Gniazda i wtyczki przemysłowe 400 V mają obudowę czerwoną (230 V – niebieską). Wersja 3P+N+PE ma pięć styków.
+
+? Jakie narzędzie najlepiej nadaje się do wykrycia przebiegu przewodów pod tynkiem przed wierceniem?
++ Wykrywacz przewodów (detektor)
+- Megaomomierz
+- Poziomica laserowa
+- Miernik cęgowy
+! Wykrywacz przewodów reaguje na pole elektryczne przewodów pod napięciem lub na metal i pozwala ominąć je podczas wiercenia.
+
+? Dlaczego przewody ułożone na tynku mocuje się uchwytami w określonych odstępach?
++ Aby nie zwisały i nie były narażone na naprężenia i uszkodzenia mechaniczne
+- Aby zmniejszyć rezystancję przewodów
+- Aby przewody lepiej oddawały ciepło do ściany
+- Wyłącznie ze względów estetycznych
+! Prawidłowe mocowanie chroni przewód przed naprężeniami i uszkodzeniem. Odstępy uchwytów zależą od rodzaju przewodu i sposobu ułożenia.
+
+? Który element instalacji służy do ochrony przewodów przed uszkodzeniami mechanicznymi przy przejściu przez ścianę lub strop?
++ Rura ochronna (przepust)
+- Puszka łącznikowa
+- Złączka sprężynowa
+- Szyna TH35
+! Przewody przechodzące przez przegrody prowadzi się w rurach ochronnych, które chronią je przed zgnieceniem i ułatwiają wymianę.
+
+? Jak należy przyłączyć przewody do gniazda wtyczkowego z bolcem ochronnym?
++ Przewód ochronny PE do zacisku bolca, a fazowy i neutralny do zacisków styków tulejowych
+- Przewód neutralny do zacisku bolca
+- Przewód fazowy do zacisku bolca
+- Przewód ochronny może pozostać niepodłączony
+! Bolec gniazda łączy obudowę odbiornika I klasy z przewodem ochronnym. Podłączenie do niego N lub L stwarza zagrożenie porażeniem.
+
+? Czym charakteryzuje się instalacja natynkowa w korytach (kanałach) instalacyjnych?
++ Przewody układa się w zamykanych korytach z tworzywa na powierzchni ściany, co ułatwia rozbudowę
+- Przewody zatapia się w betonie stropu
+- Przewody prowadzi się bez żadnych osłon po ścianie
+- Przewody układa się tylko w ziemi
+! Koryta instalacyjne stosuje się np. w biurach i warsztatach; pozwalają łatwo dokładać obwody i montować osprzęt bezpośrednio na korycie.
+
+? Jaką funkcję pełni wyłącznik główny w rozdzielnicy mieszkaniowej?
++ Pozwala odłączyć zasilanie całej instalacji mieszkania
+- Chroni przed przepięciami
+- Mierzy zużycie energii
+- Załącza oświetlenie klatki schodowej
+! Wyłącznik główny (np. rozłącznik izolacyjny) umożliwia szybkie odłączenie wszystkich obwodów, np. w czasie pożaru lub prac w instalacji.

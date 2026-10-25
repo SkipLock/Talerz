@@ -1,0 +1,244 @@
+## ochr | Ochrona przeciwporażeniowa | Ochrona | 02,05
+
+? Jaki układ sieci przedstawiono na rysunku?
+@ sys:TN-C
++ TN-C
+- TN-S
+- TT
+- IT
+! Funkcje przewodu neutralnego i ochronnego pełni jeden przewód PEN, a punkt neutralny źródła jest uziemiony.
+
+? Jaki układ sieci przedstawiono na rysunku?
+@ sys:TN-S
++ TN-S
+- TN-C
+- TT
+- IT
+! Na całej długości sieci przewód neutralny N i ochronny PE są oddzielne, a punkt neutralny źródła jest uziemiony.
+
+? Jaki układ sieci przedstawiono na rysunku?
+@ sys:TT
++ TT
+- TN-C
+- TN-S
+- IT
+! Punkt neutralny źródła jest uziemiony, a części przewodzące dostępne odbiornika mają własne, oddzielne uziemienie.
+
+? Jaki układ sieci przedstawiono na rysunku?
+@ sys:IT
++ IT
+- TT
+- TN-C-S
+- TN-S
+! W układzie IT źródło jest odizolowane od ziemi albo uziemione przez dużą impedancję, a odbiorniki mają uziemienia ochronne.
+
+? Jaki układ sieci przedstawiono na rysunku?
+@ sys:TN-C-S
++ TN-C-S
+- TN-C
+- TN-S
+- TT
+! Przewód PEN rozdziela się w pewnym punkcie na przewody N i PE. Za punktem podziału nie wolno ich ponownie łączyć.
+
+? Co oznacza pierwsza litera T w oznaczeniu układu TN-S?
++ Bezpośrednie uziemienie punktu neutralnego źródła
+- Połączenie części przewodzących z przewodem neutralnym
+- Izolowanie źródła od ziemi
+- Zastosowanie transformatora separacyjnego
+! Pierwsza litera opisuje źródło (T – uziemione, I – izolowane), a druga części przewodzące dostępne (T – uziemione osobno, N – połączone z uziemionym punktem źródła).
+
+? Jaki jest największy dopuszczalny czas samoczynnego wyłączenia zasilania w obwodzie odbiorczym do 32 A w układzie TN przy napięciu 230 V?
++ 0,4 s
+- 0,2 s
+- 1 s
+- 5 s
+! Według PN-HD 60364-4-41 w układzie TN przy U₀ = 230 V taki obwód musi być wyłączony w ciągu 0,4 s, a w układzie TT w ciągu 0,2 s. Obwody rozdzielcze w TN mogą mieć 5 s.
+
+? Jaki warunek musi być spełniony, aby samoczynne wyłączenie zasilania w układzie TN było skuteczne?
++ Zs · Ia ≤ U₀
+- Zs · Ia ≥ U₀
+- RA · Ia ≤ 230 V
+- Zs ≥ U₀ / In
+! Impedancja pętli zwarcia Zs musi być na tyle mała, żeby prąd zwarcia osiągnął wartość Ia, przy której zabezpieczenie wyłączy w wymaganym czasie.
+
+? Jaka jest największa dopuszczalna impedancja pętli zwarcia w obwodzie 230 V zabezpieczonym wyłącznikiem B16 w układzie TN?
++ 2,88 Ω
+- 0,72 Ω
+- 1,44 Ω
+- 14,4 Ω
+! Dla wyłącznika B przyjmuje się Ia = 5 · In = 80 A, więc Zs ≤ 230 V / 80 A ≈ 2,88 Ω.
+
+? Jaka jest największa dopuszczalna impedancja pętli zwarcia w obwodzie 230 V zabezpieczonym wyłącznikiem C10 w układzie TN?
++ 2,3 Ω
+- 1,15 Ω
+- 4,6 Ω
+- 23 Ω
+! Dla charakterystyki C przyjmuje się Ia = 10 · In = 100 A, więc Zs ≤ 230 / 100 = 2,3 Ω.
+
+? Jakie napięcie dotykowe dopuszczalne długotrwale przyjmuje się w warunkach normalnych dla prądu przemiennego?
++ 50 V
+- 12 V
+- 25 V
+- 120 V
+! W warunkach normalnych dopuszczalne długotrwale napięcie dotykowe wynosi 50 V prądu przemiennego i 120 V prądu stałego.
+
+? Jaka jest górna granica bardzo niskiego napięcia (ELV) dla prądu przemiennego?
++ 50 V
+- 12 V
+- 120 V
+- 230 V
+! Bardzo niskie napięcie (SELV, PELV) to napięcie do 50 V prądu przemiennego i do 120 V prądu stałego.
+
+? Czym różni się układ PELV od SELV?
++ W PELV obwód może być uziemiony, a w SELV obwód nie ma połączenia z ziemią
+- PELV ma napięcie wyższe niż 50 V AC
+- SELV wymaga przewodu ochronnego PE
+- Niczym, to dwie nazwy tego samego
+! Oba układy mają napięcie ELV z bezpiecznego źródła, np. transformatora bezpieczeństwa. W SELV obwód jest izolowany od ziemi, w PELV może być uziemiony.
+
+? Które źródło zasilania można zastosować do obwodu SELV?
++ Transformator bezpieczeństwa
+- Autotransformator
+- Dzielnik napięcia z rezystorów
+- Zasilacz bez oddzielenia od sieci
+! Źródło SELV musi zapewniać oddzielenie ochronne od sieci. Autotransformator i dzielnik napięcia nie oddzielają obwodu wtórnego od pierwotnego.
+
+? Na czym polega ochrona przez separację elektryczną?
++ Odbiornik zasila się z transformatora separacyjnego, a obwód wtórny nie ma połączenia z ziemią
+- Odbiornik łączy się z przewodem PEN
+- Obwód zabezpiecza się wyłącznikiem C
+- Obudowę odbiornika łączy się z rurą wodociągową
+! W obwodzie separowanym dotknięcie jednego przewodu nie powoduje przepływu prądu przez ciało do ziemi, bo nie ma zamkniętej drogi.
+
+? Ile odbiorników zaleca się przyłączać do jednego transformatora separacyjnego?
++ Jeden
+- Dwa
+- Pięć
+- Dowolnie dużo
+! Separacja zasilająca jeden odbiornik jest najprostsza i najskuteczniejsza. Przy kilku odbiornikach trzeba dodatkowo stosować izolowane połączenia wyrównawcze.
+
+? Który środek należy do ochrony podstawowej (przed dotykiem bezpośrednim)?
++ Izolacja części czynnych, obudowy i osłony
+- Samoczynne wyłączenie zasilania
+- Miejscowe połączenia wyrównawcze
+- Uziemienie ochronne obudowy
+! Ochrona podstawowa zapobiega dotknięciu części czynnych w normalnych warunkach. Samoczynne wyłączenie zasilania i połączenia wyrównawcze to środki ochrony przy uszkodzeniu.
+
+? Który środek należy do ochrony przy uszkodzeniu (przed dotykiem pośrednim)?
++ Samoczynne wyłączenie zasilania
+- Izolacja podstawowa części czynnych
+- Umieszczenie poza zasięgiem ręki
+- Obudowa o stopniu ochrony IP2X
+! Ochrona przy uszkodzeniu działa wtedy, gdy zawiedzie izolacja podstawowa i na obudowie pojawi się napięcie.
+
+? Jaki jest najmniejszy przekrój miedzianego przewodu połączeń wyrównawczych głównych?
++ 6 mm²
+- 1,5 mm²
+- 2,5 mm²
+- 50 mm²
+! Przewody połączeń wyrównawczych głównych muszą mieć co najmniej 6 mm² Cu (16 mm² Al lub 50 mm² stali).
+
+? Jaki przekrój powinien mieć przewód ochronny PE, gdy przewód fazowy ma 10 mm² (ten sam materiał)?
++ 10 mm²
+- 4 mm²
+- 6 mm²
+- 16 mm²
+! Do 16 mm² przewód PE ma taki sam przekrój jak fazowy. Od 16 do 35 mm² stosuje się 16 mm², a powyżej 35 mm² połowę przekroju fazowego.
+
+? Jaki przekrój powinien mieć przewód PE, gdy przewody fazowe mają po 70 mm² Cu?
++ 35 mm²
+- 16 mm²
+- 25 mm²
+- 70 mm²
+! Gdy przekrój fazowy przekracza 35 mm², przewód PE ma co najmniej połowę tego przekroju: 70 / 2 = 35 mm².
+
+? Jaki jest najmniejszy przekrój miedzianego przewodu PEN?
++ 10 mm²
+- 2,5 mm²
+- 4 mm²
+- 16 mm²
+! Przewód PEN stosuje się tylko w instalacjach ułożonych na stałe i musi mieć co najmniej 10 mm² Cu lub 16 mm² Al.
+
+? Do czego służą połączenia wyrównawcze główne?
++ Do połączenia z głównym przewodem ochronnym metalowych instalacji wchodzących do budynku i jego konstrukcji
+- Do łączenia przewodów neutralnych różnych obwodów
+- Do zasilania odbiorników w łazience
+- Do podwyższenia napięcia w instalacji
+! Połączenia wyrównawcze sprowadzają metalowe rury (wody, gazu, CO) i konstrukcje do jednego potencjału, co ogranicza napięcia dotykowe przy uszkodzeniu.
+
+? Jaki warunek musi spełniać rezystancja uziemienia RA w układzie TT chronionym wyłącznikiem różnicowoprądowym o IΔn = 30 mA (UL = 50 V)?
++ RA ≤ 1666 Ω
+- RA ≤ 30 Ω
+- RA ≤ 50 Ω
+- RA ≤ 166 Ω
+! Z warunku RA · IΔn ≤ 50 V wynika RA ≤ 50 V / 0,03 A ≈ 1666 Ω.
+
+? W którym układzie sieci nie wolno stosować wyłączników różnicowoprądowych?
++ TN-C
+- TN-S
+- TT
+- TN-C-S, za punktem podziału przewodu PEN
+! W TN-C przewód PEN przechodziłby przez przekładnik razem z fazowymi, więc prąd uszkodzeniowy powracający przez PEN nie tworzyłby różnicy prądów. RCD stosuje się dopiero za podziałem PEN.
+
+? Jaką funkcję pełni przewód PEN?
++ Jednocześnie przewodu ochronnego PE i neutralnego N
+- Wyłącznie przewodu neutralnego
+- Wyłącznie przewodu uziemiającego
+- Przewodu fazowego o podwyższonej izolacji
+! PEN łączy funkcje PE i N. Jego przerwanie może spowodować pojawienie się napięcia na obudowach urządzeń, dlatego wymaga dużego przekroju i ochrony.
+
+? Gdzie w budynku najczęściej rozdziela się przewód PEN na przewody N i PE?
++ W złączu lub rozdzielnicy głównej budynku
+- W każdej puszce instalacyjnej
+- W gniazdach wtyczkowych
+- W oprawach oświetleniowych
+! Po rozdzieleniu PEN w złączu lub rozdzielnicy głównej instalacja wewnętrzna pracuje w układzie TN-S.
+
+? Dlaczego do urządzenia II klasy ochronności nie przyłącza się przewodu ochronnego?
++ Bo ochronę przy uszkodzeniu zapewnia izolacja podwójna lub wzmocniona
+- Bo takie urządzenia zasila się prądem stałym
+- Bo przewód PE zwiększyłby pobór mocy
+- Bo przewód PE jest wymagany tylko w łazienkach
+! W II klasie ochronności uszkodzenie jednej warstwy izolacji nie powoduje pojawienia się napięcia na dostępnych częściach.
+
+? Która klasa ochronności urządzeń wymaga przyłączenia przewodu ochronnego PE do zacisku ochronnego?
++ Klasa I
+- Klasa II
+- Klasa III
+- Klasa 0
+! Urządzenie klasy I ma izolację podstawową i zacisk ochronny. Przy uszkodzeniu izolacji prąd płynie przewodem PE i powoduje zadziałanie zabezpieczenia.
+
+? Jakiej ochrony uzupełniającej wymagają obwody gniazd wtyczkowych do 32 A ogólnego przeznaczenia?
++ Wyłącznika różnicowoprądowego o IΔn ≤ 30 mA
+- Bezpiecznika gG 32 A
+- Stopnia ochrony IP68
+- Zasilania z układu IT
+! Według PN-HD 60364-4-41 gniazda ogólnego przeznaczenia o prądzie do 32 A, używane przez osoby niewykwalifikowane, wymagają ochrony uzupełniającej RCD 30 mA.
+
+? W jakim celu wykonuje się miejscowe połączenia wyrównawcze w łazience?
++ Aby wyrównać potencjały metalowych części i ograniczyć napięcia dotykowe
+- Aby zwiększyć prąd zwarcia w obwodzie oświetlenia
+- Aby zastąpić wyłącznik różnicowoprądowy
+- Aby uziemić przewód neutralny
+! Połączenia wyrównawcze miejscowe łączą dostępne części metalowe z przewodem ochronnym, dzięki czemu nawet przy uszkodzeniu nie ma groźnej różnicy potencjałów.
+
+? Na czym polega ochrona przez zastosowanie urządzeń II klasy ochronności?
++ Na stosowaniu izolacji podwójnej lub wzmocnionej, która chroni przy uszkodzeniu bez przewodu ochronnego
+- Na łączeniu obudowy z przewodem PEN
+- Na zasilaniu napięciem 400 V
+- Na stosowaniu bezpieczników o mniejszym prądzie
+! Izolacja dodatkowa lub wzmocniona sprawia, że jedno uszkodzenie izolacji nie spowoduje pojawienia się napięcia na obudowie.
+
+? Dlaczego za punktem podziału przewodu PEN nie wolno ponownie łączyć przewodów N i PE?
++ Bo część prądu roboczego płynęłaby przewodem PE, a wyłączniki różnicowoprądowe działałyby błędnie
+- Bo wzrosłoby napięcie sieci
+- Bo przewód N jest zawsze cieńszy
+- Bo przepisy dopuszczają to tylko w łazienkach
+! Ponowne połączenie N i PE tworzy pętle, którymi prąd roboczy płynie przewodami ochronnymi i konstrukcjami, oraz powoduje zadziałania RCD.
+
+? Które napięcie dotykowe dopuszczalne długotrwale przyjmuje się dla prądu stałego (warunki normalne)?
++ 120 V
+- 12 V
+- 50 V
+- 230 V
+! Dla prądu stałego bez tętnień przyjmuje się 120 V, dla przemiennego 50 V.

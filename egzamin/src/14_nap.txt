@@ -1,0 +1,162 @@
+## nap | Napędy elektryczne i energoelektronika | Napędy | 05
+
+? Jaki stosunek utrzymuje przemiennik częstotliwości przy regulacji prędkości silnika poniżej znamionowej (sterowanie skalarne)?
++ Stały stosunek napięcia do częstotliwości U/f
+- Stałe napięcie przy zmiennej częstotliwości
+- Stałą częstotliwość przy zmiennym napięciu
+- Stały prąd równy 6 In
+! Stały stosunek U/f utrzymuje stały strumień magnetyczny, a więc możliwość rozwijania znamionowego momentu.
+
+? Ile wynosi prędkość synchroniczna silnika czterobiegunowego zasilanego z falownika napięciem o częstotliwości 25 Hz?
++ 750 obr/min
+- 375 obr/min
+- 1500 obr/min
+- 3000 obr/min
+! n₁ = 60 · f / p = 60 · 25 / 2 = 750 obr/min.
+
+? Do czego służy rezystor hamujący dołączony do przemiennika częstotliwości?
++ Do rozpraszania energii oddawanej przez silnik podczas hamowania
+- Do ograniczenia prądu rozruchowego z sieci
+- Do pomiaru prędkości obrotowej
+- Do kompensacji mocy biernej
+! Przy szybkim hamowaniu silnik pracuje jak prądnica i podnosi napięcie w obwodzie pośredniczącym DC. Nadmiar energii zamienia się w ciepło w rezystorze.
+
+? Jakie elementy półprzewodnikowe najczęściej stosuje się jako łączniki w falownikach napięcia dużej mocy?
++ Tranzystory IGBT
+- Diody Zenera
+- Diaki
+- Termistory
+! Tranzystory IGBT łączą łatwość sterowania tranzystorów MOSFET z możliwością przewodzenia dużych prądów przy dużym napięciu.
+
+? Z jakich głównych części składa się przemiennik częstotliwości z pośredniczącym obwodem napięcia stałego?
++ Z prostownika, obwodu pośredniczącego DC z kondensatorami i falownika
+- Z transformatora, dławika i bezpiecznika
+- Ze stycznika, przekaźnika termicznego i przycisku
+- Z silnika, prądnicy i przekładni
+! Prostownik zamienia napięcie sieci na stałe, kondensatory je wygładzają, a falownik wytwarza napięcie przemienne o regulowanej częstotliwości.
+
+? Jaki typ wyłącznika różnicowoprądowego zaleca się w obwodzie zasilającym trójfazowy przemiennik częstotliwości?
++ Typ B
+- Typ AC
+- Typ A
+- Wyłącznik różnicowoprądowy nie jest tu potrzebny
+! Przy uszkodzeniu w przemienniku trójfazowym może popłynąć prąd różnicowy stały wygładzony, którego nie wykrywają wyłączniki typu AC i A.
+
+? Do czego służy softstart (układ łagodnego rozruchu)?
++ Do stopniowego zwiększania napięcia na silniku w czasie rozruchu, co zmniejsza prąd i udary mechaniczne
+- Do regulacji prędkości w szerokim zakresie podczas pracy
+- Do zmiany kierunku obrotów
+- Do zwiększenia mocy silnika ponad znamionową
+! Softstart steruje napięciem za pomocą tyrystorów. Nie zmienia częstotliwości, więc nie służy do regulacji prędkości podczas pracy.
+
+? Ile wynosi wartość średnia napięcia na wyjściu prostownika jednopołówkowego bez filtru, zasilanego napięciem o wartości skutecznej 230 V?
++ Około 104 V
+- Około 207 V
+- 230 V
+- Około 325 V
+! W prostowniku jednopołówkowym Uśr ≈ 0,45 · U = 0,45 · 230 ≈ 104 V. W dwupołówkowym byłoby około 0,9 · U.
+
+? Ile wynosi wartość średnia napięcia wyprostowanego w prostowniku dwupołówkowym zasilanym napięciem 24 V (wartość skuteczna), jeśli pominiemy spadki napięcia na diodach?
++ Około 21,6 V
+- Około 10,8 V
+- 24 V
+- Około 33,9 V
+! Uśr = 0,9 · U = 0,9 · 24 ≈ 21,6 V.
+
+? Jak zmienia się kąt załączenia tyrystorów w prostowniku sterowanym, aby zmniejszyć napięcie wyjściowe?
++ Zwiększa się kąt opóźnienia załączenia (kąt wysterowania)
+- Zmniejsza się kąt opóźnienia do zera
+- Zwiększa się częstotliwość sieci
+- Odłącza się obciążenie
+! Im później w każdej połówce tyrystor zostanie załączony, tym mniejsza część sinusoidy trafia na obciążenie i tym mniejsza wartość średnia napięcia.
+
+? Jaki przekształtnik zamienia napięcie stałe na przemienne?
++ Falownik
+- Prostownik
+- Przetwornica obniżająca DC/DC
+- Transformator
+! Prostownik zamienia AC na DC, falownik DC na AC, a przetwornica DC/DC zmienia poziom napięcia stałego.
+
+? Na czym polega hamowanie dynamiczne silnika indukcyjnego?
++ Na zasileniu uzwojeń stojana prądem stałym po odłączeniu od sieci
+- Na zamianie dwóch faz zasilania
+- Na oddawaniu energii do sieci przy prędkości nadsynchronicznej
+- Na zaciśnięciu hamulca mechanicznego
+! Prąd stały wytwarza w stojanie nieruchome pole, w którym obracający się wirnik indukuje prądy wytwarzające moment hamujący.
+
+? Na czym polega hamowanie przeciwprądem silnika indukcyjnego?
++ Na zamianie dwóch faz zasilania w czasie wybiegu, aby pole wirowało przeciwnie do wirnika
+- Na odłączeniu silnika od sieci
+- Na zasileniu silnika prądem stałym
+- Na hamowaniu z oddawaniem energii do sieci
+! Silnik wytwarza moment przeciwny do kierunku obrotów i szybko się zatrzymuje. Trzeba go odłączyć przy prędkości bliskiej zera, bo inaczej ruszy w drugą stronę.
+
+? Jakie dane wprowadza się do przemiennika częstotliwości podczas jego pierwszego uruchomienia z silnikiem?
++ Dane z tabliczki znamionowej silnika: napięcie, prąd, moc, częstotliwość, prędkość i cos φ
+- Tylko numer seryjny silnika
+- Rezystancję izolacji uzwojeń
+- Kolor obudowy i masę silnika
+! Na podstawie danych znamionowych przemiennik dobiera model silnika i nastawy zabezpieczeń, np. termicznego.
+
+? Co grozi silnikowi z własnym wentylatorem na wale, który długo pracuje z falownikiem przy bardzo małej częstotliwości i pełnym obciążeniu?
++ Przegrzanie, bo wentylator obraca się wolno i słabo chłodzi silnik
+- Spadek prądu i całkowity brak nagrzewania
+- Zmiana kierunku obrotów
+- Wzrost sprawności silnika
+! Przy małej prędkości chłodzenie własnym wentylatorem jest za słabe. Stosuje się obce chłodzenie albo ogranicza obciążenie.
+
+? Jak zmieni się prędkość obrotowa silnika obcowzbudnego prądu stałego, gdy zmniejszymy napięcie twornika przy stałym wzbudzeniu?
++ Zmaleje
+- Wzrośnie
+- Nie zmieni się
+- Silnik zmieni kierunek obrotów
+! Prędkość silnika obcowzbudnego jest w przybliżeniu proporcjonalna do napięcia twornika. Osłabienie wzbudzenia zwiększałoby prędkość.
+
+? Jaką funkcję pełni enkoder w układzie napędowym?
++ Mierzy położenie lub prędkość wału i przekazuje sygnał do układu sterowania
+- Zwiększa moment silnika
+- Chroni silnik przed przeciążeniem
+- Zamienia prąd przemienny na stały
+! Enkoder generuje impulsy podczas obrotu wału, co pozwala dokładnie regulować prędkość i pozycjonować napęd.
+
+? Dlaczego między przemiennikiem częstotliwości a silnikiem stosuje się kabel ekranowany?
++ Aby ograniczyć zakłócenia elektromagnetyczne powodowane szybkim przełączaniem tranzystorów
+- Aby zmniejszyć rezystancję żył
+- Aby zwiększyć napięcie na silniku
+- Aby można było pominąć przewód ochronny
+! Napięcie wyjściowe falownika ma bardzo strome zbocza, które emitują zakłócenia. Ekran połączony obustronnie z masą ogranicza ich rozprzestrzenianie.
+
+? W którym silniku prądu stałego uzwojenie wzbudzenia jest połączone równolegle z twornikiem?
++ W bocznikowym
+- W szeregowym
+- W obcowzbudnym
+- W uniwersalnym
+! W silniku bocznikowym wzbudzenie zasila to samo napięcie co twornik. Prędkość mało zależy od obciążenia.
+
+? W jakich urządzeniach stosuje się silniki komutatorowe uniwersalne?
++ W odkurzaczach, wiertarkach i mikserach
+- W sprężarkach lodówek
+- W zegarach synchronicznych
+- W pompach obiegowych centralnego ogrzewania
+! Silnik uniwersalny działa przy prądzie stałym i przemiennym, osiąga duże prędkości i duży moment przy małych wymiarach.
+
+? Jaką prędkość obrotową osiągnie w przybliżeniu silnik czterobiegunowy o poślizgu 4%, zasilany z falownika napięciem 40 Hz?
++ 1152 obr/min
+- 1200 obr/min
+- 1440 obr/min
+- 960 obr/min
+! n₁ = 60 · 40 / 2 = 1200 obr/min, a n = n₁ · (1 − s) = 1200 · 0,96 = 1152 obr/min.
+
+? Który element przekształtnika gromadzi energię w obwodzie pośredniczącym napięcia stałego?
++ Bateria kondensatorów
+- Dioda prostownicza
+- Tranzystor IGBT
+- Rezystor pomiarowy
+! Kondensatory obwodu pośredniczącego wygładzają napięcie po prostowniku i dostarczają falownikowi impulsowego prądu.
+
+? Dlaczego po wyłączeniu przemiennika częstotliwości trzeba odczekać kilka minut przed dotknięciem jego zacisków?
++ Bo kondensatory obwodu pośredniczącego mogą być jeszcze naładowane do niebezpiecznego napięcia
+- Bo silnik nadal pobiera prąd z sieci
+- Bo wyświetlacz musi się wyłączyć
+- Bo zmienia się kierunek prądu w sieci
+! Kondensatory w obwodzie DC są naładowane do napięcia ponad 500 V przy zasilaniu 400 V. Czas rozładowania podaje producent na obudowie.

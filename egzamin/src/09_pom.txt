@@ -1,0 +1,243 @@
+## pom | Pomiary i badania | Pomiary | 02,05
+
+? Którym przyrządem mierzy się rezystancję izolacji przewodów?
++ Miernikiem rezystancji izolacji (megaomomierzem) z napięciem probierczym prądu stałego
+- Amperomierzem cęgowym
+- Miernikiem impedancji pętli zwarcia
+- Woltomierzem prądu przemiennego
+! Megaomomierz wytwarza napięcie stałe, np. 500 V, i mierzy bardzo mały prąd płynący przez izolację.
+
+? Jakim napięciem probierczym mierzy się rezystancję izolacji obwodu 230/400 V?
++ 500 V prądu stałego
+- 250 V prądu przemiennego
+- 1000 V prądu przemiennego
+- 50 V prądu stałego
+! Według PN-HD 60364-6 obwody o napięciu znamionowym do 500 V (poza SELV i PELV) bada się napięciem 500 V DC.
+
+? Jaka jest najmniejsza wymagana rezystancja izolacji obwodu 230 V mierzona napięciem 500 V DC?
++ 1 MΩ
+- 0,25 MΩ
+- 0,5 MΩ
+- 10 MΩ
+! Według PN-HD 60364-6 rezystancja izolacji obwodów do 500 V musi wynosić co najmniej 1 MΩ.
+
+? Jakim napięciem mierzy się rezystancję izolacji obwodów SELV i PELV i jaka jest wymagana wartość?
++ 250 V DC, co najmniej 0,5 MΩ
+- 500 V DC, co najmniej 1 MΩ
+- 1000 V DC, co najmniej 1 MΩ
+- 50 V AC, co najmniej 0,1 MΩ
+! Obwody SELV i PELV bada się napięciem 250 V prądu stałego, a ich izolacja musi mieć co najmniej 0,5 MΩ.
+
+? Co należy zrobić przed pomiarem rezystancji izolacji instalacji?
++ Wyłączyć napięcie i odłączyć odbiorniki oraz urządzenia wrażliwe na napięcie probiercze
+- Załączyć wszystkie odbiorniki
+- Zewrzeć przewód fazowy z ochronnym na stałe
+- Pozostawić napięcie i wykręcić żarówki
+! Pomiar wykonuje się na instalacji bez napięcia. Odbiorniki odłącza się, bo zaniżałyby wynik, a elektronikę mogłoby uszkodzić napięcie probiercze.
+
+? Woltomierz o zakresie 300 V ma skalę o 150 działkach. Jakie napięcie wskazuje, jeśli wskazówka zatrzymała się jak na rysunku?
+@ skala:150|85|zakres 300 V
++ 170 V
+- 85 V
+- 150 V
+- 255 V
+! Stała miernika wynosi 300 V / 150 dz. = 2 V/dz., więc U = 85 dz. · 2 V/dz. = 170 V.
+
+? Amperomierz ma skalę o 100 działkach i jest ustawiony na zakres 5 A. Jaki prąd wskazuje, jeśli wskazówka zatrzymała się jak na rysunku?
+@ skala:100|35|zakres 5 A
++ 1,75 A
+- 0,35 A
+- 3,5 A
+- 35 A
+! Stała miernika: 5 A / 100 dz. = 0,05 A/dz., więc I = 35 dz. · 0,05 A/dz. = 1,75 A.
+
+? Woltomierz klasy 1,5 o zakresie 300 V wskazał 200 V. Ile wynosi największy możliwy błąd bezwzględny pomiaru?
++ ±4,5 V
+- ±3 V
+- ±1,5 V
+- ±0,45 V
+! Klasa oznacza błąd w procentach zakresu: 1,5% · 300 V = ±4,5 V, niezależnie od wskazania.
+
+? Dlaczego zakres miernika analogowego dobiera się tak, aby wskazanie było w końcowej części skali?
++ Bo wtedy błąd względny pomiaru jest najmniejszy
+- Bo wtedy miernik pobiera najmniej mocy
+- Bo początek skali jest zawsze nieliniowy
+- Bo na początku skali wskazówka nie działa
+! Błąd bezwzględny zależy od zakresu, więc im większe wskazanie, tym mniejszy błąd w stosunku do mierzonej wartości.
+
+? Jaki układ pomiarowy przedstawia rysunek i do jakich rezystancji się go stosuje?
+@ loop:U|A|Rx|V@1
++ Układ poprawnie mierzonego napięcia, do pomiaru małych rezystancji
+- Układ poprawnie mierzonego prądu, do pomiaru małych rezystancji
+- Układ poprawnie mierzonego napięcia, do pomiaru dużych rezystancji
+- Układ mostkowy, do pomiaru indukcyjności
+! Woltomierz jest dołączony bezpośrednio do Rx, a amperomierz mierzy też prąd woltomierza. Błąd jest mały, gdy Rx jest dużo mniejsza od rezystancji woltomierza.
+
+? Jaki układ pomiarowy przedstawia rysunek?
+@ loop:U|A|Rx|V@2
++ Układ poprawnie mierzonego prądu, do pomiaru dużych rezystancji
+- Układ poprawnie mierzonego napięcia, do pomiaru małych rezystancji
+- Układ do pomiaru mocy biernej
+- Układ do pomiaru rezystancji izolacji
+! Amperomierz mierzy dokładnie prąd Rx, a woltomierz napięcie na Rx i amperomierzu razem. Błąd jest mały, gdy Rx jest dużo większa od rezystancji amperomierza.
+
+? Jak włącza się cewki watomierza przy pomiarze mocy odbiornika?
++ Cewkę prądową szeregowo z odbiornikiem, a napięciową równolegle do niego
+- Obie cewki szeregowo
+- Obie cewki równolegle
+- Cewkę prądową równolegle, a napięciową szeregowo
+! Cewka prądowa mierzy prąd odbiornika (jak amperomierz), a napięciowa napięcie na odbiorniku (jak woltomierz).
+
+? Jak nazywa się metoda pomiaru mocy czynnej w trójprzewodowej sieci trójfazowej dwoma watomierzami?
++ Metoda Arona
+- Metoda techniczna
+- Metoda mostka Wheatstone'a
+- Metoda kompensacyjna
+! W układzie Arona moc całkowita jest sumą algebraiczną wskazań dwóch watomierzy. Wystarcza on w sieci bez przewodu neutralnego, także przy obciążeniu niesymetrycznym.
+
+? Jakim przyrządem można zmierzyć prąd w przewodzie bez jego rozłączania?
++ Miernikiem cęgowym
+- Megaomomierzem
+- Watomierzem
+- Mostkiem Wheatstone'a
+! Cęgi obejmują przewód i mierzą prąd na podstawie jego pola magnetycznego, bez przerywania obwodu.
+
+? Co wskaże miernik cęgowy, jeśli obejmie się nim jednocześnie przewód fazowy i neutralny sprawnego obwodu jednofazowego?
++ Wartość bliską zeru (najwyżej niewielki prąd upływu)
+- Dwukrotną wartość prądu obciążenia
+- Prąd obciążenia
+- Napięcie sieci
+! Prądy w L i N płyną w przeciwnych kierunkach i ich pola się znoszą. W ten sposób mierzy się prąd upływu obwodu.
+
+? Który pomiar wykonuje się, aby sprawdzić skuteczność ochrony przez samoczynne wyłączenie zasilania w układzie TN?
++ Pomiar impedancji pętli zwarcia
+- Pomiar rezystancji izolacji podłogi
+- Pomiar natężenia oświetlenia
+- Pomiar mocy biernej
+! Z impedancji pętli zwarcia oblicza się prąd zwarcia i sprawdza, czy zabezpieczenie zadziała w wymaganym czasie.
+
+? Pomiar impedancji pętli zwarcia w obwodzie 230 V dał wynik Zs = 1,15 Ω. Ile wynosi spodziewany prąd zwarcia?
++ 200 A
+- 115 A
+- 265 A
+- 2000 A
+! Ik = U₀ / Zs = 230 V / 1,15 Ω = 200 A.
+
+? Obwód zabezpieczony wyłącznikiem B20 ma zmierzoną impedancję pętli zwarcia 3 Ω. Czy ochrona jest skuteczna (U₀ = 230 V)?
++ Nie, bo prąd zwarcia 76,7 A jest mniejszy od wymaganych 100 A
+- Tak, bo prąd zwarcia jest większy od 20 A
+- Tak, bo impedancja jest mniejsza niż 10 Ω
+- Nie, bo impedancja jest za mała
+! Wymagany prąd Ia = 5 · 20 A = 100 A, a Ik = 230 / 3 ≈ 76,7 A. Wyłącznik nie zadziała natychmiastowo, więc ochrona nie jest skuteczna.
+
+? Jakim prądem bada się ciągłość przewodów ochronnych i wyrównawczych?
++ Prądem co najmniej 200 mA ze źródła o napięciu 4–24 V
+- Prądem 1 mA ze źródła 500 V
+- Prądem 30 mA ze źródła 230 V
+- Prądem 10 A ze źródła 1000 V
+! Według PN-EN 61557-4 ciągłość mierzy się prądem co najmniej 0,2 A przy napięciu źródła od 4 do 24 V.
+
+? Jaki może być największy czas zadziałania zwykłego (bezzwłocznego) wyłącznika różnicowoprądowego przy prądzie IΔn?
++ 300 ms
+- 40 ms
+- 500 ms
+- 1 s
+! Bezzwłoczny wyłącznik RCD musi zadziałać w czasie do 300 ms przy IΔn i do 40 ms przy 5 · IΔn. Wyłączniki selektywne S mają czasy 130–500 ms.
+
+? W jakim przedziale powinien się mieścić rzeczywisty prąd zadziałania wyłącznika RCD o IΔn = 30 mA (prąd sinusoidalny)?
++ Od 15 mA do 30 mA
+- Od 30 mA do 60 mA
+- Od 0 do 15 mA
+- Od 3 mA do 10 mA
+! Wyłącznik nie może zadziałać przy 0,5 IΔn, a musi zadziałać najpóźniej przy IΔn, więc prąd zadziałania mieści się między 15 a 30 mA.
+
+? Czego potrzeba do pomiaru rezystancji uziemienia metodą techniczną (trzyprzewodową)?
++ Badanego uziomu oraz dwóch sond pomocniczych: prądowej i napięciowej
+- Tylko badanego uziomu i przewodu PE
+- Megaomomierza 2500 V i jednego przewodu
+- Transformatora separacyjnego i watomierza
+! Prąd pomiarowy płynie przez uziom i sondę prądową, a sonda napięciowa wbita między nimi pozwala zmierzyć spadek napięcia na rezystancji uziemienia.
+
+? Kiedy najlepiej mierzyć rezystancję uziemień?
++ W okresie najmniejszej wilgotności gruntu, np. latem przy suchej pogodzie
+- Zaraz po ulewnym deszczu
+- Wiosną, gdy grunt jest najbardziej wilgotny
+- Pora roku nie ma znaczenia
+! Wilgotny grunt lepiej przewodzi i zaniża wynik. Pomiar w najgorszych warunkach pokazuje, czy uziemienie będzie skuteczne przez cały rok.
+
+? Jak często trzeba co najmniej wykonywać okresowe badania instalacji elektrycznej budynku?
++ Co najmniej raz na 5 lat
+- Co najmniej raz na 10 lat
+- Co najmniej raz na 20 lat
+- Tylko przy zmianie właściciela
+! Prawo budowlane (art. 62) wymaga co najmniej raz na 5 lat sprawdzenia instalacji elektrycznej, w tym zabezpieczeń, ochrony przeciwporażeniowej, rezystancji izolacji i uziemień.
+
+? Od czego zaczyna się sprawdzanie odbiorcze nowej instalacji?
++ Od oględzin, wykonywanych zwykle przed podaniem napięcia
+- Od pomiaru impedancji pętli zwarcia pod obciążeniem
+- Od testu wyłączników RCD przyciskiem TEST
+- Od pomiaru natężenia oświetlenia
+! Według PN-HD 60364-6 oględziny poprzedzają próby i pomiary. Sprawdza się m.in. dobór i oznaczenie przewodów, zabezpieczeń i ochronę przed dotykiem.
+
+? Jakim przyrządem sprawdza się kolejność faz w sieci trójfazowej?
++ Wskaźnikiem kolejności faz
+- Megaomomierzem
+- Miernikiem impedancji pętli zwarcia
+- Omomierzem
+! Od kolejności faz zależy kierunek obrotów silników trójfazowych, dlatego sprawdza się ją np. przy przyłączaniu gniazd 400 V.
+
+? Jakim przyrządem sprawdza się prąd i czas zadziałania wyłącznika różnicowoprądowego?
++ Miernikiem parametrów wyłączników RCD
+- Megaomomierzem
+- Amperomierzem cęgowym
+- Luksomierzem
+! Miernik RCD wymusza kontrolowany prąd różnicowy i mierzy, przy jakim prądzie i po jakim czasie wyłącznik zadziałał.
+
+? Co oznacza wskazanie „OL” na omomierzu podczas sprawdzania ciągłości żyły przewodu?
++ Żyła jest przerwana (rezystancja jest większa od zakresu)
+- Żyła jest zwarta z inną żyłą
+- Rezystancja żyły wynosi 0 Ω
+- Bateria miernika jest w pełni naładowana
+! OL (overload) oznacza wartość większą od zakresu, czyli brak ciągłości. Sprawna żyła ma rezystancję bliską zeru.
+
+? Jak rozszerza się zakres pomiarowy amperomierza prądu stałego?
++ Włączając równolegle do niego bocznik
+- Włączając szeregowo z nim posobnik
+- Włączając go równolegle do odbiornika
+- Stosując transformator separacyjny
+! Bocznik przejmuje większość prądu, a przez miernik płynie tylko jego niewielka, znana część.
+
+? Jak rozszerza się zakres pomiarowy woltomierza?
++ Włączając szeregowo z nim rezystor dodatkowy (posobnik)
+- Włączając równolegle do niego bocznik
+- Włączając go szeregowo z odbiornikiem
+- Zwierając jego zaciski
+! Posobnik przejmuje część napięcia, więc na mierniku odkłada się tylko jego ułamek.
+
+? Jak należy przygotować multimetr do pomiaru napięcia w gniazdku 230 V?
++ Ustawić pomiar napięcia przemiennego (V~) na właściwym zakresie i przyłożyć sondy do styków gniazda
+- Ustawić pomiar prądu i włączyć miernik szeregowo
+- Ustawić pomiar rezystancji
+- Ustawić pomiar napięcia stałego na najmniejszym zakresie
+! Napięcie mierzy się równolegle, funkcją AC. Miernik ustawiony na pomiar prądu włożony do gniazda spowodowałby zwarcie.
+
+? W jakim celu wykonuje się pomiary eksploatacyjne instalacji elektrycznych?
++ Aby sprawdzić, czy instalacja nadal jest bezpieczna i spełnia wymagania, np. stan izolacji i skuteczność ochrony
+- Aby obliczyć rachunek za energię
+- Aby zwiększyć moc przyłączeniową
+- Aby wyłączyć zbędne obwody
+! Izolacja się starzeje, połączenia się luzują, a instalacja bywa przerabiana. Okresowe pomiary wykrywają takie zmiany, zanim dojdzie do wypadku.
+
+? Co zawiera protokół z pomiarów instalacji elektrycznej?
++ Dane obiektu, wyniki pomiarów, wartości wymagane, ocenę, datę, użyte przyrządy i dane mierzącego
+- Wyłącznie podpis właściciela budynku
+- Tylko cenę usługi
+- Schemat ideowy wszystkich urządzeń w budynku
+! Protokół musi pozwolić odtworzyć, co, czym i kiedy zmierzono oraz czy wyniki spełniają wymagania.
+
+? Ile wynosi błąd względny pomiaru, jeśli zmierzono 98 V, a rzeczywista wartość napięcia wynosi 100 V?
++ −2%
+- −0,02%
+- 2 V
+- −20%
+! Błąd względny δ = (Ux − U) / U · 100% = (98 − 100) / 100 · 100% = −2%.

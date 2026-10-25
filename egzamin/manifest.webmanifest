@@ -1,0 +1,19 @@
+{
+  "name": "Faza: egzamin ELE.02 i ELE.05",
+  "short_name": "Faza",
+  "description": "Nauka do egzaminu zawodowego ELE.02 i ELE.05: pytania z wyjaśnieniami, egzamin próbny, powtórka błędów.",
+  "lang": "pl",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#E8EBEA",
+  "theme_color": "#E8EBEA",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

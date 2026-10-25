@@ -1,0 +1,162 @@
+## siec | Sieci, jakość energii, uziemienia i odgromowa | Sieci | 05
+
+? Jakie napięcia znamionowe mają najczęściej sieci średniego napięcia w Polsce?
++ 15 kV i 20 kV
+- 230 V i 400 V
+- 110 kV i 220 kV
+- 400 kV i 750 kV
+! Sieci SN pracują najczęściej na napięciu 15 kV lub 20 kV. 110 kV to sieć wysokiego napięcia, a 220 i 400 kV najwyższego.
+
+? W jakich granicach powinna się mieścić wartość skuteczna napięcia w sieci niskiego napięcia według PN-EN 50160?
++ ±10% napięcia znamionowego
+- ±1% napięcia znamionowego
+- ±25% napięcia znamionowego
+- ±50% napięcia znamionowego
+! Przez 95% czasu w tygodniu napięcie powinno się mieścić w przedziale ±10%, czyli od 207 V do 253 V.
+
+? Co oznacza taryfa G12?
++ Taryfę dla gospodarstw domowych z rozliczaniem energii w dwóch strefach czasowych
+- Taryfę dla przemysłu zasilanego z sieci 110 kV
+- Taryfę jednostrefową dla firm
+- Taryfę dla oświetlenia ulicznego
+! Grupa G dotyczy gospodarstw domowych. G11 to taryfa jednostrefowa, a G12 dwustrefowa, z tańszą energią w określonych godzinach.
+
+? Licznik energii ma stałą 1000 imp/kWh. Dioda licznika mrugnęła 50 razy w ciągu 60 sekund. Jaką moc pobierają odbiorniki?
++ 3 kW
+- 0,05 kW
+- 0,83 kW
+- 50 kW
+! W ciągu minuty zużyto 50 / 1000 = 0,05 kWh, więc w ciągu godziny byłoby to 60 · 0,05 = 3 kWh. Moc wynosi 3 kW.
+
+? Jakim urządzeniem kompensuje się moc bierną indukcyjną w zakładzie przemysłowym?
++ Baterią kondensatorów z regulatorem mocy biernej
+- Baterią akumulatorów
+- Dławikiem szeregowym w każdym obwodzie oświetleniowym
+- Transformatorem separacyjnym
+! Kondensatory wytwarzają moc bierną pojemnościową, która równoważy moc indukcyjną silników i transformatorów. Regulator załącza kolejne stopnie baterii.
+
+? Powyżej jakiej wartości tg φ odbiorca zwykle płaci za ponadumowny pobór energii biernej?
++ 0,4
+- 0,1
+- 0,8
+- 1,0
+! Typowo przyjmuje się tg φ₀ = 0,4, co odpowiada cos φ ≈ 0,93. Pobór energii biernej powyżej tej wartości jest dodatkowo płatny.
+
+? Czym są wyższe harmoniczne w sieci elektroenergetycznej?
++ Składowymi prądu lub napięcia o częstotliwościach będących wielokrotnościami 50 Hz, wytwarzanymi głównie przez odbiorniki nieliniowe
+- Napięciami o częstotliwości niższej niż 50 Hz
+- Przepięciami atmosferycznymi
+- Zmianami napięcia trwającymi dłużej niż godzinę
+! Zasilacze impulsowe, falowniki i oświetlenie LED pobierają prąd odkształcony, zawierający m.in. 3., 5. i 7. harmoniczną (150, 250, 350 Hz).
+
+? Dlaczego przy dużej liczbie odbiorników nieliniowych, np. komputerów, przewód neutralny może się przegrzewać?
++ Bo harmoniczne rzędu 3 i jego wielokrotności z trzech faz sumują się w przewodzie N
+- Bo przewód N ma zawsze mniejszy przekrój
+- Bo w przewodzie N płynie prąd stały
+- Bo przewód N jest przerywany przez łączniki
+! Prądy trzeciej harmonicznej z trzech faz są ze sobą w fazie, więc w przewodzie neutralnym się dodają, nawet przy symetrycznym obciążeniu.
+
+? Co oznacza współczynnik THD?
++ Współczynnik całkowitego odkształcenia harmonicznego przebiegu
+- Stosunek mocy czynnej do pozornej
+- Liczbę przerw w zasilaniu w ciągu roku
+- Sprawność transformatora
+! THD mówi, jaką część składowej podstawowej stanowią łącznie wyższe harmoniczne.
+
+? Jakie zadanie ma przekaźnik gazowo-przepływowy (Buchholza) w transformatorze olejowym?
++ Wykrywa uszkodzenia wewnątrz transformatora, przy których wydziela się gaz lub następuje gwałtowny przepływ oleju
+- Mierzy temperaturę otoczenia
+- Reguluje napięcie wyjściowe
+- Chroni transformator przed przepięciami atmosferycznymi
+! Zwarcia i łuki wewnątrz kadzi rozkładają olej z wydzieleniem gazu. Przekaźnik sygnalizuje gromadzenie się gazu, a przy gwałtownym przepływie oleju powoduje wyłączenie.
+
+? Do czego służy przełącznik zaczepów transformatora rozdzielczego SN/nN?
++ Do zmiany przekładni, czyli regulacji napięcia po stronie niskiego napięcia
+- Do zmiany grupy połączeń
+- Do wyłączania transformatora przy zwarciu
+- Do pomiaru prądu obciążenia
+! Typowy przełącznik zmienia napięcie o ±2 × 2,5%. W transformatorach rozdzielczych przełącza się go zwykle w stanie beznapięciowym.
+
+? Co sygnalizuje zmiana barwy żelu krzemionkowego w odwilżaczu transformatora olejowego?
++ Nasycenie żelu wilgocią i potrzebę jego wymiany lub regeneracji
+- Przegrzanie uzwojeń
+- Zwarcie międzyzwojowe
+- Prawidłową pracę transformatora
+! Odwilżacz osusza powietrze zasysane do konserwatora. Nasycony żel zmienia barwę, np. z pomarańczowej na zieloną albo z niebieskiej na różową.
+
+? Z jakich części składa się instalacja piorunochronna?
++ Ze zwodów, przewodów odprowadzających i uziemienia
+- Z wyłączników różnicowoprądowych i ograniczników przepięć
+- Z transformatora i rozdzielnicy
+- Z masztu antenowego i przewodu koncentrycznego
+! Zwody przejmują wyładowanie, przewody odprowadzające prowadzą prąd pioruna do ziemi, a uziom rozprasza go w gruncie.
+
+? Do czego służy złącze kontrolne w instalacji piorunochronnej?
++ Do odłączenia przewodu odprowadzającego od uziomu w celu pomiaru rezystancji uziemienia
+- Do przyłączenia anteny
+- Do zabezpieczenia przed przeciążeniem
+- Do połączenia instalacji z przewodem neutralnym
+! Po rozkręceniu złącza można zmierzyć rezystancję uziomu bez wpływu pozostałych przewodów odprowadzających.
+
+? Jaki uziom wykonuje się w wykopie pod fundamenty budynku?
++ Uziom fundamentowy
+- Uziom pionowy wbijany po wybudowaniu budynku
+- Uziom naturalny z rur wodociągowych
+- Uziom z płyty miedzianej zakopanej obok budynku
+! Uziom fundamentowy, czyli taśma lub pręt stalowy w betonie fundamentu, ma dużą powierzchnię styku z gruntem i jest chroniony przed korozją.
+
+? Co nazywamy zapadem napięcia?
++ Nagłe zmniejszenie napięcia poniżej 90% wartości deklarowanej na krótki czas (od 10 ms do 1 min) z powrotem do normalnej wartości
+- Trwałe zwiększenie napięcia o 10%
+- Całkowity zanik napięcia na kilka godzin
+- Zmianę częstotliwości sieci
+! Zapady powstają np. przy zwarciach w sieci lub rozruchu dużych silników. Mogą wyłączać styczniki i zakłócać pracę elektroniki.
+
+? Do czego służy zasilacz UPS?
++ Do zapewnienia ciągłości zasilania odbiorników przy zaniku napięcia sieci
+- Do zmniejszenia zużycia energii
+- Do kompensacji mocy biernej
+- Do ochrony przed porażeniem
+! UPS ma akumulatory i falownik, które przejmują zasilanie, gdy zniknie napięcie sieci, np. dla serwerów i systemów bezpieczeństwa.
+
+? Jaką funkcję pełnią bezpieczniki w złączu kablowym budynku?
++ Chronią wewnętrzną linię zasilającą (WLZ) przed skutkami zwarć i przeciążeń
+- Mierzą energię pobieraną przez budynek
+- Chronią przed porażeniem przy dotyku bezpośrednim
+- Kompensują moc bierną budynku
+! Złącze jest granicą między siecią dystrybucyjną a instalacją odbiorcy. Wkładki w złączu zabezpieczają WLZ.
+
+? Co oznacza skrót WLZ?
++ Wewnętrzną linię zasilającą
+- Wyłącznik linii zasilającej
+- Wielofunkcyjny licznik zużycia
+- Wyrównawczą listwę zaciskową
+! WLZ prowadzi energię od złącza do tablic licznikowych lub rozdzielnic mieszkaniowych.
+
+? Który element jest granicą własności między siecią dystrybucyjną a instalacją odbiorcy w budynku zasilanym kablem?
++ Złącze kablowe
+- Gniazdo wtyczkowe w kuchni
+- Rozdzielnica mieszkaniowa
+- Wyłącznik różnicowoprądowy
+! Za złączem zaczyna się instalacja odbiorcy, za którą odpowiada właściciel lub zarządca budynku.
+
+? Jaki skutek ma przerwa w przewodzie PEN w sieci zasilającej budynek w układzie TN-C?
++ Napięcie na odbiornikach może się rozkładać nierównomiernie, a na obudowach urządzeń może się pojawić niebezpieczne napięcie
+- Napięcie w gniazdach spada do zera i nic się nie dzieje
+- Zadziałają wszystkie wyłączniki różnicowoprądowe w sieci
+- Wzrośnie tylko częstotliwość napięcia
+! Bez przewodu neutralnego odbiorniki z różnych faz łączą się szeregowo, co przesuwa punkt neutralny. Obudowy połączone z PEN mogą się znaleźć pod napięciem.
+
+? Na czym polega praca wyspowa instalacji fotowoltaicznej i dlaczego falownik sieciowy musi jej zapobiegać?
++ Na zasilaniu sieci przez falownik po zaniku napięcia sieci; zagraża to osobom pracującym przy wyłączonej sieci
+- Na pracy tylko w nocy
+- Na zasilaniu wyłącznie odbiorników prądu stałego
+- Na ładowaniu akumulatorów z sieci
+! Falownik sieciowy musi wyłączyć się po zaniku napięcia sieci, żeby nie podawać napięcia na linię, przy której mogą pracować monterzy.
+
+? Do czego służy dławik w baterii kondensatorów kompensacyjnych instalowanej w sieci z wyższymi harmonicznymi?
++ Do odstrojenia baterii od częstotliwości harmonicznych, aby nie doszło do rezonansu i przeciążenia kondensatorów
+- Do zwiększenia mocy biernej pojemnościowej
+- Do pomiaru energii biernej
+- Do ochrony przed porażeniem
+! Kondensatory razem z indukcyjnością sieci mogą wejść w rezonans z którąś harmoniczną. Dławik szeregowy przesuwa częstotliwość rezonansową poniżej 5. harmonicznej.

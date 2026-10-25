@@ -1,0 +1,176 @@
+## dob | Dobór przewodów i zabezpieczeń | Dobór | 05
+
+? Jaki warunek musi spełniać prąd znamionowy zabezpieczenia In w odniesieniu do prądu obliczeniowego IB i obciążalności przewodu Iz?
++ IB ≤ In ≤ Iz
+- In ≤ IB ≤ Iz
+- Iz ≤ In ≤ IB
+- In ≥ Iz ≥ IB
+! Zabezpieczenie musi przewodzić prąd obciążenia (In ≥ IB), ale nie może dopuścić do długotrwałego przekroczenia obciążalności przewodu (In ≤ Iz).
+
+? W warunku ochrony przed przeciążeniem I₂ ≤ 1,45 · Iz co oznacza I₂?
++ Prąd zadziałania zabezpieczenia w czasie umownym
+- Prąd zwarciowy w miejscu zainstalowania
+- Prąd rozruchowy silnika
+- Prąd upływu przewodu ochronnego
+! I₂ to prąd, przy którym zabezpieczenie na pewno zadziała w czasie umownym. Dla wyłączników nadprądowych I₂ = 1,45 In, więc warunek sprowadza się do In ≤ Iz.
+
+? Od czego zależy długotrwała obciążalność prądowa przewodu?
++ Od przekroju, materiału żyły, rodzaju izolacji, sposobu ułożenia i temperatury otoczenia
+- Wyłącznie od długości przewodu
+- Wyłącznie od napięcia znamionowego
+- Od koloru izolacji
+! Obciążalność zależy od tego, ile ciepła przewód może oddać bez przekroczenia dopuszczalnej temperatury izolacji.
+
+? Jak zmienia się dopuszczalna obciążalność przewodów, gdy kilka obwodów ułożono obok siebie w jednej wiązce?
++ Maleje, dlatego stosuje się współczynniki poprawkowe na grupowanie
+- Rośnie, bo przewody się wzajemnie chłodzą
+- Nie zmienia się
+- Rośnie tylko dla przewodów aluminiowych
+! Przewody w wiązce wzajemnie się nagrzewają, więc obciążalność mnoży się przez współczynnik mniejszy od 1.
+
+? Jaki prąd obliczeniowy pobiera jednofazowy grzejnik o mocy 3,5 kW zasilany napięciem 230 V?
++ 15,2 A
+- 1,52 A
+- 5,1 A
+- 8,8 A
+! IB = P / U = 3500 W / 230 V ≈ 15,2 A (dla grzejnika cos φ = 1).
+
+? Jaki prąd pobiera symetryczny odbiornik trójfazowy o mocy 11 kW i cos φ = 1 zasilany z sieci 400 V?
++ 15,9 A
+- 9,2 A
+- 27,5 A
+- 47,8 A
+! IB = P / (√3 · U · cos φ) = 11 000 / (1,73 · 400) ≈ 15,9 A.
+
+? Jakie zabezpieczenie dobrać do obwodu jednofazowego grzejnika 3,5 kW zasilanego przewodem o obciążalności Iz = 24 A?
++ Wyłącznik nadprądowy B16 albo B20
+- Wyłącznik B10
+- Wyłącznik B32
+- Wyłącznik B6
+! IB ≈ 15,2 A, więc trzeba spełnić 15,2 A ≤ In ≤ 24 A. Warunek spełniają wyłączniki 16 A i 20 A.
+
+? Jaki największy spadek napięcia zaleca PN-HD 60364-5-52 dla obwodów oświetleniowych instalacji zasilanej bezpośrednio z publicznej sieci niskiego napięcia?
++ 3%
+- 0,5%
+- 10%
+- 15%
+! Załącznik G normy zaleca dla takich instalacji spadek do 3% dla oświetlenia i do 5% dla pozostałych odbiorników.
+
+? Ile wynosi spadek napięcia w obwodzie jednofazowym, jeśli rezystancja jednej żyły wynosi 0,2 Ω, a prąd 10 A?
++ 4 V
+- 0,02 V
+- 2 V
+- 20 V
+! Prąd płynie przewodem fazowym i neutralnym: ΔU = 2 · I · R = 2 · 10 · 0,2 = 4 V.
+
+? Odbiornik jednofazowy 2,3 kW zasilono przewodem miedzianym 2,5 mm² o długości 25 m (γ = 56 m/(Ω·mm²)). Ile wynosi procentowy spadek napięcia?
++ 1,55%
+- 0,78%
+- 3,1%
+- 15,5%
+! ΔU% = 200 · P · l / (γ · S · U²) = 200 · 2300 · 25 / (56 · 2,5 · 230²) ≈ 1,55%.
+
+? Jak dobiera się wkładkę gG zabezpieczającą silnik przy rozruchu bezpośrednim lekkim?
++ In ≥ Ir / α, gdzie Ir to prąd rozruchowy, a α ≈ 2,5
+- In równy połowie prądu znamionowego silnika
+- In równy prądowi zwarciowemu sieci
+- In ≤ 0,5 · Ir / α
+! Wkładka nie może się przepalić podczas rozruchu, więc jej prąd dobiera się z prądu rozruchowego podzielonego przez α (2,5 dla rozruchu lekkiego, 1,6–2 dla ciężkiego).
+
+? Jakie zabezpieczenie zwarciowe stosuje się dla silnika razem z przekaźnikiem termicznym?
++ Bezpieczniki o charakterystyce aM lub gG albo wyłącznik silnikowy z wyzwalaczem zwarciowym
+- Wyłącznie wyłącznik różnicowoprądowy 30 mA
+- Ogranicznik przepięć
+- Wyłącznik B6 niezależnie od mocy silnika
+! Przekaźnik termiczny chroni tylko przed przeciążeniem. Zwarcia muszą wyłączać bezpieczniki albo wyłącznik.
+
+? Co oznacza sposób ułożenia przewodów A1 według PN-HD 60364-5-52?
++ Przewody jednożyłowe w rurce w ścianie izolowanej cieplnie
+- Przewody na ścianie, bez osłon
+- Kabel ułożony w ziemi
+- Kable na korytku perforowanym
+! Sposób A1 daje najgorsze chłodzenie i najmniejszą obciążalność. C to ułożenie bezpośrednio na ścianie, D w ziemi, E i F na korytkach w powietrzu.
+
+? Który sposób ułożenia zapewnia przewodom największą obciążalność prądową?
++ Kable na korytku perforowanym w powietrzu (sposób E lub F)
+- Przewody w rurce w ścianie izolowanej cieplnie (A1)
+- Przewody w rurce na ścianie (B1)
+- Przewody w izolacji termicznej stropu
+! Przewody swobodnie omywane powietrzem najlepiej oddają ciepło, więc mogą przewodzić większy prąd.
+
+? Dla jakiej temperatury otoczenia podaje się obciążalności przewodów ułożonych w powietrzu w tabelach PN-HD 60364-5-52?
++ 30 °C
+- 0 °C
+- 20 °C
+- 40 °C
+! Tabele przyjmują 30 °C dla przewodów w powietrzu i 20 °C dla kabli w ziemi. W innych temperaturach stosuje się współczynniki poprawkowe.
+
+? Jak dobiera się przekrój przewodu obwodu odbiorczego?
++ Z obciążalności prądowej, a potem sprawdza się spadek napięcia, skuteczność ochrony przeciwporażeniowej i wytrzymałość zwarciową
+- Wyłącznie na podstawie długości obwodu
+- Zawsze 1,5 mm², niezależnie od obciążenia
+- Na podstawie koloru izolacji
+! Przekrój musi spełnić kilka warunków naraz: nagrzewanie prądem roboczym, spadek napięcia, samoczynne wyłączenie zasilania i nagrzewanie prądem zwarciowym.
+
+? Ile wynosi prąd zwarcia na końcu obwodu, jeśli impedancja pętli zwarcia wynosi 0,46 Ω (U₀ = 230 V)?
++ 500 A
+- 50 A
+- 106 A
+- 2300 A
+! Ik = U₀ / Zs = 230 / 0,46 = 500 A.
+
+? Jaką zwarciową zdolność łączeniową powinien mieć wyłącznik nadprądowy, jeśli spodziewany prąd zwarcia w miejscu montażu wynosi 4,5 kA?
++ Co najmniej 4,5 kA, np. 6 kA
+- Wystarczy 3 kA
+- Wystarczy 1,5 kA
+- Nie ma to znaczenia
+! Wyłącznik musi bezpiecznie przerwać największy możliwy prąd zwarcia w miejscu montażu. Za mała zdolność łączeniowa grozi zniszczeniem aparatu.
+
+? Silnik ma prąd znamionowy 15 A, a współczynnik prądu rozruchowego k = 6. Ile wynosi prąd rozruchowy?
++ 90 A
+- 2,5 A
+- 21 A
+- 45 A
+! Ir = k · In = 6 · 15 A = 90 A.
+
+? Na jaki prąd należy nastawić przekaźnik termiczny silnika o prądzie znamionowym 8,2 A?
++ 8,2 A
+- 4,1 A
+- 16,4 A
+- 49,2 A
+! Przekaźnik termiczny nastawia się na prąd znamionowy silnika z tabliczki.
+
+? Jaki przekrój powinien mieć przewód ochronny, gdy przewody fazowe mają 25 mm² Cu (PE z tego samego materiału)?
++ 16 mm²
+- 6 mm²
+- 10 mm²
+- 25 mm²
+! Dla przekrojów fazowych od 16 do 35 mm² przewód ochronny ma 16 mm².
+
+? Jak zmieni się spadek napięcia na linii, jeśli przy tym samym prądzie zwiększymy przekrój przewodów dwukrotnie?
++ Zmaleje dwukrotnie
+- Wzrośnie dwukrotnie
+- Nie zmieni się
+- Zmaleje czterokrotnie
+! Spadek napięcia jest proporcjonalny do rezystancji przewodów, a ta jest odwrotnie proporcjonalna do przekroju.
+
+? Dlaczego wkładki topikowej gG nie dobiera się do silnika po prostu na jego prąd znamionowy?
++ Bo przepaliłaby się podczas rozruchu, gdy prąd jest kilka razy większy od znamionowego
+- Bo wkładki gG działają tylko w obwodach prądu stałego
+- Bo prąd znamionowy silnika jest zawsze większy od prądu rozruchowego
+- Bo wkładka nie chroniłaby przed zwarciem
+! Prąd rozruchowy silnika klatkowego to zwykle 5–7 In. Przed przeciążeniem chroni przekaźnik termiczny, a wkładka ma wyłączać zwarcia.
+
+? Ile wynosi procentowy spadek napięcia, jeśli na linii zasilającej odbiornik 230 V odkłada się 6,9 V?
++ 3%
+- 0,3%
+- 6,9%
+- 30%
+! ΔU% = ΔU / U · 100% = 6,9 / 230 · 100% = 3%.
+
+? Którą wielkość porównuje się z prądem zadziałania zabezpieczenia przy sprawdzaniu ochrony przy uszkodzeniu?
++ Prąd zwarcia jednofazowego obliczony z impedancji pętli zwarcia
+- Prąd obciążenia w normalnej pracy
+- Prąd jałowy transformatora
+- Prąd upływu przez izolację przy 500 V DC
+! Zabezpieczenie zadziała dostatecznie szybko, gdy prąd zwarcia Ik = U₀ / Zs jest nie mniejszy niż prąd Ia wyłączający w wymaganym czasie.

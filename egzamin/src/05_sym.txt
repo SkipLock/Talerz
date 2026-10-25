@@ -1,0 +1,230 @@
+## sym | Symbole, schematy i dokumentacja | Schematy | 02,05
+
+? Który symbol oznacza diodę Zenera?
++ @sym:dioda_zenera
+- @sym:dioda
+- @sym:led
+- @sym:tyrystor
+! Dioda Zenera ma katodę z załamanymi końcami. Zwykła dioda ma prostą kreskę katody, LED strzałki skierowane na zewnątrz, a tyrystor dodatkową bramkę.
+
+? Jaki element przedstawia symbol na rysunku?
+@ sym:tyrystor
++ Tyrystor
+- Triak
+- Dioda Zenera
+- Fotodioda
+! Tyrystor to dioda z dodatkową elektrodą sterującą (bramką). Zaczyna przewodzić po podaniu impulsu na bramkę.
+
+? Który symbol oznacza kondensator elektrolityczny?
++ @sym:kondensator_elektrolityczny
+- @sym:kondensator
+- @sym:bateria
+- @sym:cewka_rdzen
+! Kondensator elektrolityczny ma oznaczoną biegunowość, bo trzeba go włączać plusem do wyższego potencjału.
+
+? Jaki element przedstawia symbol na rysunku?
+@ sym:potencjometr
++ Potencjometr
+- Termistor
+- Fotorezystor
+- Bezpiecznik
+! Strzałka dotykająca rezystora to ślizgacz potencjometru, czyli trzecie wyprowadzenie o regulowanym położeniu.
+
+? Który symbol oznacza styk zwierny?
++ @sym:styk_zwierny
+- @sym:styk_rozwierny
+- @sym:przycisk_rozwierny
+- @sym:bezpiecznik
+! Styk zwierny jest w spoczynku otwarty i zamyka obwód po zadziałaniu. Styk rozwierny w spoczynku jest zamknięty.
+
+? Co przedstawia symbol na rysunku?
+@ sym:przycisk_rozwierny
++ Przycisk sterowniczy ze stykiem rozwiernym
+- Przycisk sterowniczy ze stykiem zwiernym
+- Łącznik krańcowy ze stykiem zwiernym
+- Przekaźnik czasowy
+! Linia przerywana z symbolem napędu ręcznego oznacza przycisk, a styk opierający się o poprzeczną kreskę to styk rozwierny. Taki przycisk stosuje się np. jako STOP.
+
+? Który symbol przedstawia cewkę stycznika?
++ @sym:cewka_stycznika
+- @sym:przekaznik_termiczny
+- @sym:bezpiecznik
+- @sym:rezystor
+! Cewkę stycznika lub przekaźnika rysuje się jako prostokąt z zaciskami A1 i A2.
+
+? Który symbol oznacza silnik prądu przemiennego trójfazowego?
++ @sym:silnik
+- @sym:pradnica
+- @sym:silnik_dc
+- @sym:silnik_1f
+! Litera M oznacza silnik (G – prądnicę), a znak 3~ prąd przemienny trójfazowy.
+
+? Jaki element przedstawia symbol?
+@ sym:transformator
++ Transformator
+- Dławik
+- Dwa połączone silniki
+- Kondensator
+! Dwa przenikające się okręgi to uproszczony symbol transformatora dwuuzwojeniowego.
+
+? Co oznacza symbol przedstawiony na rysunku, umieszczony na obudowie urządzenia?
+@ sym:klasa2
++ Urządzenie II klasy ochronności (izolacja podwójna lub wzmocniona)
+- Urządzenie I klasy ochronności, wymaga przyłączenia przewodu PE
+- Urządzenie zasilane bardzo niskim napięciem
+- Urządzenie wodoszczelne
+! Podwójny kwadrat oznacza II klasę ochronności. Takiego urządzenia nie łączy się z przewodem ochronnym.
+
+? Co oznacza symbol przedstawiony na rysunku?
+@ sym:klasa3
++ Urządzenie III klasy ochronności, zasilane bardzo niskim napięciem SELV lub PELV
+- Urządzenie II klasy ochronności
+- Urządzenie przeznaczone do stref zagrożonych wybuchem
+- Urządzenie wymagające uziemienia
+! Romb z cyfrą III oznacza urządzenie przystosowane do zasilania bardzo niskim napięciem.
+
+? Który symbol oznacza zacisk uziemienia ochronnego?
++ @sym:uziemienie_ochronne
+- @sym:uziemienie
+- @sym:klasa2
+- @sym:bateria
+! Symbol uziemienia w okręgu oznacza zacisk przewodu ochronnego PE w urządzeniu I klasy ochronności.
+
+? Jaki rodzaj schematu pokazuje zasadę działania układu bez uwzględnienia rzeczywistego rozmieszczenia elementów?
++ Schemat ideowy
+- Schemat montażowy
+- Plan instalacji
+- Rysunek wykonawczy obudowy
+! Schemat ideowy pokazuje, jak elementy są połączone i jak działa układ. Schemat montażowy pokazuje rzeczywiste położenie elementów i przebieg przewodów.
+
+? Jaki element przedstawia symbol na rysunku?
+@ sym:led
++ Dioda elektroluminescencyjna (LED)
+- Fotodioda
+- Dioda Zenera
+- Fototranzystor
+! Strzałki skierowane od diody oznaczają emisję światła. Strzałki skierowane do elementu oznaczałyby element światłoczuły.
+
+? Jaki tranzystor przedstawia symbol?
+@ sym:tranzystor_npn
++ Bipolarny NPN
+- Bipolarny PNP
+- Polowy z kanałem N
+- Tyrystor
+! Strzałka na emiterze skierowana na zewnątrz oznacza tranzystor NPN. W tranzystorze PNP strzałka wskazuje do środka.
+
+? Jaki tranzystor przedstawia symbol?
+@ sym:tranzystor_pnp
++ Bipolarny PNP
+- Bipolarny NPN
+- Polowy MOSFET
+- Triak
+! W tranzystorze PNP strzałka na emiterze jest skierowana do bazy (do środka symbolu).
+
+? Jaką bramkę logiczną przedstawia symbol?
+@ bramka:nand
++ NAND
+- AND
+- NOR
+- XOR
+! Znak & oznacza iloczyn (AND), a kółko na wyjściu negację, więc to bramka NAND.
+
+? Jaką funkcję realizuje bramka przedstawiona na rysunku?
+@ bramka:or
++ Sumę logiczną (OR)
+- Iloczyn logiczny (AND)
+- Negację (NOT)
+- Różnicę symetryczną (XOR)
+! Znak ≥1 oznacza, że wyjście ma stan 1, gdy co najmniej jedno wejście ma stan 1.
+
+? Który symbol oznacza bezpiecznik?
++ @sym:bezpiecznik
+- @sym:rezystor
+- @sym:cewka_stycznika
+- @sym:licznik
+! Bezpiecznik rysuje się jako prostokąt przecięty wzdłuż linią przewodu.
+
+? Do czego służy aparat oznaczony na schemacie symbolem z rysunku?
+@ sym:przekaznik_termiczny
++ Do ochrony silnika przed przeciążeniem
+- Do ochrony silnika przed zwarciem
+- Do załączania silnika z opóźnieniem
+- Do pomiaru temperatury otoczenia
+! To człon termiczny przekaźnika przeciążeniowego. Nagrzewa się prądem silnika i przy długotrwałym przeciążeniu otwiera styk w obwodzie cewki stycznika.
+
+? Co przedstawia rysunek?
+@ uklad:graetz
++ Prostownik dwupołówkowy w układzie mostkowym (Graetza)
+- Prostownik jednopołówkowy
+- Falownik trójfazowy
+- Stabilizator napięcia z diodą Zenera
+! Cztery diody w mostku przewodzą parami, dzięki czemu przez obciążenie R prąd płynie w tym samym kierunku w obu połówkach okresu.
+
+? Jaki układ przedstawia rysunek?
+@ uklad:schodowy
++ Układ schodowy: sterowanie oświetleniem z dwóch miejsc
+- Układ świecznikowy: dwa obwody z jednego miejsca
+- Układ krzyżowy: sterowanie z trzech miejsc
+- Układ z przekaźnikiem bistabilnym
+! Dwa łączniki schodowe (przełączne) połączone dwoma przewodami korespondencyjnymi pozwalają włączać i wyłączać lampę z dwóch miejsc.
+
+? Co przedstawia rysunek?
+@ uklad:podtrzymanie
++ Obwód sterowania stycznikiem z podtrzymaniem: S1 – stop, S2 – start
+- Obwód sterowania stycznikiem bez podtrzymania
+- Układ nawrotny z blokadą
+- Układ gwiazda-trójkąt
+! Styk zwierny K1 równoległy do przycisku S2 podtrzymuje zasilanie cewki po zwolnieniu przycisku. Przycisk rozwierny S1 przerywa obwód i wyłącza stycznik.
+
+? Jaki element przedstawia symbol na rysunku?
+@ sym:triak
++ Triak
+- Tyrystor
+- Diak
+- Dioda podwójna
+! Triak to dwa tyrystory połączone przeciwsobnie ze wspólną bramką. Przewodzi w obu kierunkach i służy np. w ściemniaczach.
+
+? Jaki element przedstawia symbol na rysunku?
+@ sym:fotodioda
++ Fotodioda
+- Dioda elektroluminescencyjna (LED)
+- Dioda Zenera
+- Fotorezystor
+! Strzałki skierowane do diody oznaczają, że element reaguje na światło padające z zewnątrz.
+
+? Jaki element przedstawia symbol?
+@ sym:termistor
++ Termistor (rezystor zależny od temperatury)
+- Potencjometr
+- Fotorezystor
+- Warystor
+! Symbol ϑ przy ukośnej linii z załamaniem oznacza, że rezystancja zmienia się wraz z temperaturą.
+
+? Który symbol oznacza ogniwo (źródło napięcia stałego)?
++ @sym:bateria
+- @sym:kondensator
+- @sym:kondensator_elektrolityczny
+- @sym:uziemienie
+! Dłuższa, cienka kreska oznacza biegun dodatni ogniwa, a krótsza, gruba biegun ujemny.
+
+? Co przedstawia symbol na rysunku?
+@ sym:przycisk_zwierny
++ Przycisk sterowniczy ze stykiem zwiernym
+- Przycisk sterowniczy ze stykiem rozwiernym
+- Styk przekaźnika termicznego
+- Bezpiecznik
+! Linia przerywana z napędem ręcznym oznacza przycisk, a styk otwarty w spoczynku to styk zwierny. Taki przycisk stosuje się np. jako START.
+
+? Który symbol oznacza amperomierz?
++ @sym:amperomierz
+- @sym:woltomierz
+- @sym:watomierz
+- @sym:omomierz
+! Mierniki rysuje się jako okrąg z literą wielkości: A – amperomierz, V – woltomierz, W – watomierz, Ω – omomierz.
+
+? Jaki dokument powstaje po zakończeniu budowy i przedstawia instalację w takiej postaci, w jakiej ją faktycznie wykonano?
++ Dokumentacja powykonawcza
+- Projekt koncepcyjny
+- Specyfikacja przetargowa
+- Karta katalogowa aparatu
+! Dokumentacja powykonawcza uwzględnia wszystkie zmiany wprowadzone w czasie budowy. Jest potrzebna do eksploatacji i przyszłych napraw.
