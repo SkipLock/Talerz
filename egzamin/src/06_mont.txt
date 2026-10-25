@@ -755,3 +755,178 @@
 - Bo wyłączniki RCD przestają działać
 - Bo rośnie napięcie
 ! Przedłużacze mają ograniczoną obciążalność. Duże odbiorniki powinny mieć stałe gniazda w odpowiednich obwodach.
+
+? Kiedy wykonuje się uziom fundamentowy budynku?
++ Podczas budowy fundamentów, przed zalaniem ich betonem
+- Po zakończeniu budowy, przed tynkowaniem
+- Podczas montażu rozdzielnicy mieszkaniowej
+- Dopiero przed pierwszym badaniem instalacji
+! Taśmę lub pręt stalowy układa się w ławie fundamentowej, zanim zostanie zalana betonem. Później takiego uziomu nie da się już wykonać.
+
+? Jak łączy się uziom fundamentowy z instalacją w budynku?
++ Wyprowadzeniem uziomu (np. bednarką ocynkowaną) do głównej szyny uziemiającej, chronionym przed korozją i uszkodzeniem
+- Nie łączy się go, bo działa samodzielnie
+- Przewodem neutralnym N z rozdzielnicy
+- Przez rurę wodociągową
+! W budynkach z instalacją piorunochronną do wyprowadzeń uziomu dołącza się także przewody odprowadzające.
+
+? Do czego służy główna szyna uziemiająca (GSU)?
++ Do połączenia przewodu uziemiającego, głównego przewodu ochronnego i przewodów połączeń wyrównawczych głównych
+- Do zasilania odbiorników trójfazowych
+- Do łączenia przewodów neutralnych obwodów oświetleniowych w puszkach
+- Do mocowania aparatów modułowych
+! GSU montuje się zwykle przy złączu lub rozdzielnicy głównej. Zbiega się w niej ochrona przeciwporażeniowa całego budynku.
+
+? Które elementy łączy się z główną szyną uziemiającą przewodami połączeń wyrównawczych głównych?
++ Metalowe rury wody, gazu i centralnego ogrzewania oraz metalowe konstrukcje budynku
+- Obudowy przenośnych odbiorników
+- Przewody neutralne poszczególnych obwodów
+- Okna z profili PVC
+! Dzięki tym połączeniom części przewodzące obce mają ten sam potencjał co przewody ochronne, więc nie powstaje między nimi niebezpieczne napięcie.
+
+? Jak zasila się urządzenia elektryczne na placu budowy?
++ Z rozdzielnicy budowlanej z wyłącznikami różnicowoprądowymi, zasilanej ze złącza lub agregatu
+- Z gniazd w sąsiednim budynku, przez domowe przedłużacze
+- Bezpośrednio z przewodów linii napowietrznej
+- Wyłącznie z akumulatorów
+! Rozdzielnica budowlana ma zamykaną obudowę o odpowiednim stopniu IP i gniazda przemysłowe chronione wyłącznikami różnicowoprądowymi.
+
+? Jaką ochronę dodatkową muszą mieć obwody gniazd do 32 A na placu budowy?
++ Wyłącznik różnicowoprądowy o prądzie IΔn nie większym niż 30 mA
+- Wyłącznie bezpieczniki topikowe 63 A
+- Wyłącznik różnicowoprądowy 500 mA
+- Żadnej, bo praca odbywa się na zewnątrz
+! Wymaga tego PN-HD 60364-7-704. Wilgoć i uszkodzenia przewodów na budowie zwiększają ryzyko porażenia.
+
+? Jaką ochronę przed pożarem stosuje się w instalacjach budynków inwentarskich, np. obór i chlewni?
++ Wyłącznik różnicowoprądowy o prądzie IΔn nie większym niż 300 mA
+- Wyłącznik nadprądowy o charakterystyce D
+- Wyłącznik różnicowoprądowy o prądzie IΔn 1 A
+- Żadnej szczególnej
+! Wymaga tego PN-HD 60364-7-705. Obwody gniazd do 32 A muszą mieć dodatkowo wyłącznik różnicowoprądowy 30 mA.
+
+? Jakiego koloru folię ostrzegawczą układa się nad kablem elektroenergetycznym niskiego napięcia?
++ Niebieskiego
+- Czerwonego
+- Żółtego
+- Białego
+! Nad kablami nN układa się folię niebieską, nad kablami średniego i wysokiego napięcia czerwoną, a nad gazociągiem żółtą.
+
+? W jakim miejscu układa się folię ostrzegawczą przy kablu w ziemi?
++ Około 25 cm nad kablem
+- Bezpośrednio na kablu
+- Tuż pod powierzchnią terenu, kilka centymetrów pod ziemią
+- Pod kablem
+! Folia leży wyżej niż kabel, więc podczas późniejszych wykopów zostanie odkryta, zanim dojdzie do uszkodzenia kabla.
+
+? Na jakiej najmniejszej głębokości układa się w ziemi kabel średniego napięcia (do 30 kV)?
++ 0,8 m
+- 0,4 m
+- 0,6 m
+- 1,5 m
+! Kable SN układa się na głębokości co najmniej 0,8 m, a kable nN poza drogami co najmniej 0,7 m.
+
+? Do czego służy mufa kablowa?
++ Do połączenia dwóch odcinków kabla lub wykonania odgałęzienia z odtworzeniem izolacji i szczelności
+- Do zakończenia kabla w rozdzielnicy
+- Do mocowania kabla na ścianie
+- Do pomiaru prądu w kablu
+! Do zakończenia kabla i przyłączenia go do urządzenia służy głowica kablowa.
+
+? Do czego służy głowica kablowa?
++ Do zakończenia kabla, uszczelnienia go i przyłączenia do urządzenia lub linii
+- Do łączenia dwóch odcinków kabla w ziemi
+- Do odwijania kabla z bębna
+- Do zmniejszenia przekroju żył
+! Głowice stosuje się m.in. na końcach kabli SN przyłączanych do rozdzielnic i linii napowietrznych.
+
+? Co oznacza skrót PWP w instalacji budynku?
++ Przeciwpożarowy wyłącznik prądu
+- Przewód wyrównawczy połączeń
+- Punkt wejścia przewodów
+- Przekaźnik współczynnika mocy
+! PWP pozwala straży pożarnej odłączyć zasilanie budynku, z wyjątkiem urządzeń, które muszą działać podczas pożaru.
+
+? Gdzie umieszcza się przycisk przeciwpożarowego wyłącznika prądu?
++ W pobliżu głównego wejścia do budynku lub złącza, w miejscu oznakowanym
+- W piwnicy, w zamykanym pomieszczeniu technicznym
+- W rozdzielnicy mieszkaniowej każdego lokalu
+- Na dachu budynku
+! Tak wymagają warunki techniczne dla budynków. Strażacy muszą móc szybko znaleźć i użyć wyłącznika.
+
+? Dlaczego przewody przyłączające ogranicznik przepięć powinny być jak najkrótsze?
++ Bo spadek napięcia na indukcyjności długich przewodów zwiększa przepięcie docierające do chronionych urządzeń
+- Bo krótkie przewody mają większy przekrój
+- Bo wymaga tego kolor izolacji
+- Bo długie przewody nie przewodzą prądu udarowego
+! Zaleca się, aby łączna długość przewodów przyłączających ogranicznik nie przekraczała 0,5 m.
+
+? Jak prowadzi się przewody DC instalacji fotowoltaicznej od paneli do falownika?
++ Przewodami solarnymi odpornymi na promieniowanie UV, z przewodami plus i minus prowadzonymi obok siebie
+- Przewodami YDYp ułożonymi luźno na dachu
+- Przewodem plus z jednej strony budynku, a minus z drugiej
+- Przewodami telefonicznymi
+! Przewody prowadzone obok siebie tworzą małą pętlę, w której wyładowania atmosferyczne indukują mniejsze przepięcia.
+
+? Jakie złącza stosuje się do łączenia przewodów paneli fotowoltaicznych?
++ Złącza wtykowe przeznaczone do instalacji PV (np. MC4), tego samego typu po obu stronach połączenia
+- Kostki zaciskowe z puszek instalacyjnych
+- Skręcenie żył owinięte taśmą izolacyjną
+- Wtyczki i gniazda 230 V
+! Złącza różnych producentów mogą do siebie nie pasować. Źle dopasowane styki nagrzewają się, co grozi pożarem.
+
+? Czym wykonuje się otwory pod kołki w ścianie betonowej?
++ Wiertarką udarową lub młotowiertarką z wiertłem do betonu
+- Wiertarką bez udaru z wiertłem do drewna
+- Wkrętarką z bitem
+- Otwornicą do płyt gipsowo-kartonowych
+! Do betonu i cegły pełnej używa się wierteł z ostrzem z węglików spiekanych i pracy z udarem.
+
+? Dlaczego w rozdzielnicy pozostawia się wolne miejsca na aparaty?
++ Aby można było później dodać nowe obwody lub aparaty bez wymiany obudowy
+- Aby aparaty mogły się swobodnie przesuwać na szynie
+- Aby zmniejszyć prąd zwarcia
+- Bo wymaga tego kolor obudowy
+! Zaleca się zostawić około 20–30% rezerwy miejsca. Wolne miejsca zakrywa się zaślepkami.
+
+? Co sprawdza się przed zamontowaniem aparatu modułowego w rozdzielnicy?
++ Zgodność typu, prądu znamionowego i charakterystyki z projektem oraz brak uszkodzeń obudowy
+- Wyłącznie kolor dźwigni
+- Masę aparatu
+- Nic, wystarczy go zamontować
+! Pomyłka, np. wyłącznik C zamiast B albo większy prąd znamionowy, może sprawić, że obwód nie będzie właściwie chroniony.
+
+? Na jakiej wysokości nad podłogą przebiega dolna pozioma strefa instalacyjna?
++ 15–45 cm
+- 50–80 cm
+- 100–130 cm
+- 150–180 cm
+! W dolnej strefie prowadzi się przewody do gniazd. Strefa środkowa, 100–130 cm, jest przewidziana dla pomieszczeń z blatami roboczymi, np. kuchni.
+
+? Na jakiej wysokości przebiega środkowa pozioma strefa instalacyjna, stosowana np. w kuchni nad blatem?
++ 100–130 cm nad podłogą
+- 15–45 cm nad podłogą
+- 45–75 cm nad podłogą
+- 75–95 cm nad podłogą
+! Środkowa strefa obejmuje pas 100–130 cm nad podłogą, czyli powyżej typowego blatu kuchennego. Dolna strefa to 15–45 cm.
+
+? Jak uszczelnia się przejście kabla przez ścianę lub strop oddzielenia przeciwpożarowego?
++ Systemem ogniochronnym o odporności ogniowej wymaganej dla tej przegrody
+- Pozostawia się otwór, aby kabel mógł się chłodzić
+- Wypełnia się go zwykłą pianką montażową
+- Zakleja się go taśmą izolacyjną
+! Nieuszczelnione przejścia pozwalają ogniowi i dymowi przedostawać się między strefami pożarowymi.
+
+? Jak naprawić przewód uszkodzony podczas wiercenia w ścianie?
++ Po wyłączeniu zasilania wymienić uszkodzony odcinek albo wykonać połączenie w dostępnej puszce
+- Owinąć miejsce uszkodzenia taśmą izolacyjną i zatynkować
+- Zostawić bez zmian, jeśli bezpiecznik nie zadziałał
+- Zalać miejsce uszkodzenia gipsem
+! Połączenia przewodów muszą być dostępne do kontroli. Wyjątkiem są tylko złącza specjalnie do tego przeznaczone, np. zalewane żywicą.
+
+? Do czego służy dławnica lub przepust w obudowie rozdzielnicy natynkowej?
++ Do szczelnego wprowadzenia przewodu do obudowy z zachowaniem jej stopnia ochrony IP
+- Do mocowania aparatów
+- Do chłodzenia rozdzielnicy
+- Do pomiaru prądu
+! Otwór bez dławnicy obniża stopień ochrony obudowy, a ostra krawędź może uszkodzić izolację przewodu.

@@ -412,3 +412,178 @@
 - Oprawa jest zasilana napięciem 12 V
 - Oprawa jest wodoszczelna
 ! Żyłę PE w puszce izoluje się i pozostawia niepodłączoną, chyba że producent przewidział dla niej zacisk pośredniczący.
+
+? Którym źródłem LED zastąpić tradycyjną żarówkę 60 W, aby uzyskać podobną ilość światła?
++ Źródłem o strumieniu około 800 lm, zwykle o mocy 7–9 W
+- Źródłem LED o mocy 60 W
+- Źródłem o strumieniu około 60 lm
+- Dowolnym źródłem LED, bo wszystkie dają tyle samo światła
+! Ilość światła określa strumień świetlny w lumenach, a nie moc. Żarówka 60 W daje około 800 lm.
+
+? Co oznacza oznaczenie GU10 na źródle światła?
++ Trzonek z dwoma bolcami i zatrzaskiem obrotowym, do źródeł zasilanych napięciem 230 V
+- Gwint Edisona o średnicy 10 mm
+- Trzonek do źródeł zasilanych wyłącznie napięciem 12 V
+- Moc źródła 10 W
+! Podobne trzonki GU5.3 (MR16) są przeznaczone do źródeł 12 V, dlatego przy wymianie trzeba sprawdzić napięcie zasilania.
+
+? Czym różni się zasilacz LED stałonapięciowy od stałoprądowego?
++ Stałonapięciowy utrzymuje stałe napięcie, np. 24 V dla taśm LED, a stałoprądowy stały prąd, np. 350 mA dla diod mocy
+- Niczym, to dwie nazwy tego samego zasilacza
+- Stałonapięciowy daje prąd przemienny, a stałoprądowy stały
+- Stałoprądowy można zasilać tylko z akumulatora
+! Zasilacz musi pasować do odbiornika. Moduł LED przeznaczony do zasilania prądem 350 mA uszkodzi się po podłączeniu do zasilacza 24 V.
+
+? Dlaczego dłuższe odcinki taśmy LED zasila się z obu końców albo w kilku miejscach?
++ Aby ograniczyć spadek napięcia na taśmie, przez który jej koniec świeci słabiej
+- Aby taśma świeciła w dwóch kolorach
+- Aby zwiększyć napięcie zasilacza
+- Bo taśma LED przewodzi prąd tylko w jedną stronę
+! Ścieżki taśmy są cienkie i mają zauważalną rezystancję. Producenci podają największą długość odcinka zasilanego z jednego końca.
+
+? Który kod określa odporność obudowy oprawy na uderzenia mechaniczne?
++ IK, np. IK08
+- IP, np. IP65
+- Ra, np. Ra 80
+- UGR, np. UGR 19
+! Kod IK (od IK00 do IK10) opisuje energię uderzenia, którą wytrzymuje obudowa. Oprawy w halach sportowych i na zewnątrz mają często IK08–IK10.
+
+? Jaką temperaturę barwową ma światło białe neutralne?
++ 4000 K
+- 1800 K
+- 2700 K
+- 6500 K
+! Światło ciepłe ma około 2700–3000 K, neutralne około 4000 K, a zimne powyżej 5000 K.
+
+? Co uwzględnia współczynnik utrzymania (konserwacji) w projekcie oświetlenia?
++ Spadek natężenia oświetlenia w czasie eksploatacji, wynikający ze starzenia źródeł oraz zabrudzenia opraw i pomieszczenia
+- Liczbę łączeń oprawy w ciągu doby
+- Koszt energii elektrycznej
+- Wysokość zawieszenia opraw nad podłogą
+! Dlatego nowa instalacja daje więcej światła niż wymagane minimum. Z czasem, zwłaszcza bez czyszczenia opraw, natężenie oświetlenia spada.
+
+? Co oznacza parametr L70 podawany dla źródeł LED, np. L70 = 50 000 h?
++ Czas, po którym strumień świetlny spadnie do 70% wartości początkowej
+- Czas, po którym 70% diod całkowicie przestanie świecić
+- Że źródło ma skuteczność 70 lm/W
+- Że źródło świeci tylko przez 70% doby
+! Źródła LED rzadko gasną nagle. Z czasem świecą coraz słabiej, dlatego ich trwałość określa się spadkiem strumienia świetlnego.
+
+? Do czego służy oświetlenie awaryjne zastępcze?
++ Umożliwia kontynuowanie ważnych czynności, gdy zaniknie oświetlenie podstawowe
+- Oznacza wyłącznie drogi ewakuacyjne
+- Zastępuje oświetlenie dzienne w pochmurne dni
+- Służy do dekoracji budynku
+! Oświetlenie awaryjne dzieli się na ewakuacyjne i zastępcze. Zastępcze stosuje się np. w salach operacyjnych i dyspozytorniach.
+
+? Jak często wykonuje się test pełnego czasu działania oświetlenia awaryjnego (np. 1 h) według PN-EN 50172?
++ Raz w roku
+- Raz w tygodniu
+- Raz na 5 lat
+- Tylko przy odbiorze budynku
+! Norma przewiduje comiesięczny krótki test działania oraz coroczny test pełnego czasu pracy na akumulatorach. Wyniki wpisuje się do dziennika.
+
+? Jakie najmniejsze natężenie oświetlenia ewakuacyjnego wymaga PN-EN 1838 na osi drogi ewakuacyjnej o szerokości do 2 m?
++ 1 lx
+- 0,5 lx
+- 5 lx
+- 15 lx
+! 1 lx mierzy się na podłodze wzdłuż osi drogi ewakuacyjnej. Wartość 0,5 lx dotyczy oświetlenia strefy otwartej (antypanicznego).
+
+? Ile energii zużyje grzejnik o mocy 2 kW pracujący przez 3 godziny?
++ 6 kWh
+- 0,67 kWh
+- 1,5 kWh
+- 5 kWh
+! E = P · t = 2 kW · 3 h = 6 kWh.
+
+? Ile czasu potrzebuje grzałka 2 kW, aby podgrzać 80 l wody o 40 °C? Pomiń straty; ciepło właściwe wody wynosi 4,19 kJ/(kg·K).
++ 1,9 h
+- 3,7 h
+- 7,4 h
+- 13,4 h
+! Q = m · c · ΔT = 80 kg · 4,19 kJ/(kg·K) · 40 K ≈ 13 400 kJ ≈ 3,7 kWh, a t = 3,7 kWh / 2 kW ≈ 1,9 h.
+
+? Jak działa termostat w elektrycznym grzejniku?
++ Wyłącza i ponownie załącza grzałkę, utrzymując ustawioną temperaturę
+- Zmienia napięcie sieci
+- Mierzy zużycie energii
+- Chroni grzejnik przed zwarciem
+! Termostat reaguje na temperaturę. Przed zwarciem i przeciążeniem chronią zabezpieczenia nadprądowe obwodu.
+
+? Jakie zabezpieczenie dodatkowe musi mieć obwód elektrycznego ogrzewania podłogowego?
++ Wyłącznik różnicowoprądowy o prądzie IΔn nie większym niż 30 mA
+- Wyłącznik nadprądowy o charakterystyce D
+- Ogranicznik przepięć typu 1
+- Żadnego, bo kable grzejne są ukryte w podłodze
+! Kable i maty grzejne leżą pod posadzką, po której chodzą ludzie, często w łazienkach. Uszkodzenie izolacji musi zostać szybko wyłączone.
+
+? Który z odbiorników pobiera z sieci moc bierną indukcyjną?
++ Silnik indukcyjny pompy wodnej
+- Czajnik elektryczny
+- Żarówka tradycyjna
+- Grzejnik olejowy
+! Grzejniki, czajniki i żarówki to odbiorniki rezystancyjne o cos φ ≈ 1. Silnik potrzebuje mocy biernej do wytworzenia pola magnetycznego.
+
+? Dlaczego na płycie indukcyjnej nie podgrzeje się wody w garnku szklanym lub aluminiowym bez specjalnego dna?
++ Bo nagrzewanie indukcyjne wymaga dna z materiału ferromagnetycznego, w którym indukują się prądy wirowe
+- Bo płyta działa tylko z garnkami o pojemności powyżej 5 l
+- Bo szkło przewodzi prąd
+- Bo płyta indukcyjna grzeje tylko powietrze nad sobą
+! Ciepło powstaje w dnie naczynia, a nie w płycie. Garnki do płyt indukcyjnych oznacza się symbolem spirali.
+
+? Jaką skalę mają etykiety energetyczne lodówek i pralek od 2021 roku?
++ Od A do G, bez klas z plusami
+- Od A+++ do D
+- Od 1 do 10
+- Od A do Z
+! W 2021 roku UE zastąpiła klasy A+++, A++ i A+ nową skalą A–G z ostrzejszymi wymaganiami.
+
+? Co należy sprawdzić przed przyłączeniem płyty grzejnej (kuchni elektrycznej) do instalacji?
++ Schemat na tabliczce zaciskowej i ułożenie zworek odpowiednie do zasilania jedno-, dwu- lub trójfazowego
+- Wyłącznie kolor przewodu zasilającego
+- Czy płyta ma wtyczkę 230 V
+- Nic, każdą płytę łączy się tak samo
+! Płyty grzejne można zwykle zasilać na kilka sposobów, a zworki ustawia się na listwie zaciskowej zgodnie z instrukcją. Błędne połączenie może uszkodzić płytę.
+
+? Dlaczego zużytych świetlówek nie wolno wyrzucać do zwykłych odpadów?
++ Bo zawierają rtęć i trzeba je oddać do punktu zbiórki zużytego sprzętu
+- Bo mogą wybuchnąć w koszu
+- Bo zawierają uran
+- Można je wyrzucać do odpadów zmieszanych
+! Świetlówki liniowe i kompaktowe zawierają niewielką ilość rtęci, dlatego oddaje się je do punktu zbiórki zużytego sprzętu elektrycznego.
+
+? Jaki prąd pobiera z sieci 230 V grzejnik o mocy 1,5 kW?
++ 6,5 A
+- 0,15 A
+- 2,2 A
+- 3,8 A
+! I = P / U = 1500 W / 230 V ≈ 6,5 A.
+
+? Czym jest oprawa z modułem awaryjnym?
++ Oprawą z wbudowanym akumulatorem, która po zaniku napięcia sieci świeci jeszcze przez określony czas, np. 1 h
+- Oprawą, która wyłącza się przy przepięciu
+- Oprawą o podwyższonym stopniu IP
+- Oprawą z dwoma źródłami światła
+! Moduł awaryjny ładuje akumulator podczas normalnej pracy. Takie oprawy stosuje się w oświetleniu ewakuacyjnym.
+
+? Do czego służy system DALI w instalacjach oświetleniowych?
++ Do cyfrowego sterowania oprawami, np. ściemniania i grupowania, przez dwużyłową magistralę
+- Do zasilania opraw prądem stałym 400 V
+- Do pomiaru natężenia oświetlenia
+- Do ochrony opraw przed przepięciami
+! Każdy statecznik DALI ma adres, więc oprawy można łączyć w grupy i sceny bez zmiany okablowania.
+
+? Jak steruje się jasnością opraw ze statecznikami ściemnialnymi 1–10 V?
++ Napięciem stałym 1–10 V doprowadzonym osobną parą przewodów sterujących
+- Zmianą częstotliwości sieci
+- Wkręceniem źródła o innej mocy
+- Wyłącznie łącznikiem świecznikowym
+! Przy 10 V oprawa świeci z pełną jasnością, a przy 1 V z minimalną. Do wyłączenia oprawy potrzebny jest osobny łącznik lub przekaźnik.
+
+? Dlaczego nie dotyka się palcami bańki halogenowego źródła światła?
++ Bo tłuszcz z palców powoduje miejscowe przegrzanie bańki kwarcowej i skraca trwałość źródła
+- Bo bańka jest pod napięciem 230 V
+- Bo zmienia to barwę światła na niebieską
+- Bo halogen przestaje świecić po dotknięciu
+! Bańki halogenowe pracują w bardzo wysokiej temperaturze. Źródło montuje się przez czystą ściereczkę albo w rękawiczkach.
